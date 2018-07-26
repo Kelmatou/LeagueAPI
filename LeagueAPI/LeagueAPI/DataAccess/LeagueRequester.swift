@@ -19,10 +19,10 @@ internal class LeagueRequester {
     public func request(method: LeagueMethod) {
         if canMakeRequest(for: method) {
             let methodUrl: String = method.getMethodUrl()
-            print("Requesting: \(methodUrl)")
+            Logger.print("Requesting: \(methodUrl)")
         }
         else {
-            print("Cannot make request for now")
+            Logger.error("Cannot make request for now")
         }
     }
     

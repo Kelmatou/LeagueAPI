@@ -22,7 +22,7 @@ public class LeagueAPI {
             let summonerBusiness: SummonerBusiness = SummonerBusiness(key: self.key, method: method as! SummonerMethod)
             summonerBusiness.request()
         default:
-            print("Unknown method type")
+            Logger.error("Unknown method type")
         }
     }
 }
