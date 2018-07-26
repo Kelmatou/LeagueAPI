@@ -10,7 +10,7 @@ import Foundation
 
 internal class LeagueRequester {
     
-    public var key: APIKey
+    private var key: APIKey
     
     public init(key: APIKey) {
         self.key = key

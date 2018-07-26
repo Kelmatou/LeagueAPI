@@ -10,25 +10,16 @@ import Foundation
 
 internal class SummonerBusiness {
     
-    public enum SummonerMethods {
-        case ByName(name: String)
-        case ById(id: Double)
-    }
+    private var key: APIKey
+    private var method: SummonerMethod
     
-    public var key: APIKey
-    
-    public init(key: APIKey) {
+    public init(key: APIKey, method: SummonerMethod) {
         self.key = key
+        self.method = method
     }
     
-    public func executeMethod(method: SummonerMethods) {
-        switch method {
-        case .ByName(name: ""):
-            print()
-        case .ById(id: 3):
-            print()
-        default:
-            print()
-        }
+    public func request() {
+        let requester: LeagueRequester = LeagueRequester(key: self.key)
+        requester.request(method: self.method)
     }
 }

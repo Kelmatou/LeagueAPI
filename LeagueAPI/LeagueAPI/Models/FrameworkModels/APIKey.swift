@@ -11,12 +11,20 @@ import Foundation
 internal class APIKey {
     
     public var token: String
-    public var appRateLimit: String
-    public var methodLimits: Dictionary<String, String>
+    public var appRateLimit: RateLimit?
+    public var methodLimits: Dictionary<String, RateLimit>
     
-    public init(token: String, appRateLimit: String = "", methodLimits: Dictionary<String, String>? = nil) {
+    public init(token: String, appRateLimit: RateLimit? = nil, methodLimits: Dictionary<String, RateLimit>? = nil) {
         self.token = token
         self.appRateLimit = appRateLimit
         self.methodLimits = methodLimits ?? Dictionary()
+    }
+    
+    public func hasReachAppRateLimit() -> Bool {
+        return appRateLimit?.hasReachLimit ?? false
+    }
+    
+    public func hasReachMethodLimit(for method: String) -> Bool {
+        return self.methodLimits[method]?.hasReachLimit ?? false
     }
 }

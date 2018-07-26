@@ -10,6 +10,17 @@ import Foundation
 
 public class SummonerMethod: LeagueMethod {
     
+    public enum SummonerMethods {
+        case ByName(name: String)
+        case ById(id: Double)
+    }
+    
+    private var method: SummonerMethods
+    
+    public init(method: SummonerMethods) {
+        self.method = method
+    }
+    
     public func getMethodUrl() -> String {
         return ""
     }
