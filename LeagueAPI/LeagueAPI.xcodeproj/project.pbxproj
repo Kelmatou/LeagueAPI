@@ -14,6 +14,7 @@
 		97D38D2B210A5A5C00150CF9 /* LeagueRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D2A210A5A5C00150CF9 /* LeagueRequester.swift */; };
 		97D38D2F210A5B7E00150CF9 /* LeagueMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D2E210A5B7E00150CF9 /* LeagueMethod.swift */; };
 		97D38D31210A5CDA00150CF9 /* SummonerMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D30210A5CDA00150CF9 /* SummonerMethod.swift */; };
+		97D38D33210A5F7200150CF9 /* SummonerBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D32210A5F7200150CF9 /* SummonerBusiness.swift */; };
 		97FB449A210A493000C092AB /* LeagueAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 97FB4498210A492F00C092AB /* LeagueAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		97D38D2A210A5A5C00150CF9 /* LeagueRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueRequester.swift; sourceTree = "<group>"; };
 		97D38D2E210A5B7E00150CF9 /* LeagueMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueMethod.swift; sourceTree = "<group>"; };
 		97D38D30210A5CDA00150CF9 /* SummonerMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummonerMethod.swift; sourceTree = "<group>"; };
+		97D38D32210A5F7200150CF9 /* SummonerBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummonerBusiness.swift; sourceTree = "<group>"; };
 		97FB4495210A492F00C092AB /* LeagueAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeagueAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97FB4498210A492F00C092AB /* LeagueAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeagueAPI.h; sourceTree = "<group>"; };
 		97FB4499210A492F00C092AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		97D38D1D210A50AF00150CF9 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				97D38D32210A5F7200150CF9 /* SummonerBusiness.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				97D38D22210A521000150CF9 /* RESTRequester.swift in Sources */,
 				97D38D2F210A5B7E00150CF9 /* LeagueMethod.swift in Sources */,
 				97D38D24210A532B00150CF9 /* ObjectMapper.swift in Sources */,
+				97D38D33210A5F7200150CF9 /* SummonerBusiness.swift in Sources */,
 				97D38D29210A549500150CF9 /* APIKey.swift in Sources */,
 				97D38D1B210A4D8D00150CF9 /* Summoner.swift in Sources */,
 				97D38D31210A5CDA00150CF9 /* SummonerMethod.swift in Sources */,
