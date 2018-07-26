@@ -18,6 +18,9 @@
 		97D38D35210A623A00150CF9 /* LeagueAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D34210A623A00150CF9 /* LeagueAPI.swift */; };
 		97D38D37210A6AC900150CF9 /* RateLimit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D36210A6AC900150CF9 /* RateLimit.swift */; };
 		97D38D39210A75B800150CF9 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D38210A75B800150CF9 /* Logger.swift */; };
+		97D38D3F210A7B0B00150CF9 /* ServiceProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D3E210A7B0B00150CF9 /* ServiceProxy.swift */; };
+		97D38D43210A7B4900150CF9 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D42210A7B4900150CF9 /* Region.swift */; };
+		97D38D45210A7BEF00150CF9 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D44210A7BEF00150CF9 /* Platform.swift */; };
 		97FB449A210A493000C092AB /* LeagueAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 97FB4498210A492F00C092AB /* LeagueAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -33,6 +36,9 @@
 		97D38D34210A623A00150CF9 /* LeagueAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueAPI.swift; sourceTree = "<group>"; };
 		97D38D36210A6AC900150CF9 /* RateLimit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateLimit.swift; sourceTree = "<group>"; };
 		97D38D38210A75B800150CF9 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		97D38D3E210A7B0B00150CF9 /* ServiceProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProxy.swift; sourceTree = "<group>"; };
+		97D38D42210A7B4900150CF9 /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
+		97D38D44210A7BEF00150CF9 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		97FB4495210A492F00C092AB /* LeagueAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeagueAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97FB4498210A492F00C092AB /* LeagueAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeagueAPI.h; sourceTree = "<group>"; };
 		97FB4499210A492F00C092AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,6 +111,9 @@
 			children = (
 				97D38D28210A549500150CF9 /* APIKey.swift */,
 				97D38D36210A6AC900150CF9 /* RateLimit.swift */,
+				97D38D3E210A7B0B00150CF9 /* ServiceProxy.swift */,
+				97D38D42210A7B4900150CF9 /* Region.swift */,
+				97D38D44210A7BEF00150CF9 /* Platform.swift */,
 				97D38D2D210A5B5700150CF9 /* Methods */,
 			);
 			path = FrameworkModels;
@@ -236,10 +245,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97D38D45210A7BEF00150CF9 /* Platform.swift in Sources */,
 				97D38D35210A623A00150CF9 /* LeagueAPI.swift in Sources */,
 				97D38D22210A521000150CF9 /* RESTRequester.swift in Sources */,
 				97D38D2F210A5B7E00150CF9 /* LeagueMethod.swift in Sources */,
 				97D38D39210A75B800150CF9 /* Logger.swift in Sources */,
+				97D38D3F210A7B0B00150CF9 /* ServiceProxy.swift in Sources */,
+				97D38D43210A7B4900150CF9 /* Region.swift in Sources */,
 				97D38D24210A532B00150CF9 /* ObjectMapper.swift in Sources */,
 				97D38D33210A5F7200150CF9 /* SummonerBusiness.swift in Sources */,
 				97D38D29210A549500150CF9 /* APIKey.swift in Sources */,
