@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum Platform: String {
+internal enum Platform: String {
     case BR1
     case EUN1
     case EUW1
