@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		97D38D1B210A4D8D00150CF9 /* Summoner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D1A210A4D8D00150CF9 /* Summoner.swift */; };
 		97FB449A210A493000C092AB /* LeagueAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 97FB4498210A492F00C092AB /* LeagueAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		97D38D1A210A4D8D00150CF9 /* Summoner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summoner.swift; sourceTree = "<group>"; };
 		97FB4495210A492F00C092AB /* LeagueAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeagueAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97FB4498210A492F00C092AB /* LeagueAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeagueAPI.h; sourceTree = "<group>"; };
 		97FB4499210A492F00C092AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -27,6 +29,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		97D38D19210A4D7700150CF9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				97D38D1A210A4D8D00150CF9 /* Summoner.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		97D38D1C210A50A700150CF9 /* DataAccess */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataAccess;
+			sourceTree = "<group>";
+		};
+		97D38D1D210A50AF00150CF9 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		97D38D1E210A50B700150CF9 /* FrameworkAPI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FrameworkAPI;
+			sourceTree = "<group>";
+		};
+		97D38D1F210A511D00150CF9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		97FB448B210A492F00C092AB = {
 			isa = PBXGroup;
 			children = (
@@ -46,6 +84,11 @@
 		97FB4497210A492F00C092AB /* LeagueAPI */ = {
 			isa = PBXGroup;
 			children = (
+				97D38D1E210A50B700150CF9 /* FrameworkAPI */,
+				97D38D1D210A50AF00150CF9 /* Business */,
+				97D38D1C210A50A700150CF9 /* DataAccess */,
+				97D38D19210A4D7700150CF9 /* Models */,
+				97D38D1F210A511D00150CF9 /* Utils */,
 				97FB4498210A492F00C092AB /* LeagueAPI.h */,
 				97FB4499210A492F00C092AB /* Info.plist */,
 			);
@@ -95,6 +138,7 @@
 				TargetAttributes = {
 					97FB4494210A492F00C092AB = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -130,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97D38D1B210A4D8D00150CF9 /* Summoner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +304,7 @@
 		97FB449E210A493000C092AB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -276,6 +322,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kelmatou.LeagueAPI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,6 +331,7 @@
 		97FB449F210A493000C092AB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
