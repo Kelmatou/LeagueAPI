@@ -17,7 +17,17 @@ internal class LeagueRequester {
     }
     
     public func request(method: LeagueMethod) {
-        let methodUrl: String = method.getMethodUrl()
-        print("Requesting: \(methodUrl)")
+        if canMakeRequest(for: method) {
+            let methodUrl: String = method.getMethodUrl()
+            print("Requesting: \(methodUrl)")
+        }
+        else {
+            print("Cannot make request for now")
+        }
+    }
+    
+    private func canMakeRequest(for method: LeagueMethod) -> Bool {
+        let methodSignature: String = method.getMethodSignature()
+        return self.key.hasReachLimit(for: methodSignature)
     }
 }

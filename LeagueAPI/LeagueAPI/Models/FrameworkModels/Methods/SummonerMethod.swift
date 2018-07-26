@@ -9,7 +9,7 @@
 import Foundation
 
 public class SummonerMethod: LeagueMethod {
-    
+
     public enum SummonerMethods {
         case ByName(name: String)
         case ById(id: Double)
@@ -19,6 +19,10 @@ public class SummonerMethod: LeagueMethod {
     
     public init(method: SummonerMethods) {
         self.method = method
+    }
+    
+    public func getMethodSignature() -> String {
+        return ""
     }
     
     public func getMethodUrl() -> String {

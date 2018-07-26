@@ -10,5 +10,6 @@ import Foundation
 
 public protocol LeagueMethod {
     
+    func getMethodSignature() -> String
     func getMethodUrl() -> String
 }

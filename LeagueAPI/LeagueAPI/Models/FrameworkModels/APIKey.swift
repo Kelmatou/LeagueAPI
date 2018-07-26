@@ -20,6 +20,10 @@ internal class APIKey {
         self.methodLimits = methodLimits ?? Dictionary()
     }
     
+    public func hasReachLimit(for method: String) -> Bool {
+        return hasReachAppRateLimit() || hasReachMethodLimit(for: method)
+    }
+    
     public func hasReachAppRateLimit() -> Bool {
         return appRateLimit?.hasReachLimit ?? false
     }
