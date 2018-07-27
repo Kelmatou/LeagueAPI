@@ -39,7 +39,7 @@ public class SummonerMethod: LeagueMethod {
     
     public func getMethodUrl() -> String {
         let entrypoint: String = self.service.host
-        let commonPath: String = "https://\(entrypoint)\(MethodPaths.Summoner)/\(Version.RiotAPI)/summoners"
+        let commonPath: String = "https://\(entrypoint)\(MethodPaths.Summoner.rawValue)/\(Version.RiotAPI)/summoners"
         switch self.method {
         case .ByAccountId(let id):
             return "\(commonPath)/by-account/\(id)"

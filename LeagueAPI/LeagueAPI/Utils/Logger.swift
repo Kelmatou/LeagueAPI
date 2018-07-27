@@ -11,7 +11,7 @@ import Foundation
 internal class Logger {
     
     public static func print(_ message: String) {
-        print(message)
+        Swift.print(message)
     }
     
     public static func error(_ message: String) {

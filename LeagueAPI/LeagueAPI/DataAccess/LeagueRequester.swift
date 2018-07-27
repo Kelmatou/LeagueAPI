@@ -34,6 +34,6 @@ internal class LeagueRequester<RiotModel: Decodable> {
     
     private func canMakeRequest(for method: LeagueMethod) -> Bool {
         let methodSignature: String = method.getMethodSignature()
-        return self.key.hasReachLimit(for: methodSignature)
+        return !self.key.hasReachLimit(for: methodSignature)
     }
 }
