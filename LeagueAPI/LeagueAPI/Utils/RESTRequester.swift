@@ -8,7 +8,7 @@
 
 import UIKit
 
-internal class RESTRequester {
+public class RESTRequester {
     
     public enum AccessMethod: String {
         case GET     = "GET"

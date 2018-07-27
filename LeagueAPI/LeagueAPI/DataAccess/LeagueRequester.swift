@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal class LeagueRequester {
+internal class LeagueRequester<RiotModel: Decodable> {
     
     private var key: APIKey
     
@@ -16,13 +16,19 @@ internal class LeagueRequester {
         self.key = key
     }
     
-    public func request(method: LeagueMethod) {
+    internal func request(method: LeagueMethod, handler: @escaping (RiotModel?, String?) -> Void) {
         if canMakeRequest(for: method) {
+            let accessMethod: RESTRequester.AccessMethod = method.getAccessMethod()
             let methodUrl: String = method.getMethodUrl()
+            let headers: [String: String] = ["X-Riot-Token": self.key.token]
             Logger.print("Requesting: \(methodUrl)")
+
+            RESTRequester.requestObject(accessMethod, url: methodUrl, headers: headers, asType: RiotModel.self) { (result, error) in
+                handler(result, error)
+            }
         }
         else {
-            Logger.error("Cannot make request for now")
+            handler(nil, "Cannot make request for now")
         }
     }
     

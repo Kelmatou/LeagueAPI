@@ -16,13 +16,33 @@ public class LeagueAPI {
         self.key = APIKey(token: APIToken)
     }
     
-    public func request(method: LeagueMethod) {
-        switch method {
-        case is SummonerMethod:
-            let summonerBusiness: SummonerBusiness = SummonerBusiness(key: self.key, method: method as! SummonerMethod)
-            summonerBusiness.request()
-        default:
-            Logger.error("Unknown method type")
+    // MARK: - Summoner
+    
+    public func getSummonerByAccountId(id: Double, on region: Region, handler: @escaping (Summoner?, String?) -> Void) {
+        getSummoner(method: .ByAccountId(id: id), region: region) { (summoner, error) in
+            handler(summoner, error)
+        }
+    }
+    
+    public func getSummonerByName(name: String, on region: Region, handler: @escaping (Summoner?, String?) -> Void) {
+        getSummoner(method: .ByName(name: name), region: region) { (summoner, error) in
+            handler(summoner, error)
+        }
+    }
+    
+    public func getSummonerById(id: Double, on region: Region, handler: @escaping (Summoner?, String?) -> Void) {
+        getSummoner(method: .ById(id: id), region: region) { (summoner, error) in
+            handler(summoner, error)
+        }
+    }
+    
+    // MARK: - Private
+    
+    private func getSummoner(method: SummonerMethod.SummonerMethods, region: Region, handler: @escaping (Summoner?, String?) -> Void) {
+        let summonerMethod: SummonerMethod = SummonerMethod(method: method, region: region)
+        let summonerBusiness: SummonerBusiness = SummonerBusiness(key: self.key, method: summonerMethod)
+        summonerBusiness.request() { (summonner, error) in
+            handler(summonner, error)
         }
     }
 }

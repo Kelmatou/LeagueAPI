@@ -18,8 +18,10 @@ internal class SummonerBusiness {
         self.method = method
     }
     
-    public func request() {
-        let requester: LeagueRequester = LeagueRequester(key: self.key)
-        requester.request(method: self.method)
+    public func request<RiotModel: Decodable>(handler: @escaping (RiotModel?, String?) -> Void) {
+        let requester: LeagueRequester<RiotModel> = LeagueRequester(key: self.key)
+        requester.request(method: self.method) { (summoner, error) in
+            handler(summoner, error)
+        }
     }
 }

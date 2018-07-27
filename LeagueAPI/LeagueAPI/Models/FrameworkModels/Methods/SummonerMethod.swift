@@ -9,7 +9,7 @@
 import Foundation
 
 public class SummonerMethod: LeagueMethod {
-
+    
     public enum SummonerMethods {
         case ByAccountId(id: Double)
         case ByName(name: String)
@@ -22,6 +22,10 @@ public class SummonerMethod: LeagueMethod {
     public init(method: SummonerMethods, region: Region) {
         self.method = method
         self.service = ServiceProxy(for: region)
+    }
+    
+    public func getAccessMethod() -> RESTRequester.AccessMethod {
+        return .GET
     }
     
     public func getMethodSignature() -> String {
