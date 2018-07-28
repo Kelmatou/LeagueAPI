@@ -1,0 +1,34 @@
+//
+//  Queue.swift
+//  LeagueAPI
+//
+//  Created by Antoine Clop on 7/28/18.
+//  Copyright © 2018 Antoine Clop. All rights reserved.
+//
+
+import Foundation
+
+public class Queue {
+    
+    public enum QueueTypes: String {
+        case RankedSolo5V5 = "RANKED_SOLO_5x5"
+        case RankedFlex5V5 = "RANKED_FLEX_SR"
+        case RankedFlex3V3 = "RANKED_FLEX_TT"
+        case Unknown = "Unknown"
+    }
+    
+    public private(set) var type: QueueTypes
+    
+    internal init(queueType: String) {
+        switch queueType {
+        case QueueTypes.RankedSolo5V5.rawValue:
+            self.type = .RankedSolo5V5
+        case QueueTypes.RankedFlex5V5.rawValue:
+            self.type = .RankedFlex5V5
+        case QueueTypes.RankedFlex3V3.rawValue:
+            self.type = .RankedFlex3V3
+        default:
+            self.type = .Unknown
+        }
+    }
+}
