@@ -75,6 +75,7 @@
 		97D38DD9210CF05C00150CF9 /* MatchEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DD8210CF05C00150CF9 /* MatchEvent.swift */; };
 		97D38DDB210CF85D00150CF9 /* MatchMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DDA210CF85D00150CF9 /* MatchMethod.swift */; };
 		97D38DDD210D0CEF00150CF9 /* MatchBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DDC210D0CEF00150CF9 /* MatchBusiness.swift */; };
+		97D38DDF210D16C400150CF9 /* ThirdPartyCodeMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DDE210D16C400150CF9 /* ThirdPartyCodeMethod.swift */; };
 		97FB449A210A493000C092AB /* LeagueAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 97FB4498210A492F00C092AB /* LeagueAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -147,6 +148,7 @@
 		97D38DD8210CF05C00150CF9 /* MatchEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchEvent.swift; sourceTree = "<group>"; };
 		97D38DDA210CF85D00150CF9 /* MatchMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchMethod.swift; sourceTree = "<group>"; };
 		97D38DDC210D0CEF00150CF9 /* MatchBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchBusiness.swift; sourceTree = "<group>"; };
+		97D38DDE210D16C400150CF9 /* ThirdPartyCodeMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartyCodeMethod.swift; sourceTree = "<group>"; };
 		97FB4495210A492F00C092AB /* LeagueAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeagueAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97FB4498210A492F00C092AB /* LeagueAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeagueAPI.h; sourceTree = "<group>"; };
 		97FB4499210A492F00C092AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 				97D38DDA210CF85D00150CF9 /* MatchMethod.swift */,
 				97D38DB4210CC12800150CF9 /* SpectatorMethod.swift */,
 				97D38D30210A5CDA00150CF9 /* SummonerMethod.swift */,
+				97D38DDE210D16C400150CF9 /* ThirdPartyCodeMethod.swift */,
 			);
 			path = Methods;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				97D38D91210C85AC00150CF9 /* RankedMethod.swift in Sources */,
 				97D38D93210C88E800150CF9 /* RankedBusiness.swift in Sources */,
 				97D38DC7210CCCA400150CF9 /* MatchParticipantIdentity.swift in Sources */,
+				97D38DDF210D16C400150CF9 /* ThirdPartyCodeMethod.swift in Sources */,
 				97D38DCD210CCDE200150CF9 /* LegacyRune.swift in Sources */,
 				97D38D95210C9D2100150CF9 /* ServiceStatus.swift in Sources */,
 				97D38DB7210CC2FE00150CF9 /* SpectatorBusiness.swift in Sources */,
