@@ -158,4 +158,12 @@ public class LeagueAPI {
             handler(summoner, error)
         }
     }
+    
+    // MARK: - Third Party Code
+    
+    public func getThirdPartyVerificationCode(by summonerId: Double, on region: Region, handler: @escaping (String?, String?) -> Void) {
+        ThirdPartyCodeBusiness.getVerificationCode(method: .ById(id: summonerId), region: region, key: self.key) { (code, error) in
+            handler(code, error)
+        }
+    }
 }
