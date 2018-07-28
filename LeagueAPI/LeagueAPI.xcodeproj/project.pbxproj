@@ -76,6 +76,7 @@
 		97D38DDB210CF85D00150CF9 /* MatchMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DDA210CF85D00150CF9 /* MatchMethod.swift */; };
 		97D38DDD210D0CEF00150CF9 /* MatchBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DDC210D0CEF00150CF9 /* MatchBusiness.swift */; };
 		97D38DDF210D16C400150CF9 /* ThirdPartyCodeMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DDE210D16C400150CF9 /* ThirdPartyCodeMethod.swift */; };
+		97D38DE1210D17B700150CF9 /* ThirdPartyCodeBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DE0210D17B700150CF9 /* ThirdPartyCodeBusiness.swift */; };
 		97FB449A210A493000C092AB /* LeagueAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 97FB4498210A492F00C092AB /* LeagueAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -149,6 +150,7 @@
 		97D38DDA210CF85D00150CF9 /* MatchMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchMethod.swift; sourceTree = "<group>"; };
 		97D38DDC210D0CEF00150CF9 /* MatchBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchBusiness.swift; sourceTree = "<group>"; };
 		97D38DDE210D16C400150CF9 /* ThirdPartyCodeMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartyCodeMethod.swift; sourceTree = "<group>"; };
+		97D38DE0210D17B700150CF9 /* ThirdPartyCodeBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartyCodeBusiness.swift; sourceTree = "<group>"; };
 		97FB4495210A492F00C092AB /* LeagueAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeagueAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97FB4498210A492F00C092AB /* LeagueAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeagueAPI.h; sourceTree = "<group>"; };
 		97FB4499210A492F00C092AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				97D38DDC210D0CEF00150CF9 /* MatchBusiness.swift */,
 				97D38DB6210CC2FE00150CF9 /* SpectatorBusiness.swift */,
 				97D38D32210A5F7200150CF9 /* SummonerBusiness.swift */,
+				97D38DE0210D17B700150CF9 /* ThirdPartyCodeBusiness.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				97D38D9F210CA2E800150CF9 /* StatusMethod.swift in Sources */,
 				97D38D75210C57E400150CF9 /* ChampionMastery.swift in Sources */,
 				97D38DC1210CCC3000150CF9 /* MatchPlayer.swift in Sources */,
+				97D38DE1210D17B700150CF9 /* ThirdPartyCodeBusiness.swift in Sources */,
 				97D38DA9210CA88100150CF9 /* Observer.swift in Sources */,
 				97D38D45210A7BEF00150CF9 /* Platform.swift in Sources */,
 				97D38D35210A623A00150CF9 /* LeagueAPI.swift in Sources */,
