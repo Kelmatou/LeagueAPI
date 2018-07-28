@@ -14,7 +14,7 @@ public class LeagueInfo: Decodable {
     public var playerOrTeamName: String
     public var rank: String
     public var leaguePoints: Int
-    public var series: Series
+    public var series: Series?
     public var wins: Int
     public var losses: Int
     public var hotStreak: Bool
@@ -36,7 +36,7 @@ public class LeagueInfo: Decodable {
         case inactive = "inactive"
     }
     
-    public init(playerOrTeamId: String, playerOrTeamName: String, rank: String, leaguePoints: Int, series: Series, wins: Int, losses: Int, hotStreak: Bool, veteran: Bool, freshBlood: Bool, inactive: Bool) {
+    public init(playerOrTeamId: String, playerOrTeamName: String, rank: String, leaguePoints: Int, series: Series?, wins: Int, losses: Int, hotStreak: Bool, veteran: Bool, freshBlood: Bool, inactive: Bool) {
         self.playerOrTeamId = playerOrTeamId
         self.playerOrTeamName = playerOrTeamName
         self.rank = rank
@@ -56,7 +56,7 @@ public class LeagueInfo: Decodable {
         self.playerOrTeamName = try container.decode(String.self, forKey: .playerOrTeamName)
         self.rank = try container.decode(String.self, forKey: .rank)
         self.leaguePoints = try container.decode(Int.self, forKey: .leaguePoints)
-        self.series = try container.decode(Series.self, forKey: .series)
+        self.series = try container.decode(Series?.self, forKey: .series)
         self.wins = try container.decode(Int.self, forKey: .wins)
         self.losses = try container.decode(Int.self, forKey: .losses)
         self.hotStreak = try container.decode(Bool.self, forKey: .hotStreak)

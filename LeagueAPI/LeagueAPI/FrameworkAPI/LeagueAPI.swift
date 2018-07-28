@@ -66,6 +66,7 @@ public class LeagueAPI {
     }
     
     public func getMasterLeague(for queue: Queue, on region: Region, handler: @escaping (League?, String?) -> Void) {
+        
         RankedBusiness.getRanked(method: .MasterByQueue(queue: queue), region: region, key: self.key) { (league, error) in
             handler(league, error)
         }
@@ -105,6 +106,7 @@ public class LeagueAPI {
         }
     }
     
+    // WARNING: Too many calls to unexisting league may result in Blacklist
     public func getSummoner(by summonerId: Double, on region: Region, handler: @escaping (Summoner?, String?) -> Void) {
         SummonerBusiness.getSummoner(method: .ById(id: summonerId), region: region, key: self.key) { (summoner, error) in
             handler(summoner, error)

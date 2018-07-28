@@ -19,6 +19,14 @@ public class Queue {
     
     public private(set) var type: QueueTypes
     
+    public init?(queueType: QueueTypes) {
+        guard queueType != .Unknown else {
+            Logger.error("QueueType instance cannot be created with \"Unknown\" value")
+            return nil
+        }
+        self.type = queueType
+    }
+    
     internal init(queueType: String) {
         switch queueType {
         case QueueTypes.RankedSolo5V5.rawValue:
@@ -28,6 +36,7 @@ public class Queue {
         case QueueTypes.RankedFlex3V3.rawValue:
             self.type = .RankedFlex3V3
         default:
+            Logger.warning("Queue type \"\(queueType)\" unknown (check for LeagueAPI update)")
             self.type = .Unknown
         }
     }
