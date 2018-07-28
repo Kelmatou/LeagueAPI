@@ -30,6 +30,7 @@
 		97D38D7B210C5D8500150CF9 /* ChampionMasteryMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D7A210C5D8500150CF9 /* ChampionMasteryMethod.swift */; };
 		97D38D7D210C69CB00150CF9 /* ChampionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D7C210C69CB00150CF9 /* ChampionList.swift */; };
 		97D38D7F210C69FE00150CF9 /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D7E210C69FE00150CF9 /* Champion.swift */; };
+		97D38D81210C6BFB00150CF9 /* ChampionMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D80210C6BFB00150CF9 /* ChampionMethod.swift */; };
 		97FB449A210A493000C092AB /* LeagueAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 97FB4498210A492F00C092AB /* LeagueAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		97D38D7A210C5D8500150CF9 /* ChampionMasteryMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMasteryMethod.swift; sourceTree = "<group>"; };
 		97D38D7C210C69CB00150CF9 /* ChampionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionList.swift; sourceTree = "<group>"; };
 		97D38D7E210C69FE00150CF9 /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
+		97D38D80210C6BFB00150CF9 /* ChampionMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMethod.swift; sourceTree = "<group>"; };
 		97FB4495210A492F00C092AB /* LeagueAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeagueAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97FB4498210A492F00C092AB /* LeagueAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeagueAPI.h; sourceTree = "<group>"; };
 		97FB4499210A492F00C092AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				97D38D46210A80AA00150CF9 /* MethodPaths.swift */,
 				97D38D30210A5CDA00150CF9 /* SummonerMethod.swift */,
 				97D38D7A210C5D8500150CF9 /* ChampionMasteryMethod.swift */,
+				97D38D80210C6BFB00150CF9 /* ChampionMethod.swift */,
 			);
 			path = Methods;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				97D38D29210A549500150CF9 /* APIKey.swift in Sources */,
 				97D38D7D210C69CB00150CF9 /* ChampionList.swift in Sources */,
 				97D38D1B210A4D8D00150CF9 /* Summoner.swift in Sources */,
+				97D38D81210C6BFB00150CF9 /* ChampionMethod.swift in Sources */,
 				97D38D47210A80AA00150CF9 /* MethodPaths.swift in Sources */,
 				97D38D77210C5C4A00150CF9 /* APIBusiness.swift in Sources */,
 				97D38D73210B9ED300150CF9 /* Rate.swift in Sources */,
