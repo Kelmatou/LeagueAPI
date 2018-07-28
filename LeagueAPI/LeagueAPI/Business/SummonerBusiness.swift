@@ -10,17 +10,10 @@ import Foundation
 
 internal class SummonerBusiness {
     
-    private var key: APIKey
-    private var method: SummonerMethod
-    
-    public init(key: APIKey, method: SummonerMethod) {
-        self.key = key
-        self.method = method
-    }
-    
-    public func request<RiotModel: Decodable>(handler: @escaping (RiotModel?, String?) -> Void) {
-        let requester: LeagueRequester<RiotModel> = LeagueRequester(key: self.key)
-        requester.request(method: self.method) { (summoner, error) in
+    public static func getSummoner(method: SummonerMethod.SummonerMethods, region: Region, key: APIKey, handler: @escaping (Summoner?, String?) -> Void) {
+        let summonerMethod: SummonerMethod = SummonerMethod(method: method, region: region)
+        let summonerBusiness: APIBusiness = APIBusiness(key: key, method: summonerMethod)
+        summonerBusiness.request() { (summoner, error) in
             handler(summoner, error)
         }
     }
