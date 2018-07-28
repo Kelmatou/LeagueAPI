@@ -83,6 +83,14 @@ public class LeagueAPI {
         }
     }
     
+    // MARK: - Status
+    
+    public func getStatus(on region: Region, handler: @escaping (ServiceStatus?, String?) -> Void) {
+        StatusBusiness.getStatus(method: .GetStatus, region: region, key: self.key) { (status, error) in
+            handler(status, error)
+        }
+    }
+    
     // MARK: - Summoner
     
     public func getSummonerByAccountId(accountId: Double, on region: Region, handler: @escaping (Summoner?, String?) -> Void) {
