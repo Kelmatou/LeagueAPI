@@ -58,6 +58,7 @@ public class LeagueAPI {
         }
     }
     
+    // WARNING: Too many calls to unexisting league may result in Blacklist
     public func getLeague(by leagueId: String, on region: Region, handler: @escaping (League?, String?) -> Void) {
         RankedBusiness.getRanked(method: .LeagueById(id: leagueId), region: region, key: self.key) { (league, error) in
             handler(league, error)
