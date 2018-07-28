@@ -55,6 +55,7 @@
 		97D38DB1210CABBA00150CF9 /* RunePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DB0210CABBA00150CF9 /* RunePage.swift */; };
 		97D38DB3210CB3FD00150CF9 /* GameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DB2210CB3FD00150CF9 /* GameMode.swift */; };
 		97D38DB5210CC12800150CF9 /* SpectatorMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DB4210CC12800150CF9 /* SpectatorMethod.swift */; };
+		97D38DB7210CC2FE00150CF9 /* SpectatorBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DB6210CC2FE00150CF9 /* SpectatorBusiness.swift */; };
 		97FB449A210A493000C092AB /* LeagueAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 97FB4498210A492F00C092AB /* LeagueAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -107,6 +108,7 @@
 		97D38DB0210CABBA00150CF9 /* RunePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunePage.swift; sourceTree = "<group>"; };
 		97D38DB2210CB3FD00150CF9 /* GameMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMode.swift; sourceTree = "<group>"; };
 		97D38DB4210CC12800150CF9 /* SpectatorMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectatorMethod.swift; sourceTree = "<group>"; };
+		97D38DB6210CC2FE00150CF9 /* SpectatorBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectatorBusiness.swift; sourceTree = "<group>"; };
 		97FB4495210A492F00C092AB /* LeagueAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeagueAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97FB4498210A492F00C092AB /* LeagueAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeagueAPI.h; sourceTree = "<group>"; };
 		97FB4499210A492F00C092AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				97D38D82210C6E9B00150CF9 /* ChampionBusiness.swift */,
 				97D38D92210C88E800150CF9 /* RankedBusiness.swift */,
 				97D38DA0210CA3A100150CF9 /* StatusBusiness.swift */,
+				97D38DB6210CC2FE00150CF9 /* SpectatorBusiness.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				97D38D91210C85AC00150CF9 /* RankedMethod.swift in Sources */,
 				97D38D93210C88E800150CF9 /* RankedBusiness.swift in Sources */,
 				97D38D95210C9D2100150CF9 /* ServiceStatus.swift in Sources */,
+				97D38DB7210CC2FE00150CF9 /* SpectatorBusiness.swift in Sources */,
 				97D38D85210C727300150CF9 /* League.swift in Sources */,
 				97D38D43210A7B4900150CF9 /* Region.swift in Sources */,
 				97D38D99210C9D3900150CF9 /* Incident.swift in Sources */,
