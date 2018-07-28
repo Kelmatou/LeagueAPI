@@ -7,3 +7,49 @@
 //
 
 import Foundation
+
+public class MatchReference: Decodable {
+    
+    public var gameId: Double
+    public var season: Int
+    public var queue: Int
+    public var championId: Int
+    public var lane: String
+    public var role: String
+    public var platformId: String
+    public var gameDate: Double
+    
+    enum CodingKeys: String, CodingKey {
+        case gameId = "gameId"
+        case season = "season"
+        case queue = "queue"
+        case championId = "champion"
+        case lane = "lane"
+        case role = "role"
+        case platformId = "platformId"
+        case gameDate = "timestamp"
+    }
+    
+    public init(gameId: Double, season: Int, queue: Int, championId: Int, lane: String, role: String, platformId: String, gameDate: Double) {
+        self.gameId = gameId
+        self.season = season
+        self.queue = queue
+        self.championId = championId
+        self.lane = lane
+        self.role = role
+        self.platformId = platformId
+        self.gameDate = gameDate
+    }
+    
+    public required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.gameId = try container.decode(Double.self, forKey: .gameId)
+        self.season = try container.decode(Int.self, forKey: .season)
+        self.queue = try container.decode(Int.self, forKey: .queue)
+        self.championId = try container.decode(Int.self, forKey: .championId)
+        self.lane = try container.decode(String.self, forKey: .lane)
+        self.role = try container.decode(String.self, forKey: .role)
+        self.platformId = try container.decode(String.self, forKey: .platformId)
+        self.gameDate = try container.decode(Double.self, forKey: .gameDate)
+    }
+}

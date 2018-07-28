@@ -56,6 +56,18 @@
 		97D38DB3210CB3FD00150CF9 /* GameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DB2210CB3FD00150CF9 /* GameMode.swift */; };
 		97D38DB5210CC12800150CF9 /* SpectatorMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DB4210CC12800150CF9 /* SpectatorMethod.swift */; };
 		97D38DB7210CC2FE00150CF9 /* SpectatorBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DB6210CC2FE00150CF9 /* SpectatorBusiness.swift */; };
+		97D38DB9210CC75E00150CF9 /* MatchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DB8210CC75E00150CF9 /* MatchList.swift */; };
+		97D38DBB210CC78B00150CF9 /* MatchReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DBA210CC78B00150CF9 /* MatchReference.swift */; };
+		97D38DBD210CCB3A00150CF9 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DBC210CCB3A00150CF9 /* Match.swift */; };
+		97D38DBF210CCC2100150CF9 /* MatchParticipant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DBE210CCC2100150CF9 /* MatchParticipant.swift */; };
+		97D38DC1210CCC3000150CF9 /* MatchPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DC0210CCC3000150CF9 /* MatchPlayer.swift */; };
+		97D38DC3210CCC4700150CF9 /* TeamStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DC2210CCC4700150CF9 /* TeamStats.swift */; };
+		97D38DC5210CCC6B00150CF9 /* TeamBan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DC4210CCC6B00150CF9 /* TeamBan.swift */; };
+		97D38DC7210CCCA400150CF9 /* MatchParticipantIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DC6210CCCA400150CF9 /* MatchParticipantIdentity.swift */; };
+		97D38DC9210CCCB800150CF9 /* MatchParticipantStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DC8210CCCB800150CF9 /* MatchParticipantStats.swift */; };
+		97D38DCB210CCCDB00150CF9 /* MatchParticipantTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DCA210CCCDB00150CF9 /* MatchParticipantTimeline.swift */; };
+		97D38DCD210CCDE200150CF9 /* LegacyRune.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DCC210CCDE200150CF9 /* LegacyRune.swift */; };
+		97D38DCF210CCDFD00150CF9 /* LegacyMastery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DCE210CCDFD00150CF9 /* LegacyMastery.swift */; };
 		97FB449A210A493000C092AB /* LeagueAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 97FB4498210A492F00C092AB /* LeagueAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -109,6 +121,18 @@
 		97D38DB2210CB3FD00150CF9 /* GameMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMode.swift; sourceTree = "<group>"; };
 		97D38DB4210CC12800150CF9 /* SpectatorMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectatorMethod.swift; sourceTree = "<group>"; };
 		97D38DB6210CC2FE00150CF9 /* SpectatorBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectatorBusiness.swift; sourceTree = "<group>"; };
+		97D38DB8210CC75E00150CF9 /* MatchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchList.swift; sourceTree = "<group>"; };
+		97D38DBA210CC78B00150CF9 /* MatchReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchReference.swift; sourceTree = "<group>"; };
+		97D38DBC210CCB3A00150CF9 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		97D38DBE210CCC2100150CF9 /* MatchParticipant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchParticipant.swift; sourceTree = "<group>"; };
+		97D38DC0210CCC3000150CF9 /* MatchPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchPlayer.swift; sourceTree = "<group>"; };
+		97D38DC2210CCC4700150CF9 /* TeamStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamStats.swift; sourceTree = "<group>"; };
+		97D38DC4210CCC6B00150CF9 /* TeamBan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamBan.swift; sourceTree = "<group>"; };
+		97D38DC6210CCCA400150CF9 /* MatchParticipantIdentity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchParticipantIdentity.swift; sourceTree = "<group>"; };
+		97D38DC8210CCCB800150CF9 /* MatchParticipantStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchParticipantStats.swift; sourceTree = "<group>"; };
+		97D38DCA210CCCDB00150CF9 /* MatchParticipantTimeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchParticipantTimeline.swift; sourceTree = "<group>"; };
+		97D38DCC210CCDE200150CF9 /* LegacyRune.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacyRune.swift; sourceTree = "<group>"; };
+		97D38DCE210CCDFD00150CF9 /* LegacyMastery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacyMastery.swift; sourceTree = "<group>"; };
 		97FB4495210A492F00C092AB /* LeagueAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeagueAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97FB4498210A492F00C092AB /* LeagueAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeagueAPI.h; sourceTree = "<group>"; };
 		97FB4499210A492F00C092AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -197,6 +221,18 @@
 				97D38DAA210CA89B00150CF9 /* Participant.swift */,
 				97D38DAE210CABA700150CF9 /* GameCustomObject.swift */,
 				97D38DB0210CABBA00150CF9 /* RunePage.swift */,
+				97D38DB8210CC75E00150CF9 /* MatchList.swift */,
+				97D38DBA210CC78B00150CF9 /* MatchReference.swift */,
+				97D38DBC210CCB3A00150CF9 /* Match.swift */,
+				97D38DC6210CCCA400150CF9 /* MatchParticipantIdentity.swift */,
+				97D38DC0210CCC3000150CF9 /* MatchPlayer.swift */,
+				97D38DC2210CCC4700150CF9 /* TeamStats.swift */,
+				97D38DC4210CCC6B00150CF9 /* TeamBan.swift */,
+				97D38DBE210CCC2100150CF9 /* MatchParticipant.swift */,
+				97D38DC8210CCCB800150CF9 /* MatchParticipantStats.swift */,
+				97D38DCA210CCCDB00150CF9 /* MatchParticipantTimeline.swift */,
+				97D38DCC210CCDE200150CF9 /* LegacyRune.swift */,
+				97D38DCE210CCDFD00150CF9 /* LegacyMastery.swift */,
 			);
 			path = RiotModels;
 			sourceTree = "<group>";
@@ -352,6 +388,7 @@
 			files = (
 				97D38D9F210CA2E800150CF9 /* StatusMethod.swift in Sources */,
 				97D38D75210C57E400150CF9 /* ChampionMastery.swift in Sources */,
+				97D38DC1210CCC3000150CF9 /* MatchPlayer.swift in Sources */,
 				97D38DA9210CA88100150CF9 /* Observer.swift in Sources */,
 				97D38D45210A7BEF00150CF9 /* Platform.swift in Sources */,
 				97D38D35210A623A00150CF9 /* LeagueAPI.swift in Sources */,
@@ -360,6 +397,8 @@
 				97D38D87210C728300150CF9 /* LeagueInfo.swift in Sources */,
 				97D38DAB210CA89B00150CF9 /* Participant.swift in Sources */,
 				97D38DB3210CB3FD00150CF9 /* GameMode.swift in Sources */,
+				97D38DCB210CCCDB00150CF9 /* MatchParticipantTimeline.swift in Sources */,
+				97D38DC3210CCC4700150CF9 /* TeamStats.swift in Sources */,
 				97D38D22210A521000150CF9 /* RESTRequester.swift in Sources */,
 				97D38D79210C5D4600150CF9 /* ChampionMasteryBusiness.swift in Sources */,
 				97D38DA7210CA86F00150CF9 /* BannedChampion.swift in Sources */,
@@ -368,22 +407,30 @@
 				97D38D2F210A5B7E00150CF9 /* LeagueMethod.swift in Sources */,
 				97D38D83210C6E9B00150CF9 /* ChampionBusiness.swift in Sources */,
 				97D38D8B210C72E900150CF9 /* RankedPosition.swift in Sources */,
+				97D38DC5210CCC6B00150CF9 /* TeamBan.swift in Sources */,
 				97D38D7F210C69FE00150CF9 /* Champion.swift in Sources */,
+				97D38DCF210CCDFD00150CF9 /* LegacyMastery.swift in Sources */,
 				97D38D97210C9D2C00150CF9 /* Service.swift in Sources */,
+				97D38DC9210CCCB800150CF9 /* MatchParticipantStats.swift in Sources */,
 				97D38D39210A75B800150CF9 /* Logger.swift in Sources */,
 				97D38D3F210A7B0B00150CF9 /* ServiceProxy.swift in Sources */,
 				97D38D91210C85AC00150CF9 /* RankedMethod.swift in Sources */,
 				97D38D93210C88E800150CF9 /* RankedBusiness.swift in Sources */,
+				97D38DC7210CCCA400150CF9 /* MatchParticipantIdentity.swift in Sources */,
+				97D38DCD210CCDE200150CF9 /* LegacyRune.swift in Sources */,
 				97D38D95210C9D2100150CF9 /* ServiceStatus.swift in Sources */,
 				97D38DB7210CC2FE00150CF9 /* SpectatorBusiness.swift in Sources */,
 				97D38D85210C727300150CF9 /* League.swift in Sources */,
+				97D38DBF210CCC2100150CF9 /* MatchParticipant.swift in Sources */,
 				97D38D43210A7B4900150CF9 /* Region.swift in Sources */,
 				97D38D99210C9D3900150CF9 /* Incident.swift in Sources */,
 				97D38D24210A532B00150CF9 /* ObjectMapper.swift in Sources */,
 				97D38D9B210C9D4100150CF9 /* Message.swift in Sources */,
 				97D38D33210A5F7200150CF9 /* SummonerBusiness.swift in Sources */,
 				97D38D29210A549500150CF9 /* APIKey.swift in Sources */,
+				97D38DBB210CC78B00150CF9 /* MatchReference.swift in Sources */,
 				97D38D7D210C69CB00150CF9 /* ChampionList.swift in Sources */,
+				97D38DBD210CCB3A00150CF9 /* Match.swift in Sources */,
 				97D38D1B210A4D8D00150CF9 /* Summoner.swift in Sources */,
 				97D38D81210C6BFB00150CF9 /* ChampionMethod.swift in Sources */,
 				97D38D47210A80AA00150CF9 /* MethodPaths.swift in Sources */,
@@ -395,6 +442,7 @@
 				97D38D9D210C9D4E00150CF9 /* Translation.swift in Sources */,
 				97D38D7B210C5D8500150CF9 /* ChampionMasteryMethod.swift in Sources */,
 				97D38D4B210A823E00150CF9 /* Version.swift in Sources */,
+				97D38DB9210CC75E00150CF9 /* MatchList.swift in Sources */,
 				97D38DAF210CABA700150CF9 /* GameCustomObject.swift in Sources */,
 				97D38DA5210CA86000150CF9 /* GameInfo.swift in Sources */,
 				97D38D2B210A5A5C00150CF9 /* LeagueRequester.swift in Sources */,
