@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol LeagueMethod {
+internal protocol LeagueMethod {
     
     func getAccessMethod() -> RESTRequester.AccessMethod
     func getMethodSignature() -> String

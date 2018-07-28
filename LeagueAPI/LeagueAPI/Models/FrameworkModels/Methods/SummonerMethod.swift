@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class SummonerMethod: LeagueMethod {
+internal class SummonerMethod: LeagueMethod {
     
     public enum SummonerMethods {
         case ByAccountId(id: Double)

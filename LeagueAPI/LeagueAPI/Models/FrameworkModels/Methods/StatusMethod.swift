@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class StatusMethod: LeagueMethod {
+internal class StatusMethod: LeagueMethod {
     
     public enum StatusMethods {
         case GetStatus

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class ChampionMasteryMethod: LeagueMethod {
+internal class ChampionMasteryMethod: LeagueMethod {
     
     public enum ChampionMasteryMethods {
         case BySummonerId(id: Double)

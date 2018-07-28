@@ -54,6 +54,7 @@
 		97D38DAF210CABA700150CF9 /* GameCustomObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DAE210CABA700150CF9 /* GameCustomObject.swift */; };
 		97D38DB1210CABBA00150CF9 /* RunePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DB0210CABBA00150CF9 /* RunePage.swift */; };
 		97D38DB3210CB3FD00150CF9 /* GameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DB2210CB3FD00150CF9 /* GameMode.swift */; };
+		97D38DB5210CC12800150CF9 /* SpectatorMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DB4210CC12800150CF9 /* SpectatorMethod.swift */; };
 		97FB449A210A493000C092AB /* LeagueAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 97FB4498210A492F00C092AB /* LeagueAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -105,6 +106,7 @@
 		97D38DAE210CABA700150CF9 /* GameCustomObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCustomObject.swift; sourceTree = "<group>"; };
 		97D38DB0210CABBA00150CF9 /* RunePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunePage.swift; sourceTree = "<group>"; };
 		97D38DB2210CB3FD00150CF9 /* GameMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMode.swift; sourceTree = "<group>"; };
+		97D38DB4210CC12800150CF9 /* SpectatorMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectatorMethod.swift; sourceTree = "<group>"; };
 		97FB4495210A492F00C092AB /* LeagueAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeagueAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97FB4498210A492F00C092AB /* LeagueAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeagueAPI.h; sourceTree = "<group>"; };
 		97FB4499210A492F00C092AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -225,11 +227,12 @@
 			children = (
 				97D38D2E210A5B7E00150CF9 /* LeagueMethod.swift */,
 				97D38D46210A80AA00150CF9 /* MethodPaths.swift */,
-				97D38D30210A5CDA00150CF9 /* SummonerMethod.swift */,
 				97D38D7A210C5D8500150CF9 /* ChampionMasteryMethod.swift */,
 				97D38D80210C6BFB00150CF9 /* ChampionMethod.swift */,
 				97D38D90210C85AC00150CF9 /* RankedMethod.swift */,
 				97D38D9E210CA2E800150CF9 /* StatusMethod.swift */,
+				97D38DB4210CC12800150CF9 /* SpectatorMethod.swift */,
+				97D38D30210A5CDA00150CF9 /* SummonerMethod.swift */,
 			);
 			path = Methods;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				97D38D45210A7BEF00150CF9 /* Platform.swift in Sources */,
 				97D38D35210A623A00150CF9 /* LeagueAPI.swift in Sources */,
 				97D38D89210C729900150CF9 /* Series.swift in Sources */,
+				97D38DB5210CC12800150CF9 /* SpectatorMethod.swift in Sources */,
 				97D38D87210C728300150CF9 /* LeagueInfo.swift in Sources */,
 				97D38DAB210CA89B00150CF9 /* Participant.swift in Sources */,
 				97D38DB3210CB3FD00150CF9 /* GameMode.swift in Sources */,
