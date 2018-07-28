@@ -1,5 +1,5 @@
 //
-//  FeaturedGame.swift
+//  FeaturedGames.swift
 //  LeagueAPI
 //
 //  Created by Antoine Clop on 7/28/18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class FeaturedGame: Decodable {
+public class FeaturedGames: Decodable {
     
     public var refreshInterval: Double
     public var games: [GameInfo]

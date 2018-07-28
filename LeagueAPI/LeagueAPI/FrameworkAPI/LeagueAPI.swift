@@ -92,6 +92,20 @@ public class LeagueAPI {
         }
     }
     
+    // MARK: - Spectator
+    
+    public func getCurrentGame(by summonerId: Double, on region: Region, handler: @escaping (GameInfo?, String?) -> Void) {
+        SpectatorBusiness.getCurrentGame(method: .BySummonerId(id: summonerId), region: region, key: self.key) { (game, error) in
+            handler(game, error)
+        }
+    }
+    
+    public func getFeaturedGames(on region: Region, handler: @escaping (FeaturedGames?, String?) -> Void) {
+        SpectatorBusiness.getCurrentGame(method: .FeaturedGames, region: region, key: self.key) { (game, error) in
+            handler(game, error)
+        }
+    }
+    
     // MARK: - Summoner
     
     public func getSummonerByAccountId(accountId: Double, on region: Region, handler: @escaping (Summoner?, String?) -> Void) {
