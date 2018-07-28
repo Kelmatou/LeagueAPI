@@ -92,6 +92,38 @@ public class LeagueAPI {
         }
     }
     
+    // MARK: - Match
+    
+    public func getMatch(by gameId: Double, on region: Region, handler: @escaping (Match?, String?) -> Void) {
+        MatchBusiness.getMatch(method: .ById(id: gameId), region: region, key: self.key) { (match, error) in
+            handler(match, error)
+        }
+    }
+    
+    public func getMatchList(by accountId: Double, on region: Region, beginTime: Double? = nil, endTime: Double? = nil, beginIndex: Int? = nil, endIndex: Int? = nil, championId: Int? = nil, queue: Int? = nil, season: Int? = nil, handler: @escaping (MatchList?, String?) -> Void) {
+        MatchBusiness.getMatch(method: .MatchesByAccountId(id: accountId, beginTime: beginTime, endTime: endTime, beginIndex: beginIndex, endIndex: endIndex, championId: championId, queue: queue, season: season), region: region, key: self.key) { (match, error) in
+            handler(match, error)
+        }
+    }
+    
+    public func getMatchTimeline(by gameId: Double, on region: Region, handler: @escaping (MatchTimeline?, String?) -> Void) {
+        MatchBusiness.getMatch(method: .TimelineById(id: gameId), region: region, key: self.key) { (match, error) in
+            handler(match, error)
+        }
+    }
+    
+    public func getMatchIds(by tournamentCode: String, on region: Region, handler: @escaping ([Double]?, String?) -> Void) {
+        MatchBusiness.getMatch(method: .MatchIdsByTournamentCode(code: tournamentCode), region: region, key: self.key) { (match, error) in
+            handler(match, error)
+        }
+    }
+    
+    public func getMatch(by gameId: Double, and tournamentCode: String, on region: Region, handler: @escaping (Match?, String?) -> Void) {
+        MatchBusiness.getMatch(method: .ByIdAndTournamentCode(id: gameId, code: tournamentCode), region: region, key: self.key) { (match, error) in
+            handler(match, error)
+        }
+    }
+    
     // MARK: - Spectator
     
     public func getCurrentGame(by summonerId: Double, on region: Region, handler: @escaping (GameInfo?, String?) -> Void) {
