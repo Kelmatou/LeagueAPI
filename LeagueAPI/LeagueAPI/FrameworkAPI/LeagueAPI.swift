@@ -36,6 +36,20 @@ public class LeagueAPI {
         }
     }
     
+    // MARK: - Champion
+    
+    public func getAll(freeToPlayOnly: Bool = false, on region: Region, handler: @escaping ([Champion]?, String?) -> Void) {
+        ChampionBusiness.getChampionList(method: .All(freeToPlay: freeToPlayOnly), region: region, key: self.key) { (champions, error) in
+            handler(champions, error)
+        }
+    }
+    
+    public func getChampion(by championId: Double, on region: Region, handler: @escaping (Champion?, String?) -> Void) {
+        ChampionBusiness.getChampion(method: .ById(id: championId), region: region, key: self.key) { (champion, error) in
+            handler(champion, error)
+        }
+    }
+    
     // MARK: - Summoner
     
     public func getSummonerByAccountId(accountId: Double, on region: Region, handler: @escaping (Summoner?, String?) -> Void) {
