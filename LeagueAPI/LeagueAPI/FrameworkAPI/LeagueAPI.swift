@@ -50,6 +50,38 @@ public class LeagueAPI {
         }
     }
     
+    // MARK: - Ranked
+    
+    public func getChallengerLeague(for queue: Queue, on region: Region, handler: @escaping (League?, String?) -> Void) {
+        RankedBusiness.getRanked(method: .ChallengerByQueue(queue: queue), region: region, key: self.key) { (league, error) in
+            handler(league, error)
+        }
+    }
+    
+    public func getLeague(by leagueId: String, on region: Region, handler: @escaping (League?, String?) -> Void) {
+        RankedBusiness.getRanked(method: .LeagueById(id: leagueId), region: region, key: self.key) { (league, error) in
+            handler(league, error)
+        }
+    }
+    
+    public func getMasterLeague(for queue: Queue, on region: Region, handler: @escaping (League?, String?) -> Void) {
+        RankedBusiness.getRanked(method: .MasterByQueue(queue: queue), region: region, key: self.key) { (league, error) in
+            handler(league, error)
+        }
+    }
+    
+    public func getRankedPositions(for summonerId: Double, on region: Region, handler: @escaping ([RankedPosition]?, String?) -> Void) {
+        RankedBusiness.getRanked(method: .PositionsById(id: summonerId), region: region, key: self.key) { (league, error) in
+            handler(league, error)
+        }
+    }
+    
+    public func getRankedPosition(for summonerId: Double, in queue: Queue, on region: Region, handler: @escaping (RankedPosition?, String?) -> Void) {
+        RankedBusiness.getRankedPosition(in: queue, method: .PositionsById(id: summonerId), region: region, key: self.key) { (league, error) in
+            handler(league, error)
+        }
+    }
+    
     // MARK: - Summoner
     
     public func getSummonerByAccountId(accountId: Double, on region: Region, handler: @escaping (Summoner?, String?) -> Void) {

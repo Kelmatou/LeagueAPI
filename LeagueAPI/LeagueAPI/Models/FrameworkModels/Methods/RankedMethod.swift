@@ -14,7 +14,7 @@ internal class RankedMethod: LeagueMethod {
         case ChallengerByQueue(queue: Queue)
         case MasterByQueue(queue: Queue)
         case LeagueById(id: String)
-        case PositionById(id: Double)
+        case PositionsById(id: Double)
     }
     
     private var service: ServiceProxy
@@ -33,8 +33,8 @@ internal class RankedMethod: LeagueMethod {
         switch self.method {
         case .LeagueById, .ChallengerByQueue, .MasterByQueue:
             return "League"
-        case .PositionById:
-            return "PositionById-\(self.service.region.rawValue)"
+        case .PositionsById:
+            return "PositionsById-\(self.service.region.rawValue)"
         }
     }
     
@@ -48,7 +48,7 @@ internal class RankedMethod: LeagueMethod {
             return "\(commonPath)/leagues/\(id)"
         case .MasterByQueue(let queue):
             return "\(commonPath)/masterleagues/by-queue/\(queue.type.rawValue)"
-        case .PositionById(let id):
+        case .PositionsById(let id):
             return "\(commonPath)/positions/by-summoner/\(id)"
         }
     }
