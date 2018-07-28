@@ -23,12 +23,25 @@ internal class LeagueRequester<RiotModel: Decodable> {
             let headers: [String: String] = ["X-Riot-Token": self.key.token]
             Logger.print("Requesting: \(methodUrl)")
 
-            RESTRequester.requestObject(accessMethod, url: methodUrl, headers: headers, asType: RiotModel.self) { (result, error) in
+            RESTRequester.requestObject(accessMethod, url: methodUrl, headers: headers, asType: RiotModel.self) { (result, headers, error) in
+                self.updateKeyLimits(for: method, headers: headers)
                 handler(result, error)
             }
         }
         else {
             handler(nil, "Cannot make request for now")
+        }
+    }
+    
+    private func updateKeyLimits(for method: LeagueMethod, headers: RESTRequester.Headers?) {
+        if let headers = headers {
+            if let appRateLimitCount = headers["X-App-Rate-Limit-Count"] as? String, let appRateLimit = headers["X-App-Rate-Limit"] as? String {
+                self.key.updateAppRateLimit(with: appRateLimitCount, appRate: appRateLimit)
+            }
+            if let methodLimitCount = headers["X-Method-Rate-Limit-Count"] as? String, let methodLimit = headers["X-Method-Rate-Limit"] as? String {
+                self.key.updateMethodLimit(for: method.getMethodSignature(), newLimits: methodLimitCount, methodRate: methodLimit)
+            }
+            
         }
     }
     

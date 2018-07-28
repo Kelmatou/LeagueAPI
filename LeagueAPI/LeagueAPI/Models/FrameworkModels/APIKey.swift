@@ -10,11 +10,11 @@ import Foundation
 
 internal class APIKey {
     
-    public var token: String
-    public var appRateLimit: RateLimit?
-    public var methodLimits: Dictionary<String, RateLimit>
+    public private(set) var token: String
+    public private(set) var appRateLimit: [RateLimit]
+    public private(set) var methodLimits: Dictionary<String, [RateLimit]>
     
-    public init(token: String, appRateLimit: RateLimit? = nil, methodLimits: Dictionary<String, RateLimit>? = nil) {
+    public init(token: String, appRateLimit: [RateLimit] = [], methodLimits: Dictionary<String, [RateLimit]>? = nil) {
         self.token = token
         self.appRateLimit = appRateLimit
         self.methodLimits = methodLimits ?? Dictionary()
@@ -25,10 +25,45 @@ internal class APIKey {
     }
     
     public func hasReachAppRateLimit() -> Bool {
-        return appRateLimit?.hasReachLimit ?? false
+        for rateLimit in self.appRateLimit {
+            if rateLimit.hasReachLimit {
+                return true
+            }
+        }
+        return false
     }
     
     public func hasReachMethodLimit(for method: String) -> Bool {
-        return self.methodLimits[method]?.hasReachLimit ?? false
+        guard let methodLimits = self.methodLimits[method] else { return false }
+        for rateLimit in methodLimits {
+            if rateLimit.hasReachLimit {
+                return true
+            }
+        }
+        return false
+    }
+    
+    public func updateAppRateLimit(with newLimits: String, appRate: String) {
+        let newRateLimits: [RateLimit] = RateLimit.array(from: newLimits, and: appRate)
+        self.appRateLimit.merge(with: newRateLimits)
+        print("New app rate limits:")
+        for limit in self.appRateLimit {
+            print("\(limit.current)/\(limit.limit) - \(limit.duration)s (has \(limit.creations.count) records)")
+        }
+    }
+    
+    public func updateMethodLimit(for method: String, newLimits: String, methodRate: String) {
+        let newRateLimits: [RateLimit] = RateLimit.array(from: newLimits, and: methodRate)
+        if self.methodLimits[method] != nil {
+            self.methodLimits[method]?.merge(with: newRateLimits)
+        }
+        else {
+            self.methodLimits[method] = newRateLimits
+        }
+        print("New method rate limits for \(method):")
+        guard let methodLimits = self.methodLimits[method] else { return }
+        for limit in methodLimits {
+            print("\(limit.current)/\(limit.limit) - \(limit.duration)s (has \(limit.creations.count) records)")
+        }
     }
 }

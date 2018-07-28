@@ -10,6 +10,8 @@ import UIKit
 
 public class RESTRequester {
     
+    public typealias Headers = [AnyHashable : Any]
+    
     public enum AccessMethod: String {
         case GET     = "GET"
         case POST    = "POST"
@@ -31,7 +33,7 @@ public class RESTRequester {
      - parameter body: the content of the message
      - parameter handler: allows the user to make actions just after request ended (Data, String)
      */
-    public static func request(_ method: AccessMethod, url: String, headers: [String : String]? = nil, body: String? = nil, handler: @escaping (Data?, String?) -> Void) {
+    public static func request(_ method: AccessMethod, url: String, headers: [String : String]? = nil, body: String? = nil, handler: @escaping (Data?, Headers?, String?) -> Void) {
         if let uri = URL(string: url) {
             var request: URLRequest = URLRequest(url: uri)
             request.httpMethod = method.rawValue
@@ -45,17 +47,21 @@ public class RESTRequester {
             }
             let task = URLSession.shared.dataTask(with: request) {
                 (data, response, error) in
+                var allHeaders: Headers? = nil
+                if let httpResponse = response as? HTTPURLResponse {
+                    allHeaders = httpResponse.allHeaderFields
+                }
                 if let error = error {
-                    handler(data, error.localizedDescription)
+                    handler(data, allHeaders, error.localizedDescription)
                 }
                 else {
-                    handler(data, nil)
+                    handler(data, allHeaders, nil)
                 }
             }
             task.resume()
         }
         else {
-            handler(nil, "Invalid URL")
+            handler(nil, nil, "Invalid URL")
         }
     }
     
@@ -68,14 +74,14 @@ public class RESTRequester {
      - parameter body: the content of the message
      - parameter handler: allows the user to make actions just after request ended (String, String)
      */
-    public static func requestText(_ method: AccessMethod, url: String, headers: [String : String]? = nil, body: String? = nil, handler: @escaping (String?, String?) -> Void) {
+    public static func requestText(_ method: AccessMethod, url: String, headers: [String : String]? = nil, body: String? = nil, handler: @escaping (String?, Headers?, String?) -> Void) {
         request(method, url: url, headers: headers, body: body) {
-            (data, error) in
+            (data, headers, error) in
             var responseDecoded: String?
             if let data = data, error == nil {
                 responseDecoded = String(data: data, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
             }
-            handler(responseDecoded, error)
+            handler(responseDecoded, headers, error)
         }
     }
     
@@ -88,14 +94,14 @@ public class RESTRequester {
      - parameter body: the content of the message
      - parameter handler: allows the user to make actions just after request ended (UIImage, String)
      */
-    public static func requestImage(_ method: AccessMethod, url: String, headers: [String : String]? = nil, body: String? = nil, handler: @escaping (UIImage?, String?) -> Void) {
+    public static func requestImage(_ method: AccessMethod, url: String, headers: [String : String]? = nil, body: String? = nil, handler: @escaping (UIImage?, Headers?, String?) -> Void) {
         request(method, url: url, headers: headers, body: body) {
-            (data, error) in
+            (data, headers, error) in
             var responseImage: UIImage?
             if let data = data, error == nil {
                 responseImage = UIImage(data: data)
             }
-            handler(responseImage, error)
+            handler(responseImage, headers, error)
         }
     }
     
@@ -109,9 +115,9 @@ public class RESTRequester {
      - parameter asType: the type of the output object
      - parameter handler: allows the user to make actions just after request ended (UIImage, String)
      */
-    public static func requestObject<T: Decodable>(_ method: AccessMethod, url: String, headers: [String : String]? = nil, body: String? = nil, asType: T.Type, handler: @escaping (T?, String?) -> Void) {
+    public static func requestObject<T: Decodable>(_ method: AccessMethod, url: String, headers: [String : String]? = nil, body: String? = nil, asType: T.Type, handler: @escaping (T?, Headers?, String?) -> Void) {
         request(method, url: url, headers: headers, body: body) {
-            (data, error) in
+            (data, headers, error) in
             var responseObject: T?
             if let data = data, error == nil {
                 let conversion: (T?, String?) = ObjectMapper.convert(data, into: T.self)
@@ -119,7 +125,7 @@ public class RESTRequester {
                     responseObject = object
                 }
             }
-            handler(responseObject, error)
+            handler(responseObject, headers, error)
         }
     }
 }
