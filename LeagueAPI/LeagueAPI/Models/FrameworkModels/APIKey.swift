@@ -46,9 +46,9 @@ internal class APIKey {
     public func updateAppRateLimit(with newLimits: String, appRate: String) {
         let newRateLimits: [RateLimit] = RateLimit.array(from: newLimits, and: appRate)
         self.appRateLimit.merge(with: newRateLimits)
-        print("New app rate limits:")
+        Logger.print("New app rate limits:")
         for limit in self.appRateLimit {
-            print("\(limit.current)/\(limit.limit) - \(limit.duration)s (has \(limit.creations.count) records)")
+            Logger.print("\(limit.current)/\(limit.limit) - \(limit.duration)s (has \(limit.creations.count) records)")
         }
     }
     
@@ -60,10 +60,10 @@ internal class APIKey {
         else {
             self.methodLimits[method] = newRateLimits
         }
-        print("New method rate limits for \(method):")
+        Logger.print("New method rate limits for \(method):")
         guard let methodLimits = self.methodLimits[method] else { return }
         for limit in methodLimits {
-            print("\(limit.current)/\(limit.limit) - \(limit.duration)s (has \(limit.creations.count) records)")
+            Logger.print("\(limit.current)/\(limit.limit) - \(limit.duration)s (has \(limit.creations.count) records)")
         }
     }
 }
