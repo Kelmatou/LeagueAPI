@@ -74,6 +74,7 @@
 		97D38DD7210CF04E00150CF9 /* MatchPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DD6210CF04E00150CF9 /* MatchPosition.swift */; };
 		97D38DD9210CF05C00150CF9 /* MatchEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DD8210CF05C00150CF9 /* MatchEvent.swift */; };
 		97D38DDB210CF85D00150CF9 /* MatchMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DDA210CF85D00150CF9 /* MatchMethod.swift */; };
+		97D38DDD210D0CEF00150CF9 /* MatchBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DDC210D0CEF00150CF9 /* MatchBusiness.swift */; };
 		97FB449A210A493000C092AB /* LeagueAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 97FB4498210A492F00C092AB /* LeagueAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -145,6 +146,7 @@
 		97D38DD6210CF04E00150CF9 /* MatchPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchPosition.swift; sourceTree = "<group>"; };
 		97D38DD8210CF05C00150CF9 /* MatchEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchEvent.swift; sourceTree = "<group>"; };
 		97D38DDA210CF85D00150CF9 /* MatchMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchMethod.swift; sourceTree = "<group>"; };
+		97D38DDC210D0CEF00150CF9 /* MatchBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchBusiness.swift; sourceTree = "<group>"; };
 		97FB4495210A492F00C092AB /* LeagueAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeagueAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97FB4498210A492F00C092AB /* LeagueAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeagueAPI.h; sourceTree = "<group>"; };
 		97FB4499210A492F00C092AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -182,12 +184,13 @@
 			isa = PBXGroup;
 			children = (
 				97D38D76210C5C4A00150CF9 /* APIBusiness.swift */,
-				97D38D32210A5F7200150CF9 /* SummonerBusiness.swift */,
 				97D38D78210C5D4600150CF9 /* ChampionMasteryBusiness.swift */,
 				97D38D82210C6E9B00150CF9 /* ChampionBusiness.swift */,
 				97D38D92210C88E800150CF9 /* RankedBusiness.swift */,
 				97D38DA0210CA3A100150CF9 /* StatusBusiness.swift */,
+				97D38DDC210D0CEF00150CF9 /* MatchBusiness.swift */,
 				97D38DB6210CC2FE00150CF9 /* SpectatorBusiness.swift */,
+				97D38D32210A5F7200150CF9 /* SummonerBusiness.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 				97D38D8F210C7E8D00150CF9 /* Queue.swift in Sources */,
 				97D38D31210A5CDA00150CF9 /* SummonerMethod.swift in Sources */,
 				97D38D9D210C9D4E00150CF9 /* Translation.swift in Sources */,
+				97D38DDD210D0CEF00150CF9 /* MatchBusiness.swift in Sources */,
 				97D38D7B210C5D8500150CF9 /* ChampionMasteryMethod.swift in Sources */,
 				97D38D4B210A823E00150CF9 /* Version.swift in Sources */,
 				97D38DD1210CF02300150CF9 /* MatchTimeline.swift in Sources */,
