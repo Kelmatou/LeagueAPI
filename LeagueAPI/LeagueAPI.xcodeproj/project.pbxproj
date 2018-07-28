@@ -68,6 +68,11 @@
 		97D38DCB210CCCDB00150CF9 /* MatchParticipantTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DCA210CCCDB00150CF9 /* MatchParticipantTimeline.swift */; };
 		97D38DCD210CCDE200150CF9 /* LegacyRune.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DCC210CCDE200150CF9 /* LegacyRune.swift */; };
 		97D38DCF210CCDFD00150CF9 /* LegacyMastery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DCE210CCDFD00150CF9 /* LegacyMastery.swift */; };
+		97D38DD1210CF02300150CF9 /* MatchTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DD0210CF02300150CF9 /* MatchTimeline.swift */; };
+		97D38DD3210CF03000150CF9 /* MatchFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DD2210CF03000150CF9 /* MatchFrame.swift */; };
+		97D38DD5210CF04000150CF9 /* MatchParticipantFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DD4210CF04000150CF9 /* MatchParticipantFrame.swift */; };
+		97D38DD7210CF04E00150CF9 /* MatchPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DD6210CF04E00150CF9 /* MatchPosition.swift */; };
+		97D38DD9210CF05C00150CF9 /* MatchEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DD8210CF05C00150CF9 /* MatchEvent.swift */; };
 		97FB449A210A493000C092AB /* LeagueAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 97FB4498210A492F00C092AB /* LeagueAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -133,6 +138,11 @@
 		97D38DCA210CCCDB00150CF9 /* MatchParticipantTimeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchParticipantTimeline.swift; sourceTree = "<group>"; };
 		97D38DCC210CCDE200150CF9 /* LegacyRune.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacyRune.swift; sourceTree = "<group>"; };
 		97D38DCE210CCDFD00150CF9 /* LegacyMastery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacyMastery.swift; sourceTree = "<group>"; };
+		97D38DD0210CF02300150CF9 /* MatchTimeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTimeline.swift; sourceTree = "<group>"; };
+		97D38DD2210CF03000150CF9 /* MatchFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchFrame.swift; sourceTree = "<group>"; };
+		97D38DD4210CF04000150CF9 /* MatchParticipantFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchParticipantFrame.swift; sourceTree = "<group>"; };
+		97D38DD6210CF04E00150CF9 /* MatchPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchPosition.swift; sourceTree = "<group>"; };
+		97D38DD8210CF05C00150CF9 /* MatchEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchEvent.swift; sourceTree = "<group>"; };
 		97FB4495210A492F00C092AB /* LeagueAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeagueAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97FB4498210A492F00C092AB /* LeagueAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeagueAPI.h; sourceTree = "<group>"; };
 		97FB4499210A492F00C092AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -233,6 +243,11 @@
 				97D38DCA210CCCDB00150CF9 /* MatchParticipantTimeline.swift */,
 				97D38DCC210CCDE200150CF9 /* LegacyRune.swift */,
 				97D38DCE210CCDFD00150CF9 /* LegacyMastery.swift */,
+				97D38DD0210CF02300150CF9 /* MatchTimeline.swift */,
+				97D38DD2210CF03000150CF9 /* MatchFrame.swift */,
+				97D38DD4210CF04000150CF9 /* MatchParticipantFrame.swift */,
+				97D38DD8210CF05C00150CF9 /* MatchEvent.swift */,
+				97D38DD6210CF04E00150CF9 /* MatchPosition.swift */,
 			);
 			path = RiotModels;
 			sourceTree = "<group>";
@@ -399,10 +414,12 @@
 				97D38DB3210CB3FD00150CF9 /* GameMode.swift in Sources */,
 				97D38DCB210CCCDB00150CF9 /* MatchParticipantTimeline.swift in Sources */,
 				97D38DC3210CCC4700150CF9 /* TeamStats.swift in Sources */,
+				97D38DD5210CF04000150CF9 /* MatchParticipantFrame.swift in Sources */,
 				97D38D22210A521000150CF9 /* RESTRequester.swift in Sources */,
 				97D38D79210C5D4600150CF9 /* ChampionMasteryBusiness.swift in Sources */,
 				97D38DA7210CA86F00150CF9 /* BannedChampion.swift in Sources */,
 				97D38DB1210CABBA00150CF9 /* RunePage.swift in Sources */,
+				97D38DD9210CF05C00150CF9 /* MatchEvent.swift in Sources */,
 				97D38DA1210CA3A100150CF9 /* StatusBusiness.swift in Sources */,
 				97D38D2F210A5B7E00150CF9 /* LeagueMethod.swift in Sources */,
 				97D38D83210C6E9B00150CF9 /* ChampionBusiness.swift in Sources */,
@@ -412,6 +429,7 @@
 				97D38DCF210CCDFD00150CF9 /* LegacyMastery.swift in Sources */,
 				97D38D97210C9D2C00150CF9 /* Service.swift in Sources */,
 				97D38DC9210CCCB800150CF9 /* MatchParticipantStats.swift in Sources */,
+				97D38DD3210CF03000150CF9 /* MatchFrame.swift in Sources */,
 				97D38D39210A75B800150CF9 /* Logger.swift in Sources */,
 				97D38D3F210A7B0B00150CF9 /* ServiceProxy.swift in Sources */,
 				97D38D91210C85AC00150CF9 /* RankedMethod.swift in Sources */,
@@ -428,6 +446,7 @@
 				97D38D9B210C9D4100150CF9 /* Message.swift in Sources */,
 				97D38D33210A5F7200150CF9 /* SummonerBusiness.swift in Sources */,
 				97D38D29210A549500150CF9 /* APIKey.swift in Sources */,
+				97D38DD7210CF04E00150CF9 /* MatchPosition.swift in Sources */,
 				97D38DBB210CC78B00150CF9 /* MatchReference.swift in Sources */,
 				97D38D7D210C69CB00150CF9 /* ChampionList.swift in Sources */,
 				97D38DBD210CCB3A00150CF9 /* Match.swift in Sources */,
@@ -442,6 +461,7 @@
 				97D38D9D210C9D4E00150CF9 /* Translation.swift in Sources */,
 				97D38D7B210C5D8500150CF9 /* ChampionMasteryMethod.swift in Sources */,
 				97D38D4B210A823E00150CF9 /* Version.swift in Sources */,
+				97D38DD1210CF02300150CF9 /* MatchTimeline.swift in Sources */,
 				97D38DB9210CC75E00150CF9 /* MatchList.swift in Sources */,
 				97D38DAF210CABA700150CF9 /* GameCustomObject.swift in Sources */,
 				97D38DA5210CA86000150CF9 /* GameInfo.swift in Sources */,
