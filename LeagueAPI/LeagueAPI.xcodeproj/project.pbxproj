@@ -79,6 +79,9 @@
 		97D38DE1210D17B700150CF9 /* ThirdPartyCodeBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DE0210D17B700150CF9 /* ThirdPartyCodeBusiness.swift */; };
 		97D38DE3210DFC7000150CF9 /* TournamentEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DE2210DFC7000150CF9 /* TournamentEvent.swift */; };
 		97D38DE5210DFCB100150CF9 /* TournamentEventList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DE4210DFCB100150CF9 /* TournamentEventList.swift */; };
+		97D38DE7210DFD9A00150CF9 /* TournamentStubMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DE6210DFD9A00150CF9 /* TournamentStubMethod.swift */; };
+		97D38DEC210DFEEC00150CF9 /* TournamentInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DEB210DFEEC00150CF9 /* TournamentInfo.swift */; };
+		97D38DEE210DFFAB00150CF9 /* TournamentRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DED210DFFAB00150CF9 /* TournamentRegion.swift */; };
 		97FB449A210A493000C092AB /* LeagueAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 97FB4498210A492F00C092AB /* LeagueAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -155,6 +158,9 @@
 		97D38DE0210D17B700150CF9 /* ThirdPartyCodeBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartyCodeBusiness.swift; sourceTree = "<group>"; };
 		97D38DE2210DFC7000150CF9 /* TournamentEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentEvent.swift; sourceTree = "<group>"; };
 		97D38DE4210DFCB100150CF9 /* TournamentEventList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentEventList.swift; sourceTree = "<group>"; };
+		97D38DE6210DFD9A00150CF9 /* TournamentStubMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentStubMethod.swift; sourceTree = "<group>"; };
+		97D38DEB210DFEEC00150CF9 /* TournamentInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentInfo.swift; sourceTree = "<group>"; };
+		97D38DED210DFFAB00150CF9 /* TournamentRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentRegion.swift; sourceTree = "<group>"; };
 		97FB4495210A492F00C092AB /* LeagueAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeagueAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97FB4498210A492F00C092AB /* LeagueAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeagueAPI.h; sourceTree = "<group>"; };
 		97FB4499210A492F00C092AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -280,6 +286,7 @@
 				97D38D8E210C7E8D00150CF9 /* Queue.swift */,
 				97D38DB2210CB3FD00150CF9 /* GameMode.swift */,
 				97D38D2D210A5B5700150CF9 /* Methods */,
+				97D38DEA210DFEC000150CF9 /* BodyRequestModels */,
 			);
 			path = FrameworkModels;
 			sourceTree = "<group>";
@@ -305,8 +312,18 @@
 				97D38DB4210CC12800150CF9 /* SpectatorMethod.swift */,
 				97D38D30210A5CDA00150CF9 /* SummonerMethod.swift */,
 				97D38DDE210D16C400150CF9 /* ThirdPartyCodeMethod.swift */,
+				97D38DE6210DFD9A00150CF9 /* TournamentStubMethod.swift */,
 			);
 			path = Methods;
+			sourceTree = "<group>";
+		};
+		97D38DEA210DFEC000150CF9 /* BodyRequestModels */ = {
+			isa = PBXGroup;
+			children = (
+				97D38DEB210DFEEC00150CF9 /* TournamentInfo.swift */,
+				97D38DED210DFFAB00150CF9 /* TournamentRegion.swift */,
+			);
+			path = BodyRequestModels;
 			sourceTree = "<group>";
 		};
 		97FB448B210A492F00C092AB = {
@@ -437,6 +454,7 @@
 				97D38DDB210CF85D00150CF9 /* MatchMethod.swift in Sources */,
 				97D38D22210A521000150CF9 /* RESTRequester.swift in Sources */,
 				97D38D79210C5D4600150CF9 /* ChampionMasteryBusiness.swift in Sources */,
+				97D38DE7210DFD9A00150CF9 /* TournamentStubMethod.swift in Sources */,
 				97D38DA7210CA86F00150CF9 /* BannedChampion.swift in Sources */,
 				97D38DB1210CABBA00150CF9 /* RunePage.swift in Sources */,
 				97D38DD9210CF05C00150CF9 /* MatchEvent.swift in Sources */,
@@ -450,6 +468,7 @@
 				97D38D97210C9D2C00150CF9 /* Service.swift in Sources */,
 				97D38DC9210CCCB800150CF9 /* MatchParticipantStats.swift in Sources */,
 				97D38DD3210CF03000150CF9 /* MatchFrame.swift in Sources */,
+				97D38DEC210DFEEC00150CF9 /* TournamentInfo.swift in Sources */,
 				97D38DE5210DFCB100150CF9 /* TournamentEventList.swift in Sources */,
 				97D38DE3210DFC7000150CF9 /* TournamentEvent.swift in Sources */,
 				97D38D39210A75B800150CF9 /* Logger.swift in Sources */,
@@ -471,6 +490,7 @@
 				97D38D29210A549500150CF9 /* APIKey.swift in Sources */,
 				97D38DD7210CF04E00150CF9 /* MatchPosition.swift in Sources */,
 				97D38DBB210CC78B00150CF9 /* MatchReference.swift in Sources */,
+				97D38DEE210DFFAB00150CF9 /* TournamentRegion.swift in Sources */,
 				97D38D7D210C69CB00150CF9 /* ChampionList.swift in Sources */,
 				97D38DBD210CCB3A00150CF9 /* Match.swift in Sources */,
 				97D38D1B210A4D8D00150CF9 /* Summoner.swift in Sources */,
