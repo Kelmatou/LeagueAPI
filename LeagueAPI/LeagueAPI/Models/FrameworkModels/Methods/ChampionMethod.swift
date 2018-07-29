@@ -41,4 +41,8 @@ internal class ChampionMethod: LeagueMethod {
             return "\(commonPath)/\(id)"
         }
     }
+    
+    func getMethodBody() -> Data? {
+        return nil
+    }
 }

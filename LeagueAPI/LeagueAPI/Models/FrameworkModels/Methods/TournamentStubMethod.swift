@@ -52,4 +52,19 @@ internal class TournamentStubMethod: LeagueMethod {
             return "\(commonPath)/tournaments"
         }
     }
+    
+    func getMethodBody() -> Data? {
+        switch self.method {
+        case .CreateCodes(_, _, let info):
+            return ObjectMapper.encode(info)
+        case .EventsByTournamentCode:
+            return nil
+        case .CreateProvider(let callbackUrl, let region):
+            let tournamentProvider: TournamentProvider = TournamentProvider(region: region.region.rawValue, url: callbackUrl)
+            return ObjectMapper.encode(tournamentProvider)
+        case .CreateTournament(let name, let providerId):
+            let tournamentInitializer: TournamentInitializer = TournamentInitializer(name: name, providerId: providerId)
+            return ObjectMapper.encode(tournamentInitializer)
+        }
+    }
 }

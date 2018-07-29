@@ -38,4 +38,8 @@ internal class StatusMethod: LeagueMethod {
             return "\(commonPath)"
         }
     }
+    
+    func getMethodBody() -> Data? {
+        return nil
+    }
 }

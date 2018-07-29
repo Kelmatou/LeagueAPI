@@ -82,6 +82,8 @@
 		97D38DE7210DFD9A00150CF9 /* TournamentStubMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DE6210DFD9A00150CF9 /* TournamentStubMethod.swift */; };
 		97D38DEC210DFEEC00150CF9 /* TournamentInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DEB210DFEEC00150CF9 /* TournamentInfo.swift */; };
 		97D38DEE210DFFAB00150CF9 /* TournamentRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DED210DFFAB00150CF9 /* TournamentRegion.swift */; };
+		97D38DF0210E0A9000150CF9 /* TournamentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DEF210E0A9000150CF9 /* TournamentProvider.swift */; };
+		97D38DF2210E0B0A00150CF9 /* TournamentInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DF1210E0B0A00150CF9 /* TournamentInitializer.swift */; };
 		97FB449A210A493000C092AB /* LeagueAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 97FB4498210A492F00C092AB /* LeagueAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -161,6 +163,8 @@
 		97D38DE6210DFD9A00150CF9 /* TournamentStubMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentStubMethod.swift; sourceTree = "<group>"; };
 		97D38DEB210DFEEC00150CF9 /* TournamentInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentInfo.swift; sourceTree = "<group>"; };
 		97D38DED210DFFAB00150CF9 /* TournamentRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentRegion.swift; sourceTree = "<group>"; };
+		97D38DEF210E0A9000150CF9 /* TournamentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentProvider.swift; sourceTree = "<group>"; };
+		97D38DF1210E0B0A00150CF9 /* TournamentInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentInitializer.swift; sourceTree = "<group>"; };
 		97FB4495210A492F00C092AB /* LeagueAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeagueAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97FB4498210A492F00C092AB /* LeagueAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeagueAPI.h; sourceTree = "<group>"; };
 		97FB4499210A492F00C092AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -320,8 +324,10 @@
 		97D38DEA210DFEC000150CF9 /* BodyRequestModels */ = {
 			isa = PBXGroup;
 			children = (
-				97D38DEB210DFEEC00150CF9 /* TournamentInfo.swift */,
 				97D38DED210DFFAB00150CF9 /* TournamentRegion.swift */,
+				97D38DEB210DFEEC00150CF9 /* TournamentInfo.swift */,
+				97D38DEF210E0A9000150CF9 /* TournamentProvider.swift */,
+				97D38DF1210E0B0A00150CF9 /* TournamentInitializer.swift */,
 			);
 			path = BodyRequestModels;
 			sourceTree = "<group>";
@@ -451,6 +457,7 @@
 				97D38DCB210CCCDB00150CF9 /* MatchParticipantTimeline.swift in Sources */,
 				97D38DC3210CCC4700150CF9 /* TeamStats.swift in Sources */,
 				97D38DD5210CF04000150CF9 /* MatchParticipantFrame.swift in Sources */,
+				97D38DF0210E0A9000150CF9 /* TournamentProvider.swift in Sources */,
 				97D38DDB210CF85D00150CF9 /* MatchMethod.swift in Sources */,
 				97D38D22210A521000150CF9 /* RESTRequester.swift in Sources */,
 				97D38D79210C5D4600150CF9 /* ChampionMasteryBusiness.swift in Sources */,
@@ -505,6 +512,7 @@
 				97D38DDD210D0CEF00150CF9 /* MatchBusiness.swift in Sources */,
 				97D38D7B210C5D8500150CF9 /* ChampionMasteryMethod.swift in Sources */,
 				97D38D4B210A823E00150CF9 /* Version.swift in Sources */,
+				97D38DF2210E0B0A00150CF9 /* TournamentInitializer.swift in Sources */,
 				97D38DD1210CF02300150CF9 /* MatchTimeline.swift in Sources */,
 				97D38DB9210CC75E00150CF9 /* MatchList.swift in Sources */,
 				97D38DAF210CABA700150CF9 /* GameCustomObject.swift in Sources */,

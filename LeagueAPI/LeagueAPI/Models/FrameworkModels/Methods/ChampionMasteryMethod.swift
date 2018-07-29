@@ -9,7 +9,7 @@
 import Foundation
 
 internal class ChampionMasteryMethod: LeagueMethod {
-    
+
     public enum ChampionMasteryMethods {
         case BySummonerId(id: Double)
         case BySummonerIdAndChampionId(summonerId: Double, championId: Double)
@@ -43,5 +43,9 @@ internal class ChampionMasteryMethod: LeagueMethod {
         case .ScoreBySummonerId(let id):
             return "\(commonPath)/scores/by-summoner/\(id)"
         }
+    }
+    
+    func getMethodBody() -> Data? {
+        return nil
     }
 }

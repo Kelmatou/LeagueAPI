@@ -52,4 +52,8 @@ internal class RankedMethod: LeagueMethod {
             return "\(commonPath)/positions/by-summoner/\(id)"
         }
     }
+    
+    func getMethodBody() -> Data? {
+        return nil
+    }
 }

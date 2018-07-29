@@ -49,4 +49,8 @@ internal class SummonerMethod: LeagueMethod {
             return "\(commonPath)/\(id)"
         }
     }
+    
+    func getMethodBody() -> Data? {
+        return nil
+    }
 }

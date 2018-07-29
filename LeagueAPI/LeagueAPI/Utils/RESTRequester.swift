@@ -33,13 +33,11 @@ public class RESTRequester {
      - parameter body: the content of the message
      - parameter handler: allows the user to make actions just after request ended (Data, String)
      */
-    public static func request(_ method: AccessMethod, url: String, headers: [String : String]? = nil, body: String? = nil, handler: @escaping (Data?, Headers?, String?) -> Void) {
+    public static func request(_ method: AccessMethod, url: String, headers: [String : String]? = nil, body: Data? = nil, handler: @escaping (Data?, Headers?, String?) -> Void) {
         if let uri = URL(string: url) {
             var request: URLRequest = URLRequest(url: uri)
             request.httpMethod = method.rawValue
-            if let body = body {
-                request.httpBody = body.data(using: String.Encoding.utf8)
-            }
+            request.httpBody = body
             if let headers = headers {
                 for header in headers {
                     request.addValue(header.value, forHTTPHeaderField: header.key)
@@ -74,7 +72,7 @@ public class RESTRequester {
      - parameter body: the content of the message
      - parameter handler: allows the user to make actions just after request ended (String, String)
      */
-    public static func requestText(_ method: AccessMethod, url: String, headers: [String : String]? = nil, body: String? = nil, handler: @escaping (String?, Headers?, String?) -> Void) {
+    public static func requestText(_ method: AccessMethod, url: String, headers: [String : String]? = nil, body: Data? = nil, handler: @escaping (String?, Headers?, String?) -> Void) {
         request(method, url: url, headers: headers, body: body) {
             (data, headers, error) in
             var responseDecoded: String?
@@ -94,7 +92,7 @@ public class RESTRequester {
      - parameter body: the content of the message
      - parameter handler: allows the user to make actions just after request ended (UIImage, String)
      */
-    public static func requestImage(_ method: AccessMethod, url: String, headers: [String : String]? = nil, body: String? = nil, handler: @escaping (UIImage?, Headers?, String?) -> Void) {
+    public static func requestImage(_ method: AccessMethod, url: String, headers: [String : String]? = nil, body: Data? = nil, handler: @escaping (UIImage?, Headers?, String?) -> Void) {
         request(method, url: url, headers: headers, body: body) {
             (data, headers, error) in
             var responseImage: UIImage?
@@ -115,7 +113,7 @@ public class RESTRequester {
      - parameter asType: the type of the output object
      - parameter handler: allows the user to make actions just after request ended (UIImage, String)
      */
-    public static func requestObject<T: Decodable>(_ method: AccessMethod, url: String, headers: [String : String]? = nil, body: String? = nil, asType: T.Type, handler: @escaping (T?, Headers?, String?) -> Void) {
+    public static func requestObject<T: Decodable>(_ method: AccessMethod, url: String, headers: [String : String]? = nil, body: Data? = nil, asType: T.Type, handler: @escaping (T?, Headers?, String?) -> Void) {
         request(method, url: url, headers: headers, body: body) {
             (data, headers, error) in
             var responseObject: T?

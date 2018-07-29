@@ -31,4 +31,15 @@ internal class ObjectMapper {
             return (nil, nil)
         }
     }
+    
+    internal static func encode<T: Encodable>(_ object: T?) -> Data? {
+        guard let object = object else { return nil }
+        do {
+            return try JSONEncoder().encode(object)
+        }
+        catch {
+            Logger.error("Failed to encode an object")
+            return nil
+        }
+    }
 }

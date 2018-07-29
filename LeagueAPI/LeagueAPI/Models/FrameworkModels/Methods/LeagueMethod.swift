@@ -13,4 +13,5 @@ internal protocol LeagueMethod {
     func getAccessMethod() -> RESTRequester.AccessMethod
     func getMethodSignature() -> String
     func getMethodUrl() -> String
+    func getMethodBody() -> Data?
 }

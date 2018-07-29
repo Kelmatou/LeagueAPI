@@ -38,4 +38,8 @@ internal class ThirdPartyCodeMethod: LeagueMethod {
             return "\(commonPath)/by-summoner/\(id)"
         }
     }
+    
+    func getMethodBody() -> Data? {
+        return nil
+    }
 }

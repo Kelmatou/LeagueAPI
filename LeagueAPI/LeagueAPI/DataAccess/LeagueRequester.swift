@@ -21,9 +21,10 @@ internal class LeagueRequester<RiotModel: Decodable> {
             let accessMethod: RESTRequester.AccessMethod = method.getAccessMethod()
             let methodUrl: String = method.getMethodUrl()
             let headers: [String: String] = ["X-Riot-Token": self.key.token]
+            let body: Data? = method.getMethodBody()
             Logger.print("Requesting: \(methodUrl)")
 
-            RESTRequester.requestObject(accessMethod, url: methodUrl, headers: headers, asType: RiotModel.self) { (result, headers, error) in
+            RESTRequester.requestObject(accessMethod, url: methodUrl, headers: headers, body: body, asType: RiotModel.self) { (result, headers, error) in
                 self.updateKeyLimits(for: method, headers: headers)
                 handler(result, error)
             }

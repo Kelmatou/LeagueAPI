@@ -69,4 +69,8 @@ internal class MatchMethod: LeagueMethod {
             return "\(commonPath)/matches/\(id)/by-tournament-code/\(code)"
         }
     }
+    
+    func getMethodBody() -> Data? {
+        return nil
+    }
 }

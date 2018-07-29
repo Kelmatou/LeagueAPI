@@ -41,4 +41,8 @@ internal class SpectatorMethod: LeagueMethod {
             return "\(commonPath)/featured-games"
         }
     }
+    
+    func getMethodBody() -> Data? {
+        return nil
+    }
 }
