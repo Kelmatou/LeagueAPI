@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class TournamentEventList: Decodable {
+internal class TournamentEventList: Decodable {
     
     public var eventList: [TournamentEvent]
     

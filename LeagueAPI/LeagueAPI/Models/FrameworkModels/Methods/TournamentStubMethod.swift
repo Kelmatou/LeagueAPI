@@ -11,7 +11,7 @@ import Foundation
 internal class TournamentStubMethod: LeagueMethod {
     
     public enum TournamentStubMethods {
-        case CreateCodes(amount: Int?, tournamentId: Int, info: TournamentInfo)
+        case CreateCodes(amount: Int?, tournamentId: Double, info: TournamentInfo)
         case EventsByTournamentCode(code: String)
         case CreateProvider(callbackUrl: String, region: TournamentRegion)
         case CreateTournament(name: String, providerId: Int)
