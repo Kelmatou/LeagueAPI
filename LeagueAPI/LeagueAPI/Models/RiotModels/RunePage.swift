@@ -10,9 +10,9 @@ import Foundation
 
 public class RunePage: Decodable {
     
-    public var primaryPath: Double
-    public var secondaryPath: Double
-    public var runeIds: [Double]
+    public var primaryPath: Int64
+    public var secondaryPath: Int64
+    public var runeIds: [Int64]
     
     enum CodingKeys: String, CodingKey {
         case primaryPath = "perkStyle"
@@ -20,7 +20,7 @@ public class RunePage: Decodable {
         case runeIds = "perkIds"
     }
     
-    public init(primaryPath: Double, secondaryPath: Double, runeIds: [Double]) {
+    public init(primaryPath: Int64, secondaryPath: Int64, runeIds: [Int64]) {
         self.primaryPath = primaryPath
         self.secondaryPath = secondaryPath
         self.runeIds = runeIds
@@ -28,8 +28,8 @@ public class RunePage: Decodable {
     
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.primaryPath = try container.decode(Double.self, forKey: .primaryPath)
-        self.secondaryPath = try container.decode(Double.self, forKey: .secondaryPath)
-        self.runeIds = try container.decode([Double].self, forKey: .runeIds)
+        self.primaryPath = try container.decode(Int64.self, forKey: .primaryPath)
+        self.secondaryPath = try container.decode(Int64.self, forKey: .secondaryPath)
+        self.runeIds = try container.decode([Int64].self, forKey: .runeIds)
     }
 }

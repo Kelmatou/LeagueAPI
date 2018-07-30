@@ -10,7 +10,7 @@ import Foundation
 
 public class Champion: Decodable {
     
-    public var id: Double
+    public var id: Int64
     public var freeToPlay: Bool
     public var enabled: Bool
     public var rankedEnabled: Bool
@@ -26,7 +26,7 @@ public class Champion: Decodable {
         case coopBotEnabled = "botMmEnabled"
     }
     
-    public init(id: Double, freeToPlay: Bool, enabled: Bool, rankedEnabled: Bool, customBotEnabled: Bool, coopBotEnabled: Bool) {
+    public init(id: Int64, freeToPlay: Bool, enabled: Bool, rankedEnabled: Bool, customBotEnabled: Bool, coopBotEnabled: Bool) {
         self.id = id
         self.freeToPlay = freeToPlay
         self.enabled = enabled
@@ -37,7 +37,7 @@ public class Champion: Decodable {
     
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try container.decode(Double.self, forKey: .id)
+        self.id = try container.decode(Int64.self, forKey: .id)
         self.freeToPlay = try container.decode(Bool.self, forKey: .freeToPlay)
         self.enabled = try container.decode(Bool.self, forKey: .enabled)
         self.rankedEnabled = try container.decode(Bool.self, forKey: .rankedEnabled)

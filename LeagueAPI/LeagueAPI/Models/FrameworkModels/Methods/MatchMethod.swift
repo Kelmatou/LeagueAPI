@@ -11,11 +11,11 @@ import Foundation
 internal class MatchMethod: LeagueMethod {
     
     public enum MatchMethods {
-        case ById(id: Double)
-        case MatchesByAccountId(id: Double, beginTime: Double?, endTime: Double?, beginIndex: Int?, endIndex: Int?, championId: Int?, queue: Int?, season: Int?)
-        case TimelineById(id: Double)
+        case ById(id: Int64)
+        case MatchesByAccountId(id: Int64, beginTime: Int64?, endTime: Int64?, beginIndex: Int?, endIndex: Int?, championId: Int?, queue: Int?, season: Int?)
+        case TimelineById(id: Int64)
         case MatchIdsByTournamentCode(code: String)
-        case ByIdAndTournamentCode(id: Double, code: String)
+        case ByIdAndTournamentCode(id: Int64, code: String)
     }
     
     private var service: ServiceProxy
@@ -56,11 +56,11 @@ internal class MatchMethod: LeagueMethod {
             if let championId = championId { queryParameters["champion"] = championId }
             if let queue = queue { queryParameters["queue"] = queue }
             if let season = season { queryParameters["season"] = season }
-            var queryParametersUrl: String = ""
+            var queryParametersUrl: String = queryParameters.count == 0 ? "" : "?"
             for parameter in queryParameters {
                 queryParametersUrl += "\(queryParametersUrl == "" ? "" : "&")\(parameter.key)=\(parameter.value)"
             }
-            return "\(commonPath)/matchlists/by-account/\(id)?\(queryParametersUrl)"
+            return "\(commonPath)/matchlists/by-account/\(id)\(queryParametersUrl)"
         case .TimelineById(let id):
             return "\(commonPath)/timelines/by-match/\(id)"
         case .MatchIdsByTournamentCode(let code):
