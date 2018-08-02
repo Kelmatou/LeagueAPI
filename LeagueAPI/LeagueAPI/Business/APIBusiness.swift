@@ -18,8 +18,8 @@ internal class APIBusiness {
         self.method = method
     }
     
-    public func request<RiotModel: Decodable>(handler: @escaping (RiotModel?, String?) -> Void) {
-        let requester: LeagueRequester<RiotModel> = LeagueRequester(key: self.key)
+    public func request<DataType: Decodable>(handler: @escaping (DataType?, String?) -> Void) {
+        let requester: LeagueRequester = LeagueRequester(key: self.key)
         requester.request(method: self.method) { (result, error) in
             handler(result, error)
         }

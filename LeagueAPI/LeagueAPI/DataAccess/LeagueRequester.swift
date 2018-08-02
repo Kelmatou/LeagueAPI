@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal class LeagueRequester<RiotModel: Decodable> {
+internal class LeagueRequester {
     
     private var key: APIKey
     
@@ -16,18 +16,21 @@ internal class LeagueRequester<RiotModel: Decodable> {
         self.key = key
     }
     
-    internal func request(method: LeagueMethod, handler: @escaping (RiotModel?, String?) -> Void) {
+    internal func request<ResultType: Decodable>(method: LeagueMethod, handler: @escaping (ResultType?, String?) -> Void) {
         if canMakeRequest(for: method) {
             let accessMethod: RESTRequester.AccessMethod = method.getAccessMethod()
             let methodUrl: String = method.getMethodUrl()
             let headers: [String: String] = ["X-Riot-Token": self.key.token]
             let body: Data? = method.getMethodBody()
             Logger.print("Requesting: \(methodUrl)")
-
-            RESTRequester.requestObject(accessMethod, url: methodUrl, headers: headers, body: body, asType: RiotModel.self) { (result, headers, error) in
+            
+            let completion: (ResultType?, RESTRequester.Headers?, String?) -> Void = { (result, headers, error) in
                 self.updateKeyLimits(for: method, headers: headers)
                 handler(result, error)
             }
+            let resultIsJson: Bool = !PrimitiveType.isPrimitive(ResultType.self)
+            let requester: DataRequester = resultIsJson ? JsonRequester() : RawRequester()
+            requester.request(accessMethod: accessMethod, methodUrl: methodUrl, headers: headers, body: body, handler: completion)
         }
         else {
             handler(nil, "Cannot make request for now")

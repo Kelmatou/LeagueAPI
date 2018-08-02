@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9769180321134E2B00F8AF3B /* JsonRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9769180221134E2B00F8AF3B /* JsonRequester.swift */; };
+		9769180521134E5700F8AF3B /* DataRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9769180421134E5700F8AF3B /* DataRequester.swift */; };
+		97691807211359D100F8AF3B /* RawRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97691806211359D100F8AF3B /* RawRequester.swift */; };
+		9769180921135CF700F8AF3B /* PrimitiveType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9769180821135CF700F8AF3B /* PrimitiveType.swift */; };
 		97D38D1B210A4D8D00150CF9 /* Summoner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D1A210A4D8D00150CF9 /* Summoner.swift */; };
 		97D38D22210A521000150CF9 /* RESTRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D21210A521000150CF9 /* RESTRequester.swift */; };
 		97D38D24210A532B00150CF9 /* ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D23210A532B00150CF9 /* ObjectMapper.swift */; };
@@ -89,6 +93,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9769180221134E2B00F8AF3B /* JsonRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonRequester.swift; sourceTree = "<group>"; };
+		9769180421134E5700F8AF3B /* DataRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequester.swift; sourceTree = "<group>"; };
+		97691806211359D100F8AF3B /* RawRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawRequester.swift; sourceTree = "<group>"; };
+		9769180821135CF700F8AF3B /* PrimitiveType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimitiveType.swift; sourceTree = "<group>"; };
 		97D38D1A210A4D8D00150CF9 /* Summoner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summoner.swift; sourceTree = "<group>"; };
 		97D38D21210A521000150CF9 /* RESTRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTRequester.swift; sourceTree = "<group>"; };
 		97D38D23210A532B00150CF9 /* ObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMapper.swift; sourceTree = "<group>"; };
@@ -196,6 +204,9 @@
 			isa = PBXGroup;
 			children = (
 				97D38D2A210A5A5C00150CF9 /* LeagueRequester.swift */,
+				9769180421134E5700F8AF3B /* DataRequester.swift */,
+				9769180221134E2B00F8AF3B /* JsonRequester.swift */,
+				97691806211359D100F8AF3B /* RawRequester.swift */,
 			);
 			path = DataAccess;
 			sourceTree = "<group>";
@@ -231,6 +242,7 @@
 				97D38D21210A521000150CF9 /* RESTRequester.swift */,
 				97D38D23210A532B00150CF9 /* ObjectMapper.swift */,
 				97D38D38210A75B800150CF9 /* Logger.swift */,
+				9769180821135CF700F8AF3B /* PrimitiveType.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -446,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97D38D9F210CA2E800150CF9 /* StatusMethod.swift in Sources */,
+				9769180921135CF700F8AF3B /* PrimitiveType.swift in Sources */,
 				97D38D75210C57E400150CF9 /* ChampionMastery.swift in Sources */,
 				97D38DC1210CCC3000150CF9 /* MatchPlayer.swift in Sources */,
 				97D38DE1210D17B700150CF9 /* ThirdPartyCodeBusiness.swift in Sources */,
@@ -453,9 +466,11 @@
 				97D38D45210A7BEF00150CF9 /* Platform.swift in Sources */,
 				97D38D35210A623A00150CF9 /* LeagueAPI.swift in Sources */,
 				97D38D89210C729900150CF9 /* Series.swift in Sources */,
+				9769180521134E5700F8AF3B /* DataRequester.swift in Sources */,
 				97D38DB5210CC12800150CF9 /* SpectatorMethod.swift in Sources */,
 				97D38D87210C728300150CF9 /* LeagueInfo.swift in Sources */,
 				97D38DAB210CA89B00150CF9 /* Participant.swift in Sources */,
+				9769180321134E2B00F8AF3B /* JsonRequester.swift in Sources */,
 				97D38DB3210CB3FD00150CF9 /* GameMode.swift in Sources */,
 				97D38DCB210CCCDB00150CF9 /* MatchParticipantTimeline.swift in Sources */,
 				97D38DC3210CCC4700150CF9 /* TeamStats.swift in Sources */,
@@ -479,6 +494,7 @@
 				97D38D97210C9D2C00150CF9 /* Service.swift in Sources */,
 				97D38DC9210CCCB800150CF9 /* MatchParticipantStats.swift in Sources */,
 				97D38DD3210CF03000150CF9 /* MatchFrame.swift in Sources */,
+				97691807211359D100F8AF3B /* RawRequester.swift in Sources */,
 				97D38DEC210DFEEC00150CF9 /* TournamentInfo.swift in Sources */,
 				97D38DE5210DFCB100150CF9 /* TournamentEventList.swift in Sources */,
 				97D38DE3210DFC7000150CF9 /* TournamentEvent.swift in Sources */,
