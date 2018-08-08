@@ -11,9 +11,9 @@ import Foundation
 internal class ChampionMasteryMethod: LeagueMethod {
 
     public enum ChampionMasteryMethods {
-        case BySummonerId(id: Double)
-        case BySummonerIdAndChampionId(summonerId: Double, championId: Double)
-        case ScoreBySummonerId(id: Double)
+        case BySummonerId(id: Int64)
+        case BySummonerIdAndChampionId(summonerId: Int64, championId: Int64)
+        case ScoreBySummonerId(id: Int64)
     }
     
     private var service: ServiceProxy

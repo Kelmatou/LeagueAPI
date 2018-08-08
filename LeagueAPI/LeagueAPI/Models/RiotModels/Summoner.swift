@@ -10,12 +10,12 @@ import Foundation
 
 public class Summoner: Decodable {
     
-    public var id: Double
-    public var accountId: Double
+    public var id: Int64
+    public var accountId: Int64
     public var name: String
-    public var level: Double
+    public var level: Int64
     public var iconId: Int
-    public var revisionDate: Double
+    public var revisionDate: Int64
     
     enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -26,7 +26,7 @@ public class Summoner: Decodable {
         case revisionDate = "revisionDate"
     }
     
-    public init(id: Double, accountId: Double, name: String, level: Double, iconId: Int, revisionDate: Double) {
+    public init(id: Int64, accountId: Int64, name: String, level: Int64, iconId: Int, revisionDate: Int64) {
         self.id = id
         self.accountId = accountId
         self.name = name
@@ -37,11 +37,11 @@ public class Summoner: Decodable {
     
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try container.decode(Double.self, forKey: .id)
-        self.accountId = try container.decode(Double.self, forKey: .accountId)
+        self.id = try container.decode(Int64.self, forKey: .id)
+        self.accountId = try container.decode(Int64.self, forKey: .accountId)
         self.name = try container.decode(String.self, forKey: .name)
-        self.level = try container.decode(Double.self, forKey: .level)
+        self.level = try container.decode(Int64.self, forKey: .level)
         self.iconId = try container.decode(Int.self, forKey: .iconId)
-        self.revisionDate = try container.decode(Double.self, forKey: .revisionDate)
+        self.revisionDate = try container.decode(Int64.self, forKey: .revisionDate)
     }
 }

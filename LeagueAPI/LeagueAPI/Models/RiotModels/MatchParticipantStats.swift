@@ -62,7 +62,7 @@ public class MatchParticipantStats: Decodable {
     public var playerScore8: Int
     public var playerScore9: Int
     public var totalScoreRank: Int
-    public var visionScore: Double
+    public var visionScore: Int64
     public var firstBloodKill: Bool
     public var firstBloodAssist: Bool
     public var firstInhibitorKill: Bool
@@ -80,22 +80,22 @@ public class MatchParticipantStats: Decodable {
     public var primaryRunePath: Int
     public var secondaryRunePath: Int
     public var neutralMinionsKilled: Int
-    public var totalDamageDealt: Double
-    public var totalDamageDealtToChampions: Double
-    public var damageDealtToObjectives: Double
-    public var damageDealtToTurrets: Double
-    public var trueDamageDealt: Double
-    public var trueDamageDealtToChampions: Double
-    public var magicDamageDealt: Double
-    public var magicDamageDealtToChampions: Double
-    public var physicalDamageDealt: Double
-    public var physicalDamageDealtToChampions: Double
-    public var totalDamageTaken: Double
-    public var trueDamageTaken: Double
-    public var magicalDamageTaken: Double
-    public var physicalDamageTaken: Double
-    public var damageSelfMitigated: Double
-    public var totalHeal: Double
+    public var totalDamageDealt: Int64
+    public var totalDamageDealtToChampions: Int64
+    public var damageDealtToObjectives: Int64
+    public var damageDealtToTurrets: Int64
+    public var trueDamageDealt: Int64
+    public var trueDamageDealtToChampions: Int64
+    public var magicDamageDealt: Int64
+    public var magicDamageDealtToChampions: Int64
+    public var physicalDamageDealt: Int64
+    public var physicalDamageDealtToChampions: Int64
+    public var totalDamageTaken: Int64
+    public var trueDamageTaken: Int64
+    public var magicalDamageTaken: Int64
+    public var physicalDamageTaken: Int64
+    public var damageSelfMitigated: Int64
+    public var totalHeal: Int64
     public var totalUnitsHealed: Int
     public var largestMultiKill: Int
     public var largestCritialStrike: Int
@@ -111,7 +111,7 @@ public class MatchParticipantStats: Decodable {
     public var totalMinionsKilled: Int
     public var totalTimeCrowdControlDealt: Int
     public var longestTimeSpentLiving: Int
-    public var timeCCingOthers: Double
+    public var timeCCingOthers: Int64
     public var altarsCaptures: Int
     public var altarsNeutralized: Int
     public var nodeNeutralize: Int
@@ -228,7 +228,7 @@ public class MatchParticipantStats: Decodable {
         case nodeCaptureAssist = "nodeCaptureAssist"
     }
     
-    public init(participantId: Int, win: Bool, champLevel: Int, goldEarned: Int, goldSpent: Int, item0: Int, item1: Int, item2: Int, item3: Int, item4: Int, item5: Int, item6: Int, rune0: Int, rune1: Int, rune2: Int, rune3: Int, rune4: Int, rune5: Int, rune0Var1: Int, rune0Var2: Int, rune0Var3: Int, rune1Var1: Int, rune1Var2: Int, rune1Var3: Int, rune2Var1: Int, rune2Var2: Int, rune2Var3: Int, rune3Var1: Int, rune3Var2: Int, rune3Var3: Int, rune4Var1: Int, rune4Var2: Int, rune4Var3: Int, rune5Var1: Int, rune5Var2: Int, rune5Var3: Int, doubleKills: Int, tripleKills: Int, quadraKills: Int, pentaKills: Int, totalPlayerScore: Int, playerScore0: Int, playerScore1: Int, playerScore2: Int, playerScore3: Int, playerScore4: Int, playerScore5: Int, playerScore6: Int, playerScore7: Int, playerScore8: Int, playerScore9: Int, totalScoreRank: Int, visionScore: Double, firstBloodKill: Bool, firstBloodAssist: Bool, firstInhibitorKill: Bool, firstInhibitorAssist: Bool, firstTowerKill: Bool, firstTowerAssist: Bool, kills: Int, deaths: Int, assists: Int, unrealKills: Int, wardsPlayed: Int, wardsKilled: Int, sigthWardsBoughtInGame: Int, visionWardsBoughtInGame: Int, primaryRunePath: Int, secondaryRunePath: Int, neutralMinionsKilled: Int, totalDamageDealt: Double, totalDamageDealtToChampions: Double, damageDealtToObjectives: Double, damageDealtToTurrets: Double, trueDamageDealt: Double, trueDamageDealtToChampions: Double, magicDamageDealt: Double, magicDamageDealtToChampions: Double, physicalDamageDealt: Double, physicalDamageDealtToChampions: Double, totalDamageTaken: Double, trueDamageTaken: Double, magicalDamageTaken: Double, physicalDamageTaken: Double, damageSelfMitigated: Double, totalHeal: Double, totalUnitsHealed: Int, largestMultiKill: Int, largestCritialStrike: Int, largestKillingSpree: Int, teamObjective: Int, combatPlayerScore: Int, objectivePlayerScore: Int, neutralMinionsKilledTeamJungle: Int, neutralMinionsKilledEnemyJungle: Int, killingSprees: Int, inhibitorKills: Int, turretKills: Int, totalMinionsKilled: Int, totalTimeCrowdControlDealt: Int, longestTimeSpentLiving: Int, timeCCingOthers: Double, altarsCaptures: Int, altarsNeutralized: Int, nodeNeutralize: Int, nodeNeutralizeAssist: Int, nodeCaptureAssist: Int) {
+    public init(participantId: Int, win: Bool, champLevel: Int, goldEarned: Int, goldSpent: Int, item0: Int, item1: Int, item2: Int, item3: Int, item4: Int, item5: Int, item6: Int, rune0: Int, rune1: Int, rune2: Int, rune3: Int, rune4: Int, rune5: Int, rune0Var1: Int, rune0Var2: Int, rune0Var3: Int, rune1Var1: Int, rune1Var2: Int, rune1Var3: Int, rune2Var1: Int, rune2Var2: Int, rune2Var3: Int, rune3Var1: Int, rune3Var2: Int, rune3Var3: Int, rune4Var1: Int, rune4Var2: Int, rune4Var3: Int, rune5Var1: Int, rune5Var2: Int, rune5Var3: Int, doubleKills: Int, tripleKills: Int, quadraKills: Int, pentaKills: Int, totalPlayerScore: Int, playerScore0: Int, playerScore1: Int, playerScore2: Int, playerScore3: Int, playerScore4: Int, playerScore5: Int, playerScore6: Int, playerScore7: Int, playerScore8: Int, playerScore9: Int, totalScoreRank: Int, visionScore: Int64, firstBloodKill: Bool, firstBloodAssist: Bool, firstInhibitorKill: Bool, firstInhibitorAssist: Bool, firstTowerKill: Bool, firstTowerAssist: Bool, kills: Int, deaths: Int, assists: Int, unrealKills: Int, wardsPlayed: Int, wardsKilled: Int, sigthWardsBoughtInGame: Int, visionWardsBoughtInGame: Int, primaryRunePath: Int, secondaryRunePath: Int, neutralMinionsKilled: Int, totalDamageDealt: Int64, totalDamageDealtToChampions: Int64, damageDealtToObjectives: Int64, damageDealtToTurrets: Int64, trueDamageDealt: Int64, trueDamageDealtToChampions: Int64, magicDamageDealt: Int64, magicDamageDealtToChampions: Int64, physicalDamageDealt: Int64, physicalDamageDealtToChampions: Int64, totalDamageTaken: Int64, trueDamageTaken: Int64, magicalDamageTaken: Int64, physicalDamageTaken: Int64, damageSelfMitigated: Int64, totalHeal: Int64, totalUnitsHealed: Int, largestMultiKill: Int, largestCritialStrike: Int, largestKillingSpree: Int, teamObjective: Int, combatPlayerScore: Int, objectivePlayerScore: Int, neutralMinionsKilledTeamJungle: Int, neutralMinionsKilledEnemyJungle: Int, killingSprees: Int, inhibitorKills: Int, turretKills: Int, totalMinionsKilled: Int, totalTimeCrowdControlDealt: Int, longestTimeSpentLiving: Int, timeCCingOthers: Int64, altarsCaptures: Int, altarsNeutralized: Int, nodeNeutralize: Int, nodeNeutralizeAssist: Int, nodeCaptureAssist: Int) {
         self.participantId = participantId
         self.win = win
         self.champLevel = champLevel
@@ -392,7 +392,7 @@ public class MatchParticipantStats: Decodable {
         self.playerScore8 = try container.decode(Int.self, forKey: .playerScore8)
         self.playerScore9 = try container.decode(Int.self, forKey: .playerScore9)
         self.totalScoreRank = try container.decode(Int.self, forKey: .totalScoreRank)
-        self.visionScore = try container.decode(Double.self, forKey: .visionScore)
+        self.visionScore = try container.decode(Int64.self, forKey: .visionScore)
         self.firstBloodKill = try container.decode(Bool.self, forKey: .firstBloodKill)
         self.firstBloodAssist = try container.decode(Bool.self, forKey: .firstBloodAssist)
         self.firstInhibitorKill = try container.decode(Bool.self, forKey: .firstInhibitorKill)
@@ -410,22 +410,22 @@ public class MatchParticipantStats: Decodable {
         self.primaryRunePath = try container.decode(Int.self, forKey: .primaryRunePath)
         self.secondaryRunePath = try container.decode(Int.self, forKey: .secondaryRunePath)
         self.neutralMinionsKilled = try container.decode(Int.self, forKey: .neutralMinionsKilled)
-        self.totalDamageDealt = try container.decode(Double.self, forKey: .totalDamageDealt)
-        self.totalDamageDealtToChampions = try container.decode(Double.self, forKey: .totalDamageDealtToChampions)
-        self.damageDealtToObjectives = try container.decode(Double.self, forKey: .damageDealtToObjectives)
-        self.damageDealtToTurrets = try container.decode(Double.self, forKey: .damageDealtToTurrets)
-        self.trueDamageDealt = try container.decode(Double.self, forKey: .trueDamageDealt)
-        self.trueDamageDealtToChampions = try container.decode(Double.self, forKey: .trueDamageDealtToChampions)
-        self.magicDamageDealt = try container.decode(Double.self, forKey: .magicDamageDealt)
-        self.magicDamageDealtToChampions = try container.decode(Double.self, forKey: .magicDamageDealtToChampions)
-        self.physicalDamageDealt = try container.decode(Double.self, forKey: .physicalDamageDealt)
-        self.physicalDamageDealtToChampions = try container.decode(Double.self, forKey: .physicalDamageDealtToChampions)
-        self.totalDamageTaken = try container.decode(Double.self, forKey: .totalDamageTaken)
-        self.trueDamageTaken = try container.decode(Double.self, forKey: .trueDamageTaken)
-        self.magicalDamageTaken = try container.decode(Double.self, forKey: .magicalDamageTaken)
-        self.physicalDamageTaken = try container.decode(Double.self, forKey: .physicalDamageTaken)
-        self.damageSelfMitigated = try container.decode(Double.self, forKey: .damageSelfMitigated)
-        self.totalHeal = try container.decode(Double.self, forKey: .totalHeal)
+        self.totalDamageDealt = try container.decode(Int64.self, forKey: .totalDamageDealt)
+        self.totalDamageDealtToChampions = try container.decode(Int64.self, forKey: .totalDamageDealtToChampions)
+        self.damageDealtToObjectives = try container.decode(Int64.self, forKey: .damageDealtToObjectives)
+        self.damageDealtToTurrets = try container.decode(Int64.self, forKey: .damageDealtToTurrets)
+        self.trueDamageDealt = try container.decode(Int64.self, forKey: .trueDamageDealt)
+        self.trueDamageDealtToChampions = try container.decode(Int64.self, forKey: .trueDamageDealtToChampions)
+        self.magicDamageDealt = try container.decode(Int64.self, forKey: .magicDamageDealt)
+        self.magicDamageDealtToChampions = try container.decode(Int64.self, forKey: .magicDamageDealtToChampions)
+        self.physicalDamageDealt = try container.decode(Int64.self, forKey: .physicalDamageDealt)
+        self.physicalDamageDealtToChampions = try container.decode(Int64.self, forKey: .physicalDamageDealtToChampions)
+        self.totalDamageTaken = try container.decode(Int64.self, forKey: .totalDamageTaken)
+        self.trueDamageTaken = try container.decode(Int64.self, forKey: .trueDamageTaken)
+        self.magicalDamageTaken = try container.decode(Int64.self, forKey: .magicalDamageTaken)
+        self.physicalDamageTaken = try container.decode(Int64.self, forKey: .physicalDamageTaken)
+        self.damageSelfMitigated = try container.decode(Int64.self, forKey: .damageSelfMitigated)
+        self.totalHeal = try container.decode(Int64.self, forKey: .totalHeal)
         self.totalUnitsHealed = try container.decode(Int.self, forKey: .totalUnitsHealed)
         self.largestMultiKill = try container.decode(Int.self, forKey: .largestMultiKill)
         self.largestCritialStrike = try container.decode(Int.self, forKey: .largestCritialStrike)
@@ -441,7 +441,7 @@ public class MatchParticipantStats: Decodable {
         self.totalMinionsKilled = try container.decode(Int.self, forKey: .totalMinionsKilled)
         self.totalTimeCrowdControlDealt = try container.decode(Int.self, forKey: .totalTimeCrowdControlDealt)
         self.longestTimeSpentLiving = try container.decode(Int.self, forKey: .longestTimeSpentLiving)
-        self.timeCCingOthers = try container.decode(Double.self, forKey: .timeCCingOthers)
+        self.timeCCingOthers = try container.decode(Int64.self, forKey: .timeCCingOthers)
         self.altarsCaptures = try container.decode(Int.self, forKey: .altarsCaptures)
         self.altarsNeutralized = try container.decode(Int.self, forKey: .altarsNeutralized)
         self.nodeNeutralize = try container.decode(Int.self, forKey: .nodeNeutralize)

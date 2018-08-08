@@ -12,7 +12,7 @@ public class Match: Decodable {
     
     public var seasonId: Int
     public var queueId: Int
-    public var gameId: Double
+    public var gameId: Int64
     public var participants: [MatchParticipantIdentity]
     public var patch: String
     public var platformId: String
@@ -21,8 +21,8 @@ public class Match: Decodable {
     public var gameType: String
     public var teamsInfo: [TeamStats]
     public var participantsInfo: [MatchParticipant]
-    public var gameDuration: Double
-    public var gameCreation: Double
+    public var gameDuration: Int64
+    public var gameCreation: Int64
     
     enum CodingKeys: String, CodingKey {
         case seasonId = "seasonId"
@@ -40,7 +40,7 @@ public class Match: Decodable {
         case gameCreation = "gameCreation"
     }
     
-    public init(seasonId: Int, queueId: Int, gameId: Double, participants: [MatchParticipantIdentity], patch: String, platformId: String, gameMode: String, mapId: Int, gameType: String, teamsInfo: [TeamStats], participantsInfo: [MatchParticipant], gameDuration: Double, gameCreation: Double) {
+    public init(seasonId: Int, queueId: Int, gameId: Int64, participants: [MatchParticipantIdentity], patch: String, platformId: String, gameMode: String, mapId: Int, gameType: String, teamsInfo: [TeamStats], participantsInfo: [MatchParticipant], gameDuration: Int64, gameCreation: Int64) {
         self.seasonId = seasonId
         self.queueId = queueId
         self.gameId = gameId
@@ -60,7 +60,7 @@ public class Match: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.seasonId = try container.decode(Int.self, forKey: .seasonId)
         self.queueId = try container.decode(Int.self, forKey: .queueId)
-        self.gameId = try container.decode(Double.self, forKey: .gameId)
+        self.gameId = try container.decode(Int64.self, forKey: .gameId)
         self.participants = try container.decode([MatchParticipantIdentity].self, forKey: .participants)
         self.patch = try container.decode(String.self, forKey: .patch)
         self.platformId = try container.decode(String.self, forKey: .platformId)
@@ -69,7 +69,7 @@ public class Match: Decodable {
         self.gameType = try container.decode(String.self, forKey: .gameType)
         self.teamsInfo = try container.decode([TeamStats].self, forKey: .teamsInfo)
         self.participantsInfo = try container.decode([MatchParticipant].self, forKey: .participantsInfo)
-        self.gameDuration = try container.decode(Double.self, forKey: .gameDuration)
-        self.gameCreation = try container.decode(Double.self, forKey: .gameCreation)
+        self.gameDuration = try container.decode(Int64.self, forKey: .gameDuration)
+        self.gameCreation = try container.decode(Int64.self, forKey: .gameCreation)
     }
 }

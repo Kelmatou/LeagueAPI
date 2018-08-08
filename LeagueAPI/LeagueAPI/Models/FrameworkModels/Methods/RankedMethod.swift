@@ -14,7 +14,7 @@ internal class RankedMethod: LeagueMethod {
         case ChallengerByQueue(queue: Queue)
         case MasterByQueue(queue: Queue)
         case LeagueById(id: String)
-        case PositionsById(id: Double)
+        case PositionsById(id: Int64)
     }
     
     private var service: ServiceProxy

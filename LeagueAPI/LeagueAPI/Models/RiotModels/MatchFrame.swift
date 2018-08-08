@@ -12,7 +12,7 @@ public class MatchFrame: Decodable {
     
     public var events: [MatchEvent]
     public var participantFrames: [Int : MatchParticipantFrame]
-    public var timestamp: Double
+    public var timestamp: Int64
     
     enum CodingKeys: String, CodingKey {
         case events = "events"
@@ -20,7 +20,7 @@ public class MatchFrame: Decodable {
         case timestamp = "timestamp"
     }
     
-    public init(events: [MatchEvent], participantFrames: [Int: MatchParticipantFrame], timestamp: Double) {
+    public init(events: [MatchEvent], participantFrames: [Int: MatchParticipantFrame], timestamp: Int64) {
         self.events = events
         self.participantFrames = participantFrames
         self.timestamp = timestamp
@@ -30,6 +30,6 @@ public class MatchFrame: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.events = try container.decode([MatchEvent].self, forKey: .events)
         self.participantFrames = try container.decode([Int : MatchParticipantFrame].self, forKey: .participantFrames)
-        self.timestamp = try container.decode(Double.self, forKey: .timestamp)
+        self.timestamp = try container.decode(Int64.self, forKey: .timestamp)
     }
 }

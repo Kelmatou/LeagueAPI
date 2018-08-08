@@ -13,11 +13,11 @@ public class TournamentInfo: Encodable {
     public var spectatorType: String
     public var teamSize: Int
     public var pickType: String
-    public var allowedSummonerIds: [Double]
+    public var allowedSummonerIds: [Int64]
     public var mapType: String
     public var metadata: String
     
-    public init(spectatorType: String, teamSize: Int, pickType: String, allowedSummonerIds: [Double], mapType: String, metadata: String) {
+    public init(spectatorType: String, teamSize: Int, pickType: String, allowedSummonerIds: [Int64], mapType: String, metadata: String) {
         self.spectatorType = spectatorType
         self.teamSize = teamSize
         self.pickType = pickType
