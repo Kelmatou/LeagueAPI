@@ -8,10 +8,30 @@
 
 import Foundation
 
-internal class PrimitiveType {
+protocol PrimitiveType {}
+extension Int64: PrimitiveType {}
+extension String: PrimitiveType {}
+extension Int: PrimitiveType {}
+
+protocol ArrayProtocol {
+    static func type() -> Array<Any>.Element.Type
+}
+
+extension Array: ArrayProtocol {
+    static func type() -> Any.Type {
+        return self.Element.self
+    }
+}
+
+internal class PrimitiveTypeCheck {
     
-    public static func isPrimitive<Type>(_ type: Type.Type) -> Bool {
-        return type == Int.self || type == Int64.self || type == String.self
-            || type == [Int].self || type == [Int64].self || type == [String].self
+    public static func isPrimitive(_ type: Any.Type) -> Bool {
+        if let arrayType = type as? ArrayProtocol.Type {
+            let nestedType: Any.Type = arrayType.type()
+            return nestedType is PrimitiveType.Type
+        }
+        else {
+            return type is PrimitiveType.Type
+        }
     }
 }

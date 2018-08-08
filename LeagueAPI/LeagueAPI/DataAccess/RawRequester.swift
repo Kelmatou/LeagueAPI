@@ -12,8 +12,15 @@ internal class RawRequester: DataRequester {
     
     func request<DataType: Decodable>(accessMethod: RESTRequester.AccessMethod, methodUrl: String, headers: [String : String], body: Data?, handler: @escaping (DataType?, RESTRequester.Headers?, String?) -> Void) {
         RESTRequester.request(accessMethod, url: methodUrl, headers: headers, body: body) { (data, headers, error) in
-            let result: DataType? = data as? DataType
-            handler(result, headers, error)
+            if let result = data as? DataType {
+                handler(result, headers, error)
+            }
+            else if let error = error {
+                handler(nil, headers, error)
+            }
+            else {
+                handler(nil, headers, "RawRequester: cast into \(DataType.self) failed")
+            }
         }
     }
 }

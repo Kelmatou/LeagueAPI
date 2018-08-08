@@ -11,10 +11,6 @@ import Foundation
 internal class JsonRequester: DataRequester {
     
     public func request<DataType: Decodable>(accessMethod: RESTRequester.AccessMethod, methodUrl: String, headers: [String : String], body: Data?, handler: @escaping (DataType?, RESTRequester.Headers?, String?) -> Void) {
-        guard DataType.self is Decodable else {
-            Logger.error("JsonRequester: \(DataType.self) does not conform to Decodable protocol")
-            return
-        }
         RESTRequester.requestObject(accessMethod, url: methodUrl, headers: headers, body: body, asType: DataType.self) { (result, headers, error) in
             handler(result, headers, error)
         }

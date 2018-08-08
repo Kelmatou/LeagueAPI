@@ -31,7 +31,7 @@ public class RESTRequester {
      - parameter url: the targeted url
      - parameter headers: a dictionary of header [Value : HttpField]
      - parameter body: the content of the message
-     - parameter handler: allows the user to make actions just after request ended (Data, String)
+     - parameter handler: allows the user to make actions just after request ended (Data, Headers, String)
      */
     public static func request(_ method: AccessMethod, url: String, headers: [String : String]? = nil, body: Data? = nil, handler: @escaping (Data?, Headers?, String?) -> Void) {
         if let uri = URL(string: url) {
@@ -45,15 +45,29 @@ public class RESTRequester {
             }
             let task = URLSession.shared.dataTask(with: request) {
                 (data, response, error) in
-                var allHeaders: Headers? = nil
-                if let httpResponse = response as? HTTPURLResponse {
-                    allHeaders = httpResponse.allHeaderFields
+                var httpResponse: HTTPURLResponse? = nil
+                if let httpResponseUnwrapped = response as? HTTPURLResponse {
+                    httpResponse = httpResponseUnwrapped
                 }
-                if let error = error {
-                    handler(data, allHeaders, error.localizedDescription)
+                let allHeaders: Headers? = httpResponse?.allHeaderFields
+                Logger.print("Server responsed with code \(httpResponse?.statusCode ?? 0)")
+                if let httpResponse = httpResponse {
+                    let validResponseCode: Int = 200
+                    if httpResponse.statusCode == validResponseCode {
+                        handler(data, allHeaders, nil)
+                    }
+                    else {
+                        let dataConversion: (ErrorStatus?, String?) = ObjectMapper.convert(data, into: ErrorStatus.self)
+                        if let errorStatus = dataConversion.0 {
+                            handler(nil, allHeaders, errorStatus.status.message)
+                        }
+                        else {
+                            handler(nil, allHeaders, error?.localizedDescription)
+                        }
+                    }
                 }
                 else {
-                    handler(data, allHeaders, nil)
+                    handler(data, allHeaders, error?.localizedDescription)
                 }
             }
             task.resume()

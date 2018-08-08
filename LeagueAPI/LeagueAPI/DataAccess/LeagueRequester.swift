@@ -28,7 +28,7 @@ internal class LeagueRequester {
                 self.updateKeyLimits(for: method, headers: headers)
                 handler(result, error)
             }
-            let resultIsJson: Bool = !PrimitiveType.isPrimitive(ResultType.self)
+            let resultIsJson: Bool = !PrimitiveTypeCheck.isPrimitive(ResultType.self)
             let requester: DataRequester = resultIsJson ? JsonRequester() : RawRequester()
             requester.request(accessMethod: accessMethod, methodUrl: methodUrl, headers: headers, body: body, handler: completion)
         }
@@ -45,7 +45,6 @@ internal class LeagueRequester {
             if let methodLimitCount = headers["X-Method-Rate-Limit-Count"] as? String, let methodLimit = headers["X-Method-Rate-Limit"] as? String {
                 self.key.updateMethodLimit(for: method.getMethodSignature(), newLimits: methodLimitCount, methodRate: methodLimit)
             }
-            
         }
     }
     
