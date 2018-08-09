@@ -11,14 +11,14 @@ import Foundation
 public class TeamBan: Decodable {
     
     public var banTurn: Int
-    public var championId: Int
+    public var championId: ChampionId
     
     enum CodingKeys: String, CodingKey {
         case banTurn = "pickTurn"
         case championId = "championId"
     }
     
-    public init(banTurn: Int, championId: Int) {
+    public init(banTurn: Int, championId: ChampionId) {
         self.banTurn = banTurn
         self.championId = championId
     }
@@ -26,6 +26,6 @@ public class TeamBan: Decodable {
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.banTurn = try container.decode(Int.self, forKey: .banTurn)
-        self.championId = try container.decode(Int.self, forKey: .championId)
+        self.championId = try container.decode(ChampionId.self, forKey: .championId)
     }
 }

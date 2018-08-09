@@ -11,9 +11,9 @@ import Foundation
 internal class SummonerMethod: LeagueMethod {
     
     public enum SummonerMethods {
-        case ByAccountId(id: Int64)
+        case ByAccountId(id: AccountId)
         case ByName(name: String)
-        case ById(id: Int64)
+        case ById(id: SummonerId)
     }
     
     private var service: ServiceProxy

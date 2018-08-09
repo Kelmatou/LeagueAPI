@@ -11,11 +11,11 @@ import Foundation
 internal class MatchMethod: LeagueMethod {
     
     public enum MatchMethods {
-        case ById(id: Int64)
-        case MatchesByAccountId(id: Int64, beginTime: Int64?, endTime: Int64?, beginIndex: Int?, endIndex: Int?, championId: Int?, queue: Int?, season: Int?)
-        case TimelineById(id: Int64)
-        case MatchIdsByTournamentCode(code: String)
-        case ByIdAndTournamentCode(id: Int64, code: String)
+        case ById(id: GameId)
+        case MatchesByAccountId(id: AccountId, beginTime: Int64?, endTime: Int64?, beginIndex: Int?, endIndex: Int?, championId: ChampionId?, queue: Int?, season: Int?)
+        case TimelineById(id: GameId)
+        case MatchIdsByTournamentCode(code: TournamentCode)
+        case ByIdAndTournamentCode(id: GameId, code: TournamentCode)
     }
     
     private var service: ServiceProxy

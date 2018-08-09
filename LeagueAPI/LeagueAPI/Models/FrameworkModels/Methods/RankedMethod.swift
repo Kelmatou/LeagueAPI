@@ -13,8 +13,8 @@ internal class RankedMethod: LeagueMethod {
     public enum RankedMethods {
         case ChallengerByQueue(queue: Queue)
         case MasterByQueue(queue: Queue)
-        case LeagueById(id: String)
-        case PositionsById(id: Int64)
+        case LeagueById(id: LeagueId)
+        case PositionsById(id: SummonerId)
     }
     
     private var service: ServiceProxy

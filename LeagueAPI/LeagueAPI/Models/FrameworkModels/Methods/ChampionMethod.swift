@@ -12,7 +12,7 @@ internal class ChampionMethod: LeagueMethod {
     
     public enum ChampionMethods {
         case All(freeToPlay: Bool)
-        case ById(id: Int64)
+        case ById(id: ChampionId)
     }
     
     private var service: ServiceProxy

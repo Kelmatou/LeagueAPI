@@ -10,8 +10,8 @@ import Foundation
 
 public class Summoner: Decodable {
     
-    public var id: Int64
-    public var accountId: Int64
+    public var id: SummonerId
+    public var accountId: AccountId
     public var name: String
     public var level: Int64
     public var iconId: Int
@@ -26,7 +26,7 @@ public class Summoner: Decodable {
         case revisionDate = "revisionDate"
     }
     
-    public init(id: Int64, accountId: Int64, name: String, level: Int64, iconId: Int, revisionDate: Int64) {
+    public init(id: SummonerId, accountId: AccountId, name: String, level: Int64, iconId: Int, revisionDate: Int64) {
         self.id = id
         self.accountId = accountId
         self.name = name
@@ -37,8 +37,8 @@ public class Summoner: Decodable {
     
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try container.decode(Int64.self, forKey: .id)
-        self.accountId = try container.decode(Int64.self, forKey: .accountId)
+        self.id = try container.decode(SummonerId.self, forKey: .id)
+        self.accountId = try container.decode(AccountId.self, forKey: .accountId)
         self.name = try container.decode(String.self, forKey: .name)
         self.level = try container.decode(Int64.self, forKey: .level)
         self.iconId = try container.decode(Int.self, forKey: .iconId)

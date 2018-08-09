@@ -11,7 +11,7 @@ import Foundation
 internal class ThirdPartyCodeMethod: LeagueMethod {
     
     public enum ThirdPartyCodeMethods {
-        case ById(id: Int64)
+        case ById(id: SummonerId)
     }
     
     private var service: ServiceProxy

@@ -10,8 +10,8 @@ import Foundation
 
 public class ChampionMastery: Decodable {
     
-    public var championId: Int64
-    public var summonerId: Int64
+    public var championId: ChampionId
+    public var summonerId: SummonerId
     public var championLevel: Int
     public var championPoints: Int
     public var championPointsUntilNextLevel: Int64
@@ -32,7 +32,7 @@ public class ChampionMastery: Decodable {
         case lastPlayTime = "lastPlayTime"
     }
     
-    public init(championId: Int64, summonerId: Int64, championLevel: Int, championPoints: Int, championPointsUntilNextLevel: Int64, championPointsSinceLastLevel: Int64, chestGranted: Bool, tokensEarned: Int, lastPlayTime: Int64) {
+    public init(championId: ChampionId, summonerId: SummonerId, championLevel: Int, championPoints: Int, championPointsUntilNextLevel: Int64, championPointsSinceLastLevel: Int64, chestGranted: Bool, tokensEarned: Int, lastPlayTime: Int64) {
         self.championId = championId
         self.summonerId = summonerId
         self.championLevel = championLevel
@@ -46,8 +46,8 @@ public class ChampionMastery: Decodable {
     
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.championId = try container.decode(Int64.self, forKey: .championId)
-        self.summonerId = try container.decode(Int64.self, forKey: .summonerId)
+        self.championId = try container.decode(ChampionId.self, forKey: .championId)
+        self.summonerId = try container.decode(SummonerId.self, forKey: .summonerId)
         self.championLevel = try container.decode(Int.self, forKey: .championLevel)
         self.championPoints = try container.decode(Int.self, forKey: .championPoints)
         self.championPointsUntilNextLevel = try container.decode(Int64.self, forKey: .championPointsUntilNextLevel)

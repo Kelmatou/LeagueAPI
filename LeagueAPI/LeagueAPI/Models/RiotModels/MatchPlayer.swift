@@ -10,9 +10,9 @@ import Foundation
 
 public class MatchPlayer: Decodable {
     
-    public var currentAccountId: Int64
-    public var accountId: Int64
-    public var summonerId: Int64
+    public var currentAccountId: AccountId
+    public var accountId: AccountId
+    public var summonerId: SummonerId
     public var summonerName: String
     public var profileIconId: Int
     public var currentPlatformId: String
@@ -30,7 +30,7 @@ public class MatchPlayer: Decodable {
         case matchHistoryUri = "matchHistoryUri"
     }
     
-    public init(currentAccountId: Int64, accountId: Int64, summonerId: Int64, summonerName: String, profileIconId: Int, currentPlatformId: String, platformId: String, matchHistoryUri: String) {
+    public init(currentAccountId: AccountId, accountId: AccountId, summonerId: SummonerId, summonerName: String, profileIconId: Int, currentPlatformId: String, platformId: String, matchHistoryUri: String) {
         self.currentAccountId = currentAccountId
         self.accountId = accountId
         self.summonerId = summonerId
@@ -43,9 +43,9 @@ public class MatchPlayer: Decodable {
     
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.currentAccountId = try container.decode(Int64.self, forKey: .currentAccountId)
-        self.accountId = try container.decode(Int64.self, forKey: .accountId)
-        self.summonerId = try container.decode(Int64.self, forKey: .summonerId)
+        self.currentAccountId = try container.decode(AccountId.self, forKey: .currentAccountId)
+        self.accountId = try container.decode(AccountId.self, forKey: .accountId)
+        self.summonerId = try container.decode(SummonerId.self, forKey: .summonerId)
         self.summonerName = try container.decode(String.self, forKey: .summonerName)
         self.profileIconId = try container.decode(Int.self, forKey: .profileIconId)
         self.currentPlatformId = try container.decode(String.self, forKey: .currentPlatformId)

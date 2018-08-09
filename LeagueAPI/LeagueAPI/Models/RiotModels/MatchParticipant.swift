@@ -12,7 +12,7 @@ public class MatchParticipant: Decodable {
     
     public var participantId: Int
     public var teamId: Int
-    public var championId: Int
+    public var championId: ChampionId
     public var summonerSpell1: Int
     public var summonerSpell2: Int
     public var highestAchievementSeasonTier: String
@@ -34,7 +34,7 @@ public class MatchParticipant: Decodable {
         case masteries = "masteries"
     }
     
-    public init(participantId: Int, teamId: Int, championId: Int, summonerSpell1: Int, summonerSpell2: Int, highestAchievementSeasonTier: String, stats: MatchParticipantStats, timeline: MatchParticipantTimeline, runes: [LegacyRune]? = nil, masteries: [LegacyMastery]? = nil) {
+    public init(participantId: Int, teamId: Int, championId: ChampionId, summonerSpell1: Int, summonerSpell2: Int, highestAchievementSeasonTier: String, stats: MatchParticipantStats, timeline: MatchParticipantTimeline, runes: [LegacyRune]? = nil, masteries: [LegacyMastery]? = nil) {
         self.participantId = participantId
         self.teamId = teamId
         self.championId = championId
@@ -51,7 +51,7 @@ public class MatchParticipant: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.participantId = try container.decode(Int.self, forKey: .participantId)
         self.teamId = try container.decode(Int.self, forKey: .teamId)
-        self.championId = try container.decode(Int.self, forKey: .championId)
+        self.championId = try container.decode(ChampionId.self, forKey: .championId)
         self.summonerSpell1 = try container.decode(Int.self, forKey: .summonerSpell1)
         self.summonerSpell2 = try container.decode(Int.self, forKey: .summonerSpell2)
         self.highestAchievementSeasonTier = try container.decode(String.self, forKey: .highestAchievementSeasonTier)

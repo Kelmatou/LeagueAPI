@@ -11,10 +11,10 @@ import Foundation
 internal class TournamentStubMethod: LeagueMethod {
     
     public enum TournamentStubMethods {
-        case CreateCodes(amount: Int?, tournamentId: Int64, info: TournamentInfo)
-        case EventsByTournamentCode(code: String)
+        case CreateCodes(amount: Int?, tournamentId: TournamentId, info: TournamentInfo)
+        case EventsByTournamentCode(code: TournamentCode)
         case CreateProvider(callbackUrl: String, region: TournamentRegion)
-        case CreateTournament(name: String, providerId: Int)
+        case CreateTournament(name: String, providerId: ProviderId)
     }
     
     private var service: ServiceProxy

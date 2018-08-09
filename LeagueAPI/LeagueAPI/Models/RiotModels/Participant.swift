@@ -12,12 +12,12 @@ public class Participant: Decodable {
     
     public var summonerName: String
     public var profileIconId: Int64
-    public var championId: Int64
+    public var championId: ChampionId
     public var isBot: Bool
     public var teamId: Int64
     public var summonerSpell1: Int64
     public var summonerSpell2: Int64
-    public var summonerId: Int64? // Detailed participant field
+    public var summonerId: SummonerId? // Detailed participant field
     public var runePage: RunePage? // Detailed participant field
     public var customizedObjects: [GameCustomObject]? // Detailed participant field
     
@@ -34,7 +34,7 @@ public class Participant: Decodable {
         case customizedObjects = "gameCustomizationObjects"
     }
     
-    public init(summonerName: String, profileIconId: Int64, championId: Int64, isBot: Bool, teamId: Int64, summonerSpell1: Int64, summonerSpell2: Int64, summonerId: Int64? = nil, runePage: RunePage? = nil, customizedObjects: [GameCustomObject]? = nil) {
+    public init(summonerName: String, profileIconId: Int64, championId: ChampionId, isBot: Bool, teamId: Int64, summonerSpell1: Int64, summonerSpell2: Int64, summonerId: SummonerId? = nil, runePage: RunePage? = nil, customizedObjects: [GameCustomObject]? = nil) {
         self.summonerName = summonerName
         self.profileIconId = profileIconId
         self.championId = championId
@@ -51,12 +51,12 @@ public class Participant: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.summonerName = try container.decode(String.self, forKey: .summonerName)
         self.profileIconId = try container.decode(Int64.self, forKey: .profileIconId)
-        self.championId = try container.decode(Int64.self, forKey: .championId)
+        self.championId = try container.decode(ChampionId.self, forKey: .championId)
         self.isBot = try container.decode(Bool.self, forKey: .isBot)
         self.teamId = try container.decode(Int64.self, forKey: .teamId)
         self.summonerSpell1 = try container.decode(Int64.self, forKey: .summonerSpell1)
         self.summonerSpell2 = try container.decode(Int64.self, forKey: .summonerSpell2)
-        self.summonerId = try container.decode(Int64?.self, forKey: .summonerId)
+        self.summonerId = try container.decode(SummonerId?.self, forKey: .summonerId)
         self.runePage = try container.decode(RunePage?.self, forKey: .runePage)
         self.customizedObjects = try container.decode([GameCustomObject]?.self, forKey: .customizedObjects)
     }

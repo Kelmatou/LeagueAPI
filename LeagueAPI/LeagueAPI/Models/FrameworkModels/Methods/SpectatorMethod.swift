@@ -11,7 +11,7 @@ import Foundation
 internal class SpectatorMethod: LeagueMethod {
     
     public enum SpectatorMethods {
-        case BySummonerId(id: Int64)
+        case BySummonerId(id: SummonerId)
         case FeaturedGames
     }
     

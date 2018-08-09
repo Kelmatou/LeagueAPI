@@ -11,9 +11,9 @@ import Foundation
 internal class TournamentInitializer: Encodable {
     
     public var name: String = ""
-    public var providerId: Int
+    public var providerId: ProviderId
     
-    public init(name: String, providerId: Int) {
+    public init(name: String, providerId: ProviderId) {
         self.name = name
         self.providerId = providerId
     }
