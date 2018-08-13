@@ -56,7 +56,7 @@ public class LeagueInfo: Decodable {
         self.playerOrTeamName = try container.decode(String.self, forKey: .playerOrTeamName)
         self.rank = try container.decode(String.self, forKey: .rank)
         self.leaguePoints = try container.decode(Int.self, forKey: .leaguePoints)
-        self.series = try container.decode(Series?.self, forKey: .series)
+        self.series = try? container.decode(Series.self, forKey: .series)
         self.wins = try container.decode(Int.self, forKey: .wins)
         self.losses = try container.decode(Int.self, forKey: .losses)
         self.hotStreak = try container.decode(Bool.self, forKey: .hotStreak)

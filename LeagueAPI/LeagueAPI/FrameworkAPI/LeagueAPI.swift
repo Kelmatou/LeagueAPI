@@ -16,7 +16,7 @@ public class LeagueAPI {
         self.key = APIKey(token: APIToken)
     }
     
-    // MARK: - Champion Mastery
+    // MARK: - Champion Mastery - OK
     
     public func getChampionMasteries(by summonerId: SummonerId, on region: Region, handler: @escaping ([ChampionMastery]?, String?) -> Void) {
         ChampionMasteryBusiness.getMastery(method: .BySummonerId(id: summonerId), region: region, key: self.key) { (championMasteries, error) in
@@ -36,9 +36,9 @@ public class LeagueAPI {
         }
     }
     
-    // MARK: - Champion
+    // MARK: - Champion - OK
     
-    public func getAll(freeToPlayOnly: Bool = false, on region: Region, handler: @escaping ([Champion]?, String?) -> Void) {
+    public func getAllChampions(freeToPlayOnly: Bool = false, on region: Region, handler: @escaping ([Champion]?, String?) -> Void) {
         ChampionBusiness.getChampionList(method: .All(freeToPlay: freeToPlayOnly), region: region, key: self.key) { (champions, error) in
             handler(champions, error)
         }
@@ -50,7 +50,7 @@ public class LeagueAPI {
         }
     }
     
-    // MARK: - Ranked
+    // MARK: - Ranked - OK
     
     public func getChallengerLeague(for queue: Queue, on region: Region, handler: @escaping (League?, String?) -> Void) {
         RankedBusiness.getRanked(method: .ChallengerByQueue(queue: queue), region: region, key: self.key) { (league, error) in
@@ -83,7 +83,7 @@ public class LeagueAPI {
         }
     }
     
-    // MARK: - Status
+    // MARK: - Status - OK
     
     public func getStatus(on region: Region, handler: @escaping (ServiceStatus?, String?) -> Void) {
         StatusBusiness.getStatus(method: .GetStatus, region: region, key: self.key) { (status, error) in
@@ -91,7 +91,7 @@ public class LeagueAPI {
         }
     }
     
-    // MARK: - Match
+    // MARK: - Match - OK
     
     public func getMatch(by gameId: GameId, on region: Region, handler: @escaping (Match?, String?) -> Void) {
         MatchBusiness.getMatch(method: .ById(id: gameId), region: region, key: self.key) { (match, error) in
@@ -123,7 +123,7 @@ public class LeagueAPI {
         }
     }
     
-    // MARK: - Spectator
+    // MARK: - Spectator - OK
     
     public func getCurrentGame(by summonerId: SummonerId, on region: Region, handler: @escaping (GameInfo?, String?) -> Void) {
         SpectatorBusiness.getCurrentGame(method: .BySummonerId(id: summonerId), region: region, key: self.key) { (game, error) in
@@ -137,7 +137,7 @@ public class LeagueAPI {
         }
     }
     
-    // MARK: - Summoner
+    // MARK: - Summoner - OK
     
     public func getSummonerByAccountId(accountId: AccountId, on region: Region, handler: @escaping (Summoner?, String?) -> Void) {
         SummonerBusiness.getSummoner(method: .ByAccountId(id: accountId), region: region, key: self.key) { (summoner, error) in
@@ -166,40 +166,40 @@ public class LeagueAPI {
         }
     }
     
-    // MARK: - Tournament Stub
+    // MARK: - Tournament Stub - OK
     
-    public func newTournament(hostRegion: TournamentRegion, named name: String, hostUrl: String, tournamentId: Double, on region: Region, amount: Int? = nil, info: TournamentInfo, handler: @escaping ((ProviderId, TournamentId, [TournamentCode])?, String?) -> Void) {
-        createTournamentProvider(hostRegion: hostRegion, hostUrl: hostUrl, on: region) { (providerId, error) in
+    public func newTournament(hostRegion: TournamentRegion, named name: String, hostUrl: String, amount: Int? = nil, info: TournamentInfo, handler: @escaping ((ProviderId, TournamentId, [TournamentCode])?, String?) -> Void) {
+        createTournamentProvider(hostRegion: hostRegion, hostUrl: hostUrl) { (providerId, error) in
             guard let providerId = providerId, error == nil else { handler(nil, error); return }
-            self.createTournament(providerId: providerId, named: name, on: region) { (tournamentId, error) in
+            self.createTournament(providerId: providerId, named: name) { (tournamentId, error) in
                 guard let tournamentId = tournamentId, error == nil else { handler(nil, error); return }
-                self.createTournamentCode(tournamentId: tournamentId, on: region, amount: amount, info: info) { (codes, error) in
+                self.createTournamentCode(tournamentId: tournamentId, amount: amount, info: info) { (codes, error) in
                     handler((providerId, tournamentId, codes ?? []), error)
                 }
             }
         }
     }
     
-    public func createTournamentCode(tournamentId: TournamentId, on region: Region, amount: Int? = nil, info: TournamentInfo, handler: @escaping ([TournamentCode]?, String?) -> Void) {
-        TournamentStubBusiness.manageTournament(method: .CreateCodes(amount: amount, tournamentId: tournamentId, info: info), region: region, key: self.key) { (codes, error) in
+    public func createTournamentCode(tournamentId: TournamentId, amount: Int? = nil, info: TournamentInfo, handler: @escaping ([TournamentCode]?, String?) -> Void) {
+        TournamentStubBusiness.manageTournament(method: .CreateCodes(amount: amount, tournamentId: tournamentId, info: info), key: self.key) { (codes, error) in
             handler(codes, error)
         }
     }
     
-    public func getTournamentEvents(tournamentCode: TournamentCode, on region: Region, handler: @escaping ([TournamentEvent]?, String?) -> Void) {
-        TournamentStubBusiness.getTournamentEvents(method: .EventsByTournamentCode(code: tournamentCode), region: region, key: self.key) { (events, error) in
+    public func getTournamentEvents(tournamentCode: TournamentCode, handler: @escaping ([TournamentEvent]?, String?) -> Void) {
+        TournamentStubBusiness.getTournamentEvents(method: .EventsByTournamentCode(code: tournamentCode), key: self.key) { (events, error) in
             handler(events, error)
         }
     }
     
-    public func createTournamentProvider(hostRegion: TournamentRegion, hostUrl: String, on region: Region, handler: @escaping (ProviderId?, String?) -> Void) {
-        TournamentStubBusiness.manageTournament(method: .CreateProvider(callbackUrl: hostUrl, region: hostRegion), region: region, key: self.key) { (providerId, error) in
+    public func createTournamentProvider(hostRegion: TournamentRegion, hostUrl: String, handler: @escaping (ProviderId?, String?) -> Void) {
+        TournamentStubBusiness.manageTournament(method: .CreateProvider(callbackUrl: hostUrl, region: hostRegion), key: self.key) { (providerId, error) in
             handler(providerId, error)
         }
     }
     
-    public func createTournament(providerId: ProviderId, named name: String, on region: Region, handler: @escaping (TournamentId?, String?) -> Void) {
-        TournamentStubBusiness.manageTournament(method: .CreateTournament(name: name, providerId: providerId), region: region, key: self.key) { (tournamentId, error) in
+    public func createTournament(providerId: ProviderId, named name: String, handler: @escaping (TournamentId?, String?) -> Void) {
+        TournamentStubBusiness.manageTournament(method: .CreateTournament(name: name, providerId: providerId), key: self.key) { (tournamentId, error) in
             handler(tournamentId, error)
         }
     }

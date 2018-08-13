@@ -19,7 +19,7 @@ public class Queue {
     
     public private(set) var type: QueueTypes
     
-    public init?(queueType: QueueTypes) {
+    public init?(_ queueType: QueueTypes) {
         guard queueType != .Unknown else {
             Logger.error("QueueType instance cannot be created with \"Unknown\" value")
             return nil

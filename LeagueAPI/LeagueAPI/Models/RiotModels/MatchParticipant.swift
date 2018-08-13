@@ -15,7 +15,7 @@ public class MatchParticipant: Decodable {
     public var championId: ChampionId
     public var summonerSpell1: Int
     public var summonerSpell2: Int
-    public var highestAchievementSeasonTier: String
+    public var highestAchievedSeasonTier: String
     public var stats: MatchParticipantStats
     public var timeline: MatchParticipantTimeline
     public var runes: [LegacyRune]?
@@ -27,20 +27,20 @@ public class MatchParticipant: Decodable {
         case championId = "championId"
         case summonerSpell1 = "spell1Id"
         case summonerSpell2 = "spell2Id"
-        case highestAchievementSeasonTier = "highestAchievementSeasonTier"
+        case highestAchievedSeasonTier = "highestAchievedSeasonTier"
         case stats = "stats"
         case timeline = "timeline"
         case runes = "runes"
         case masteries = "masteries"
     }
     
-    public init(participantId: Int, teamId: Int, championId: ChampionId, summonerSpell1: Int, summonerSpell2: Int, highestAchievementSeasonTier: String, stats: MatchParticipantStats, timeline: MatchParticipantTimeline, runes: [LegacyRune]? = nil, masteries: [LegacyMastery]? = nil) {
+    public init(participantId: Int, teamId: Int, championId: ChampionId, summonerSpell1: Int, summonerSpell2: Int, highestAchievedSeasonTier: String, stats: MatchParticipantStats, timeline: MatchParticipantTimeline, runes: [LegacyRune]? = nil, masteries: [LegacyMastery]? = nil) {
         self.participantId = participantId
         self.teamId = teamId
         self.championId = championId
         self.summonerSpell1 = summonerSpell1
         self.summonerSpell2 = summonerSpell2
-        self.highestAchievementSeasonTier = highestAchievementSeasonTier
+        self.highestAchievedSeasonTier = highestAchievedSeasonTier
         self.stats = stats
         self.timeline = timeline
         self.runes = runes
@@ -54,10 +54,10 @@ public class MatchParticipant: Decodable {
         self.championId = try container.decode(ChampionId.self, forKey: .championId)
         self.summonerSpell1 = try container.decode(Int.self, forKey: .summonerSpell1)
         self.summonerSpell2 = try container.decode(Int.self, forKey: .summonerSpell2)
-        self.highestAchievementSeasonTier = try container.decode(String.self, forKey: .highestAchievementSeasonTier)
+        self.highestAchievedSeasonTier = try container.decode(String.self, forKey: .highestAchievedSeasonTier)
         self.stats = try container.decode(MatchParticipantStats.self, forKey: .stats)
         self.timeline = try container.decode(MatchParticipantTimeline.self, forKey: .timeline)
-        self.runes = try container.decode([LegacyRune]?.self, forKey: .runes)
-        self.masteries = try container.decode([LegacyMastery]?.self, forKey: .masteries)
+        self.runes = try? container.decode([LegacyRune].self, forKey: .runes)
+        self.masteries = try? container.decode([LegacyMastery].self, forKey: .masteries)
     }
 }

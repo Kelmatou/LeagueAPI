@@ -11,14 +11,14 @@ import Foundation
 public class MatchParticipantFrame: Decodable {
     
     public var participantId: Int
-    public var teamScore: Int
+    public var teamScore: Int?
     public var level: Int
     public var xp: Int
-    public var position: MatchPosition
+    public var position: MatchPosition?
     public var totalGold: Int
     public var currentGold: Int
     public var minionsKilled: Int
-    public var dominionScore: Int
+    public var dominionScore: Int?
     public var jungleMinionsKilled: Int
     
     enum CodingKeys: String, CodingKey {
@@ -34,7 +34,7 @@ public class MatchParticipantFrame: Decodable {
         case jungleMinionsKilled = "jungleMinionsKilled"
     }
     
-    public init(participantId: Int, teamScore: Int, level: Int, xp: Int, position: MatchPosition, totalGold: Int, currentGold: Int, minionsKilled: Int, dominionScore: Int, jungleMinionsKilled: Int) {
+    public init(participantId: Int, teamScore: Int?, level: Int, xp: Int, position: MatchPosition?, totalGold: Int, currentGold: Int, minionsKilled: Int, dominionScore: Int?, jungleMinionsKilled: Int) {
         self.participantId = participantId
         self.teamScore = teamScore
         self.level = level
@@ -50,14 +50,14 @@ public class MatchParticipantFrame: Decodable {
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.participantId = try container.decode(Int.self, forKey: .participantId)
-        self.teamScore = try container.decode(Int.self, forKey: .teamScore)
+        self.teamScore = try? container.decode(Int.self, forKey: .teamScore)
         self.level = try container.decode(Int.self, forKey: .level)
         self.xp = try container.decode(Int.self, forKey: .xp)
-        self.position = try container.decode(MatchPosition.self, forKey: .position)
+        self.position = try? container.decode(MatchPosition.self, forKey: .position)
         self.totalGold = try container.decode(Int.self, forKey: .totalGold)
         self.currentGold = try container.decode(Int.self, forKey: .currentGold)
         self.minionsKilled = try container.decode(Int.self, forKey: .minionsKilled)
-        self.dominionScore = try container.decode(Int.self, forKey: .dominionScore)
+        self.dominionScore = try? container.decode(Int.self, forKey: .dominionScore)
         self.jungleMinionsKilled = try container.decode(Int.self, forKey: .jungleMinionsKilled)
     }
 }

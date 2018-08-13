@@ -13,7 +13,10 @@ public class TournamentRegion {
     public private(set) var region: Region
     
     public init?(region: Region) {
-        guard region != .KR else { return nil }
+        guard region != .KR else {
+            Logger.error("Korean (KR) region cannot be selected for Tournament Region")
+            return nil
+        }
         self.region = region
     }
 }

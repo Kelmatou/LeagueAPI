@@ -30,26 +30,10 @@ extension Int: PrimitiveType {
     }
 }
 
-protocol ArrayProtocol {
-    static func type() -> Array<Any>.Element.Type
-}
-
-extension Array: ArrayProtocol {
-    static func type() -> Any.Type {
-        return self.Element.self
-    }
-}
-
 internal class PrimitiveTypeCheck {
     
     public static func isPrimitive(_ type: Any.Type) -> Bool {
-        if let arrayType = type as? ArrayProtocol.Type {
-            let nestedType: Any.Type = arrayType.type()
-            return nestedType is PrimitiveType.Type
-        }
-        else {
-            return type is PrimitiveType.Type
-        }
+        return type is PrimitiveType.Type
     }
     
     public static func cast(from data: Data?, into type: Any.Type) -> Any? {

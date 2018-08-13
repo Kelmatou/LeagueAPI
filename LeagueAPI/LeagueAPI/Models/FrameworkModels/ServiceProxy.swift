@@ -12,9 +12,12 @@ internal class ServiceProxy {
     
     public private(set) var region: Region
     public private(set) var platforms: [Platform]
-    public private(set) var host: String
+    private var host: Endpoint
+    public var hostUrl: String {
+        return self.host.rawValue
+    }
     
-    private init(region: Region, platforms: [Platform], host: String) {
+    private init(region: Region, platforms: [Platform], host: Endpoint) {
         self.region = region
         self.platforms = platforms
         self.host = host
@@ -23,29 +26,29 @@ internal class ServiceProxy {
     public convenience init(for region: Region) {
         switch region {
         case .BR:
-            self.init(region: region, platforms: [.BR1], host: "br1.api.riotgames.com")
+            self.init(region: region, platforms: [.BR1], host: .BR)
         case .EUNE:
-            self.init(region: region, platforms: [.EUN1], host: "eun1.api.riotgames.com")
+            self.init(region: region, platforms: [.EUN1], host: .EUNE)
         case .EUW:
-            self.init(region: region, platforms: [.EUW1], host: "euw1.api.riotgames.com")
+            self.init(region: region, platforms: [.EUW1], host: .EUW)
         case .JP:
-            self.init(region: region, platforms: [.JP1], host: "jp1.api.riotgames.com")
+            self.init(region: region, platforms: [.JP1], host: .JP)
         case .KR:
-            self.init(region: region, platforms: [.KR], host: "kr.api.riotgames.com")
+            self.init(region: region, platforms: [.KR], host: .KR)
         case .LAN:
-            self.init(region: region, platforms: [.LA1], host: "la1.api.riotgames.com")
+            self.init(region: region, platforms: [.LA1], host: .LAN)
         case .LAS:
-            self.init(region: region, platforms: [.LA2], host: "la2.api.riotgames.com")
+            self.init(region: region, platforms: [.LA2], host: .LAS)
         case .NA:
-            self.init(region: region, platforms: [.NA1, .NA], host: "na1.api.riotgames.com")
+            self.init(region: region, platforms: [.NA1, .NA], host: .NA)
         case .OCE:
-            self.init(region: region, platforms: [.OC1], host: "oc1.api.riotgames.com")
+            self.init(region: region, platforms: [.OC1], host: .OCE)
         case .PBE:
-            self.init(region: region, platforms: [.PBE1], host: "pbe1.api.riotgames.com")
+            self.init(region: region, platforms: [.PBE1], host: .PBE)
         case .RU:
-            self.init(region: region, platforms: [.RU], host: "ru.api.riotgames.com")
+            self.init(region: region, platforms: [.RU], host: .RU)
         case .TR:
-            self.init(region: region, platforms: [.TR1], host: "tr1.api.riotgames.com")
+            self.init(region: region, platforms: [.TR1], host: .TR)
         }
     }    
 }

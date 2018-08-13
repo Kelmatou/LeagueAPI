@@ -39,7 +39,7 @@ internal class RankedMethod: LeagueMethod {
     }
     
     func getMethodUrl() -> String {
-        let entrypoint: String = self.service.host
+        let entrypoint: String = self.service.hostUrl
         let commonPath: String = "https://\(entrypoint)\(MethodPaths.League.rawValue)/\(Version.RiotAPI)"
         switch self.method {
         case .ChallengerByQueue(let queue):

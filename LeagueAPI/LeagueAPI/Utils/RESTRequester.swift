@@ -78,26 +78,6 @@ public class RESTRequester {
     }
     
     /**
-     Sends an HTTP request and that will receive text
-     
-     - parameter method: the AccessMethod
-     - parameter url: the targeted url
-     - parameter headers: a dictionary of header [Value : HttpField]
-     - parameter body: the content of the message
-     - parameter handler: allows the user to make actions just after request ended (String, String)
-     */
-    public static func requestText(_ method: AccessMethod, url: String, headers: [String : String]? = nil, body: Data? = nil, handler: @escaping (String?, Headers?, String?) -> Void) {
-        request(method, url: url, headers: headers, body: body) {
-            (data, headers, error) in
-            var responseDecoded: String?
-            if let data = data, error == nil {
-                responseDecoded = String(data: data, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
-            }
-            handler(responseDecoded, headers, error)
-        }
-    }
-    
-    /**
      Sends an HTTP request and that will receive an image
      
      - parameter method: the AccessMethod
@@ -131,13 +111,17 @@ public class RESTRequester {
         request(method, url: url, headers: headers, body: body) {
             (data, headers, error) in
             var responseObject: T?
+            var responseError: String? = error
             if let data = data, error == nil {
                 let conversion: (T?, String?) = ObjectMapper.convert(data, into: T.self)
                 if let object = conversion.0 {
                     responseObject = object
                 }
+                if let conversionError = conversion.1 {
+                    responseError = conversionError
+                }
             }
-            handler(responseObject, headers, error)
+            handler(responseObject, headers, responseError)
         }
     }
 }

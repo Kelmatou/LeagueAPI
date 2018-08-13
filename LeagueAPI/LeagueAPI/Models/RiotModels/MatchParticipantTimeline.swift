@@ -14,11 +14,11 @@ public class MatchParticipantTimeline: Decodable {
     public var lane: String
     public var role: String
     public var goldPerMinDeltas: [String : Double]
-    public var csDiffPerMinDeltas: [String : Double]
+    public var csDiffPerMinDeltas: [String : Double]?
     public var csPerMinDeltas: [String : Double]
-    public var xpDiffPerMinDeltas: [String : Double]
+    public var xpDiffPerMinDeltas: [String : Double]?
     public var xpPerMinDeltas: [String : Double]
-    public var damageTakenDiffPerMinDeltas: [String : Double]
+    public var damageTakenDiffPerMinDeltas: [String : Double]?
     public var damageTakenPerMinDeltas: [String : Double]
     
     enum CodingKeys: String, CodingKey {
@@ -34,7 +34,7 @@ public class MatchParticipantTimeline: Decodable {
         case damageTakenPerMinDeltas = "damageTakenPerMinDeltas"
     }
     
-    public init(participantId: Int, lane: String, role: String, goldPerMinDeltas: [String : Double], csDiffPerMinDeltas: [String : Double], csPerMinDeltas: [String : Double], xpDiffPerMinDeltas: [String : Double], xpPerMinDeltas: [String : Double], damageTakenDiffPerMinDeltas: [String : Double], damageTakenPerMinDeltas: [String : Double]) {
+    public init(participantId: Int, lane: String, role: String, goldPerMinDeltas: [String : Double], csDiffPerMinDeltas: [String : Double]?, csPerMinDeltas: [String : Double], xpDiffPerMinDeltas: [String : Double]?, xpPerMinDeltas: [String : Double], damageTakenDiffPerMinDeltas: [String : Double]?, damageTakenPerMinDeltas: [String : Double]) {
         self.participantId = participantId
         self.lane = lane
         self.role = role
@@ -53,11 +53,11 @@ public class MatchParticipantTimeline: Decodable {
         self.lane = try container.decode(String.self, forKey: .lane)
         self.role = try container.decode(String.self, forKey: .role)
         self.goldPerMinDeltas = try container.decode([String : Double].self, forKey: .goldPerMinDeltas)
-        self.csDiffPerMinDeltas = try container.decode([String : Double].self, forKey: .csDiffPerMinDeltas)
+        self.csDiffPerMinDeltas = try? container.decode([String : Double].self, forKey: .csDiffPerMinDeltas)
         self.csPerMinDeltas = try container.decode([String : Double].self, forKey: .csPerMinDeltas)
-        self.xpDiffPerMinDeltas = try container.decode([String : Double].self, forKey: .xpDiffPerMinDeltas)
+        self.xpDiffPerMinDeltas = try? container.decode([String : Double].self, forKey: .xpDiffPerMinDeltas)
         self.xpPerMinDeltas = try container.decode([String : Double].self, forKey: .xpPerMinDeltas)
-        self.damageTakenDiffPerMinDeltas = try container.decode([String : Double].self, forKey: .damageTakenDiffPerMinDeltas)
+        self.damageTakenDiffPerMinDeltas = try? container.decode([String : Double].self, forKey: .damageTakenDiffPerMinDeltas)
         self.damageTakenPerMinDeltas = try container.decode([String : Double].self, forKey: .damageTakenPerMinDeltas)
     }
 }

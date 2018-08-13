@@ -56,8 +56,8 @@ public class Participant: Decodable {
         self.teamId = try container.decode(Int64.self, forKey: .teamId)
         self.summonerSpell1 = try container.decode(Int64.self, forKey: .summonerSpell1)
         self.summonerSpell2 = try container.decode(Int64.self, forKey: .summonerSpell2)
-        self.summonerId = try container.decode(SummonerId?.self, forKey: .summonerId)
-        self.runePage = try container.decode(RunePage?.self, forKey: .runePage)
-        self.customizedObjects = try container.decode([GameCustomObject]?.self, forKey: .customizedObjects)
+        self.summonerId = try? container.decode(SummonerId.self, forKey: .summonerId)
+        self.runePage = try? container.decode(RunePage.self, forKey: .runePage)
+        self.customizedObjects = try? container.decode([GameCustomObject].self, forKey: .customizedObjects)
     }
 }

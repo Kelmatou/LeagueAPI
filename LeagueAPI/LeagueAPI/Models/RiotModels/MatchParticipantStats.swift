@@ -22,30 +22,30 @@ public class MatchParticipantStats: Decodable {
     public var item4: Int
     public var item5: Int
     public var item6: Int
-    public var rune0: Int
-    public var rune1: Int
-    public var rune2: Int
-    public var rune3: Int
-    public var rune4: Int
-    public var rune5: Int
-    public var rune0Var1: Int
-    public var rune0Var2: Int
-    public var rune0Var3: Int
-    public var rune1Var1: Int
-    public var rune1Var2: Int
-    public var rune1Var3: Int
-    public var rune2Var1: Int
-    public var rune2Var2: Int
-    public var rune2Var3: Int
-    public var rune3Var1: Int
-    public var rune3Var2: Int
-    public var rune3Var3: Int
-    public var rune4Var1: Int
-    public var rune4Var2: Int
-    public var rune4Var3: Int
-    public var rune5Var1: Int
-    public var rune5Var2: Int
-    public var rune5Var3: Int
+    public var rune0: Int?
+    public var rune1: Int?
+    public var rune2: Int?
+    public var rune3: Int?
+    public var rune4: Int?
+    public var rune5: Int?
+    public var rune0Var1: Int?
+    public var rune0Var2: Int?
+    public var rune0Var3: Int?
+    public var rune1Var1: Int?
+    public var rune1Var2: Int?
+    public var rune1Var3: Int?
+    public var rune2Var1: Int?
+    public var rune2Var2: Int?
+    public var rune2Var3: Int?
+    public var rune3Var1: Int?
+    public var rune3Var2: Int?
+    public var rune3Var3: Int?
+    public var rune4Var1: Int?
+    public var rune4Var2: Int?
+    public var rune4Var3: Int?
+    public var rune5Var1: Int?
+    public var rune5Var2: Int?
+    public var rune5Var3: Int?
     public var doubleKills: Int
     public var tripleKills: Int
     public var quadraKills: Int
@@ -65,25 +65,25 @@ public class MatchParticipantStats: Decodable {
     public var visionScore: Int64
     public var firstBloodKill: Bool
     public var firstBloodAssist: Bool
-    public var firstInhibitorKill: Bool
-    public var firstInhibitorAssist: Bool
-    public var firstTowerKill: Bool
-    public var firstTowerAssist: Bool
+    public var firstInhibitorKill: Bool?
+    public var firstInhibitorAssist: Bool?
+    public var firstTowerKill: Bool?
+    public var firstTowerAssist: Bool?
     public var kills: Int
     public var deaths: Int
     public var assists: Int
     public var unrealKills: Int
-    public var wardsPlayed: Int
-    public var wardsKilled: Int
-    public var sigthWardsBoughtInGame: Int
-    public var visionWardsBoughtInGame: Int
-    public var primaryRunePath: Int
-    public var secondaryRunePath: Int
+    public var wardsPlayed: Int?
+    public var wardsKilled: Int?
+    public var sigthWardsBoughtInGame: Int?
+    public var visionWardsBoughtInGame: Int?
+    public var primaryRunePath: Int?
+    public var secondaryRunePath: Int?
     public var neutralMinionsKilled: Int
     public var totalDamageDealt: Int64
     public var totalDamageDealtToChampions: Int64
     public var damageDealtToObjectives: Int64
-    public var damageDealtToTurrets: Int64
+    public var damageDealtToTurrets: Int64?
     public var trueDamageDealt: Int64
     public var trueDamageDealtToChampions: Int64
     public var magicDamageDealt: Int64
@@ -98,25 +98,25 @@ public class MatchParticipantStats: Decodable {
     public var totalHeal: Int64
     public var totalUnitsHealed: Int
     public var largestMultiKill: Int
-    public var largestCritialStrike: Int
+    public var largestCritialStrike: Int?
     public var largestKillingSpree: Int
-    public var teamObjective: Int
+    public var teamObjective: Int?
     public var combatPlayerScore: Int
     public var objectivePlayerScore: Int
-    public var neutralMinionsKilledTeamJungle: Int
-    public var neutralMinionsKilledEnemyJungle: Int
+    public var neutralMinionsKilledTeamJungle: Int?
+    public var neutralMinionsKilledEnemyJungle: Int?
     public var killingSprees: Int
-    public var inhibitorKills: Int
-    public var turretKills: Int
+    public var inhibitorKills: Int?
+    public var turretKills: Int?
     public var totalMinionsKilled: Int
     public var totalTimeCrowdControlDealt: Int
     public var longestTimeSpentLiving: Int
     public var timeCCingOthers: Int64
-    public var altarsCaptures: Int
-    public var altarsNeutralized: Int
-    public var nodeNeutralize: Int
-    public var nodeNeutralizeAssist: Int
-    public var nodeCaptureAssist: Int
+    public var altarsCaptures: Int?
+    public var altarsNeutralized: Int?
+    public var nodeNeutralize: Int?
+    public var nodeNeutralizeAssist: Int?
+    public var nodeCaptureAssist: Int?
     
     enum CodingKeys: String, CodingKey {
         case participantId = "participantId"
@@ -228,7 +228,7 @@ public class MatchParticipantStats: Decodable {
         case nodeCaptureAssist = "nodeCaptureAssist"
     }
     
-    public init(participantId: Int, win: Bool, champLevel: Int, goldEarned: Int, goldSpent: Int, item0: Int, item1: Int, item2: Int, item3: Int, item4: Int, item5: Int, item6: Int, rune0: Int, rune1: Int, rune2: Int, rune3: Int, rune4: Int, rune5: Int, rune0Var1: Int, rune0Var2: Int, rune0Var3: Int, rune1Var1: Int, rune1Var2: Int, rune1Var3: Int, rune2Var1: Int, rune2Var2: Int, rune2Var3: Int, rune3Var1: Int, rune3Var2: Int, rune3Var3: Int, rune4Var1: Int, rune4Var2: Int, rune4Var3: Int, rune5Var1: Int, rune5Var2: Int, rune5Var3: Int, doubleKills: Int, tripleKills: Int, quadraKills: Int, pentaKills: Int, totalPlayerScore: Int, playerScore0: Int, playerScore1: Int, playerScore2: Int, playerScore3: Int, playerScore4: Int, playerScore5: Int, playerScore6: Int, playerScore7: Int, playerScore8: Int, playerScore9: Int, totalScoreRank: Int, visionScore: Int64, firstBloodKill: Bool, firstBloodAssist: Bool, firstInhibitorKill: Bool, firstInhibitorAssist: Bool, firstTowerKill: Bool, firstTowerAssist: Bool, kills: Int, deaths: Int, assists: Int, unrealKills: Int, wardsPlayed: Int, wardsKilled: Int, sigthWardsBoughtInGame: Int, visionWardsBoughtInGame: Int, primaryRunePath: Int, secondaryRunePath: Int, neutralMinionsKilled: Int, totalDamageDealt: Int64, totalDamageDealtToChampions: Int64, damageDealtToObjectives: Int64, damageDealtToTurrets: Int64, trueDamageDealt: Int64, trueDamageDealtToChampions: Int64, magicDamageDealt: Int64, magicDamageDealtToChampions: Int64, physicalDamageDealt: Int64, physicalDamageDealtToChampions: Int64, totalDamageTaken: Int64, trueDamageTaken: Int64, magicalDamageTaken: Int64, physicalDamageTaken: Int64, damageSelfMitigated: Int64, totalHeal: Int64, totalUnitsHealed: Int, largestMultiKill: Int, largestCritialStrike: Int, largestKillingSpree: Int, teamObjective: Int, combatPlayerScore: Int, objectivePlayerScore: Int, neutralMinionsKilledTeamJungle: Int, neutralMinionsKilledEnemyJungle: Int, killingSprees: Int, inhibitorKills: Int, turretKills: Int, totalMinionsKilled: Int, totalTimeCrowdControlDealt: Int, longestTimeSpentLiving: Int, timeCCingOthers: Int64, altarsCaptures: Int, altarsNeutralized: Int, nodeNeutralize: Int, nodeNeutralizeAssist: Int, nodeCaptureAssist: Int) {
+    public init(participantId: Int, win: Bool, champLevel: Int, goldEarned: Int, goldSpent: Int, item0: Int, item1: Int, item2: Int, item3: Int, item4: Int, item5: Int, item6: Int, rune0: Int?, rune1: Int?, rune2: Int?, rune3: Int?, rune4: Int?, rune5: Int?, rune0Var1: Int?, rune0Var2: Int?, rune0Var3: Int?, rune1Var1: Int?, rune1Var2: Int?, rune1Var3: Int?, rune2Var1: Int?, rune2Var2: Int?, rune2Var3: Int?, rune3Var1: Int?, rune3Var2: Int?, rune3Var3: Int?, rune4Var1: Int?, rune4Var2: Int?, rune4Var3: Int?, rune5Var1: Int?, rune5Var2: Int?, rune5Var3: Int?, doubleKills: Int, tripleKills: Int, quadraKills: Int, pentaKills: Int, totalPlayerScore: Int, playerScore0: Int, playerScore1: Int, playerScore2: Int, playerScore3: Int, playerScore4: Int, playerScore5: Int, playerScore6: Int, playerScore7: Int, playerScore8: Int, playerScore9: Int, totalScoreRank: Int, visionScore: Int64, firstBloodKill: Bool, firstBloodAssist: Bool, firstInhibitorKill: Bool?, firstInhibitorAssist: Bool?, firstTowerKill: Bool?, firstTowerAssist: Bool?, kills: Int, deaths: Int, assists: Int, unrealKills: Int, wardsPlayed: Int?, wardsKilled: Int?, sigthWardsBoughtInGame: Int?, visionWardsBoughtInGame: Int?, primaryRunePath: Int?, secondaryRunePath: Int?, neutralMinionsKilled: Int, totalDamageDealt: Int64, totalDamageDealtToChampions: Int64, damageDealtToObjectives: Int64, damageDealtToTurrets: Int64?, trueDamageDealt: Int64, trueDamageDealtToChampions: Int64, magicDamageDealt: Int64, magicDamageDealtToChampions: Int64, physicalDamageDealt: Int64, physicalDamageDealtToChampions: Int64, totalDamageTaken: Int64, trueDamageTaken: Int64, magicalDamageTaken: Int64, physicalDamageTaken: Int64, damageSelfMitigated: Int64, totalHeal: Int64, totalUnitsHealed: Int, largestMultiKill: Int, largestCritialStrike: Int?, largestKillingSpree: Int, teamObjective: Int?, combatPlayerScore: Int, objectivePlayerScore: Int, neutralMinionsKilledTeamJungle: Int?, neutralMinionsKilledEnemyJungle: Int?, killingSprees: Int, inhibitorKills: Int?, turretKills: Int?, totalMinionsKilled: Int, totalTimeCrowdControlDealt: Int, longestTimeSpentLiving: Int, timeCCingOthers: Int64, altarsCaptures: Int?, altarsNeutralized: Int?, nodeNeutralize: Int?, nodeNeutralizeAssist: Int?, nodeCaptureAssist: Int?) {
         self.participantId = participantId
         self.win = win
         self.champLevel = champLevel
@@ -352,30 +352,30 @@ public class MatchParticipantStats: Decodable {
         self.item4 = try container.decode(Int.self, forKey: .item4)
         self.item5 = try container.decode(Int.self, forKey: .item5)
         self.item6 = try container.decode(Int.self, forKey: .item6)
-        self.rune0 = try container.decode(Int.self, forKey: .rune0)
-        self.rune1 = try container.decode(Int.self, forKey: .rune1)
-        self.rune2 = try container.decode(Int.self, forKey: .rune2)
-        self.rune3 = try container.decode(Int.self, forKey: .rune3)
-        self.rune4 = try container.decode(Int.self, forKey: .rune4)
-        self.rune5 = try container.decode(Int.self, forKey: .rune5)
-        self.rune0Var1 = try container.decode(Int.self, forKey: .rune0Var1)
-        self.rune0Var2 = try container.decode(Int.self, forKey: .rune0Var2)
-        self.rune0Var3 = try container.decode(Int.self, forKey: .rune0Var3)
-        self.rune1Var1 = try container.decode(Int.self, forKey: .rune1Var1)
-        self.rune1Var2 = try container.decode(Int.self, forKey: .rune1Var2)
-        self.rune1Var3 = try container.decode(Int.self, forKey: .rune1Var3)
-        self.rune2Var1 = try container.decode(Int.self, forKey: .rune2Var1)
-        self.rune2Var2 = try container.decode(Int.self, forKey: .rune2Var2)
-        self.rune2Var3 = try container.decode(Int.self, forKey: .rune2Var3)
-        self.rune3Var1 = try container.decode(Int.self, forKey: .rune3Var1)
-        self.rune3Var2 = try container.decode(Int.self, forKey: .rune3Var2)
-        self.rune3Var3 = try container.decode(Int.self, forKey: .rune3Var3)
-        self.rune4Var1 = try container.decode(Int.self, forKey: .rune4Var1)
-        self.rune4Var2 = try container.decode(Int.self, forKey: .rune4Var2)
-        self.rune4Var3 = try container.decode(Int.self, forKey: .rune4Var3)
-        self.rune5Var1 = try container.decode(Int.self, forKey: .rune5Var1)
-        self.rune5Var2 = try container.decode(Int.self, forKey: .rune5Var2)
-        self.rune5Var3 = try container.decode(Int.self, forKey: .rune5Var3)
+        self.rune0 = try? container.decode(Int.self, forKey: .rune0)
+        self.rune1 = try? container.decode(Int.self, forKey: .rune1)
+        self.rune2 = try? container.decode(Int.self, forKey: .rune2)
+        self.rune3 = try? container.decode(Int.self, forKey: .rune3)
+        self.rune4 = try? container.decode(Int.self, forKey: .rune4)
+        self.rune5 = try? container.decode(Int.self, forKey: .rune5)
+        self.rune0Var1 = try? container.decode(Int.self, forKey: .rune0Var1)
+        self.rune0Var2 = try? container.decode(Int.self, forKey: .rune0Var2)
+        self.rune0Var3 = try? container.decode(Int.self, forKey: .rune0Var3)
+        self.rune1Var1 = try? container.decode(Int.self, forKey: .rune1Var1)
+        self.rune1Var2 = try? container.decode(Int.self, forKey: .rune1Var2)
+        self.rune1Var3 = try? container.decode(Int.self, forKey: .rune1Var3)
+        self.rune2Var1 = try? container.decode(Int.self, forKey: .rune2Var1)
+        self.rune2Var2 = try? container.decode(Int.self, forKey: .rune2Var2)
+        self.rune2Var3 = try? container.decode(Int.self, forKey: .rune2Var3)
+        self.rune3Var1 = try? container.decode(Int.self, forKey: .rune3Var1)
+        self.rune3Var2 = try? container.decode(Int.self, forKey: .rune3Var2)
+        self.rune3Var3 = try? container.decode(Int.self, forKey: .rune3Var3)
+        self.rune4Var1 = try? container.decode(Int.self, forKey: .rune4Var1)
+        self.rune4Var2 = try? container.decode(Int.self, forKey: .rune4Var2)
+        self.rune4Var3 = try? container.decode(Int.self, forKey: .rune4Var3)
+        self.rune5Var1 = try? container.decode(Int.self, forKey: .rune5Var1)
+        self.rune5Var2 = try? container.decode(Int.self, forKey: .rune5Var2)
+        self.rune5Var3 = try? container.decode(Int.self, forKey: .rune5Var3)
         self.doubleKills = try container.decode(Int.self, forKey: .doubleKills)
         self.tripleKills = try container.decode(Int.self, forKey: .tripleKills)
         self.quadraKills = try container.decode(Int.self, forKey: .quadraKills)
@@ -395,25 +395,25 @@ public class MatchParticipantStats: Decodable {
         self.visionScore = try container.decode(Int64.self, forKey: .visionScore)
         self.firstBloodKill = try container.decode(Bool.self, forKey: .firstBloodKill)
         self.firstBloodAssist = try container.decode(Bool.self, forKey: .firstBloodAssist)
-        self.firstInhibitorKill = try container.decode(Bool.self, forKey: .firstInhibitorKill)
-        self.firstInhibitorAssist = try container.decode(Bool.self, forKey: .firstInhibitorAssist)
-        self.firstTowerKill = try container.decode(Bool.self, forKey: .firstTowerKill)
-        self.firstTowerAssist = try container.decode(Bool.self, forKey: .firstTowerAssist)
+        self.firstInhibitorKill = try? container.decode(Bool.self, forKey: .firstInhibitorKill)
+        self.firstInhibitorAssist = try? container.decode(Bool.self, forKey: .firstInhibitorAssist)
+        self.firstTowerKill = try? container.decode(Bool.self, forKey: .firstTowerKill)
+        self.firstTowerAssist = try? container.decode(Bool.self, forKey: .firstTowerAssist)
         self.kills = try container.decode(Int.self, forKey: .kills)
         self.deaths = try container.decode(Int.self, forKey: .deaths)
         self.assists = try container.decode(Int.self, forKey: .assists)
         self.unrealKills = try container.decode(Int.self, forKey: .unrealKills)
-        self.wardsPlayed = try container.decode(Int.self, forKey: .wardsPlayed)
-        self.wardsKilled = try container.decode(Int.self, forKey: .wardsKilled)
-        self.sigthWardsBoughtInGame = try container.decode(Int.self, forKey: .sigthWardsBoughtInGame)
-        self.visionWardsBoughtInGame = try container.decode(Int.self, forKey: .visionWardsBoughtInGame)
-        self.primaryRunePath = try container.decode(Int.self, forKey: .primaryRunePath)
-        self.secondaryRunePath = try container.decode(Int.self, forKey: .secondaryRunePath)
+        self.wardsPlayed = try? container.decode(Int.self, forKey: .wardsPlayed)
+        self.wardsKilled = try? container.decode(Int.self, forKey: .wardsKilled)
+        self.sigthWardsBoughtInGame = try? container.decode(Int.self, forKey: .sigthWardsBoughtInGame)
+        self.visionWardsBoughtInGame = try? container.decode(Int.self, forKey: .visionWardsBoughtInGame)
+        self.primaryRunePath = try? container.decode(Int.self, forKey: .primaryRunePath)
+        self.secondaryRunePath = try? container.decode(Int.self, forKey: .secondaryRunePath)
         self.neutralMinionsKilled = try container.decode(Int.self, forKey: .neutralMinionsKilled)
         self.totalDamageDealt = try container.decode(Int64.self, forKey: .totalDamageDealt)
         self.totalDamageDealtToChampions = try container.decode(Int64.self, forKey: .totalDamageDealtToChampions)
         self.damageDealtToObjectives = try container.decode(Int64.self, forKey: .damageDealtToObjectives)
-        self.damageDealtToTurrets = try container.decode(Int64.self, forKey: .damageDealtToTurrets)
+        self.damageDealtToTurrets = try? container.decode(Int64.self, forKey: .damageDealtToTurrets)
         self.trueDamageDealt = try container.decode(Int64.self, forKey: .trueDamageDealt)
         self.trueDamageDealtToChampions = try container.decode(Int64.self, forKey: .trueDamageDealtToChampions)
         self.magicDamageDealt = try container.decode(Int64.self, forKey: .magicDamageDealt)
@@ -428,24 +428,24 @@ public class MatchParticipantStats: Decodable {
         self.totalHeal = try container.decode(Int64.self, forKey: .totalHeal)
         self.totalUnitsHealed = try container.decode(Int.self, forKey: .totalUnitsHealed)
         self.largestMultiKill = try container.decode(Int.self, forKey: .largestMultiKill)
-        self.largestCritialStrike = try container.decode(Int.self, forKey: .largestCritialStrike)
+        self.largestCritialStrike = try? container.decode(Int.self, forKey: .largestCritialStrike)
         self.largestKillingSpree = try container.decode(Int.self, forKey: .largestKillingSpree)
-        self.teamObjective = try container.decode(Int.self, forKey: .teamObjective)
+        self.teamObjective = try? container.decode(Int.self, forKey: .teamObjective)
         self.combatPlayerScore = try container.decode(Int.self, forKey: .combatPlayerScore)
         self.objectivePlayerScore = try container.decode(Int.self, forKey: .objectivePlayerScore)
-        self.neutralMinionsKilledTeamJungle = try container.decode(Int.self, forKey: .neutralMinionsKilledTeamJungle)
-        self.neutralMinionsKilledEnemyJungle = try container.decode(Int.self, forKey: .neutralMinionsKilledEnemyJungle)
+        self.neutralMinionsKilledTeamJungle = try? container.decode(Int.self, forKey: .neutralMinionsKilledTeamJungle)
+        self.neutralMinionsKilledEnemyJungle = try? container.decode(Int.self, forKey: .neutralMinionsKilledEnemyJungle)
         self.killingSprees = try container.decode(Int.self, forKey: .killingSprees)
-        self.inhibitorKills = try container.decode(Int.self, forKey: .inhibitorKills)
-        self.turretKills = try container.decode(Int.self, forKey: .turretKills)
+        self.inhibitorKills = try? container.decode(Int.self, forKey: .inhibitorKills)
+        self.turretKills = try? container.decode(Int.self, forKey: .turretKills)
         self.totalMinionsKilled = try container.decode(Int.self, forKey: .totalMinionsKilled)
         self.totalTimeCrowdControlDealt = try container.decode(Int.self, forKey: .totalTimeCrowdControlDealt)
         self.longestTimeSpentLiving = try container.decode(Int.self, forKey: .longestTimeSpentLiving)
         self.timeCCingOthers = try container.decode(Int64.self, forKey: .timeCCingOthers)
-        self.altarsCaptures = try container.decode(Int.self, forKey: .altarsCaptures)
-        self.altarsNeutralized = try container.decode(Int.self, forKey: .altarsNeutralized)
-        self.nodeNeutralize = try container.decode(Int.self, forKey: .nodeNeutralize)
-        self.nodeNeutralizeAssist = try container.decode(Int.self, forKey: .nodeNeutralizeAssist)
-        self.nodeCaptureAssist = try container.decode(Int.self, forKey: .nodeCaptureAssist)
+        self.altarsCaptures = try? container.decode(Int.self, forKey: .altarsCaptures)
+        self.altarsNeutralized = try? container.decode(Int.self, forKey: .altarsNeutralized)
+        self.nodeNeutralize = try? container.decode(Int.self, forKey: .nodeNeutralize)
+        self.nodeNeutralizeAssist = try? container.decode(Int.self, forKey: .nodeNeutralizeAssist)
+        self.nodeCaptureAssist = try? container.decode(Int.self, forKey: .nodeCaptureAssist)
     }
 }

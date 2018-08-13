@@ -31,7 +31,7 @@ internal class StatusMethod: LeagueMethod {
     }
     
     public func getMethodUrl() -> String {
-        let entrypoint: String = self.service.host
+        let entrypoint: String = self.service.hostUrl
         let commonPath: String = "https://\(entrypoint)\(MethodPaths.Status.rawValue)/\(Version.RiotAPI)/shard-data"
         switch self.method {
         case .GetStatus:

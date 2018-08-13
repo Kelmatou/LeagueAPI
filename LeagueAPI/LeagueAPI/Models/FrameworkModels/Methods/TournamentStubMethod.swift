@@ -17,12 +17,12 @@ internal class TournamentStubMethod: LeagueMethod {
         case CreateTournament(name: String, providerId: ProviderId)
     }
     
-    private var service: ServiceProxy
+    private var host: Endpoint
     private var method: TournamentStubMethods
     
-    public init(method: TournamentStubMethods, region: Region) {
+    public init(method: TournamentStubMethods) {
         self.method = method
-        self.service = ServiceProxy(for: region)
+        self.host = .America
     }
     
     public func getAccessMethod() -> RESTRequester.AccessMethod {
@@ -39,11 +39,11 @@ internal class TournamentStubMethod: LeagueMethod {
     }
     
     public func getMethodUrl() -> String {
-        let entrypoint: String = self.service.host
+        let entrypoint: String = self.host.rawValue
         let commonPath: String = "https://\(entrypoint)\(MethodPaths.TournamentStub.rawValue)/\(Version.RiotAPI)"
         switch self.method {
         case .CreateCodes(let amount, let tournamentId, _):
-            return "\(commonPath)/codes?tournamentId=\(tournamentId)\(amount == nil ? "" : "&count=\(amount!)")"
+            return "\(commonPath)/codes?tournamentId=\(tournamentId)&count=\(amount ?? 1)"
         case .EventsByTournamentCode(let code):
             return "\(commonPath)/lobby-events/by-code/\(code)"
         case .CreateProvider:

@@ -14,14 +14,14 @@ public class TeamStats: Decodable {
     public var win: Bool
     public var bans: [TeamBan]
     public var firstDragon: Bool
-    public var firstRiftHerald: Bool
+    public var firstRiftHerald: Bool?
     public var firstBaron: Bool
     public var firstBlood: Bool
     public var firstInhibitor: Bool
     public var firstTower: Bool
     public var baronKills: Int
     public var dragonKills: Int
-    public var riftHeraldKills: Int
+    public var riftHeraldKills: Int?
     public var vilemawKills: Int
     public var inhibitorKills: Int
     public var towerKills: Int
@@ -46,7 +46,7 @@ public class TeamStats: Decodable {
         case dominionVictoryScore = "dominionVictoryScore"
     }
     
-    public init(teamId: Int, win: Bool, bans: [TeamBan], firstDragon: Bool, firstRiftHerald: Bool, firstBaron: Bool, firstBlood: Bool, firstInhibitor: Bool, firstTower: Bool, baronKills: Int, dragonKills: Int, riftHeraldKills: Int, vilemawKills: Int, inhibitorKills: Int, towerKills: Int, dominionVictoryScore: Int) {
+    public init(teamId: Int, win: Bool, bans: [TeamBan], firstDragon: Bool, firstRiftHerald: Bool?, firstBaron: Bool, firstBlood: Bool, firstInhibitor: Bool, firstTower: Bool, baronKills: Int, dragonKills: Int, riftHeraldKills: Int?, vilemawKills: Int, inhibitorKills: Int, towerKills: Int, dominionVictoryScore: Int) {
         self.teamId = teamId
         self.win = win
         self.bans = bans
@@ -72,14 +72,14 @@ public class TeamStats: Decodable {
         self.win = winValue == "Win"
         self.bans = try container.decode([TeamBan].self, forKey: .bans)
         self.firstDragon = try container.decode(Bool.self, forKey: .firstDragon)
-        self.firstRiftHerald = try container.decode(Bool.self, forKey: .firstRiftHerald)
+        self.firstRiftHerald = try? container.decode(Bool.self, forKey: .firstRiftHerald)
         self.firstBaron = try container.decode(Bool.self, forKey: .firstBaron)
         self.firstBlood = try container.decode(Bool.self, forKey: .firstBlood)
         self.firstInhibitor = try container.decode(Bool.self, forKey: .firstInhibitor)
         self.firstTower = try container.decode(Bool.self, forKey: .firstTower)
         self.baronKills = try container.decode(Int.self, forKey: .baronKills)
         self.dragonKills = try container.decode(Int.self, forKey: .dragonKills)
-        self.riftHeraldKills = try container.decode(Int.self, forKey: .riftHeraldKills)
+        self.riftHeraldKills = try? container.decode(Int.self, forKey: .riftHeraldKills)
         self.vilemawKills = try container.decode(Int.self, forKey: .vilemawKills)
         self.inhibitorKills = try container.decode(Int.self, forKey: .inhibitorKills)
         self.towerKills = try container.decode(Int.self, forKey: .towerKills)

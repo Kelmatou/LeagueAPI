@@ -18,14 +18,26 @@ internal class ObjectMapper {
      */
     internal static func convert<T: Decodable>(_ data: Data?, into type: T.Type) -> (T?, String?) {
         if let data = data {
+            var errorReason: String?
             do {
                 let dataJson: T = try JSONDecoder().decode(T.self, from: data)
                 return (dataJson, nil)
             }
-            catch {
-                let error: String = "Could not parse \(type) data from json"
-                return (nil, error)
+            catch DecodingError.dataCorrupted {
+                errorReason = "data received was not json format"
             }
+            catch DecodingError.keyNotFound(let key, _) {
+                errorReason = "key \"\(key.stringValue)\" was not found"
+            }
+            catch DecodingError.valueNotFound(let valueType, let context) {
+                errorReason = "A \(valueType) was expected for key \"\(context.codingPath.last?.stringValue ?? "(no key)")\", but no value was associated"
+            }
+            catch DecodingError.typeMismatch(let typeExcepted, let context) {
+                errorReason = "A \(typeExcepted) was expected for key \"\(context.codingPath.last?.stringValue ?? "(no key)")\""
+            }
+            catch {
+            }
+            return (nil, "Could not parse \(type) data from json \(errorReason == nil ? "" : "because \(errorReason!)")")
         }
         else {
             return (nil, nil)

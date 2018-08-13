@@ -33,7 +33,7 @@ internal class ChampionMasteryMethod: LeagueMethod {
     }
     
     public func getMethodUrl() -> String {
-        let entrypoint: String = self.service.host
+        let entrypoint: String = self.service.hostUrl
         let commonPath: String = "https://\(entrypoint)\(MethodPaths.ChampionMastery.rawValue)/\(Version.RiotAPI)"
         switch self.method {
         case .BySummonerId(let id):
