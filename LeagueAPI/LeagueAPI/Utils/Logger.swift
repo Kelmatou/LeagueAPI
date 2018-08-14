@@ -8,17 +8,32 @@
 
 import Foundation
 
-internal class Logger {
+open class Logger {
     
-    public static func print(_ message: String) {
+    public enum Access {
+        case Info
+        case Warning
+        case Error
+    }
+    
+    public static var access: [Access : Bool] = [
+        .Info : true,
+        .Warning : true,
+        .Error : true
+    ]
+    
+    open static func print(_ message: String) {
+        guard access[.Info] ?? false else { return }
         Swift.print(message)
     }
     
-    public static func error(_ message: String) {
-        Logger.print("Error: \(message)")
+    open static func warning(_ message: String) {
+        guard access[.Warning] ?? false else { return }
+        Logger.print("Warning: \(message)")
     }
     
-    public static func warning(_ message: String) {
-        Logger.print("Warning: \(message)")
+    open static func error(_ message: String) {
+        guard access[.Error] ?? false else { return }
+        Logger.print("Error: \(message)")
     }
 }

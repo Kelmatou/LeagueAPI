@@ -20,11 +20,11 @@ public class LeagueAPI: APIClient {
     // MARK: - Tournament Stub
     
     public func newStubTournament(hostRegion: TournamentRegion, named name: String, hostUrl: String, amount: Int? = nil, info: TournamentInfo, handler: @escaping ((ProviderId, TournamentId, [TournamentCode])?, String?) -> Void) {
-        riotAPI.createTournamentProvider(hostRegion: hostRegion, hostUrl: hostUrl) { (providerId, error) in
+        riotAPI.createStubTournamentProvider(hostRegion: hostRegion, hostUrl: hostUrl) { (providerId, error) in
             guard let providerId = providerId, error == nil else { handler(nil, error); return }
-            self.riotAPI.createTournament(providerId: providerId, named: name) { (tournamentId, error) in
+            self.riotAPI.createStubTournament(providerId: providerId, named: name) { (tournamentId, error) in
                 guard let tournamentId = tournamentId, error == nil else { handler(nil, error); return }
-                self.riotAPI.createTournamentCode(tournamentId: tournamentId, amount: amount, info: info) { (codes, error) in
+                self.riotAPI.createStubTournamentCode(tournamentId: tournamentId, amount: amount, info: info) { (codes, error) in
                     handler((providerId, tournamentId, codes ?? []), error)
                 }
             }
