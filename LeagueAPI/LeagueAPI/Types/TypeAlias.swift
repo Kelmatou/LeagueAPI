@@ -11,6 +11,7 @@ import Foundation
 public typealias SummonerId = Int64
 public typealias AccountId = Int64
 public typealias ChampionId = Int64
+public typealias SkinId = String
 public typealias GameId = Int64
 public typealias ProviderId = Int
 public typealias LeagueId = String
