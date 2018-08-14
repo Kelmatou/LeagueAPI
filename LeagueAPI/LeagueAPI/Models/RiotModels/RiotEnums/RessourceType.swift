@@ -11,16 +11,17 @@ import Foundation
 public class RessourceType {
     
     public enum RessourceTypes: String {
-        case Mana = "MP"
+        case Mana = "Mana"
         case Energy = "Energy"
-        case BloodWell = "BloodWell"
-        case GnarFury = "GnarFury"
-        case BattleFury = "BattleFury"
+        case BloodWell = "Blood Well"
+        case Courage = "Courage"
+        case Shield = "Shield"
+        case Fury = "Fury"
         case Rage = "Rage"
         case Ferocity = "Ferocity"
         case Heat = "Heat"
-        case DragonFury = "DragonFury"
-        case Wind = "Wind"
+        case CrimsonRush = "Crimson Rush"
+        case Flow = "Flow"
         case None = "None"
         case Unknown = "Unknown"
     }
@@ -43,20 +44,18 @@ public class RessourceType {
             self.type = .Energy
         case RessourceTypes.BloodWell.rawValue:
             self.type = .BloodWell
-        case RessourceTypes.GnarFury.rawValue:
-            self.type = .GnarFury
-        case RessourceTypes.BattleFury.rawValue:
-            self.type = .BattleFury
+        case RessourceTypes.Courage.rawValue:
+            self.type = .Courage
+        case RessourceTypes.Shield.rawValue:
+            self.type = .Shield
+        case RessourceTypes.Fury.rawValue:
+            self.type = .Fury
         case RessourceTypes.Rage.rawValue:
             self.type = .Rage
         case RessourceTypes.Ferocity.rawValue:
             self.type = .Ferocity
         case RessourceTypes.Heat.rawValue:
             self.type = .Heat
-        case RessourceTypes.DragonFury.rawValue:
-            self.type = .DragonFury
-        case RessourceTypes.Wind.rawValue:
-            self.type = .Wind
         case RessourceTypes.None.rawValue:
             self.type = .None
         default:

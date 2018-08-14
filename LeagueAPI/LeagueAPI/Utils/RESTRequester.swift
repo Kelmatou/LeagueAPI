@@ -70,6 +70,7 @@ public class RESTRequester {
                     handler(data, allHeaders, error?.localizedDescription)
                 }
             }
+            Logger.print("Requesting: \(url)")
             task.resume()
         }
         else {

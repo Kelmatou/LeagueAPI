@@ -22,7 +22,6 @@ internal class LeagueRequester {
             let methodUrl: String = method.getMethodUrl()
             let headers: [String: String] = ["X-Riot-Token": self.key.token]
             let body: Data? = method.getMethodBody()
-            Logger.print("Requesting: \(methodUrl)")
             
             let completion: (ResultType?, RESTRequester.Headers?, String?) -> Void = { (result, headers, error) in
                 self.updateKeyLimits(for: method, headers: headers)
