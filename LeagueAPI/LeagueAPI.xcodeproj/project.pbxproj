@@ -15,6 +15,8 @@
 		9769180521134E5700F8AF3B /* DataRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9769180421134E5700F8AF3B /* DataRequester.swift */; };
 		97691807211359D100F8AF3B /* RawRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97691806211359D100F8AF3B /* RawRequester.swift */; };
 		9769180921135CF700F8AF3B /* PrimitiveType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9769180821135CF700F8AF3B /* PrimitiveType.swift */; };
+		97A560782122E32C00A908CD /* RiotAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560772122E32C00A908CD /* RiotAPI.swift */; };
+		97A5607A2122E36C00A908CD /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560792122E36C00A908CD /* APIClient.swift */; };
 		97D38D1B210A4D8D00150CF9 /* Summoner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D1A210A4D8D00150CF9 /* Summoner.swift */; };
 		97D38D22210A521000150CF9 /* RESTRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D21210A521000150CF9 /* RESTRequester.swift */; };
 		97D38D24210A532B00150CF9 /* ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D23210A532B00150CF9 /* ObjectMapper.swift */; };
@@ -108,6 +110,8 @@
 		9769180421134E5700F8AF3B /* DataRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequester.swift; sourceTree = "<group>"; };
 		97691806211359D100F8AF3B /* RawRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawRequester.swift; sourceTree = "<group>"; };
 		9769180821135CF700F8AF3B /* PrimitiveType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimitiveType.swift; sourceTree = "<group>"; };
+		97A560772122E32C00A908CD /* RiotAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiotAPI.swift; sourceTree = "<group>"; };
+		97A560792122E36C00A908CD /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		97D38D1A210A4D8D00150CF9 /* Summoner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summoner.swift; sourceTree = "<group>"; };
 		97D38D21210A521000150CF9 /* RESTRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTRequester.swift; sourceTree = "<group>"; };
 		97D38D23210A532B00150CF9 /* ObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMapper.swift; sourceTree = "<group>"; };
@@ -260,7 +264,9 @@
 		97D38D1E210A50B700150CF9 /* FrameworkAPI */ = {
 			isa = PBXGroup;
 			children = (
+				97A560792122E36C00A908CD /* APIClient.swift */,
 				97D38D34210A623A00150CF9 /* LeagueAPI.swift */,
+				97A560772122E32C00A908CD /* RiotAPI.swift */,
 			);
 			path = FrameworkAPI;
 			sourceTree = "<group>";
@@ -500,6 +506,7 @@
 				97D38DC1210CCC3000150CF9 /* MatchPlayer.swift in Sources */,
 				97D38DE1210D17B700150CF9 /* ThirdPartyCodeBusiness.swift in Sources */,
 				97D38DA9210CA88100150CF9 /* Observer.swift in Sources */,
+				97A560782122E32C00A908CD /* RiotAPI.swift in Sources */,
 				97D38D45210A7BEF00150CF9 /* Platform.swift in Sources */,
 				97D38D35210A623A00150CF9 /* LeagueAPI.swift in Sources */,
 				97D38D89210C729900150CF9 /* Series.swift in Sources */,
@@ -515,6 +522,7 @@
 				97E31449211B9F9800C9F739 /* ErrorStatus.swift in Sources */,
 				97D38DF0210E0A9000150CF9 /* TournamentProvider.swift in Sources */,
 				97E31447211B9E9700C9F739 /* ErrorMessage.swift in Sources */,
+				97A5607A2122E36C00A908CD /* APIClient.swift in Sources */,
 				97D38DF4210E0C5C00150CF9 /* TournamentStubBusiness.swift in Sources */,
 				97D38DDB210CF85D00150CF9 /* MatchMethod.swift in Sources */,
 				97D38D22210A521000150CF9 /* RESTRequester.swift in Sources */,
