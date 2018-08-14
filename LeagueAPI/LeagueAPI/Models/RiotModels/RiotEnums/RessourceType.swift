@@ -56,6 +56,10 @@ public class RessourceType {
             self.type = .Ferocity
         case RessourceTypes.Heat.rawValue:
             self.type = .Heat
+        case RessourceTypes.CrimsonRush.rawValue:
+            self.type = .CrimsonRush
+        case RessourceTypes.Flow.rawValue:
+            self.type = .Flow
         case RessourceTypes.None.rawValue:
             self.type = .None
         default:
