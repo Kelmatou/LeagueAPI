@@ -32,6 +32,7 @@
 		97A56097212381C700A908CD /* ChampionAdditionalDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A56096212381C700A908CD /* ChampionAdditionalDetails.swift */; };
 		97A560992123822700A908CD /* Skin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560982123822700A908CD /* Skin.swift */; };
 		97A560A12125C07C00A908CD /* HttpResponseCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560A02125C07C00A908CD /* HttpResponseCode.swift */; };
+		97A560A32125CB0000A908CD /* RiotAPIRESTRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560A22125CB0000A908CD /* RiotAPIRESTRequester.swift */; };
 		97D38D1B210A4D8D00150CF9 /* Summoner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D1A210A4D8D00150CF9 /* Summoner.swift */; };
 		97D38D22210A521000150CF9 /* RESTRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D21210A521000150CF9 /* RESTRequester.swift */; };
 		97D38D24210A532B00150CF9 /* ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D23210A532B00150CF9 /* ObjectMapper.swift */; };
@@ -142,6 +143,7 @@
 		97A56096212381C700A908CD /* ChampionAdditionalDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionAdditionalDetails.swift; sourceTree = "<group>"; };
 		97A560982123822700A908CD /* Skin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skin.swift; sourceTree = "<group>"; };
 		97A560A02125C07C00A908CD /* HttpResponseCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpResponseCode.swift; sourceTree = "<group>"; };
+		97A560A22125CB0000A908CD /* RiotAPIRESTRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiotAPIRESTRequester.swift; sourceTree = "<group>"; };
 		97D38D1A210A4D8D00150CF9 /* Summoner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summoner.swift; sourceTree = "<group>"; };
 		97D38D21210A521000150CF9 /* RESTRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTRequester.swift; sourceTree = "<group>"; };
 		97D38D23210A532B00150CF9 /* ObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMapper.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 				9769180421134E5700F8AF3B /* DataRequester.swift */,
 				9769180221134E2B00F8AF3B /* JsonRequester.swift */,
 				97691806211359D100F8AF3B /* RawRequester.swift */,
+				97A560A22125CB0000A908CD /* RiotAPIRESTRequester.swift */,
 				97A5608B2123572600A908CD /* DataDragonRequester.swift */,
 			);
 			path = DataAccess;
@@ -671,6 +674,7 @@
 				97D38DF2210E0B0A00150CF9 /* TournamentInitializer.swift in Sources */,
 				97D38DD1210CF02300150CF9 /* MatchTimeline.swift in Sources */,
 				97D38DB9210CC75E00150CF9 /* MatchList.swift in Sources */,
+				97A560A32125CB0000A908CD /* RiotAPIRESTRequester.swift in Sources */,
 				97D38DAF210CABA700150CF9 /* GameCustomObject.swift in Sources */,
 				97D38DA5210CA86000150CF9 /* GameInfo.swift in Sources */,
 				97D38D2B210A5A5C00150CF9 /* LeagueRequester.swift in Sources */,

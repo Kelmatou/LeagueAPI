@@ -11,7 +11,7 @@ import Foundation
 internal class RawRequester: DataRequester {
     
     func request<DataType: Decodable>(accessMethod: RESTRequester.AccessMethod, methodUrl: String, headers: [String : String], body: Data?, handler: @escaping (DataType?, HttpResponseCode, RESTRequester.Headers?, String?) -> Void) {
-        RESTRequester.request(accessMethod, url: methodUrl, headers: headers, body: body) { (data, responseCode, headers, error) in
+        RiotAPIRESTRequester().request(accessMethod, url: methodUrl, headers: headers, body: body) { (data, responseCode, headers, error) in
             if let result = PrimitiveTypeCheck.cast(from: data, into: DataType.self) as? DataType {
                 handler(result, responseCode, headers, error)
             }

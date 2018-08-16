@@ -11,6 +11,6 @@ import Foundation
 internal class JsonRequester: DataRequester {
     
     public func request<DataType: Decodable>(accessMethod: RESTRequester.AccessMethod, methodUrl: String, headers: [String : String], body: Data?, handler: @escaping (DataType?, HttpResponseCode, RESTRequester.Headers?, String?) -> Void) {
-        RESTRequester.requestObject(accessMethod, url: methodUrl, headers: headers, body: body, asType: DataType.self, handler: handler)
+        RiotAPIRESTRequester().requestObject(accessMethod, url: methodUrl, headers: headers, body: body, asType: DataType.self, handler: handler)
     }
 }
