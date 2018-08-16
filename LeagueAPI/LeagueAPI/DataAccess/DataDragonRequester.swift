@@ -34,7 +34,7 @@ internal class DataDragonRequester {
         }
         else {
             let versionUrl: String = "\(DataDragonUrl)/realms/na.json"
-            RESTRequester.requestObject(.GET, url: versionUrl, asType: DDragonVersions.self) { (versions, _, error) in
+            RESTRequester.requestObject(.GET, url: versionUrl, asType: DDragonVersions.self) { (versions, _, _, error) in
                 self.versions = versions
                 completion(versions, error)
             }
@@ -49,7 +49,7 @@ internal class DataDragonRequester {
             getDataVersions() { (versions, error) in
                 if let versions = versions {
                     let championsUrl: String = "\(self.DataDragonUrl)/cdn/\(versions.champion)/data/en_US/champion.json"
-                    RESTRequester.requestObject(.GET, url: championsUrl, asType: DDragonChampionsFile.self) { (championsDetails, _, error) in
+                    RESTRequester.requestObject(.GET, url: championsUrl, asType: DDragonChampionsFile.self) { (championsDetails, _, _, error) in
                         self.championsDetails = championsDetails
                         completion(championsDetails, error)
                     }
@@ -69,7 +69,7 @@ internal class DataDragonRequester {
             getDataVersions() { (versions, error) in
                 if let versions = versions {
                     let championUrl: String = "\(self.DataDragonUrl)/cdn/\(versions.champion)/data/en_US/champion/\(name).json"
-                    RESTRequester.requestObject(.GET, url: championUrl, asType: DDragonChampionFile.self) { (championDetails, _, error) in
+                    RESTRequester.requestObject(.GET, url: championUrl, asType: DDragonChampionFile.self) { (championDetails, _, _, error) in
                         self.championAdditionalDetails[name] = championDetails
                         completion(championDetails, error)
                     }

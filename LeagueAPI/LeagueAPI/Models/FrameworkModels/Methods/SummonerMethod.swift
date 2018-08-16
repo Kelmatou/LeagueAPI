@@ -53,4 +53,13 @@ internal class SummonerMethod: LeagueMethod {
     func getMethodBody() -> Data? {
         return nil
     }
+    
+    func getWarningMessage() -> String? {
+        switch self.method {
+        case .ByAccountId, .ByName:
+            return nil
+        case .ById:
+            return "Too many calls to unexisting Summoner(by SummonerId) may result in Blacklist"
+        }
+    }
 }

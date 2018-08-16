@@ -9,5 +9,5 @@
 import Foundation
 
 internal protocol DataRequester {
-    func request<DataType: Decodable>(accessMethod: RESTRequester.AccessMethod, methodUrl: String, headers: [String: String], body: Data?, handler: @escaping (DataType?, RESTRequester.Headers?, String?) -> Void)
+    func request<DataType: Decodable>(accessMethod: RESTRequester.AccessMethod, methodUrl: String, headers: [String: String], body: Data?, handler: @escaping (DataType?, HttpResponseCode, RESTRequester.Headers?, String?) -> Void)
 }

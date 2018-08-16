@@ -56,4 +56,13 @@ internal class RankedMethod: LeagueMethod {
     func getMethodBody() -> Data? {
         return nil
     }
+    
+    func getWarningMessage() -> String? {
+        switch self.method {
+        case .ChallengerByQueue, .MasterByQueue, .PositionsById:
+            return nil
+        case .LeagueById:
+            return "Too many calls to unexisting League(by LeagueId) may result in Blacklist"
+        }
+    }
 }

@@ -10,9 +10,7 @@ import Foundation
 
 internal class JsonRequester: DataRequester {
     
-    public func request<DataType: Decodable>(accessMethod: RESTRequester.AccessMethod, methodUrl: String, headers: [String : String], body: Data?, handler: @escaping (DataType?, RESTRequester.Headers?, String?) -> Void) {
-        RESTRequester.requestObject(accessMethod, url: methodUrl, headers: headers, body: body, asType: DataType.self) { (result, headers, error) in
-            handler(result, headers, error)
-        }
+    public func request<DataType: Decodable>(accessMethod: RESTRequester.AccessMethod, methodUrl: String, headers: [String : String], body: Data?, handler: @escaping (DataType?, HttpResponseCode, RESTRequester.Headers?, String?) -> Void) {
+        RESTRequester.requestObject(accessMethod, url: methodUrl, headers: headers, body: body, asType: DataType.self, handler: handler)
     }
 }

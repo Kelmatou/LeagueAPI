@@ -42,4 +42,8 @@ internal class StatusMethod: LeagueMethod {
     func getMethodBody() -> Data? {
         return nil
     }
+    
+    func getWarningMessage() -> String? {
+        return nil
+    }
 }

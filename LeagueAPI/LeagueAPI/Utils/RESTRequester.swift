@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class RESTRequester {
+internal class RESTRequester {
     
     public typealias Headers = [AnyHashable : Any]
     
@@ -31,9 +31,9 @@ public class RESTRequester {
      - parameter url: the targeted url
      - parameter headers: a dictionary of header [Value : HttpField]
      - parameter body: the content of the message
-     - parameter handler: allows the user to make actions just after request ended (Data, Headers, String)
+     - parameter handler: allows the user to make actions just after request ended (Data, ResponseCode, Headers, String)
      */
-    public static func request(_ method: AccessMethod, url: String, headers: [String : String]? = nil, body: Data? = nil, handler: @escaping (Data?, Headers?, String?) -> Void) {
+    public static func request(_ method: AccessMethod, url: String, headers: [String : String]? = nil, body: Data? = nil, handler: @escaping (Data?, HttpResponseCode, Headers?, String?) -> Void) {
         if let uri = URL(string: url) {
             var request: URLRequest = URLRequest(url: uri)
             request.httpMethod = method.rawValue
@@ -50,31 +50,29 @@ public class RESTRequester {
                     httpResponse = httpResponseUnwrapped
                 }
                 let allHeaders: Headers? = httpResponse?.allHeaderFields
-                Logger.print("Server responsed with code \(httpResponse?.statusCode ?? 0)")
-                if let httpResponse = httpResponse {
-                    let validResponseCode: Int = 200
-                    if httpResponse.statusCode == validResponseCode {
-                        handler(data, allHeaders, nil)
-                    }
-                    else {
-                        let dataConversion: (ErrorStatus?, String?) = ObjectMapper.convert(data, into: ErrorStatus.self)
-                        if let errorStatus = dataConversion.0 {
-                            handler(nil, allHeaders, errorStatus.status.message)
-                        }
-                        else {
-                            handler(nil, allHeaders, error?.localizedDescription)
-                        }
-                    }
+                let responseCode: HttpResponseCode = HttpResponseCode(httpResponse?.statusCode ?? -1)
+                Logger.print("Server responsed with code \(responseCode.codeValue)")
+                if responseCode == .Ok {
+                    handler(data, responseCode, allHeaders, nil)
+                }
+                else if responseCode == .Unknown {
+                    handler(data, responseCode, allHeaders, error?.localizedDescription)
                 }
                 else {
-                    handler(data, allHeaders, error?.localizedDescription)
+                    let dataConversion: (ErrorStatus?, String?) = ObjectMapper.convert(data, into: ErrorStatus.self)
+                    if let errorStatus = dataConversion.0 {
+                        handler(nil, responseCode, allHeaders, errorStatus.status.message)
+                    }
+                    else {
+                        handler(nil, responseCode, allHeaders, error?.localizedDescription)
+                    }
                 }
             }
             Logger.print("Requesting: \(url)")
             task.resume()
         }
         else {
-            handler(nil, nil, "Invalid URL")
+            handler(nil, HttpResponseCode(.FrameworkError), nil, "Invalid URL")
         }
     }
     
@@ -87,14 +85,14 @@ public class RESTRequester {
      - parameter body: the content of the message
      - parameter handler: allows the user to make actions just after request ended (UIImage, String)
      */
-    public static func requestImage(_ method: AccessMethod, url: String, headers: [String : String]? = nil, body: Data? = nil, handler: @escaping (UIImage?, Headers?, String?) -> Void) {
+    public static func requestImage(_ method: AccessMethod, url: String, headers: [String : String]? = nil, body: Data? = nil, handler: @escaping (UIImage?, HttpResponseCode, Headers?, String?) -> Void) {
         request(method, url: url, headers: headers, body: body) {
-            (data, headers, error) in
+            (data, responseCode, headers, error) in
             var responseImage: UIImage?
             if let data = data, error == nil {
                 responseImage = UIImage(data: data)
             }
-            handler(responseImage, headers, error)
+            handler(responseImage, responseCode, headers, error)
         }
     }
     
@@ -108,9 +106,9 @@ public class RESTRequester {
      - parameter asType: the type of the output object
      - parameter handler: allows the user to make actions just after request ended (UIImage, String)
      */
-    public static func requestObject<T: Decodable>(_ method: AccessMethod, url: String, headers: [String : String]? = nil, body: Data? = nil, asType: T.Type, handler: @escaping (T?, Headers?, String?) -> Void) {
+    public static func requestObject<T: Decodable>(_ method: AccessMethod, url: String, headers: [String : String]? = nil, body: Data? = nil, asType: T.Type, handler: @escaping (T?, HttpResponseCode, Headers?, String?) -> Void) {
         request(method, url: url, headers: headers, body: body) {
-            (data, headers, error) in
+            (data, responseCode, headers, error) in
             var responseObject: T?
             var responseError: String? = error
             if let data = data, error == nil {
@@ -122,7 +120,7 @@ public class RESTRequester {
                     responseError = conversionError
                 }
             }
-            handler(responseObject, headers, responseError)
+            handler(responseObject, responseCode, headers, responseError)
         }
     }
 }

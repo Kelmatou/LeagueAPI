@@ -87,7 +87,7 @@ public class ChampionImage: Decodable {
     }
     
     private func downloadImage(imageUrl: String, completion: @escaping (UIImage?, String?) -> Void) {
-        RESTRequester.requestImage(.GET, url: imageUrl) { (image, _, error) in
+        RESTRequester.requestImage(.GET, url: imageUrl) { (image, _, _, error) in
             completion(image, error)
         }
     }

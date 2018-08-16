@@ -67,4 +67,8 @@ internal class TournamentStubMethod: LeagueMethod {
             return ObjectMapper.encode(tournamentInitializer)
         }
     }
+    
+    func getWarningMessage() -> String? {
+        return nil
+    }
 }

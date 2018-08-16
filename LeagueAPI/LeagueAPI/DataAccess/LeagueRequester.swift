@@ -23,7 +23,12 @@ internal class LeagueRequester {
             let headers: [String: String] = ["X-Riot-Token": self.key.token]
             let body: Data? = method.getMethodBody()
             
-            let completion: (ResultType?, RESTRequester.Headers?, String?) -> Void = { (result, headers, error) in
+            let completion: (ResultType?, HttpResponseCode, RESTRequester.Headers?, String?) -> Void = { (result, responseCode, headers, error) in
+                if responseCode == .NotFound {
+                    if let warningMessage = method.getWarningMessage() {
+                        Logger.warning(warningMessage)
+                    }
+                }
                 self.updateKeyLimits(for: method, headers: headers)
                 handler(result, error)
             }

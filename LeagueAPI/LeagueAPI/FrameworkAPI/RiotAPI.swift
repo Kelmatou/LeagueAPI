@@ -40,7 +40,6 @@ public class RiotAPI: APIClient {
         RankedBusiness.getRanked(method: .ChallengerByQueue(queue: queue), region: region, key: self.key, handler: handler)
     }
     
-    // WARNING: Too many calls to unexisting league may result in Blacklist
     public func getLeague(by leagueId: LeagueId, on region: Region, handler: @escaping (League?, String?) -> Void) {
         RankedBusiness.getRanked(method: .LeagueById(id: leagueId), region: region, key: self.key, handler: handler)
     }
@@ -105,7 +104,6 @@ public class RiotAPI: APIClient {
         SummonerBusiness.getSummoner(method: .ByName(name: name), region: region, key: self.key, handler: handler)
     }
     
-    // WARNING: Too many calls to unexisting league may result in Blacklist
     public func getSummoner(by summonerId: SummonerId, on region: Region, handler: @escaping (Summoner?, String?) -> Void) {
         SummonerBusiness.getSummoner(method: .ById(id: summonerId), region: region, key: self.key, handler: handler)
     }

@@ -73,4 +73,8 @@ internal class MatchMethod: LeagueMethod {
     func getMethodBody() -> Data? {
         return nil
     }
+    
+    func getWarningMessage() -> String? {
+        return nil
+    }
 }

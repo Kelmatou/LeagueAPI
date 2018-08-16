@@ -14,4 +14,5 @@ internal protocol LeagueMethod {
     func getMethodSignature() -> String
     func getMethodUrl() -> String
     func getMethodBody() -> Data?
+    func getWarningMessage() -> String?
 }
