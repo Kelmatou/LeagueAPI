@@ -1,5 +1,5 @@
 //
-//  ChampionImage.swift
+//  SkinImages.swift
 //  LeagueAPI
 //
 //  Created by Antoine Clop on 8/14/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class ChampionImage: Decodable {
+public class SkinImages {
     
     public var squareUrl: String {
         return squareImage.url
@@ -20,35 +20,18 @@ public class ChampionImage: Decodable {
         return splashImage.url
     }
     
-    internal let cdnUrl: String = "http://ddragon.leagueoflegends.com/cdn"
-    public internal(set) var version: String {
-        didSet {
-            self.squareImage.url = "\(cdnUrl)/\(version)/img/champion/\(championName).png"
-        }
-    }
-    public private(set) var championName: String
+    public private(set) var version: String
     
+    private let cdnUrl: String = "http://ddragon.leagueoflegends.com/cdn"
     private var squareImage: ImageWithUrl
     private var loadingImage: ImageWithUrl
     private var splashImage: ImageWithUrl
     
-    enum CodingKeys: String, CodingKey {
-        case imageName = "full"
-    }
-    
-    internal init(version: String, championName: String, squareImage: UIImage? = nil, loadingImage: UIImage? = nil, splashImage: UIImage? = nil) {
+    internal init(version: String, championName: String, skinNumber: Int, squareImage: UIImage? = nil, loadingImage: UIImage? = nil, splashImage: UIImage? = nil) {
         self.version = version
-        self.championName = championName
         self.squareImage = ImageWithUrl(url: "\(cdnUrl)/\(version)/img/champion/\(championName).png", image: squareImage)
-        self.loadingImage = ImageWithUrl(url: "\(cdnUrl)/img/champion/loading/\(championName)_0.jpg", image: loadingImage)
-        self.splashImage = ImageWithUrl(url: "\(cdnUrl)/img/champion/splash/\(championName)_0.jpg", image: splashImage)
-    }
-    
-    public required convenience init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        let filename: String = try container.decode(String.self, forKey: .imageName)
-        let champName: String = String(filename.split(separator: ".").first!)
-        self.init(version: "", championName: champName)
+        self.loadingImage = ImageWithUrl(url: "\(cdnUrl)/img/champion/loading/\(championName)_\(skinNumber).jpg", image: loadingImage)
+        self.splashImage = ImageWithUrl(url: "\(cdnUrl)/img/champion/splash/\(championName)_\(skinNumber).jpg", image: splashImage)
     }
     
     public func getSquareImage(completion: @escaping (UIImage?, String?) -> Void) {
@@ -80,9 +63,7 @@ public class ChampionImage: Decodable {
             completion(localImage, nil)
         }
         else {
-            downloadImage(imageUrl: imageWithUrl.url) { (image, error) in
-                completion(image, error)
-            }
+            downloadImage(imageUrl: imageWithUrl.url, completion: completion)
         }
     }
     

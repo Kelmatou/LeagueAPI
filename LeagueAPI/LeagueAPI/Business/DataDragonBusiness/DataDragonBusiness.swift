@@ -59,7 +59,7 @@ internal class DataDragonBusiness {
                     DataDragonRequester.instance.getChampionAdditionalDetails(name: championIdName) { (champion, error) in
                         if let champion = champion {
                             if let championAdditionalDetails = champion.champion[championIdName] {
-                                let championDetails: ChampionDetails = ChampionDetails(details: championWithFilter, additionalDetails: championAdditionalDetails)
+                                let championDetails: ChampionDetails = ChampionDetails(version: champion.version, details: championWithFilter, additionalDetails: championAdditionalDetails)
                                 completion(championDetails, nil)
                             }
                             else {

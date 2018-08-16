@@ -8,40 +8,36 @@
 
 import Foundation
 
-public class ChampionsDetails: Decodable {
+internal class ChampionsDetails: Decodable {
     
     public var championId: ChampionId
     public var championIdName: String
     public var name: String
     public var title: String
     public var presentationText: String
-    public var image: ChampionImage
     public var tags: [String]
     public var ressourceType: RessourceType
     public var stats: ChampionStats
     public var difficulties: ChampionDifficulties
     
     enum CodingKeys: String, CodingKey {
-        case version = "version"
         case championIdName = "id"
         case championId = "key"
         case name = "name"
         case title = "title"
         case presentationText = "blurb"
-        case image = "image"
         case tags = "tags"
         case ressourceType = "partype"
         case stats = "stats"
         case difficulties = "info"
     }
     
-    public init(championId: ChampionId, championIdName: String, name: String, title: String, presentationText: String, image: ChampionImage, tags: [String], ressourceType: RessourceType, stats: ChampionStats, difficulties: ChampionDifficulties) {
+    public init(championId: ChampionId, championIdName: String, name: String, title: String, presentationText: String, tags: [String], ressourceType: RessourceType, stats: ChampionStats, difficulties: ChampionDifficulties) {
         self.championId = championId
         self.championIdName = championIdName
         self.name = name
         self.title = title
         self.presentationText = presentationText
-        self.image = image
         self.tags = tags
         self.ressourceType = ressourceType
         self.stats = stats
@@ -55,8 +51,6 @@ public class ChampionsDetails: Decodable {
         self.name = try container.decode(String.self, forKey: .name)
         self.title = try container.decode(String.self, forKey: .title)
         self.presentationText = try container.decode(String.self, forKey: .presentationText)
-        self.image = try container.decode(ChampionImage.self, forKey: .image)
-        self.image.version = try container.decode(String.self, forKey: .version)
         self.tags = try container.decode([String].self, forKey: .tags)
         let ressourceTypeStr: String = try container.decode(String.self, forKey: .ressourceType)
         self.ressourceType = RessourceType(ressourceTypeStr)

@@ -8,32 +8,27 @@
 
 import Foundation
 
-public class Skin: Decodable {
+public class Skin {
     
     public var skinId: SkinId
     public var skinNumber: Int
     public var name: String
     public var hasChromas: Bool
+    public var skinImages: SkinImages
     
-    enum CodingKeys: String, CodingKey {
-        case skinId = "id"
-        case skinNumber = "num"
-        case name = "name"
-        case hasChromas = "chromas"
-    }
-    
-    public init(skinId: String, skinNumber: Int, name: String, hasChromas: Bool) {
+    public init(skinId: String, skinNumber: Int, name: String, hasChromas: Bool, skinImages: SkinImages) {
         self.skinId = skinId
         self.skinNumber = skinNumber
         self.name = name
         self.hasChromas = hasChromas
+        self.skinImages = skinImages
     }
     
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.skinId = try container.decode(String.self, forKey: .skinId)
-        self.skinNumber = try container.decode(Int.self, forKey: .skinNumber)
-        self.name = try container.decode(String.self, forKey: .name)
-        self.hasChromas = try container.decode(Bool.self, forKey: .hasChromas)
+    internal init(from data: SkinData, version: String, championNameId: String) {
+        self.skinId = data.skinId
+        self.skinNumber = data.skinNumber
+        self.name = data.name
+        self.hasChromas = data.hasChromas
+        self.skinImages = SkinImages(version: version, championName: championNameId, skinNumber: data.skinNumber)
     }
 }
