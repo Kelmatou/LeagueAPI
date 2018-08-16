@@ -30,6 +30,10 @@ public class LeagueAPI: APIClient {
     }
     
     public func getChampionDetails(byName name: String, handler: @escaping (ChampionDetails?, String?) -> Void) {
-        DataDragonBusiness.getChampionDetails(by: name, completion: handler)
+        DataDragonBusiness.getChampionDetails(byName: name, completion: handler)
+    }
+    
+    public func getChampionDetails(byRole role: String, handler: @escaping ([String]?, String?) -> Void) {
+        DataDragonBusiness.getChampions(forRole: role, completion: handler)
     }
 }

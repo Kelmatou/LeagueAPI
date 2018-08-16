@@ -25,7 +25,7 @@ internal class DataDragonBusiness {
         getChampionDetails(filterFunction: filterFunction, filterEqualValue: filterEqualValue, completion: completion)
     }
     
-    public static func getChampionDetails(by name: String, completion: @escaping (ChampionDetails?, String?) -> Void) {
+    public static func getChampionDetails(byName name: String, completion: @escaping (ChampionDetails?, String?) -> Void) {
         let filterFunction: ((String, ChampionsDetails)) -> Bool = { (keyValue) -> Bool in
             let (_, value) = keyValue
             return value.name == name
@@ -34,10 +34,26 @@ internal class DataDragonBusiness {
         getChampionDetails(filterFunction: filterFunction, filterEqualValue: filterEqualValue, completion: completion)
     }
     
-    private static func getChampionDetails(filterFunction: @escaping ((String, ChampionsDetails)) -> Bool, filterEqualValue: String = "", completion: @escaping (ChampionDetails?, String?) -> Void) {
+    public static func getChampions(forRole role: String, completion: @escaping ([String]?, String?) -> Void) {
+        let filterFunction: ((String, ChampionsDetails)) -> Bool = { (keyValue) -> Bool in
+            let (_, value) = keyValue
+            return value.tags.contains(role)
+        }
+        getChampionsFiltered(filterFunction: filterFunction) { (champions, error) in
+            completion(champions?.map { return $0.name }, error)
+        }
+    }
+    
+    private static func getChampionsFiltered(filterFunction: @escaping ((String, ChampionsDetails)) -> Bool, completion: @escaping ([ChampionsDetails]?, String?) -> Void) {
         DataDragonRequester.instance.getChampionsDetails() { (champions, error) in
+            completion(champions?.champions.filter(filterFunction).map { return $0.value }, error)
+        }
+    }
+    
+    private static func getChampionDetails(filterFunction: @escaping ((String, ChampionsDetails)) -> Bool, filterEqualValue: String = "", completion: @escaping (ChampionDetails?, String?) -> Void) {
+        getChampionsFiltered(filterFunction: filterFunction) { (champions, error) in
             if let champions = champions {
-                let championWithFilter: ChampionsDetails? = champions.champions.filter(filterFunction).first?.value
+                let championWithFilter: ChampionsDetails? = champions.first
                 if let championWithFilter = championWithFilter {
                     let championIdName: String = championWithFilter.championIdName
                     DataDragonRequester.instance.getChampionAdditionalDetails(name: championIdName) { (champion, error) in
