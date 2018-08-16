@@ -25,7 +25,11 @@ internal class DDragonChampionFile: Decodable {
     
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.version = try container.decode(String.self, forKey: .version)
-        self.champion = try container.decode([String : ChampionAdditionalDetails].self, forKey: .champion)
+        let version: String = try container.decode(String.self, forKey: .version)
+        self.version = version
+        let championData: [String : ChampionAdditionalDetailsData] = try container.decode([String : ChampionAdditionalDetailsData].self, forKey: .champion)
+        self.champion = championData.mapValues {
+            return ChampionAdditionalDetails(championAdditionalData: $0, version: version)
+        }
     }
 }

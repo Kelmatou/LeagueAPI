@@ -20,13 +20,12 @@ public class ChampionDetails {
     public var ressourceType: RessourceType
     public var stats: ChampionStats
     public var difficulties: ChampionDifficulties
-    public var version: String
     
     public var images: SkinImages? {
         return skins.first?.skinImages
     }
     
-    public init(championId: ChampionId, name: String, title: String, skins: [Skin], presentationText: String, lore: String, tags: [String], ressourceType: RessourceType, stats: ChampionStats, difficulties: ChampionDifficulties, version: String) {
+    public init(championId: ChampionId, name: String, title: String, skins: [Skin], presentationText: String, lore: String, tags: [String], ressourceType: RessourceType, stats: ChampionStats, difficulties: ChampionDifficulties) {
         self.championId = championId
         self.name = name
         self.title = title
@@ -37,22 +36,18 @@ public class ChampionDetails {
         self.ressourceType = ressourceType
         self.stats = stats
         self.difficulties = difficulties
-        self.version = version
     }
     
-    internal init(version: String, details: ChampionsDetails, additionalDetails: ChampionAdditionalDetails) {
+    internal init(details: ChampionsDetails, additionalDetails: ChampionAdditionalDetails) {
         self.championId = details.championId
         self.name = details.name
         self.title = details.title
-        self.skins = additionalDetails.skinsData.map {
-            return Skin(from: $0, version: version, championNameId: details.championIdName)
-        }
+        self.skins = additionalDetails.skins
         self.presentationText = details.presentationText
         self.lore = additionalDetails.lore
         self.tags = details.tags
         self.ressourceType = details.ressourceType
         self.stats = details.stats
         self.difficulties = details.difficulties
-        self.version = version
     }
 }

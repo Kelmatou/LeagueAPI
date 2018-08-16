@@ -22,7 +22,7 @@ public class SkinImages {
     
     public private(set) var version: String
     
-    private let cdnUrl: String = "http://ddragon.leagueoflegends.com/cdn"
+    private let cdnUrl: String = "https://ddragon.leagueoflegends.com/cdn"
     private var squareImage: ImageWithUrl
     private var loadingImage: ImageWithUrl
     private var splashImage: ImageWithUrl
@@ -39,6 +39,7 @@ public class SkinImages {
             if self.squareImage.image == nil {
                 self.squareImage.image = image
             }
+            completion(image, error)
         }
     }
     
@@ -47,6 +48,7 @@ public class SkinImages {
             if self.loadingImage.image == nil {
                 self.loadingImage.image = image
             }
+            completion(image, error)
         }
     }
     
@@ -55,6 +57,7 @@ public class SkinImages {
             if self.splashImage.image == nil {
                 self.splashImage.image = image
             }
+            completion(image, error)
         }
     }
     

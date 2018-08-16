@@ -8,24 +8,20 @@
 
 import Foundation
 
-internal class ChampionAdditionalDetails: Decodable {
+internal class ChampionAdditionalDetails {
     
-    public var skinsData: [SkinData]
+    public var skins: [Skin]
     public var lore: String
     
-    enum CodingKeys: String, CodingKey {
-        case skinsData = "skins"
-        case lore = "lore"
-    }
-    
-    public init(skinsData: [SkinData], lore: String) {
-        self.skinsData = skinsData
+    public init(skins: [Skin], lore: String) {
+        self.skins = skins
         self.lore = lore
     }
     
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.skinsData = try container.decode([SkinData].self, forKey: .skinsData)
-        self.lore = try container.decode(String.self, forKey: .lore)
+    public init(championAdditionalData: ChampionAdditionalDetailsData, version: String) {
+        self.skins = championAdditionalData.skinsData.map {
+            return Skin(from: $0, version: version, championNameId: championAdditionalData.championIdName)
+        }
+        self.lore = championAdditionalData.lore
     }
 }
