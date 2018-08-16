@@ -11,6 +11,7 @@ import Foundation
 public class ChampionsDetails: Decodable {
     
     public var championId: ChampionId
+    public var championIdName: String
     public var name: String
     public var title: String
     public var presentationText: String
@@ -22,6 +23,7 @@ public class ChampionsDetails: Decodable {
     
     enum CodingKeys: String, CodingKey {
         case version = "version"
+        case championIdName = "id"
         case championId = "key"
         case name = "name"
         case title = "title"
@@ -33,8 +35,9 @@ public class ChampionsDetails: Decodable {
         case difficulties = "info"
     }
     
-    public init(championId: ChampionId, name: String, title: String, presentationText: String, image: ChampionImage, tags: [String], ressourceType: RessourceType, stats: ChampionStats, difficulties: ChampionDifficulties) {
+    public init(championId: ChampionId, championIdName: String, name: String, title: String, presentationText: String, image: ChampionImage, tags: [String], ressourceType: RessourceType, stats: ChampionStats, difficulties: ChampionDifficulties) {
         self.championId = championId
+        self.championIdName = championIdName
         self.name = name
         self.title = title
         self.presentationText = presentationText
@@ -48,6 +51,7 @@ public class ChampionsDetails: Decodable {
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.championId = try ChampionId(container.decode(String.self, forKey: .championId))!
+        self.championIdName = try container.decode(String.self, forKey: .championIdName)
         self.name = try container.decode(String.self, forKey: .name)
         self.title = try container.decode(String.self, forKey: .title)
         self.presentationText = try container.decode(String.self, forKey: .presentationText)
