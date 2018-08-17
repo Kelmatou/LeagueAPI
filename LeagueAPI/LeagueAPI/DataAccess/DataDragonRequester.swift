@@ -22,6 +22,7 @@ internal class DataDragonRequester {
     private var championsDetails: DDragonChampionsFile?
     private var championAdditionalDetails: [String : DDragonChampionFile?] = [:]
     private var profileIcons: [ProfileIcon] = []
+    private var profileIconIds: [ProfileIconId]?
     
     // MARK: - Methods
     
@@ -70,6 +71,22 @@ internal class DataDragonRequester {
         }
     }
     
+    public func getProfileIconIds(completion: @escaping ([ProfileIconId]?, String?) -> Void) {
+        if let cachedProfileIconIds = self.profileIconIds {
+            completion(cachedProfileIconIds, nil)
+        }
+        else {
+            getDataVersions() { (versions, error) in
+                guard let versions = versions else { completion(nil, error); return }
+                let profileIconIdsUrl: String = "\(ServicesUrl.DDragonCdn)/\(versions.profileIcon)/data/en_US/profileicon.json"
+                RESTRequester().requestObject(.GET, url: profileIconIdsUrl, asType: DDragonProfileIconsFile.self) { (profileIconsFile, _, _, error) in
+                    self.profileIconIds = profileIconsFile?.profileIconIds
+                    completion(profileIconsFile?.profileIconIds, error)
+                }
+            }
+        }
+    }
+    
     public func getProfileIcon(profileIconId: ProfileIconId, completion: @escaping (ProfileIcon?, String?) -> Void) {
         let cachedProfileIcon: ProfileIcon? = self.profileIcons.filter { return $0.id == profileIconId }.first
         if let cachedProfileIcon = cachedProfileIcon {
@@ -79,15 +96,23 @@ internal class DataDragonRequester {
             getDataVersions() { (versions, error) in
                 guard let versions = versions else { completion(nil, error); return }
                 let temporaryProfileIcon: ProfileIcon = ProfileIcon(id: profileIconId, version: versions.profileIcon)
-                RESTRequester().requestImage(.GET, url: temporaryProfileIcon.profileIcon.url) { (image, responseCode, _, error) in
-                    if responseCode == .Ok {
-                        // We just downloaded image to test if icon exists, so we put it in image's cache
-                        temporaryProfileIcon.profileIcon.image = image
-                        self.profileIcons.append(temporaryProfileIcon)
-                        completion(temporaryProfileIcon, nil)
-                    }
-                    else {
-                        completion(nil, error)
+                let urlCheckedCompletion: (ProfileIcon) -> Void = { (profileIcon) in
+                    self.profileIcons.append(profileIcon)
+                    completion(profileIcon, nil)
+                }
+                if let profileIconIds = self.profileIconIds, profileIconIds.contains(profileIconId) {
+                    urlCheckedCompletion(temporaryProfileIcon)
+                }
+                else {
+                    RESTRequester().requestImage(.GET, url: temporaryProfileIcon.profileIcon.url) { (image, responseCode, _, error) in
+                        if responseCode == .Ok {
+                            // We just downloaded image to test if icon exists, so we put it in image's cache
+                            temporaryProfileIcon.profileIcon.image = image
+                            urlCheckedCompletion(temporaryProfileIcon)
+                        }
+                        else {
+                            completion(nil, error)
+                        }
                     }
                 }
             }

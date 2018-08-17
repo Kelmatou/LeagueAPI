@@ -39,6 +39,10 @@ public class LeagueAPI: APIClient {
     
     // MARK: - Profile Icon
     
+    public func getProfileIconIds(handler: @escaping ([ProfileIconId]?, String?) -> Void) {
+        DataDragonProfileIconBusiness.getProfileIconIds(completion: handler)
+    }
+    
     public func getProfileIcon(byId id: ProfileIconId, handler: @escaping (ProfileIcon?, String?) -> Void) {
         DataDragonProfileIconBusiness.getProfileIcon(byId: id, completion: handler)
     }
