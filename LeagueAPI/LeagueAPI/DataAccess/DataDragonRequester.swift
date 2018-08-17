@@ -12,7 +12,7 @@ internal class DataDragonRequester {
     
     // MARK: - Singleton
     
-    public static let instance: DataDragonRequester = DataDragonRequester()
+    public private(set) static var instance: DataDragonRequester = DataDragonRequester()
     
     private init() {}
     
@@ -25,6 +25,10 @@ internal class DataDragonRequester {
     private var profileIconIds: [ProfileIconId]?
     
     // MARK: - Methods
+    
+    public static func clearCache() {
+        DataDragonRequester.instance = DataDragonRequester()
+    }
     
     public func getDataVersions(completion: @escaping (DDragonVersions?, String?) -> Void) {
         if let versions = versions {

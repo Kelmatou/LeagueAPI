@@ -17,6 +17,10 @@ public class LeagueAPI: APIClient {
         super.init(APIToken: APIToken)
     }
     
+    public func clearCache() {
+        DataDragonRequester.clearCache()
+    }
+    
     // MARK: - Service
     
     public func getPatchVersion(handler: @escaping (String?, String?) -> Void) {
