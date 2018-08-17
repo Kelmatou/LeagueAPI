@@ -29,6 +29,9 @@ internal class LeagueRequester {
                         Logger.warning(warningMessage)
                     }
                 }
+                else if responseCode == .Forbidden && !self.hasAppRateHeaders(headers: headers) {
+                    handler(nil, "API key is invalid or expired")
+                }
                 self.updateKeyLimits(for: method, headers: headers)
                 handler(result, error)
             }
@@ -50,6 +53,10 @@ internal class LeagueRequester {
                 self.key.updateMethodLimit(for: method.getMethodSignature(), newLimits: methodLimitCount, methodRate: methodLimit)
             }
         }
+    }
+    
+    private func hasAppRateHeaders(headers: RESTRequester.Headers?) -> Bool {
+        return headers != nil && headers!["X-NewRelic-App-Data"] != nil
     }
     
     private func canMakeRequest(for method: LeagueMethod) -> Bool {
