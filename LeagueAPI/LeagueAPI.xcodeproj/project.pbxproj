@@ -362,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				97D38D21210A521000150CF9 /* RESTRequester.swift */,
+				97A560A02125C07C00A908CD /* HttpResponseCode.swift */,
 				97D38D23210A532B00150CF9 /* ObjectMapper.swift */,
 				97D38D38210A75B800150CF9 /* Logger.swift */,
 				9769180821135CF700F8AF3B /* PrimitiveType.swift */,
@@ -436,7 +437,6 @@
 			isa = PBXGroup;
 			children = (
 				97D38D4A210A823E00150CF9 /* Version.swift */,
-				97A560A02125C07C00A908CD /* HttpResponseCode.swift */,
 				97A560BF2126F97C00A908CD /* ServicesUrl.swift */,
 			);
 			path = Constants;

@@ -72,6 +72,41 @@ internal class HttpResponseCode: Equatable {
         }
     }
     
+    public func errorMessage() -> String? {
+        switch self.code {
+        case .Unknown:
+            return "Unknown error occured"
+        case .FrameworkError:
+            return "LeagueAPI internal error occured"
+        case .Ok:
+            return nil
+        case .BadRequest:
+            return "Bad request was sent to the server"
+        case .Unauthorized:
+            return "Unauthorized call was sent to the server"
+        case .Forbidden:
+            return "Invalid call was sent to the server"
+        case .NotFound:
+            return "Ressource not found"
+        case .MethodNotAllowed:
+            return "Method is not allowed"
+        case .UnsupportedMediaType:
+            return "Unsupported media type was sent to the server"
+        case .NotRecorded:
+            return "Player exists, but hasn't played since match history collection began"
+        case .RateLimitExceeded:
+            return "Rate limit was exceeded"
+        case .InternalServerError:
+            return "Server interval server error"
+        case .BadGateway:
+            return "Bad gateway with server"
+        case .ServiceUnavailable:
+            return "Service unavailable"
+        case .GatewayTimeout:
+            return "Gateway with server timed out"
+        }
+    }
+    
     public static func == (lhs: HttpResponseCode, rhs: HttpResponseCode) -> Bool {
         return lhs.code == lhs.code
     }

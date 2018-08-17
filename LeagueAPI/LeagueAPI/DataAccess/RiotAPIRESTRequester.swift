@@ -12,10 +12,7 @@ internal class RiotAPIRESTRequester: RESTRequester {
     
     override func request(_ method: AccessMethod, url: String, headers: [String : String]? = nil, body: Data? = nil, handler: @escaping (Data?, HttpResponseCode, Headers?, String?) -> Void) {
         super.request(method, url: url, headers: headers, body: body) { (data, responseCode, allHeaders, error) in
-            if responseCode == .Ok {
-                handler(data, responseCode, allHeaders, nil)
-            }
-            else if responseCode == .Unknown {
+            if responseCode == .Ok || responseCode == .Unknown {
                 handler(data, responseCode, allHeaders, error)
             }
             else {
