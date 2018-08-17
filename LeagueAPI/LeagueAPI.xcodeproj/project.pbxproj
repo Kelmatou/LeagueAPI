@@ -39,6 +39,11 @@
 		97A560C02126F97C00A908CD /* ServicesUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560BF2126F97C00A908CD /* ServicesUrl.swift */; };
 		97A560C52127070200A908CD /* DataDragonProfileIconBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560C42127070200A908CD /* DataDragonProfileIconBusiness.swift */; };
 		97A560C72127071200A908CD /* DataDragonChampionBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560C62127071200A908CD /* DataDragonChampionBusiness.swift */; };
+		97A560D0212711DF00A908CD /* DateToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560CF212711DF00A908CD /* DateToken.swift */; };
+		97A560D22127120600A908CD /* Datetime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560D12127120600A908CD /* Datetime.swift */; };
+		97A560D42127123D00A908CD /* DatetimeEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560D32127123D00A908CD /* DatetimeEnums.swift */; };
+		97A560D62127151900A908CD /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560D52127151900A908CD /* IntExtension.swift */; };
+		97A560D8212716B700A908CD /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560D7212716B700A908CD /* StringExtension.swift */; };
 		97D38D1B210A4D8D00150CF9 /* Summoner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D1A210A4D8D00150CF9 /* Summoner.swift */; };
 		97D38D22210A521000150CF9 /* RESTRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D21210A521000150CF9 /* RESTRequester.swift */; };
 		97D38D24210A532B00150CF9 /* ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D23210A532B00150CF9 /* ObjectMapper.swift */; };
@@ -156,6 +161,11 @@
 		97A560BF2126F97C00A908CD /* ServicesUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesUrl.swift; sourceTree = "<group>"; };
 		97A560C42127070200A908CD /* DataDragonProfileIconBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDragonProfileIconBusiness.swift; sourceTree = "<group>"; };
 		97A560C62127071200A908CD /* DataDragonChampionBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDragonChampionBusiness.swift; sourceTree = "<group>"; };
+		97A560CF212711DF00A908CD /* DateToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateToken.swift; sourceTree = "<group>"; };
+		97A560D12127120600A908CD /* Datetime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datetime.swift; sourceTree = "<group>"; };
+		97A560D32127123D00A908CD /* DatetimeEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatetimeEnums.swift; sourceTree = "<group>"; };
+		97A560D52127151900A908CD /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
+		97A560D7212716B700A908CD /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		97D38D1A210A4D8D00150CF9 /* Summoner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summoner.swift; sourceTree = "<group>"; };
 		97D38D21210A521000150CF9 /* RESTRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTRequester.swift; sourceTree = "<group>"; };
 		97D38D23210A532B00150CF9 /* ObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMapper.swift; sourceTree = "<group>"; };
@@ -316,6 +326,16 @@
 			path = DataDragonBusiness;
 			sourceTree = "<group>";
 		};
+		97A560CE212711B800A908CD /* Datetime */ = {
+			isa = PBXGroup;
+			children = (
+				97A560CF212711DF00A908CD /* DateToken.swift */,
+				97A560D12127120600A908CD /* Datetime.swift */,
+				97A560D32127123D00A908CD /* DatetimeEnums.swift */,
+			);
+			path = Datetime;
+			sourceTree = "<group>";
+		};
 		97D38D19210A4D7700150CF9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -361,12 +381,15 @@
 		97D38D1F210A511D00150CF9 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				97A560CE212711B800A908CD /* Datetime */,
 				97D38D21210A521000150CF9 /* RESTRequester.swift */,
 				97A560A02125C07C00A908CD /* HttpResponseCode.swift */,
 				97D38D23210A532B00150CF9 /* ObjectMapper.swift */,
 				97D38D38210A75B800150CF9 /* Logger.swift */,
 				9769180821135CF700F8AF3B /* PrimitiveType.swift */,
 				97A5608721232DED00A908CD /* ImageWithUrl.swift */,
+				97A560D52127151900A908CD /* IntExtension.swift */,
+				97A560D7212716B700A908CD /* StringExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -620,6 +643,7 @@
 				97D38DF0210E0A9000150CF9 /* TournamentProvider.swift in Sources */,
 				97E31447211B9E9700C9F739 /* ErrorMessage.swift in Sources */,
 				97A5607A2122E36C00A908CD /* APIClient.swift in Sources */,
+				97A560D22127120600A908CD /* Datetime.swift in Sources */,
 				97D38DF4210E0C5C00150CF9 /* TournamentStubBusiness.swift in Sources */,
 				97A560992123822700A908CD /* Skin.swift in Sources */,
 				97D38DDB210CF85D00150CF9 /* MatchMethod.swift in Sources */,
@@ -631,6 +655,7 @@
 				97D38DB1210CABBA00150CF9 /* RunePage.swift in Sources */,
 				97D38DD9210CF05C00150CF9 /* MatchEvent.swift in Sources */,
 				97D38DA1210CA3A100150CF9 /* StatusBusiness.swift in Sources */,
+				97A560D0212711DF00A908CD /* DateToken.swift in Sources */,
 				97A560C72127071200A908CD /* DataDragonChampionBusiness.swift in Sources */,
 				97D38D2F210A5B7E00150CF9 /* LeagueMethod.swift in Sources */,
 				97D38D83210C6E9B00150CF9 /* ChampionBusiness.swift in Sources */,
@@ -646,7 +671,9 @@
 				97D38DD3210CF03000150CF9 /* MatchFrame.swift in Sources */,
 				97A56097212381C700A908CD /* ChampionAdditionalDetails.swift in Sources */,
 				97691807211359D100F8AF3B /* RawRequester.swift in Sources */,
+				97A560D8212716B700A908CD /* StringExtension.swift in Sources */,
 				97A560A7212623D000A908CD /* SkinData.swift in Sources */,
+				97A560D62127151900A908CD /* IntExtension.swift in Sources */,
 				97D38DEC210DFEEC00150CF9 /* TournamentInfo.swift in Sources */,
 				9736CCD22120E172008E31A0 /* Endpoint.swift in Sources */,
 				97D38DE5210DFCB100150CF9 /* TournamentEventList.swift in Sources */,
@@ -691,6 +718,7 @@
 				97D38D31210A5CDA00150CF9 /* SummonerMethod.swift in Sources */,
 				97A56095212381B900A908CD /* ChampionDetails.swift in Sources */,
 				97D38D9D210C9D4E00150CF9 /* Translation.swift in Sources */,
+				97A560D42127123D00A908CD /* DatetimeEnums.swift in Sources */,
 				97D38DDD210D0CEF00150CF9 /* MatchBusiness.swift in Sources */,
 				97D38D7B210C5D8500150CF9 /* ChampionMasteryMethod.swift in Sources */,
 				97D38D4B210A823E00150CF9 /* Version.swift in Sources */,
