@@ -14,7 +14,7 @@ public class MatchPlayer: Decodable {
     public var accountId: AccountId
     public var summonerId: SummonerId
     public var summonerName: String
-    public var profileIconId: Int
+    public var profileIconId: ProfileIconId
     public var currentPlatformId: String
     public var platformId: String
     public var matchHistoryUri: String
@@ -30,7 +30,7 @@ public class MatchPlayer: Decodable {
         case matchHistoryUri = "matchHistoryUri"
     }
     
-    public init(currentAccountId: AccountId, accountId: AccountId, summonerId: SummonerId, summonerName: String, profileIconId: Int, currentPlatformId: String, platformId: String, matchHistoryUri: String) {
+    public init(currentAccountId: AccountId, accountId: AccountId, summonerId: SummonerId, summonerName: String, profileIconId: ProfileIconId, currentPlatformId: String, platformId: String, matchHistoryUri: String) {
         self.currentAccountId = currentAccountId
         self.accountId = accountId
         self.summonerId = summonerId
@@ -47,7 +47,7 @@ public class MatchPlayer: Decodable {
         self.accountId = try container.decode(AccountId.self, forKey: .accountId)
         self.summonerId = try container.decode(SummonerId.self, forKey: .summonerId)
         self.summonerName = try container.decode(String.self, forKey: .summonerName)
-        self.profileIconId = try container.decode(Int.self, forKey: .profileIconId)
+        self.profileIconId = try container.decode(ProfileIconId.self, forKey: .profileIconId)
         self.currentPlatformId = try container.decode(String.self, forKey: .currentPlatformId)
         self.platformId = try container.decode(String.self, forKey: .platformId)
         self.matchHistoryUri = try container.decode(String.self, forKey: .matchHistoryUri)

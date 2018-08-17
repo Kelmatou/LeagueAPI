@@ -8,13 +8,31 @@
 
 import UIKit
 
-internal class ImageWithUrl {
+public class ImageWithUrl {
     
-    public var url: String
-    public var image: UIImage?
+    public private(set) var url: String
+    internal var image: UIImage?
     
     public init(url: String, image: UIImage?) {
         self.url = url
         self.image = image
+    }
+    
+    public func getImage(handler: @escaping (UIImage?, String?) -> Void) {
+        if let image = self.image {
+            handler(image, nil)
+        }
+        else {
+            downloadImage(completion: handler)
+        }
+    }
+    
+    private func downloadImage(completion: @escaping (UIImage?, String?) -> Void) {
+        RESTRequester().requestImage(.GET, url: self.url) { (image, _, _, error) in
+            if self.image == nil {
+                self.image = image
+            }
+            completion(image, error)
+        }
     }
 }

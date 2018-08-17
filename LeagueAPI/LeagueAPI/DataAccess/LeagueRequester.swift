@@ -31,6 +31,7 @@ internal class LeagueRequester {
                 }
                 else if responseCode == .Forbidden && !self.hasAppRateHeaders(headers: headers) {
                     handler(nil, "API key is invalid or expired")
+                    return
                 }
                 self.updateKeyLimits(for: method, headers: headers)
                 handler(result, error)

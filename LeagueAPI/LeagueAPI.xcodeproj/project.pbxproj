@@ -27,7 +27,7 @@
 		97A5608A21234B5600A908CD /* DDragonChampionFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A5608921234B5600A908CD /* DDragonChampionFile.swift */; };
 		97A5608C2123572600A908CD /* DataDragonRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A5608B2123572600A908CD /* DataDragonRequester.swift */; };
 		97A5608F21236FCF00A908CD /* DDragonVersions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A5608E21236FCF00A908CD /* DDragonVersions.swift */; };
-		97A560932123774400A908CD /* DataDragonBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560922123774400A908CD /* DataDragonBusiness.swift */; };
+		97A560932123774400A908CD /* DataDragonVersionBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560922123774400A908CD /* DataDragonVersionBusiness.swift */; };
 		97A56095212381B900A908CD /* ChampionDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A56094212381B900A908CD /* ChampionDetails.swift */; };
 		97A56097212381C700A908CD /* ChampionAdditionalDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A56096212381C700A908CD /* ChampionAdditionalDetails.swift */; };
 		97A560992123822700A908CD /* Skin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560982123822700A908CD /* Skin.swift */; };
@@ -35,6 +35,10 @@
 		97A560A32125CB0000A908CD /* RiotAPIRESTRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560A22125CB0000A908CD /* RiotAPIRESTRequester.swift */; };
 		97A560A7212623D000A908CD /* SkinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560A6212623D000A908CD /* SkinData.swift */; };
 		97A560B521263DD400A908CD /* ChampionAdditionalDetailsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560B421263DD400A908CD /* ChampionAdditionalDetailsData.swift */; };
+		97A560BE2126F4FD00A908CD /* ProfileIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560BD2126F4FD00A908CD /* ProfileIcon.swift */; };
+		97A560C02126F97C00A908CD /* ServicesUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560BF2126F97C00A908CD /* ServicesUrl.swift */; };
+		97A560C52127070200A908CD /* DataDragonProfileIconBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560C42127070200A908CD /* DataDragonProfileIconBusiness.swift */; };
+		97A560C72127071200A908CD /* DataDragonChampionBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560C62127071200A908CD /* DataDragonChampionBusiness.swift */; };
 		97D38D1B210A4D8D00150CF9 /* Summoner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D1A210A4D8D00150CF9 /* Summoner.swift */; };
 		97D38D22210A521000150CF9 /* RESTRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D21210A521000150CF9 /* RESTRequester.swift */; };
 		97D38D24210A532B00150CF9 /* ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D23210A532B00150CF9 /* ObjectMapper.swift */; };
@@ -140,7 +144,7 @@
 		97A5608921234B5600A908CD /* DDragonChampionFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDragonChampionFile.swift; sourceTree = "<group>"; };
 		97A5608B2123572600A908CD /* DataDragonRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDragonRequester.swift; sourceTree = "<group>"; };
 		97A5608E21236FCF00A908CD /* DDragonVersions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDragonVersions.swift; sourceTree = "<group>"; };
-		97A560922123774400A908CD /* DataDragonBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDragonBusiness.swift; sourceTree = "<group>"; };
+		97A560922123774400A908CD /* DataDragonVersionBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDragonVersionBusiness.swift; sourceTree = "<group>"; };
 		97A56094212381B900A908CD /* ChampionDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionDetails.swift; sourceTree = "<group>"; };
 		97A56096212381C700A908CD /* ChampionAdditionalDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionAdditionalDetails.swift; sourceTree = "<group>"; };
 		97A560982123822700A908CD /* Skin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skin.swift; sourceTree = "<group>"; };
@@ -148,6 +152,10 @@
 		97A560A22125CB0000A908CD /* RiotAPIRESTRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiotAPIRESTRequester.swift; sourceTree = "<group>"; };
 		97A560A6212623D000A908CD /* SkinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinData.swift; sourceTree = "<group>"; };
 		97A560B421263DD400A908CD /* ChampionAdditionalDetailsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionAdditionalDetailsData.swift; sourceTree = "<group>"; };
+		97A560BD2126F4FD00A908CD /* ProfileIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileIcon.swift; sourceTree = "<group>"; };
+		97A560BF2126F97C00A908CD /* ServicesUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesUrl.swift; sourceTree = "<group>"; };
+		97A560C42127070200A908CD /* DataDragonProfileIconBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDragonProfileIconBusiness.swift; sourceTree = "<group>"; };
+		97A560C62127071200A908CD /* DataDragonChampionBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDragonChampionBusiness.swift; sourceTree = "<group>"; };
 		97D38D1A210A4D8D00150CF9 /* Summoner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summoner.swift; sourceTree = "<group>"; };
 		97D38D21210A521000150CF9 /* RESTRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTRequester.swift; sourceTree = "<group>"; };
 		97D38D23210A532B00150CF9 /* ObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMapper.swift; sourceTree = "<group>"; };
@@ -276,6 +284,7 @@
 				97A560982123822700A908CD /* Skin.swift */,
 				97A560A6212623D000A908CD /* SkinData.swift */,
 				97A560832122FFA800A908CD /* SkinImages.swift */,
+				97A560BD2126F4FD00A908CD /* ProfileIcon.swift */,
 			);
 			path = DataDragonModels;
 			sourceTree = "<group>";
@@ -300,7 +309,9 @@
 		97A560912123772300A908CD /* DataDragonBusiness */ = {
 			isa = PBXGroup;
 			children = (
-				97A560922123774400A908CD /* DataDragonBusiness.swift */,
+				97A560922123774400A908CD /* DataDragonVersionBusiness.swift */,
+				97A560C62127071200A908CD /* DataDragonChampionBusiness.swift */,
+				97A560C42127070200A908CD /* DataDragonProfileIconBusiness.swift */,
 			);
 			path = DataDragonBusiness;
 			sourceTree = "<group>";
@@ -426,6 +437,7 @@
 			children = (
 				97D38D4A210A823E00150CF9 /* Version.swift */,
 				97A560A02125C07C00A908CD /* HttpResponseCode.swift */,
+				97A560BF2126F97C00A908CD /* ServicesUrl.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -600,6 +612,7 @@
 				97D38DB3210CB3FD00150CF9 /* GameMode.swift in Sources */,
 				97D38DCB210CCCDB00150CF9 /* MatchParticipantTimeline.swift in Sources */,
 				97D38DC3210CCC4700150CF9 /* TeamStats.swift in Sources */,
+				97A560BE2126F4FD00A908CD /* ProfileIcon.swift in Sources */,
 				97A5608A21234B5600A908CD /* DDragonChampionFile.swift in Sources */,
 				97A560A12125C07C00A908CD /* HttpResponseCode.swift in Sources */,
 				97D38DD5210CF04000150CF9 /* MatchParticipantFrame.swift in Sources */,
@@ -618,6 +631,7 @@
 				97D38DB1210CABBA00150CF9 /* RunePage.swift in Sources */,
 				97D38DD9210CF05C00150CF9 /* MatchEvent.swift in Sources */,
 				97D38DA1210CA3A100150CF9 /* StatusBusiness.swift in Sources */,
+				97A560C72127071200A908CD /* DataDragonChampionBusiness.swift in Sources */,
 				97D38D2F210A5B7E00150CF9 /* LeagueMethod.swift in Sources */,
 				97D38D83210C6E9B00150CF9 /* ChampionBusiness.swift in Sources */,
 				97A5607C2122EFD200A908CD /* DDragonChampionsFile.swift in Sources */,
@@ -626,6 +640,7 @@
 				97D38DC5210CCC6B00150CF9 /* TeamBan.swift in Sources */,
 				97D38D7F210C69FE00150CF9 /* Champion.swift in Sources */,
 				97D38DCF210CCDFD00150CF9 /* LegacyMastery.swift in Sources */,
+				97A560C52127070200A908CD /* DataDragonProfileIconBusiness.swift in Sources */,
 				97D38D97210C9D2C00150CF9 /* Service.swift in Sources */,
 				97D38DC9210CCCB800150CF9 /* MatchParticipantStats.swift in Sources */,
 				97D38DD3210CF03000150CF9 /* MatchFrame.swift in Sources */,
@@ -665,7 +680,7 @@
 				97D38DEE210DFFAB00150CF9 /* TournamentRegion.swift in Sources */,
 				97D38D7D210C69CB00150CF9 /* ChampionList.swift in Sources */,
 				97D38DBD210CCB3A00150CF9 /* Match.swift in Sources */,
-				97A560932123774400A908CD /* DataDragonBusiness.swift in Sources */,
+				97A560932123774400A908CD /* DataDragonVersionBusiness.swift in Sources */,
 				97D38D1B210A4D8D00150CF9 /* Summoner.swift in Sources */,
 				97D38D81210C6BFB00150CF9 /* ChampionMethod.swift in Sources */,
 				97D38D47210A80AA00150CF9 /* MethodPaths.swift in Sources */,
@@ -679,6 +694,7 @@
 				97D38DDD210D0CEF00150CF9 /* MatchBusiness.swift in Sources */,
 				97D38D7B210C5D8500150CF9 /* ChampionMasteryMethod.swift in Sources */,
 				97D38D4B210A823E00150CF9 /* Version.swift in Sources */,
+				97A560C02126F97C00A908CD /* ServicesUrl.swift in Sources */,
 				97D38DF2210E0B0A00150CF9 /* TournamentInitializer.swift in Sources */,
 				97D38DD1210CF02300150CF9 /* MatchTimeline.swift in Sources */,
 				97D38DB9210CC75E00150CF9 /* MatchList.swift in Sources */,

@@ -1,20 +1,14 @@
 //
-//  DataDragonBusiness.swift
+//  DataDragonChampionBusiness.swift
 //  LeagueAPI
 //
-//  Created by Antoine Clop on 8/14/18.
+//  Created by Antoine Clop on 8/17/18.
 //  Copyright © 2018 Antoine Clop. All rights reserved.
 //
 
 import Foundation
 
-internal class DataDragonBusiness {
-    
-    public static func getPatchVersion(completion: @escaping (String?, String?) -> Void) {
-        DataDragonRequester.instance.getDataVersions() { (versions, error) in
-            completion(versions?.patch, error)
-        }
-    }
+internal class DataDragonChampionBusiness {
     
     public static func getChampionDetails(by championId: ChampionId, completion: @escaping (ChampionDetails?, String?) -> Void) {
         let filterFunction: ((String, ChampionsDetails)) -> Bool = { (keyValue) -> Bool in

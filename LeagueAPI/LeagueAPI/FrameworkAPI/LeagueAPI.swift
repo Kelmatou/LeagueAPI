@@ -20,20 +20,26 @@ public class LeagueAPI: APIClient {
     // MARK: - Service
     
     public func getPatchVersion(handler: @escaping (String?, String?) -> Void) {
-        DataDragonBusiness.getPatchVersion(completion: handler)
+        DataDragonVersionBusiness.getPatchVersion(completion: handler)
     }
     
     // MARK: - Champion
     
     public func getChampionDetails(by championId: ChampionId, handler: @escaping (ChampionDetails?, String?) -> Void) {
-        DataDragonBusiness.getChampionDetails(by: championId, completion: handler)
+        DataDragonChampionBusiness.getChampionDetails(by: championId, completion: handler)
     }
     
     public func getChampionDetails(byName name: String, handler: @escaping (ChampionDetails?, String?) -> Void) {
-        DataDragonBusiness.getChampionDetails(byName: name, completion: handler)
+        DataDragonChampionBusiness.getChampionDetails(byName: name, completion: handler)
     }
     
     public func getChampionsName(byRole role: String, handler: @escaping ([String]?, String?) -> Void) {
-        DataDragonBusiness.getChampions(forRole: role, completion: handler)
+        DataDragonChampionBusiness.getChampions(forRole: role, completion: handler)
+    }
+    
+    // MARK: - Profile Icon
+    
+    public func getProfileIcon(byId id: ProfileIconId, handler: @escaping (ProfileIcon?, String?) -> Void) {
+        DataDragonProfileIconBusiness.getProfileIcon(byId: id, completion: handler)
     }
 }

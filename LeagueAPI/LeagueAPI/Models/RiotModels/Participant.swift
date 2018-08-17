@@ -11,7 +11,7 @@ import Foundation
 public class Participant: Decodable {
     
     public var summonerName: String
-    public var profileIconId: Int64
+    public var profileIconId: ProfileIconId
     public var championId: ChampionId
     public var isBot: Bool
     public var teamId: Int64
@@ -34,7 +34,7 @@ public class Participant: Decodable {
         case customizedObjects = "gameCustomizationObjects"
     }
     
-    public init(summonerName: String, profileIconId: Int64, championId: ChampionId, isBot: Bool, teamId: Int64, summonerSpell1: Int64, summonerSpell2: Int64, summonerId: SummonerId? = nil, runePage: RunePage? = nil, customizedObjects: [GameCustomObject]? = nil) {
+    public init(summonerName: String, profileIconId: ProfileIconId, championId: ChampionId, isBot: Bool, teamId: Int64, summonerSpell1: Int64, summonerSpell2: Int64, summonerId: SummonerId? = nil, runePage: RunePage? = nil, customizedObjects: [GameCustomObject]? = nil) {
         self.summonerName = summonerName
         self.profileIconId = profileIconId
         self.championId = championId
@@ -50,7 +50,7 @@ public class Participant: Decodable {
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.summonerName = try container.decode(String.self, forKey: .summonerName)
-        self.profileIconId = try container.decode(Int64.self, forKey: .profileIconId)
+        self.profileIconId = try container.decode(ProfileIconId.self, forKey: .profileIconId)
         self.championId = try container.decode(ChampionId.self, forKey: .championId)
         self.isBot = try container.decode(Bool.self, forKey: .isBot)
         self.teamId = try container.decode(Int64.self, forKey: .teamId)
