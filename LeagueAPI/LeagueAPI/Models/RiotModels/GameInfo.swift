@@ -14,13 +14,13 @@ public class GameInfo: Decodable {
     public var gameStartTime: Int64
     public var platformId: String
     public var gameMode: GameMode
-    public var mapId: Int64
+    public var mapId: Long
     public var gameType: String
     public var bannedChampions: [BannedChampion]
     public var observer: Observer
     public var participants: [Participant]
     public var gameLength: Int64
-    public var gameQueueConfigId: Int64
+    public var gameQueueConfigId: Long
     
     enum CodingKeys: String, CodingKey {
         case gameId = "gameId"
@@ -36,7 +36,7 @@ public class GameInfo: Decodable {
         case gameQueueConfigId = "gameQueueConfigId"
     }
     
-    public init(gameId: GameId, gameStartTime: Int64, platformId: String, gameMode: GameMode, mapId: Int64, gameType: String, bannedChampions: [BannedChampion], observer: Observer, participants: [Participant], gameLength: Int64, gameQueueConfigId: Int64) {
+    public init(gameId: GameId, gameStartTime: Int64, platformId: String, gameMode: GameMode, mapId: Long, gameType: String, bannedChampions: [BannedChampion], observer: Observer, participants: [Participant], gameLength: Int64, gameQueueConfigId: Long) {
         self.gameId = gameId
         self.gameStartTime = gameStartTime
         self.platformId = platformId
@@ -56,12 +56,12 @@ public class GameInfo: Decodable {
         self.gameStartTime = try container.decode(Int64.self, forKey: .gameStartTime)
         self.platformId = try container.decode(String.self, forKey: .platformId)
         self.gameMode = try GameMode(gameMode: container.decode(String.self, forKey: .gameMode))
-        self.mapId = try container.decode(Int64.self, forKey: .mapId)
+        self.mapId = try container.decode(Long.self, forKey: .mapId)
         self.gameType = try container.decode(String.self, forKey: .gameType)
         self.bannedChampions = try container.decode([BannedChampion].self, forKey: .bannedChampions)
         self.observer = try container.decode(Observer.self, forKey: .observer)
         self.participants = try container.decode([Participant].self, forKey: .participants)
         self.gameLength = try container.decode(Int64.self, forKey: .gameLength)
-        self.gameQueueConfigId = try container.decode(Int64.self, forKey: .gameQueueConfigId)
+        self.gameQueueConfigId = try container.decode(Long.self, forKey: .gameQueueConfigId)
     }
 }

@@ -10,7 +10,7 @@ import Foundation
 
 public class Incident: Decodable {
     
-    public var id: Int64
+    public var id: Long
     public var active: Bool
     public var updates: [Message]
     public var createdAt: String
@@ -22,7 +22,7 @@ public class Incident: Decodable {
         case createdAt = "created_at"
     }
     
-    public init(id: Int64, active: Bool, updates: [Message], createdAt: String) {
+    public init(id: Long, active: Bool, updates: [Message], createdAt: String) {
         self.id = id
         self.active = active
         self.updates = updates
@@ -31,7 +31,7 @@ public class Incident: Decodable {
     
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try container.decode(Int64.self, forKey: .id)
+        self.id = try container.decode(Long.self, forKey: .id)
         self.active = try container.decode(Bool.self, forKey: .active)
         self.updates = try container.decode([Message].self, forKey: .updates)
         self.createdAt = try container.decode(String.self, forKey: .createdAt)

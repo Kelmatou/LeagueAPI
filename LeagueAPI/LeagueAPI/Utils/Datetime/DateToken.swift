@@ -22,7 +22,6 @@ open class DateToken {
         case MonthLong = "ML"
         case DayShort = "dS"
         case DayLong = "dL"
-        
         case Other
     }
     

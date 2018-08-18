@@ -18,3 +18,4 @@ public typealias ProviderId = Int
 public typealias LeagueId = String
 public typealias TournamentId = Int64
 public typealias TournamentCode = String
+public typealias Long = Int64

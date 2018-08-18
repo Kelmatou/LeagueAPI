@@ -63,6 +63,10 @@ open class Datetime: Comparable, Equatable {
         self.date = date
     }
     
+    public init(timestamp: Long) {
+        self.date = Date(timeIntervalSince1970: Double(timestamp))
+    }
+    
     public init?(year: Int, month: Int, day: Int, hour: Int = 0, minute: Int = 0, second: Int = 0, timeZone: TimeZone? = nil) {
         negativeYear = year < 0
         let dateComponents: DateComponents = DateComponents(calendar: nil, timeZone: timeZone , era: nil, year: year, month: month, day: day, hour: hour, minute: minute, second: second, nanosecond: 0, weekday: nil, weekdayOrdinal: nil, quarter: nil, weekOfMonth: nil, weekOfYear: nil, yearForWeekOfYear: nil)

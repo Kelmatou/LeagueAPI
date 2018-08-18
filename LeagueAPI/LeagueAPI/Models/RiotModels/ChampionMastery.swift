@@ -14,8 +14,8 @@ public class ChampionMastery: Decodable {
     public var summonerId: SummonerId
     public var championLevel: Int
     public var championPoints: Int
-    public var championPointsUntilNextLevel: Int64
-    public var championPointsSinceLastLevel: Int64
+    public var championPointsUntilNextLevel: Long
+    public var championPointsSinceLastLevel: Long
     public var chestGranted: Bool
     public var tokensEarned: Int
     public var lastPlayTime: Int64
@@ -32,7 +32,7 @@ public class ChampionMastery: Decodable {
         case lastPlayTime = "lastPlayTime"
     }
     
-    public init(championId: ChampionId, summonerId: SummonerId, championLevel: Int, championPoints: Int, championPointsUntilNextLevel: Int64, championPointsSinceLastLevel: Int64, chestGranted: Bool, tokensEarned: Int, lastPlayTime: Int64) {
+    public init(championId: ChampionId, summonerId: SummonerId, championLevel: Int, championPoints: Int, championPointsUntilNextLevel: Long, championPointsSinceLastLevel: Long, chestGranted: Bool, tokensEarned: Int, lastPlayTime: Int64) {
         self.championId = championId
         self.summonerId = summonerId
         self.championLevel = championLevel
@@ -50,8 +50,8 @@ public class ChampionMastery: Decodable {
         self.summonerId = try container.decode(SummonerId.self, forKey: .summonerId)
         self.championLevel = try container.decode(Int.self, forKey: .championLevel)
         self.championPoints = try container.decode(Int.self, forKey: .championPoints)
-        self.championPointsUntilNextLevel = try container.decode(Int64.self, forKey: .championPointsUntilNextLevel)
-        self.championPointsSinceLastLevel = try container.decode(Int64.self, forKey: .championPointsSinceLastLevel)
+        self.championPointsUntilNextLevel = try container.decode(Long.self, forKey: .championPointsUntilNextLevel)
+        self.championPointsSinceLastLevel = try container.decode(Long.self, forKey: .championPointsSinceLastLevel)
         self.chestGranted = try container.decode(Bool.self, forKey: .chestGranted)
         self.tokensEarned = try container.decode(Int.self, forKey: .tokensEarned)
         self.lastPlayTime = try container.decode(Int64.self, forKey: .lastPlayTime)
