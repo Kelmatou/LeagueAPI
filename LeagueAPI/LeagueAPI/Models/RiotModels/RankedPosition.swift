@@ -37,6 +37,6 @@ public class RankedPosition: Decodable {
         self.leagueId = try container.decode(LeagueId.self, forKey: .leagueId)
         self.leagueName = try container.decode(String.self, forKey: .leagueName)
         self.leagueInfo = try LeagueInfo(from: decoder)
-        self.queue = try Queue(queueType: container.decode(String.self, forKey: .queue))
+        self.queue = try Queue(container.decode(String.self, forKey: .queue))
     }
 }

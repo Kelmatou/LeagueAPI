@@ -12,7 +12,7 @@ internal class MatchMethod: LeagueMethod {
     
     public enum MatchMethods {
         case ById(id: GameId)
-        case MatchesByAccountId(id: AccountId, beginTime: Datetime?, endTime: Datetime?, beginIndex: Int?, endIndex: Int?, championId: ChampionId?, queue: Int?, season: Int?)
+        case MatchesByAccountId(id: AccountId, beginTime: Datetime?, endTime: Datetime?, beginIndex: Int?, endIndex: Int?, championId: ChampionId?, queue: QueueMode?, season: Int?)
         case TimelineById(id: GameId)
         case MatchIdsByTournamentCode(code: TournamentCode)
         case ByIdAndTournamentCode(id: GameId, code: TournamentCode)
@@ -54,7 +54,7 @@ internal class MatchMethod: LeagueMethod {
             if let beginIndex = beginIndex { queryParameters["beginIndex"] = beginIndex }
             if let endIndex = endIndex { queryParameters["endIndex"] = endIndex }
             if let championId = championId { queryParameters["champion"] = championId }
-            if let queue = queue { queryParameters["queue"] = queue }
+            if let queue = queue { queryParameters["queue"] = queue.mode.rawValue }
             if let season = season { queryParameters["season"] = season }
             var queryParametersUrl: String = queryParameters.count == 0 ? "" : "?"
             for parameter in queryParameters {

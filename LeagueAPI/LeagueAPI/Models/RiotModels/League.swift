@@ -37,7 +37,7 @@ public class League: Decodable {
         self.leagueId = try container.decode(LeagueId.self, forKey: .leagueId)
         self.name = try container.decode(String.self, forKey: .name)
         self.tier = try container.decode(String.self, forKey: .tier)
-        self.queue = try Queue(queueType: container.decode(String.self, forKey: .queue))
+        self.queue = try Queue(container.decode(String.self, forKey: .queue))
         self.leagueInfoList = try container.decode([LeagueInfo].self, forKey: .leagueInfoList)
     }
 }

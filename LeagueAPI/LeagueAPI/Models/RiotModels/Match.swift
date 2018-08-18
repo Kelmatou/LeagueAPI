@@ -11,7 +11,7 @@ import Foundation
 public class Match: Decodable {
     
     public var seasonId: Int
-    public var queueId: Int
+    public var queueMode: QueueMode
     public var gameId: GameId
     public var participants: [MatchParticipantIdentity]
     public var patch: String
@@ -40,9 +40,9 @@ public class Match: Decodable {
         case gameCreation = "gameCreation"
     }
     
-    public init(seasonId: Int, queueId: Int, gameId: GameId, participants: [MatchParticipantIdentity], patch: String, platformId: String, gameMode: GameMode, map: Map, gameType: GameType, teamsInfo: [TeamStats], participantsInfo: [MatchParticipant], gameDuration: Duration, gameCreation: Datetime) {
+    public init(seasonId: Int, queueMode: QueueMode, gameId: GameId, participants: [MatchParticipantIdentity], patch: String, platformId: String, gameMode: GameMode, map: Map, gameType: GameType, teamsInfo: [TeamStats], participantsInfo: [MatchParticipant], gameDuration: Duration, gameCreation: Datetime) {
         self.seasonId = seasonId
-        self.queueId = queueId
+        self.queueMode = queueMode
         self.gameId = gameId
         self.participants = participants
         self.patch = patch
@@ -59,7 +59,7 @@ public class Match: Decodable {
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.seasonId = try container.decode(Int.self, forKey: .seasonId)
-        self.queueId = try container.decode(Int.self, forKey: .queueId)
+        self.queueMode = try QueueMode(container.decode(Long.self, forKey: .queueId))
         self.gameId = try container.decode(GameId.self, forKey: .gameId)
         self.participants = try container.decode([MatchParticipantIdentity].self, forKey: .participants)
         self.patch = try container.decode(String.self, forKey: .patch)

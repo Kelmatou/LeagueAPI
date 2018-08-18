@@ -27,7 +27,7 @@ public class Queue {
         self.type = queueType
     }
     
-    internal init(queueType: String) {
+    internal init(_ queueType: String) {
         switch queueType {
         case QueueTypes.RankedSolo5V5.rawValue:
             self.type = .RankedSolo5V5

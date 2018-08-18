@@ -12,7 +12,7 @@ public class MatchReference: Decodable {
     
     public var gameId: GameId
     public var season: Int
-    public var queue: Int
+    public var queue: QueueMode
     public var championId: ChampionId
     public var lane: String
     public var role: String
@@ -30,7 +30,7 @@ public class MatchReference: Decodable {
         case gameDate = "timestamp"
     }
     
-    public init(gameId: GameId, season: Int, queue: Int, championId: ChampionId, lane: String, role: String, platformId: String, gameDate: Datetime) {
+    public init(gameId: GameId, season: Int, queue: QueueMode, championId: ChampionId, lane: String, role: String, platformId: String, gameDate: Datetime) {
         self.gameId = gameId
         self.season = season
         self.queue = queue
@@ -45,7 +45,7 @@ public class MatchReference: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.gameId = try container.decode(GameId.self, forKey: .gameId)
         self.season = try container.decode(Int.self, forKey: .season)
-        self.queue = try container.decode(Int.self, forKey: .queue)
+        self.queue = try QueueMode(container.decode(Long.self, forKey: .queue))
         self.championId = try container.decode(ChampionId.self, forKey: .championId)
         self.lane = try container.decode(String.self, forKey: .lane)
         self.role = try container.decode(String.self, forKey: .role)

@@ -10,6 +10,8 @@
 		97225C22212850D2001025EB /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97225C21212850D2001025EB /* Duration.swift */; };
 		97225C2D21286235001025EB /* GameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97225C2C21286235001025EB /* GameType.swift */; };
 		97225C2F212865E1001025EB /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97225C2E212865E1001025EB /* Map.swift */; };
+		97225C31212891DB001025EB /* QueueMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97225C30212891DB001025EB /* QueueMode.swift */; };
+		97225C3321289928001025EB /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97225C3221289928001025EB /* Place.swift */; };
 		9736CCD22120E172008E31A0 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9736CCD12120E172008E31A0 /* Endpoint.swift */; };
 		9736CCD42120EB96008E31A0 /* SpectatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9736CCD32120EB96008E31A0 /* SpectatorType.swift */; };
 		9736CCD72120EFB5008E31A0 /* PickType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9736CCD62120EFB5008E31A0 /* PickType.swift */; };
@@ -137,6 +139,8 @@
 		97225C21212850D2001025EB /* Duration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
 		97225C2C21286235001025EB /* GameType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameType.swift; sourceTree = "<group>"; };
 		97225C2E212865E1001025EB /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		97225C30212891DB001025EB /* QueueMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueMode.swift; sourceTree = "<group>"; };
+		97225C3221289928001025EB /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		9736CCD12120E172008E31A0 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		9736CCD32120EB96008E31A0 /* SpectatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectatorType.swift; sourceTree = "<group>"; };
 		9736CCD62120EFB5008E31A0 /* PickType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickType.swift; sourceTree = "<group>"; };
@@ -280,13 +284,15 @@
 				97D38D42210A7B4900150CF9 /* Region.swift */,
 				97D38D44210A7BEF00150CF9 /* Platform.swift */,
 				97D38D8E210C7E8D00150CF9 /* Queue.swift */,
+				97225C30212891DB001025EB /* QueueMode.swift */,
+				97225C2C21286235001025EB /* GameType.swift */,
 				97D38DB2210CB3FD00150CF9 /* GameMode.swift */,
 				9736CCD32120EB96008E31A0 /* SpectatorType.swift */,
 				9736CCD62120EFB5008E31A0 /* PickType.swift */,
+				97225C2E212865E1001025EB /* Map.swift */,
 				9736CCD82120F037008E31A0 /* MapType.swift */,
 				97A560852123238B00A908CD /* RessourceType.swift */,
-				97225C2C21286235001025EB /* GameType.swift */,
-				97225C2E212865E1001025EB /* Map.swift */,
+				97225C3221289928001025EB /* Place.swift */,
 			);
 			path = RiotEnums;
 			sourceTree = "<group>";
@@ -692,6 +698,7 @@
 				97225C2F212865E1001025EB /* Map.swift in Sources */,
 				97A560D8212716B700A908CD /* StringExtension.swift in Sources */,
 				97A560A7212623D000A908CD /* SkinData.swift in Sources */,
+				97225C31212891DB001025EB /* QueueMode.swift in Sources */,
 				97A560D62127151900A908CD /* IntExtension.swift in Sources */,
 				97D38DEC210DFEEC00150CF9 /* TournamentInfo.swift in Sources */,
 				9736CCD22120E172008E31A0 /* Endpoint.swift in Sources */,
@@ -712,6 +719,7 @@
 				9736CCD42120EB96008E31A0 /* SpectatorType.swift in Sources */,
 				97D38DBF210CCC2100150CF9 /* MatchParticipant.swift in Sources */,
 				97D38D43210A7B4900150CF9 /* Region.swift in Sources */,
+				97225C3321289928001025EB /* Place.swift in Sources */,
 				97A560822122F41E00A908CD /* ChampionStats.swift in Sources */,
 				97D38D99210C9D3900150CF9 /* Incident.swift in Sources */,
 				9736CCD72120EFB5008E31A0 /* PickType.swift in Sources */,

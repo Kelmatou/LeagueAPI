@@ -20,7 +20,7 @@ public class GameInfo: Decodable {
     public var observer: Observer
     public var participants: [Participant]
     public var gameLength: Duration
-    public var gameQueueConfigId: Long
+    public var gameQueueConfig: QueueMode
     
     enum CodingKeys: String, CodingKey {
         case gameId = "gameId"
@@ -36,7 +36,7 @@ public class GameInfo: Decodable {
         case gameQueueConfigId = "gameQueueConfigId"
     }
     
-    public init(gameId: GameId, gameStartTime: Datetime, platformId: String, gameMode: GameMode, map: Map, gameType: GameType, bannedChampions: [BannedChampion], observer: Observer, participants: [Participant], gameLength: Duration, gameQueueConfigId: Long) {
+    public init(gameId: GameId, gameStartTime: Datetime, platformId: String, gameMode: GameMode, map: Map, gameType: GameType, bannedChampions: [BannedChampion], observer: Observer, participants: [Participant], gameLength: Duration, gameQueueConfig: QueueMode) {
         self.gameId = gameId
         self.gameStartTime = gameStartTime
         self.platformId = platformId
@@ -47,7 +47,7 @@ public class GameInfo: Decodable {
         self.observer = observer
         self.participants = participants
         self.gameLength = gameLength
-        self.gameQueueConfigId = gameQueueConfigId
+        self.gameQueueConfig = gameQueueConfig
     }
     
     public required init(from decoder: Decoder) throws {
@@ -64,6 +64,6 @@ public class GameInfo: Decodable {
         self.participants = try container.decode([Participant].self, forKey: .participants)
         let durationSec: Long = try container.decode(Long.self, forKey: .gameLength)
         self.gameLength = Duration(seconds: Double(durationSec))
-        self.gameQueueConfigId = try container.decode(Long.self, forKey: .gameQueueConfigId)
+        self.gameQueueConfig = try QueueMode(container.decode(Long.self, forKey: .gameQueueConfigId))
     }
 }
