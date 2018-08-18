@@ -21,8 +21,8 @@ public class Match: Decodable {
     public var gameType: String
     public var teamsInfo: [TeamStats]
     public var participantsInfo: [MatchParticipant]
-    public var gameDuration: Int64
-    public var gameCreation: Int64
+    public var gameDuration: Datetime
+    public var gameCreation: Datetime
     
     enum CodingKeys: String, CodingKey {
         case seasonId = "seasonId"
@@ -40,7 +40,7 @@ public class Match: Decodable {
         case gameCreation = "gameCreation"
     }
     
-    public init(seasonId: Int, queueId: Int, gameId: GameId, participants: [MatchParticipantIdentity], patch: String, platformId: String, gameMode: String, mapId: Int, gameType: String, teamsInfo: [TeamStats], participantsInfo: [MatchParticipant], gameDuration: Int64, gameCreation: Int64) {
+    public init(seasonId: Int, queueId: Int, gameId: GameId, participants: [MatchParticipantIdentity], patch: String, platformId: String, gameMode: String, mapId: Int, gameType: String, teamsInfo: [TeamStats], participantsInfo: [MatchParticipant], gameDuration: Datetime, gameCreation: Datetime) {
         self.seasonId = seasonId
         self.queueId = queueId
         self.gameId = gameId
@@ -69,7 +69,9 @@ public class Match: Decodable {
         self.gameType = try container.decode(String.self, forKey: .gameType)
         self.teamsInfo = try container.decode([TeamStats].self, forKey: .teamsInfo)
         self.participantsInfo = try container.decode([MatchParticipant].self, forKey: .participantsInfo)
-        self.gameDuration = try container.decode(Int64.self, forKey: .gameDuration)
-        self.gameCreation = try container.decode(Int64.self, forKey: .gameCreation)
+        let gameDurationTimestamp = try container.decode(Long.self, forKey: .gameDuration)
+        self.gameDuration = Datetime(timestamp: gameDurationTimestamp)
+        let gameCreationTimestamp = try container.decode(Long.self, forKey: .gameCreation)
+        self.gameCreation = Datetime(timestamp: gameCreationTimestamp)
     }
 }

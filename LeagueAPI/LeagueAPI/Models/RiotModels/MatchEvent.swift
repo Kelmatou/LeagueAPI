@@ -32,7 +32,7 @@ public class MatchEvent: Decodable {
     public var monsterSubType: String?
     public var laneType: String?
     public var buildingType: String?
-    public var timestamp: Int64
+    public var timestamp: Datetime
     
     enum CodingKeys: String, CodingKey {
         case type = "type"
@@ -60,7 +60,7 @@ public class MatchEvent: Decodable {
         case timestamp = "timestamp"
     }
     
-    public init(type: String, eventType: String?, participantId: Int?, teamId: Int?, killerId: Int?, victimId: Int?, assistingParticipantIds: [Int]?, beforeId: Int?, afterId: Int?, position: MatchPosition?, itemId: Int?, creatorId: Int?, skillSlot: Int?, pointCaptured: String?, towerType: String?, ascendedType: String?, levelUpType: String?, wardType: String?, monsterType: String?, monsterSubType: String?, laneType: String?, buildingType: String?, timestamp: Int64) {
+    public init(type: String, eventType: String?, participantId: Int?, teamId: Int?, killerId: Int?, victimId: Int?, assistingParticipantIds: [Int]?, beforeId: Int?, afterId: Int?, position: MatchPosition?, itemId: Int?, creatorId: Int?, skillSlot: Int?, pointCaptured: String?, towerType: String?, ascendedType: String?, levelUpType: String?, wardType: String?, monsterType: String?, monsterSubType: String?, laneType: String?, buildingType: String?, timestamp: Datetime) {
         self.type = type
         self.eventType = eventType
         self.participantId = participantId
@@ -110,6 +110,7 @@ public class MatchEvent: Decodable {
         self.monsterSubType = try? container.decode(String.self, forKey: .monsterSubType)
         self.laneType = try? container.decode(String.self, forKey: .laneType)
         self.buildingType = try? container.decode(String.self, forKey: .buildingType)
-        self.timestamp = try container.decode(Int64.self, forKey: .timestamp)
+        let timestampLong: Long = try container.decode(Long.self, forKey: .timestamp)
+        self.timestamp = Datetime(timestamp: timestampLong)
     }
 }

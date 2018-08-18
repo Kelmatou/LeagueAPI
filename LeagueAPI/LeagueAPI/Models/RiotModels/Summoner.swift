@@ -13,9 +13,9 @@ public class Summoner: Decodable {
     public var id: SummonerId
     public var accountId: AccountId
     public var name: String
-    public var level: Int64
+    public var level: Long
     public var iconId: ProfileIconId
-    public var revisionDate: Int64
+    public var revisionDate: Datetime
     
     enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -26,7 +26,7 @@ public class Summoner: Decodable {
         case revisionDate = "revisionDate"
     }
     
-    public init(id: SummonerId, accountId: AccountId, name: String, level: Int64, iconId: ProfileIconId, revisionDate: Int64) {
+    public init(id: SummonerId, accountId: AccountId, name: String, level: Long, iconId: ProfileIconId, revisionDate: Datetime) {
         self.id = id
         self.accountId = accountId
         self.name = name
@@ -40,8 +40,9 @@ public class Summoner: Decodable {
         self.id = try container.decode(SummonerId.self, forKey: .id)
         self.accountId = try container.decode(AccountId.self, forKey: .accountId)
         self.name = try container.decode(String.self, forKey: .name)
-        self.level = try container.decode(Int64.self, forKey: .level)
+        self.level = try container.decode(Long.self, forKey: .level)
         self.iconId = try container.decode(ProfileIconId.self, forKey: .iconId)
-        self.revisionDate = try container.decode(Int64.self, forKey: .revisionDate)
+        let timestamp: Long = try container.decode(Long.self, forKey: .revisionDate)
+        self.revisionDate = Datetime(timestamp: timestamp)
     }
 }

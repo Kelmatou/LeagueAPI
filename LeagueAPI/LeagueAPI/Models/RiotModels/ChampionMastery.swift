@@ -18,7 +18,7 @@ public class ChampionMastery: Decodable {
     public var championPointsSinceLastLevel: Long
     public var chestGranted: Bool
     public var tokensEarned: Int
-    public var lastPlayTime: Int64
+    public var lastPlayTime: Datetime
     
     enum CodingKeys: String, CodingKey {
         case championId = "championId"
@@ -32,7 +32,7 @@ public class ChampionMastery: Decodable {
         case lastPlayTime = "lastPlayTime"
     }
     
-    public init(championId: ChampionId, summonerId: SummonerId, championLevel: Int, championPoints: Int, championPointsUntilNextLevel: Long, championPointsSinceLastLevel: Long, chestGranted: Bool, tokensEarned: Int, lastPlayTime: Int64) {
+    public init(championId: ChampionId, summonerId: SummonerId, championLevel: Int, championPoints: Int, championPointsUntilNextLevel: Long, championPointsSinceLastLevel: Long, chestGranted: Bool, tokensEarned: Int, lastPlayTime: Datetime) {
         self.championId = championId
         self.summonerId = summonerId
         self.championLevel = championLevel
@@ -54,6 +54,7 @@ public class ChampionMastery: Decodable {
         self.championPointsSinceLastLevel = try container.decode(Long.self, forKey: .championPointsSinceLastLevel)
         self.chestGranted = try container.decode(Bool.self, forKey: .chestGranted)
         self.tokensEarned = try container.decode(Int.self, forKey: .tokensEarned)
-        self.lastPlayTime = try container.decode(Int64.self, forKey: .lastPlayTime)
+        let timestamp: Long = try container.decode(Long.self, forKey: .lastPlayTime)
+        self.lastPlayTime = Datetime(timestamp: timestamp)
     }
 }

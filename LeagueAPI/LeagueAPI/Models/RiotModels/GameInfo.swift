@@ -11,7 +11,7 @@ import Foundation
 public class GameInfo: Decodable {
     
     public var gameId: GameId
-    public var gameStartTime: Int64
+    public var gameStartTime: Datetime
     public var platformId: String
     public var gameMode: GameMode
     public var mapId: Long
@@ -19,7 +19,7 @@ public class GameInfo: Decodable {
     public var bannedChampions: [BannedChampion]
     public var observer: Observer
     public var participants: [Participant]
-    public var gameLength: Int64
+    public var gameLength: Datetime
     public var gameQueueConfigId: Long
     
     enum CodingKeys: String, CodingKey {
@@ -36,7 +36,7 @@ public class GameInfo: Decodable {
         case gameQueueConfigId = "gameQueueConfigId"
     }
     
-    public init(gameId: GameId, gameStartTime: Int64, platformId: String, gameMode: GameMode, mapId: Long, gameType: String, bannedChampions: [BannedChampion], observer: Observer, participants: [Participant], gameLength: Int64, gameQueueConfigId: Long) {
+    public init(gameId: GameId, gameStartTime: Datetime, platformId: String, gameMode: GameMode, mapId: Long, gameType: String, bannedChampions: [BannedChampion], observer: Observer, participants: [Participant], gameLength: Datetime, gameQueueConfigId: Long) {
         self.gameId = gameId
         self.gameStartTime = gameStartTime
         self.platformId = platformId
@@ -53,7 +53,8 @@ public class GameInfo: Decodable {
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.gameId = try container.decode(GameId.self, forKey: .gameId)
-        self.gameStartTime = try container.decode(Int64.self, forKey: .gameStartTime)
+        let timestamp: Long = try container.decode(Long.self, forKey: .gameStartTime)
+        self.gameStartTime = Datetime(timestamp: timestamp)
         self.platformId = try container.decode(String.self, forKey: .platformId)
         self.gameMode = try GameMode(gameMode: container.decode(String.self, forKey: .gameMode))
         self.mapId = try container.decode(Long.self, forKey: .mapId)
@@ -61,7 +62,8 @@ public class GameInfo: Decodable {
         self.bannedChampions = try container.decode([BannedChampion].self, forKey: .bannedChampions)
         self.observer = try container.decode(Observer.self, forKey: .observer)
         self.participants = try container.decode([Participant].self, forKey: .participants)
-        self.gameLength = try container.decode(Int64.self, forKey: .gameLength)
+        let durationMs: Long = try container.decode(Long.self, forKey: .gameLength)
+        self.gameLength = Datetime(timestamp: durationMs)
         self.gameQueueConfigId = try container.decode(Long.self, forKey: .gameQueueConfigId)
     }
 }

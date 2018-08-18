@@ -10,7 +10,7 @@ import Foundation
 
 public class FeaturedGames: Decodable {
     
-    public var refreshInterval: Int64
+    public var refreshInterval: Datetime
     public var games: [GameInfo]
     
     enum CodingKeys: String, CodingKey {
@@ -18,14 +18,15 @@ public class FeaturedGames: Decodable {
         case games = "gameList"
     }
     
-    public init(refreshInterval: Int64, games: [GameInfo]) {
+    public init(refreshInterval: Datetime, games: [GameInfo]) {
         self.refreshInterval = refreshInterval
         self.games = games
     }
     
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.refreshInterval = try container.decode(Int64.self, forKey: .refreshInterval)
+        let durationMs: Long = try container.decode(Long.self, forKey: .refreshInterval)
+        self.refreshInterval = Datetime(timestamp: durationMs)
         self.games = try container.decode([GameInfo].self, forKey: .games)
     }
 }

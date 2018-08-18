@@ -12,7 +12,7 @@ internal class MatchMethod: LeagueMethod {
     
     public enum MatchMethods {
         case ById(id: GameId)
-        case MatchesByAccountId(id: AccountId, beginTime: Int64?, endTime: Int64?, beginIndex: Int?, endIndex: Int?, championId: ChampionId?, queue: Int?, season: Int?)
+        case MatchesByAccountId(id: AccountId, beginTime: Datetime?, endTime: Datetime?, beginIndex: Int?, endIndex: Int?, championId: ChampionId?, queue: Int?, season: Int?)
         case TimelineById(id: GameId)
         case MatchIdsByTournamentCode(code: TournamentCode)
         case ByIdAndTournamentCode(id: GameId, code: TournamentCode)
@@ -49,8 +49,8 @@ internal class MatchMethod: LeagueMethod {
             return "\(commonPath)/matches/\(id)"
         case .MatchesByAccountId(let id, let beginTime, let endTime, let beginIndex, let endIndex, let championId, let queue, let season):
             var queryParameters: [String : Any] = [:]
-            if let beginTime = beginTime { queryParameters["beginTime"] = beginTime }
-            if let endTime = endTime { queryParameters["endTime"] = endTime }
+            if let beginTime = beginTime, let timestamp = beginTime.intervalFrom1970() { queryParameters["beginTime"] = Long(timestamp) }
+            if let endTime = endTime, let timestamp = endTime.intervalFrom1970() { queryParameters["endTime"] = Long(timestamp) }
             if let beginIndex = beginIndex { queryParameters["beginIndex"] = beginIndex }
             if let endIndex = endIndex { queryParameters["endIndex"] = endIndex }
             if let championId = championId { queryParameters["champion"] = championId }
