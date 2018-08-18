@@ -18,6 +18,7 @@ internal class LeagueRequester {
     
     internal func request<ResultType: Decodable>(method: LeagueMethod, handler: @escaping (ResultType?, String?) -> Void) {
         if canMakeRequest(for: method) {
+            notifyRateLimitNewRequest(for: method)
             let accessMethod: RESTRequester.AccessMethod = method.getAccessMethod()
             let methodUrl: String = method.getMethodUrl()
             let headers: [String: String] = ["X-Riot-Token": self.key.token]
@@ -41,7 +42,7 @@ internal class LeagueRequester {
             requester.request(accessMethod: accessMethod, methodUrl: methodUrl, headers: headers, body: body, handler: completion)
         }
         else {
-            handler(nil, "Cannot make request for now")
+            handler(nil, "Cannot make request for now (Rate limit reached)")
         }
     }
     
@@ -54,6 +55,11 @@ internal class LeagueRequester {
                 self.key.updateMethodLimit(for: method.getMethodSignature(), newLimits: methodLimitCount, methodRate: methodLimit)
             }
         }
+    }
+    
+    private func notifyRateLimitNewRequest(for method: LeagueMethod) {
+        let methodSignature: String = method.getMethodSignature()
+        self.key.notifyNewRequest(for: methodSignature)
     }
     
     private func hasAppRateHeaders(headers: RESTRequester.Headers?) -> Bool {

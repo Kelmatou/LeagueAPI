@@ -10,15 +10,16 @@ import Foundation
 
 internal class RateLimit {
     
-    public var current: Int
-    public var limit: Int
-    public var duration: Int
-    public var creations: [Date]
+    public private(set) var current: Int
+    public private(set) var limit: Int
+    public private(set) var duration: Int
+    public private(set) var creations: [Date]
+    public private(set) var currentRequestNb: Int
     
     public var hasReachLimit: Bool {
-        if self.current < self.limit { return false }
+        if self.current + self.currentRequestNb < self.limit { return false }
         clean()
-        return self.creations.count >= self.limit
+        return self.creations.count + self.currentRequestNb >= self.limit
     }
     
     public init(current: Int, limit: Int, duration: Int) {
@@ -26,11 +27,42 @@ internal class RateLimit {
         self.limit = limit
         self.duration = duration
         self.creations = [Date()]
+        self.currentRequestNb = 0
     }
     
-    public func clean() {
+    public func countNewRequest() {
+        self.currentRequestNb += 1
+    }
+    
+    public func countRequestReceived() {
+        if self.currentRequestNb > 0 {
+            self.currentRequestNb -= 1
+        }
+    }
+    
+    public func merge(with newRateLimit: RateLimit) {
+        self.current = newRateLimit.current
+        self.creations.append(newRateLimit.creations[0])
+        self.currentRequestNb += newRateLimit.currentRequestNb
+        self.clean()
+    }
+    
+    public func status() -> String {
+        return "\(current)/\(limit) - \(duration)s (has \(creations.count) records and \(currentRequestNb) current requests"
+    }
+    
+    private func clean() {
         self.creations = self.creations.filter { date in
             return -date.timeIntervalSinceNow < Double(duration) }
+    }
+    
+    internal func adjustRecords() {
+        while creations.count < current {
+            creations.insert(creations.first ?? Date(), at: 0)
+        }
+        while creations.count > current {
+            creations.remove(at: 0)
+        }
     }
     
     public static func array(from currentAndDurationList: String, and limitAndDurationList: String) -> [RateLimit] {
@@ -59,14 +91,14 @@ extension Array where Element:RateLimit {
             var found: Bool = false
             for rateLimit in result {
                 if rateLimit.duration == newRateLimit.duration {
-                    rateLimit.current = newRateLimit.current
-                    rateLimit.creations.append(newRateLimit.creations[0])
-                    rateLimit.clean()
+                    rateLimit.merge(with: newRateLimit)
+                    rateLimit.countRequestReceived()
                     found = true
                     break
                 }
             }
             if !found {
+                newRateLimit.adjustRecords()
                 result.append(newRateLimit)
             }
         }

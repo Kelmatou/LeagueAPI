@@ -10,32 +10,45 @@ import Foundation
 
 open class Logger {
     
-    public enum Access {
-        case None
+    public enum Channel {
+        case Debug
         case Info
         case Warning
         case Error
     }
     
-    public static var access: [Access : Bool] = [
-        .None : false,
+    public static var channels: [Channel : Bool] = [
+        .Debug: true,
         .Info : true,
         .Warning : true,
         .Error : true
     ]
     
+    open static func setAllChannels(enabled: Bool) {
+        channels = channels.mapValues { (_) in return enabled }
+    }
+    
+    open static func setChannel(_ channel: Channel, enabled: Bool) {
+        channels[channel] = enabled
+    }
+    
+    open static func debug(_ message: String) {
+        guard channels[.Debug] ?? true else { return }
+        Swift.print("Debug: \(message)")
+    }
+    
     open static func print(_ message: String) {
-        guard !(access[.None] ?? false) && access[.Info] ?? true else { return }
+        guard channels[.Info] ?? true else { return }
         Swift.print(message)
     }
     
     open static func warning(_ message: String) {
-        guard !(access[.None] ?? false) && access[.Warning] ?? true else { return }
-        Logger.print("Warning: \(message)")
+        guard channels[.Warning] ?? true else { return }
+        Swift.print("Warning: \(message)")
     }
     
     open static func error(_ message: String) {
-        guard !(access[.None] ?? false) && access[.Error] ?? true else { return }
-        Logger.print("Error: \(message)")
+        guard channels[.Error] ?? true else { return }
+        Swift.print("Error: \(message)")
     }
 }

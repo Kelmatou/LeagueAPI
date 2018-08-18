@@ -27,6 +27,7 @@ internal class APIKey {
     public func hasReachAppRateLimit() -> Bool {
         for rateLimit in self.appRateLimit {
             if rateLimit.hasReachLimit {
+                Logger.debug("Has reach App Rate Limit")
                 return true
             }
         }
@@ -37,6 +38,7 @@ internal class APIKey {
         guard let methodLimits = self.methodLimits[method] else { return false }
         for rateLimit in methodLimits {
             if rateLimit.hasReachLimit {
+                Logger.debug("Has reach Method Rate Limit for \(method)")
                 return true
             }
         }
@@ -46,9 +48,9 @@ internal class APIKey {
     public func updateAppRateLimit(with newLimits: String, appRate: String) {
         let newRateLimits: [RateLimit] = RateLimit.array(from: newLimits, and: appRate)
         self.appRateLimit.merge(with: newRateLimits)
-        Logger.print("New app rate limits:")
+        Logger.debug("New app rate limits:")
         for limit in self.appRateLimit {
-            Logger.print("\(limit.current)/\(limit.limit) - \(limit.duration)s (has \(limit.creations.count) records)")
+            Logger.debug(limit.status())
         }
     }
     
@@ -60,10 +62,17 @@ internal class APIKey {
         else {
             self.methodLimits[method] = newRateLimits
         }
-        Logger.print("New method rate limits for \(method):")
+        Logger.debug("New method rate limits for \(method):")
         guard let methodLimits = self.methodLimits[method] else { return }
         for limit in methodLimits {
-            Logger.print("\(limit.current)/\(limit.limit) - \(limit.duration)s (has \(limit.creations.count) records)")
+            Logger.debug(limit.status())
+        }
+    }
+    
+    public func notifyNewRequest(for method: String) {
+        self.appRateLimit.forEach { $0.countNewRequest() }
+        if let methodRateLimits = self.methodLimits[method] {
+            methodRateLimits.forEach { $0.countNewRequest() }
         }
     }
 }
