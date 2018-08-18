@@ -14,7 +14,7 @@ public class GameInfo: Decodable {
     public var gameStartTime: Datetime
     public var platformId: String
     public var gameMode: GameMode
-    public var mapId: Long
+    public var map: Map
     public var gameType: GameType
     public var bannedChampions: [BannedChampion]
     public var observer: Observer
@@ -36,12 +36,12 @@ public class GameInfo: Decodable {
         case gameQueueConfigId = "gameQueueConfigId"
     }
     
-    public init(gameId: GameId, gameStartTime: Datetime, platformId: String, gameMode: GameMode, mapId: Long, gameType: GameType, bannedChampions: [BannedChampion], observer: Observer, participants: [Participant], gameLength: Duration, gameQueueConfigId: Long) {
+    public init(gameId: GameId, gameStartTime: Datetime, platformId: String, gameMode: GameMode, map: Map, gameType: GameType, bannedChampions: [BannedChampion], observer: Observer, participants: [Participant], gameLength: Duration, gameQueueConfigId: Long) {
         self.gameId = gameId
         self.gameStartTime = gameStartTime
         self.platformId = platformId
         self.gameMode = gameMode
-        self.mapId = mapId
+        self.map = map
         self.gameType = gameType
         self.bannedChampions = bannedChampions
         self.observer = observer
@@ -57,7 +57,7 @@ public class GameInfo: Decodable {
         self.gameStartTime = Datetime(timestamp: timestamp)
         self.platformId = try container.decode(String.self, forKey: .platformId)
         self.gameMode = try GameMode(container.decode(String.self, forKey: .gameMode))
-        self.mapId = try container.decode(Long.self, forKey: .mapId)
+        self.map = try Map(container.decode(Long.self, forKey: .mapId))
         self.gameType = try GameType(container.decode(String.self, forKey: .gameType))
         self.bannedChampions = try container.decode([BannedChampion].self, forKey: .bannedChampions)
         self.observer = try container.decode(Observer.self, forKey: .observer)

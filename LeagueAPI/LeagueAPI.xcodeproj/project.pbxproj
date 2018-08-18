@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		97225C22212850D2001025EB /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97225C21212850D2001025EB /* Duration.swift */; };
 		97225C2D21286235001025EB /* GameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97225C2C21286235001025EB /* GameType.swift */; };
+		97225C2F212865E1001025EB /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97225C2E212865E1001025EB /* Map.swift */; };
 		9736CCD22120E172008E31A0 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9736CCD12120E172008E31A0 /* Endpoint.swift */; };
 		9736CCD42120EB96008E31A0 /* SpectatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9736CCD32120EB96008E31A0 /* SpectatorType.swift */; };
 		9736CCD72120EFB5008E31A0 /* PickType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9736CCD62120EFB5008E31A0 /* PickType.swift */; };
@@ -135,6 +136,7 @@
 /* Begin PBXFileReference section */
 		97225C21212850D2001025EB /* Duration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
 		97225C2C21286235001025EB /* GameType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameType.swift; sourceTree = "<group>"; };
+		97225C2E212865E1001025EB /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		9736CCD12120E172008E31A0 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		9736CCD32120EB96008E31A0 /* SpectatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectatorType.swift; sourceTree = "<group>"; };
 		9736CCD62120EFB5008E31A0 /* PickType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickType.swift; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 				9736CCD82120F037008E31A0 /* MapType.swift */,
 				97A560852123238B00A908CD /* RessourceType.swift */,
 				97225C2C21286235001025EB /* GameType.swift */,
+				97225C2E212865E1001025EB /* Map.swift */,
 			);
 			path = RiotEnums;
 			sourceTree = "<group>";
@@ -686,6 +689,7 @@
 				97D38DD3210CF03000150CF9 /* MatchFrame.swift in Sources */,
 				97A56097212381C700A908CD /* ChampionAdditionalDetails.swift in Sources */,
 				97691807211359D100F8AF3B /* RawRequester.swift in Sources */,
+				97225C2F212865E1001025EB /* Map.swift in Sources */,
 				97A560D8212716B700A908CD /* StringExtension.swift in Sources */,
 				97A560A7212623D000A908CD /* SkinData.swift in Sources */,
 				97A560D62127151900A908CD /* IntExtension.swift in Sources */,

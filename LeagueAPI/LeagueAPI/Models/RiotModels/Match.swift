@@ -17,7 +17,7 @@ public class Match: Decodable {
     public var patch: String
     public var platformId: String
     public var gameMode: GameMode
-    public var mapId: Int
+    public var map: Map
     public var gameType: GameType
     public var teamsInfo: [TeamStats]
     public var participantsInfo: [MatchParticipant]
@@ -40,7 +40,7 @@ public class Match: Decodable {
         case gameCreation = "gameCreation"
     }
     
-    public init(seasonId: Int, queueId: Int, gameId: GameId, participants: [MatchParticipantIdentity], patch: String, platformId: String, gameMode: GameMode, mapId: Int, gameType: GameType, teamsInfo: [TeamStats], participantsInfo: [MatchParticipant], gameDuration: Duration, gameCreation: Datetime) {
+    public init(seasonId: Int, queueId: Int, gameId: GameId, participants: [MatchParticipantIdentity], patch: String, platformId: String, gameMode: GameMode, map: Map, gameType: GameType, teamsInfo: [TeamStats], participantsInfo: [MatchParticipant], gameDuration: Duration, gameCreation: Datetime) {
         self.seasonId = seasonId
         self.queueId = queueId
         self.gameId = gameId
@@ -48,7 +48,7 @@ public class Match: Decodable {
         self.patch = patch
         self.platformId = platformId
         self.gameMode = gameMode
-        self.mapId = mapId
+        self.map = map
         self.gameType = gameType
         self.teamsInfo = teamsInfo
         self.participantsInfo = participantsInfo
@@ -65,7 +65,7 @@ public class Match: Decodable {
         self.patch = try container.decode(String.self, forKey: .patch)
         self.platformId = try container.decode(String.self, forKey: .platformId)
         self.gameMode = try GameMode(container.decode(String.self, forKey: .gameMode))
-        self.mapId = try container.decode(Int.self, forKey: .mapId)
+        self.map = try Map(container.decode(Long.self, forKey: .mapId))
         self.gameType = try GameType(container.decode(String.self, forKey: .gameType))
         self.teamsInfo = try container.decode([TeamStats].self, forKey: .teamsInfo)
         self.participantsInfo = try container.decode([MatchParticipant].self, forKey: .participantsInfo)
