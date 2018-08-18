@@ -12,6 +12,7 @@
 		97225C2F212865E1001025EB /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97225C2E212865E1001025EB /* Map.swift */; };
 		97225C31212891DB001025EB /* QueueMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97225C30212891DB001025EB /* QueueMode.swift */; };
 		97225C3321289928001025EB /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97225C3221289928001025EB /* Place.swift */; };
+		97225C352128A2D8001025EB /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97225C342128A2D8001025EB /* Season.swift */; };
 		9736CCD22120E172008E31A0 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9736CCD12120E172008E31A0 /* Endpoint.swift */; };
 		9736CCD42120EB96008E31A0 /* SpectatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9736CCD32120EB96008E31A0 /* SpectatorType.swift */; };
 		9736CCD72120EFB5008E31A0 /* PickType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9736CCD62120EFB5008E31A0 /* PickType.swift */; };
@@ -141,6 +142,7 @@
 		97225C2E212865E1001025EB /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		97225C30212891DB001025EB /* QueueMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueMode.swift; sourceTree = "<group>"; };
 		97225C3221289928001025EB /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		97225C342128A2D8001025EB /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
 		9736CCD12120E172008E31A0 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		9736CCD32120EB96008E31A0 /* SpectatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectatorType.swift; sourceTree = "<group>"; };
 		9736CCD62120EFB5008E31A0 /* PickType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickType.swift; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 				9736CCD82120F037008E31A0 /* MapType.swift */,
 				97A560852123238B00A908CD /* RessourceType.swift */,
 				97225C3221289928001025EB /* Place.swift */,
+				97225C342128A2D8001025EB /* Season.swift */,
 			);
 			path = RiotEnums;
 			sourceTree = "<group>";
@@ -716,6 +719,7 @@
 				97D38D95210C9D2100150CF9 /* ServiceStatus.swift in Sources */,
 				97D38DB7210CC2FE00150CF9 /* SpectatorBusiness.swift in Sources */,
 				97D38D85210C727300150CF9 /* League.swift in Sources */,
+				97225C352128A2D8001025EB /* Season.swift in Sources */,
 				9736CCD42120EB96008E31A0 /* SpectatorType.swift in Sources */,
 				97D38DBF210CCC2100150CF9 /* MatchParticipant.swift in Sources */,
 				97D38D43210A7B4900150CF9 /* Region.swift in Sources */,
