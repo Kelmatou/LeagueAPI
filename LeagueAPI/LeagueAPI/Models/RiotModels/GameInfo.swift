@@ -15,7 +15,7 @@ public class GameInfo: Decodable {
     public var platformId: String
     public var gameMode: GameMode
     public var mapId: Long
-    public var gameType: String
+    public var gameType: GameType
     public var bannedChampions: [BannedChampion]
     public var observer: Observer
     public var participants: [Participant]
@@ -36,7 +36,7 @@ public class GameInfo: Decodable {
         case gameQueueConfigId = "gameQueueConfigId"
     }
     
-    public init(gameId: GameId, gameStartTime: Datetime, platformId: String, gameMode: GameMode, mapId: Long, gameType: String, bannedChampions: [BannedChampion], observer: Observer, participants: [Participant], gameLength: Duration, gameQueueConfigId: Long) {
+    public init(gameId: GameId, gameStartTime: Datetime, platformId: String, gameMode: GameMode, mapId: Long, gameType: GameType, bannedChampions: [BannedChampion], observer: Observer, participants: [Participant], gameLength: Duration, gameQueueConfigId: Long) {
         self.gameId = gameId
         self.gameStartTime = gameStartTime
         self.platformId = platformId
@@ -56,9 +56,9 @@ public class GameInfo: Decodable {
         let timestamp: Long = try container.decode(Long.self, forKey: .gameStartTime)
         self.gameStartTime = Datetime(timestamp: timestamp)
         self.platformId = try container.decode(String.self, forKey: .platformId)
-        self.gameMode = try GameMode(gameMode: container.decode(String.self, forKey: .gameMode))
+        self.gameMode = try GameMode(container.decode(String.self, forKey: .gameMode))
         self.mapId = try container.decode(Long.self, forKey: .mapId)
-        self.gameType = try container.decode(String.self, forKey: .gameType)
+        self.gameType = try GameType(container.decode(String.self, forKey: .gameType))
         self.bannedChampions = try container.decode([BannedChampion].self, forKey: .bannedChampions)
         self.observer = try container.decode(Observer.self, forKey: .observer)
         self.participants = try container.decode([Participant].self, forKey: .participants)

@@ -27,12 +27,13 @@ public class GameMode {
         case DarkStar = "DARKSTAR"
         case StarGuardian = "STARGUARDIAN"
         case Project = "PROJECT"
+        case NexusBlitz = "GAMEMODEX"
         case Unknown = "Unknown"
     }
     
     public private(set) var mode: GameModes
     
-    public init?(gameMode: GameModes) {
+    public init?(_ gameMode: GameModes) {
         guard gameMode != .Unknown else {
             Logger.error("GameMode instance cannot be created with \"Unknown\" value")
             return nil
@@ -40,7 +41,7 @@ public class GameMode {
         self.mode = gameMode
     }
     
-    internal init(gameMode: String) {
+    internal init(_ gameMode: String) {
         switch gameMode {
         case GameModes.Classic.rawValue:
             self.mode = GameModes.Classic
@@ -74,6 +75,8 @@ public class GameMode {
             self.mode = GameModes.StarGuardian
         case GameModes.Project.rawValue:
             self.mode = GameModes.Project
+        case GameModes.NexusBlitz.rawValue:
+            self.mode = GameModes.NexusBlitz
         default:
             Logger.warning("Game mode \"\(gameMode)\" unknown (check for LeagueAPI update)")
             self.mode = .Unknown

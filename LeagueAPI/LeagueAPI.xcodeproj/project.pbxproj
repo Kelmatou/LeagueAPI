@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		97225C22212850D2001025EB /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97225C21212850D2001025EB /* Duration.swift */; };
+		97225C2D21286235001025EB /* GameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97225C2C21286235001025EB /* GameType.swift */; };
 		9736CCD22120E172008E31A0 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9736CCD12120E172008E31A0 /* Endpoint.swift */; };
 		9736CCD42120EB96008E31A0 /* SpectatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9736CCD32120EB96008E31A0 /* SpectatorType.swift */; };
 		9736CCD72120EFB5008E31A0 /* PickType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9736CCD62120EFB5008E31A0 /* PickType.swift */; };
@@ -133,6 +134,7 @@
 
 /* Begin PBXFileReference section */
 		97225C21212850D2001025EB /* Duration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
+		97225C2C21286235001025EB /* GameType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameType.swift; sourceTree = "<group>"; };
 		9736CCD12120E172008E31A0 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		9736CCD32120EB96008E31A0 /* SpectatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectatorType.swift; sourceTree = "<group>"; };
 		9736CCD62120EFB5008E31A0 /* PickType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickType.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				9736CCD62120EFB5008E31A0 /* PickType.swift */,
 				9736CCD82120F037008E31A0 /* MapType.swift */,
 				97A560852123238B00A908CD /* RessourceType.swift */,
+				97225C2C21286235001025EB /* GameType.swift */,
 			);
 			path = RiotEnums;
 			sourceTree = "<group>";
@@ -661,6 +664,7 @@
 				97D38D22210A521000150CF9 /* RESTRequester.swift in Sources */,
 				97D38D79210C5D4600150CF9 /* ChampionMasteryBusiness.swift in Sources */,
 				97A560B521263DD400A908CD /* ChampionAdditionalDetailsData.swift in Sources */,
+				97225C2D21286235001025EB /* GameType.swift in Sources */,
 				97D38DE7210DFD9A00150CF9 /* TournamentStubMethod.swift in Sources */,
 				97D38DA7210CA86F00150CF9 /* BannedChampion.swift in Sources */,
 				97D38DB1210CABBA00150CF9 /* RunePage.swift in Sources */,
