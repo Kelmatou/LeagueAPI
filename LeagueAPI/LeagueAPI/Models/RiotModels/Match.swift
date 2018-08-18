@@ -21,7 +21,7 @@ public class Match: Decodable {
     public var gameType: String
     public var teamsInfo: [TeamStats]
     public var participantsInfo: [MatchParticipant]
-    public var gameDuration: Datetime
+    public var gameDuration: Duration
     public var gameCreation: Datetime
     
     enum CodingKeys: String, CodingKey {
@@ -40,7 +40,7 @@ public class Match: Decodable {
         case gameCreation = "gameCreation"
     }
     
-    public init(seasonId: Int, queueId: Int, gameId: GameId, participants: [MatchParticipantIdentity], patch: String, platformId: String, gameMode: String, mapId: Int, gameType: String, teamsInfo: [TeamStats], participantsInfo: [MatchParticipant], gameDuration: Datetime, gameCreation: Datetime) {
+    public init(seasonId: Int, queueId: Int, gameId: GameId, participants: [MatchParticipantIdentity], patch: String, platformId: String, gameMode: String, mapId: Int, gameType: String, teamsInfo: [TeamStats], participantsInfo: [MatchParticipant], gameDuration: Duration, gameCreation: Datetime) {
         self.seasonId = seasonId
         self.queueId = queueId
         self.gameId = gameId
@@ -69,9 +69,9 @@ public class Match: Decodable {
         self.gameType = try container.decode(String.self, forKey: .gameType)
         self.teamsInfo = try container.decode([TeamStats].self, forKey: .teamsInfo)
         self.participantsInfo = try container.decode([MatchParticipant].self, forKey: .participantsInfo)
-        let gameDurationTimestamp = try container.decode(Long.self, forKey: .gameDuration)
-        self.gameDuration = Datetime(timestamp: gameDurationTimestamp)
-        let gameCreationTimestamp = try container.decode(Long.self, forKey: .gameCreation)
+        let gameDurationSec: Long = try container.decode(Long.self, forKey: .gameDuration)
+        self.gameDuration = Duration(seconds: Double(gameDurationSec))
+        let gameCreationTimestamp: Long = try container.decode(Long.self, forKey: .gameCreation)
         self.gameCreation = Datetime(timestamp: gameCreationTimestamp)
     }
 }

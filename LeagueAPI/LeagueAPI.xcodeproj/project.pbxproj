@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		97225C22212850D2001025EB /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97225C21212850D2001025EB /* Duration.swift */; };
 		9736CCD22120E172008E31A0 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9736CCD12120E172008E31A0 /* Endpoint.swift */; };
 		9736CCD42120EB96008E31A0 /* SpectatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9736CCD32120EB96008E31A0 /* SpectatorType.swift */; };
 		9736CCD72120EFB5008E31A0 /* PickType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9736CCD62120EFB5008E31A0 /* PickType.swift */; };
@@ -131,6 +132,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		97225C21212850D2001025EB /* Duration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
 		9736CCD12120E172008E31A0 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		9736CCD32120EB96008E31A0 /* SpectatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectatorType.swift; sourceTree = "<group>"; };
 		9736CCD62120EFB5008E31A0 /* PickType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickType.swift; sourceTree = "<group>"; };
@@ -396,6 +398,7 @@
 				97A5608721232DED00A908CD /* ImageWithUrl.swift */,
 				97A560D52127151900A908CD /* IntExtension.swift */,
 				97A560D7212716B700A908CD /* StringExtension.swift */,
+				97225C21212850D2001025EB /* Duration.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -730,6 +733,7 @@
 				97D38DDD210D0CEF00150CF9 /* MatchBusiness.swift in Sources */,
 				97D38D7B210C5D8500150CF9 /* ChampionMasteryMethod.swift in Sources */,
 				97D38D4B210A823E00150CF9 /* Version.swift in Sources */,
+				97225C22212850D2001025EB /* Duration.swift in Sources */,
 				97A560C02126F97C00A908CD /* ServicesUrl.swift in Sources */,
 				97D38DF2210E0B0A00150CF9 /* TournamentInitializer.swift in Sources */,
 				97D38DD1210CF02300150CF9 /* MatchTimeline.swift in Sources */,

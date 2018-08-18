@@ -64,7 +64,7 @@ open class Datetime: Comparable, Equatable {
     }
     
     public init(timestamp: Long) {
-        self.date = Date(timeIntervalSince1970: Double(timestamp))
+        self.date = Date(timeIntervalSince1970: Double(timestamp / 1000))
     }
     
     public init?(year: Int, month: Int, day: Int, hour: Int = 0, minute: Int = 0, second: Int = 0, timeZone: TimeZone? = nil) {
