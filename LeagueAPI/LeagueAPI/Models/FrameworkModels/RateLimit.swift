@@ -48,7 +48,7 @@ internal class RateLimit {
     }
     
     public func status() -> String {
-        return "\(current)/\(limit) - \(duration)s (has \(creations.count) records and \(currentRequestNb) current requests"
+        return "\(current)/\(limit) - \(duration)s (has \(creations.count) records and \(currentRequestNb) current requests)"
     }
     
     private func clean() {
@@ -57,11 +57,11 @@ internal class RateLimit {
     }
     
     internal func adjustRecords() {
-        while creations.count < current {
-            creations.insert(creations.first ?? Date(), at: 0)
+        while self.creations.count < self.current {
+            self.creations.insert(self.creations.first ?? Date(), at: 0)
         }
-        while creations.count > current {
-            creations.remove(at: 0)
+        while self.creations.count > self.current {
+            self.creations.remove(at: 0)
         }
     }
     

@@ -22,7 +22,7 @@ internal class DataDragonChampionBusiness {
     public static func getChampionDetails(byName name: String, completion: @escaping (ChampionDetails?, String?) -> Void) {
         let filterFunction: ((String, ChampionsDetails)) -> Bool = { (keyValue) -> Bool in
             let (_, value) = keyValue
-            return value.name == name
+            return value.name.lowercased() == name.lowercased() || value.championIdName.lowercased() == name.lowercased()
         }
         let filterEqualValue: String = "name=\(name)"
         getChampionDetails(filterFunction: filterFunction, filterEqualValue: filterEqualValue, completion: completion)
@@ -31,7 +31,7 @@ internal class DataDragonChampionBusiness {
     public static func getChampions(forRole role: String, completion: @escaping ([String]?, String?) -> Void) {
         let filterFunction: ((String, ChampionsDetails)) -> Bool = { (keyValue) -> Bool in
             let (_, value) = keyValue
-            return value.tags.contains(role)
+            return value.tags.contains { $0.lowercased() == role.lowercased() }
         }
         getChampionsFiltered(filterFunction: filterFunction) { (champions, error) in
             completion(champions?.map { return $0.name }, error)
@@ -47,8 +47,7 @@ internal class DataDragonChampionBusiness {
     private static func getChampionDetails(filterFunction: @escaping ((String, ChampionsDetails)) -> Bool, filterEqualValue: String = "", completion: @escaping (ChampionDetails?, String?) -> Void) {
         getChampionsFiltered(filterFunction: filterFunction) { (champions, error) in
             if let champions = champions {
-                let championWithFilter: ChampionsDetails? = champions.first
-                if let championWithFilter = championWithFilter {
+                if let championWithFilter = champions.first {
                     let championIdName: String = championWithFilter.championIdName
                     DataDragonRequester.instance.getChampionAdditionalDetails(name: championIdName) { (champion, error) in
                         if let champion = champion {

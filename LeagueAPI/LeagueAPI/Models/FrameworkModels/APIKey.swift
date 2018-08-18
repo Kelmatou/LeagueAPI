@@ -60,6 +60,7 @@ internal class APIKey {
             self.methodLimits[method]?.merge(with: newRateLimits)
         }
         else {
+            newRateLimits.forEach { $0.adjustRecords() }
             self.methodLimits[method] = newRateLimits
         }
         Logger.debug("New method rate limits for \(method):")
