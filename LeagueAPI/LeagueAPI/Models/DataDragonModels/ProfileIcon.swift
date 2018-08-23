@@ -13,13 +13,13 @@ public class ProfileIcon {
     public var id: ProfileIconId
     public var profileIcon: ImageWithUrl
     
-    public init(id: ProfileIconId, url: String, image: UIImage?) {
+    public init(id: ProfileIconId, profileIcon: ImageWithUrl) {
         self.id = id
-        self.profileIcon = ImageWithUrl(url: url, image: image)
+        self.profileIcon = profileIcon
     }
     
-    internal init(id: ProfileIconId, version: String) {
-        self.id = id
-        self.profileIcon = ImageWithUrl(url: "\(ServicesUrl.DDragonCdn)/\(version)/img/profileicon/\(id).png", image: nil)
+    internal init(data: ProfileIconData, version: String) {
+        self.id = data.id
+        self.profileIcon = ImageWithUrl(url: "\(ServicesUrl.DDragonCdn)/\(version)/img/profileicon/\(data.id).png", image: nil)
     }
 }

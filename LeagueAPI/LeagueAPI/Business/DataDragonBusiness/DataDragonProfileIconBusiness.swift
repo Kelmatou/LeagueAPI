@@ -11,10 +11,14 @@ import Foundation
 internal class DataDragonProfileIconBusiness {
     
     public static func getProfileIconIds(completion: @escaping ([ProfileIconId]?, String?) -> Void) {
-        DataDragonRequester.instance.getProfileIconIds(completion: completion)
+        DataDragonRequester.instance.getProfileIcons() { (profileIconFile, error) in
+            completion(profileIconFile?.profileIcons.map { $0.id }, error)
+        }
     }
     
     public static func getProfileIcon(byId id: ProfileIconId, completion: @escaping (ProfileIcon?, String?) -> Void) {
-        DataDragonRequester.instance.getProfileIcon(profileIconId: id, completion: completion)
+        DataDragonRequester.instance.getProfileIcons() { (profileIconFile, error) in
+            completion(profileIconFile?.profileIcons.filter { return $0.id == id }.first, error)
+        }
     }
 }

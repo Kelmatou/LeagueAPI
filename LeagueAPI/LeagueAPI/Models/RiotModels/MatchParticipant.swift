@@ -13,8 +13,8 @@ public class MatchParticipant: Decodable {
     public var participantId: Int
     public var teamId: Int
     public var championId: ChampionId
-    public var summonerSpell1: Int
-    public var summonerSpell2: Int
+    public var summonerSpell1: SummonerSpellId
+    public var summonerSpell2: SummonerSpellId
     public var highestAchievedSeasonTier: String
     public var stats: MatchParticipantStats
     public var timeline: MatchParticipantTimeline
@@ -34,7 +34,7 @@ public class MatchParticipant: Decodable {
         case masteries = "masteries"
     }
     
-    public init(participantId: Int, teamId: Int, championId: ChampionId, summonerSpell1: Int, summonerSpell2: Int, highestAchievedSeasonTier: String, stats: MatchParticipantStats, timeline: MatchParticipantTimeline, runes: [LegacyRune]? = nil, masteries: [LegacyMastery]? = nil) {
+    public init(participantId: Int, teamId: Int, championId: ChampionId, summonerSpell1: SummonerSpellId, summonerSpell2: SummonerSpellId, highestAchievedSeasonTier: String, stats: MatchParticipantStats, timeline: MatchParticipantTimeline, runes: [LegacyRune]? = nil, masteries: [LegacyMastery]? = nil) {
         self.participantId = participantId
         self.teamId = teamId
         self.championId = championId
@@ -52,8 +52,8 @@ public class MatchParticipant: Decodable {
         self.participantId = try container.decode(Int.self, forKey: .participantId)
         self.teamId = try container.decode(Int.self, forKey: .teamId)
         self.championId = try container.decode(ChampionId.self, forKey: .championId)
-        self.summonerSpell1 = try container.decode(Int.self, forKey: .summonerSpell1)
-        self.summonerSpell2 = try container.decode(Int.self, forKey: .summonerSpell2)
+        self.summonerSpell1 = try container.decode(SummonerSpellId.self, forKey: .summonerSpell1)
+        self.summonerSpell2 = try container.decode(SummonerSpellId.self, forKey: .summonerSpell2)
         self.highestAchievedSeasonTier = try container.decode(String.self, forKey: .highestAchievedSeasonTier)
         self.stats = try container.decode(MatchParticipantStats.self, forKey: .stats)
         self.timeline = try container.decode(MatchParticipantTimeline.self, forKey: .timeline)

@@ -55,7 +55,17 @@ public class LeagueAPI: APIClient {
         DataDragonProfileIconBusiness.getProfileIconIds(completion: handler)
     }
     
-    public func getProfileIcon(byId id: ProfileIconId, handler: @escaping (ProfileIcon?, String?) -> Void) {
+    public func getProfileIcon(by id: ProfileIconId, handler: @escaping (ProfileIcon?, String?) -> Void) {
         DataDragonProfileIconBusiness.getProfileIcon(byId: id, completion: handler)
+    }
+    
+    // MARK: - Summoner Spell
+    
+    public func getSummonerSpells(handler: @escaping ([SummonerSpell]?, String?) -> Void) {
+        DataDragonSummonerSpellBusiness.getSummonerSpells(completion: handler)
+    }
+    
+    public func getSummonerSpell(by id: SummonerSpellId, handler: @escaping (SummonerSpell?, String?) -> Void) {
+        DataDragonSummonerSpellBusiness.getSummonerSpell(by: id, completion: handler)
     }
 }

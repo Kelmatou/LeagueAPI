@@ -13,6 +13,7 @@ public typealias AccountId = Int64
 public typealias ChampionId = Int64
 public typealias SkinId = String
 public typealias ProfileIconId = Int64
+public typealias SummonerSpellId = Long
 public typealias GameId = Int64
 public typealias ProviderId = Int
 public typealias LeagueId = String
