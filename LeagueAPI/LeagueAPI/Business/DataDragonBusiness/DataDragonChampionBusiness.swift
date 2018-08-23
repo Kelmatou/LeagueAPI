@@ -28,13 +28,34 @@ internal class DataDragonChampionBusiness {
         getChampionDetails(filterFunction: filterFunction, filterEqualValue: filterEqualValue, completion: completion)
     }
     
-    public static func getChampions(forRole role: String, completion: @escaping ([String]?, String?) -> Void) {
+    public static func getAllChampionIds(completion: @escaping ([ChampionId]?, String?) -> Void) {
+        getAllChampions() { (champions, error) in
+            completion(champions?.map { return $0.championId }, error)
+        }
+    }
+    
+    public static func getAllChampionNames(completion: @escaping ([String]?, String?) -> Void) {
+        getAllChampions() { (champions, error) in
+            completion(champions?.map { return $0.name }, error)
+        }
+    }
+    
+    public static func getChampions(for role: ChampionRole, completion: @escaping ([String]?, String?) -> Void) {
         let filterFunction: ((String, ChampionsDetails)) -> Bool = { (keyValue) -> Bool in
             let (_, value) = keyValue
-            return value.tags.contains { $0.lowercased() == role.lowercased() }
+            return value.roles.contains { $0 == role }
         }
         getChampionsFiltered(filterFunction: filterFunction) { (champions, error) in
             completion(champions?.map { return $0.name }, error)
+        }
+    }
+    
+    private static func getAllChampions(completion: @escaping ([ChampionsDetails]?, String?) -> Void) {
+        let filterFunction: ((String, ChampionsDetails)) -> Bool = { (_) -> Bool in
+            return true
+        }
+        getChampionsFiltered(filterFunction: filterFunction) { (champions, error) in
+            completion(champions, error)
         }
     }
     

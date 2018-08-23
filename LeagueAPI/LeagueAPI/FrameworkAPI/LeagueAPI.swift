@@ -37,8 +37,16 @@ public class LeagueAPI: APIClient {
         DataDragonChampionBusiness.getChampionDetails(byName: name, completion: handler)
     }
     
-    public func getChampionsName(byRole role: String, handler: @escaping ([String]?, String?) -> Void) {
-        DataDragonChampionBusiness.getChampions(forRole: role, completion: handler)
+    public func getAllChampionIds(handler: @escaping ([ChampionId]?, String?) -> Void) {
+        DataDragonChampionBusiness.getAllChampionIds(completion: handler)
+    }
+    
+    public func getAllChampionNames(handler: @escaping ([String]?, String?) -> Void) {
+        DataDragonChampionBusiness.getAllChampionNames(completion: handler)
+    }
+    
+    public func getChampionNames(for role: ChampionRole, handler: @escaping ([String]?, String?) -> Void) {
+        DataDragonChampionBusiness.getChampions(for: role, completion: handler)
     }
     
     // MARK: - Profile Icon

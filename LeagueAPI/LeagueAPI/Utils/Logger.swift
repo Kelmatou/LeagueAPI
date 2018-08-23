@@ -17,7 +17,7 @@ open class Logger {
         case Error
     }
     
-    public static var channels: [Channel : Bool] = [
+    public internal(set) static var channels: [Channel : Bool] = [
         .Debug: true,
         .Info : true,
         .Warning : true,

@@ -15,7 +15,7 @@ internal class ChampionsDetails: Decodable {
     public var name: String
     public var title: String
     public var presentationText: String
-    public var tags: [String]
+    public var roles: [ChampionRole]
     public var ressourceType: RessourceType
     public var stats: ChampionStats
     public var difficulties: ChampionDifficulties
@@ -26,19 +26,19 @@ internal class ChampionsDetails: Decodable {
         case name = "name"
         case title = "title"
         case presentationText = "blurb"
-        case tags = "tags"
+        case roles = "tags"
         case ressourceType = "partype"
         case stats = "stats"
         case difficulties = "info"
     }
     
-    public init(championId: ChampionId, championIdName: String, name: String, title: String, presentationText: String, tags: [String], ressourceType: RessourceType, stats: ChampionStats, difficulties: ChampionDifficulties) {
+    public init(championId: ChampionId, championIdName: String, name: String, title: String, presentationText: String, roles: [ChampionRole], ressourceType: RessourceType, stats: ChampionStats, difficulties: ChampionDifficulties) {
         self.championId = championId
         self.championIdName = championIdName
         self.name = name
         self.title = title
         self.presentationText = presentationText
-        self.tags = tags
+        self.roles = roles
         self.ressourceType = ressourceType
         self.stats = stats
         self.difficulties = difficulties
@@ -51,7 +51,8 @@ internal class ChampionsDetails: Decodable {
         self.name = try container.decode(String.self, forKey: .name)
         self.title = try container.decode(String.self, forKey: .title)
         self.presentationText = try container.decode(String.self, forKey: .presentationText)
-        self.tags = try container.decode([String].self, forKey: .tags)
+        let rolesStr: [String] = try container.decode([String].self, forKey: .roles)
+        self.roles = rolesStr.map { ChampionRole($0) }
         let ressourceTypeStr: String = try container.decode(String.self, forKey: .ressourceType)
         self.ressourceType = RessourceType(ressourceTypeStr)
         self.stats = try container.decode(ChampionStats.self, forKey: .stats)
