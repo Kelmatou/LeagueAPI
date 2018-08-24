@@ -43,6 +43,7 @@
 		978AC5D02130008E00C5CCCD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5CF2130008E00C5CCCD /* Item.swift */; };
 		978AC5D22130009800C5CCCD /* ItemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5D12130009800C5CCCD /* ItemData.swift */; };
 		978AC5D42130097000C5CCCD /* ItemShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5D32130097000C5CCCD /* ItemShop.swift */; };
+		978AC5D62130138C00C5CCCD /* DataDragonItemBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5D52130138C00C5CCCD /* DataDragonItemBusiness.swift */; };
 		97A560782122E32C00A908CD /* RiotAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560772122E32C00A908CD /* RiotAPI.swift */; };
 		97A5607A2122E36C00A908CD /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560792122E36C00A908CD /* APIClient.swift */; };
 		97A5607C2122EFD200A908CD /* DDragonChampionsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A5607B2122EFD200A908CD /* DDragonChampionsFile.swift */; };
@@ -195,6 +196,7 @@
 		978AC5CF2130008E00C5CCCD /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		978AC5D12130009800C5CCCD /* ItemData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemData.swift; sourceTree = "<group>"; };
 		978AC5D32130097000C5CCCD /* ItemShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemShop.swift; sourceTree = "<group>"; };
+		978AC5D52130138C00C5CCCD /* DataDragonItemBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDragonItemBusiness.swift; sourceTree = "<group>"; };
 		97A560772122E32C00A908CD /* RiotAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiotAPI.swift; sourceTree = "<group>"; };
 		97A560792122E36C00A908CD /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		97A5607B2122EFD200A908CD /* DDragonChampionsFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDragonChampionsFile.swift; sourceTree = "<group>"; };
@@ -398,6 +400,7 @@
 				97A560C62127071200A908CD /* DataDragonChampionBusiness.swift */,
 				97A560C42127070200A908CD /* DataDragonProfileIconBusiness.swift */,
 				978AC5A8212F020B00C5CCCD /* DataDragonSummonerSpellBusiness.swift */,
+				978AC5D52130138C00C5CCCD /* DataDragonItemBusiness.swift */,
 			);
 			path = DataDragonBusiness;
 			sourceTree = "<group>";
@@ -838,6 +841,7 @@
 				97D38D9D210C9D4E00150CF9 /* Translation.swift in Sources */,
 				97A560D42127123D00A908CD /* DatetimeEnums.swift in Sources */,
 				97D38DDD210D0CEF00150CF9 /* MatchBusiness.swift in Sources */,
+				978AC5D62130138C00C5CCCD /* DataDragonItemBusiness.swift in Sources */,
 				97D38D7B210C5D8500150CF9 /* ChampionMasteryMethod.swift in Sources */,
 				97D38D4B210A823E00150CF9 /* Version.swift in Sources */,
 				97225C22212850D2001025EB /* Duration.swift in Sources */,
