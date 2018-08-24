@@ -30,8 +30,8 @@ public class TournamentEvent: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.eventType = try container.decode(String.self, forKey: .eventType)
         let summonerIdStr: String? = try container.decode(String?.self, forKey: .summonerId)
-        if let summonerIdStr = summonerIdStr {
-            self.summonerId = SummonerId(summonerIdStr)
+        if let summonerIdStr = summonerIdStr, let summonerIdLong = Long(summonerIdStr) {
+            self.summonerId = SummonerId(summonerIdLong)
         }
         self.timestamp = try container.decode(String.self, forKey: .timestamp)
     }

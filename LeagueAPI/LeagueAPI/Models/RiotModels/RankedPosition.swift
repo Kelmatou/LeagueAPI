@@ -34,7 +34,7 @@ public class RankedPosition: Decodable {
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.tier = try container.decode(String.self, forKey: .tier)
-        self.leagueId = try container.decode(LeagueId.self, forKey: .leagueId)
+        self.leagueId = try LeagueId(container.decode(String.self, forKey: .leagueId))
         self.leagueName = try container.decode(String.self, forKey: .leagueName)
         self.leagueInfo = try LeagueInfo(from: decoder)
         self.queue = try Queue(container.decode(String.self, forKey: .queue))

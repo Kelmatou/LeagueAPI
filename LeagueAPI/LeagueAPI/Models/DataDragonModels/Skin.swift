@@ -16,7 +16,7 @@ public class Skin {
     public var hasChromas: Bool
     public var skinImages: SkinImages
     
-    public init(skinId: String, skinNumber: Int, name: String, hasChromas: Bool, skinImages: SkinImages) {
+    public init(skinId: SkinId, skinNumber: Int, name: String, hasChromas: Bool, skinImages: SkinImages) {
         self.skinId = skinId
         self.skinNumber = skinNumber
         self.name = name

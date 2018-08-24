@@ -26,6 +26,18 @@
 		978AC5A5212EEDEA00C5CCCD /* SummonerSpellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5A4212EEDEA00C5CCCD /* SummonerSpellData.swift */; };
 		978AC5A7212EEE0300C5CCCD /* SummonerSpell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5A6212EEE0300C5CCCD /* SummonerSpell.swift */; };
 		978AC5A9212F020B00C5CCCD /* DataDragonSummonerSpellBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5A8212F020B00C5CCCD /* DataDragonSummonerSpellBusiness.swift */; };
+		978AC5B1212F47E400C5CCCD /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5B0212F47E400C5CCCD /* Identifier.swift */; };
+		978AC5B3212F4ABA00C5CCCD /* SummonerId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5B2212F4ABA00C5CCCD /* SummonerId.swift */; };
+		978AC5B5212F512500C5CCCD /* AccountId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5B4212F512500C5CCCD /* AccountId.swift */; };
+		978AC5B7212F514200C5CCCD /* ChampionId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5B6212F514200C5CCCD /* ChampionId.swift */; };
+		978AC5B9212F514F00C5CCCD /* SkinId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5B8212F514F00C5CCCD /* SkinId.swift */; };
+		978AC5BB212F515B00C5CCCD /* ProfileIconId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5BA212F515B00C5CCCD /* ProfileIconId.swift */; };
+		978AC5BD212F517B00C5CCCD /* SummonerSpellId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5BC212F517B00C5CCCD /* SummonerSpellId.swift */; };
+		978AC5BF212F518400C5CCCD /* GameId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5BE212F518400C5CCCD /* GameId.swift */; };
+		978AC5C1212F518B00C5CCCD /* ProviderId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5C0212F518B00C5CCCD /* ProviderId.swift */; };
+		978AC5C3212F51A200C5CCCD /* LeagueId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5C2212F51A200C5CCCD /* LeagueId.swift */; };
+		978AC5C5212F51AE00C5CCCD /* TournamentId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5C4212F51AE00C5CCCD /* TournamentId.swift */; };
+		978AC5C7212F51BA00C5CCCD /* TournamentCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5C6212F51BA00C5CCCD /* TournamentCode.swift */; };
 		97A560782122E32C00A908CD /* RiotAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560772122E32C00A908CD /* RiotAPI.swift */; };
 		97A5607A2122E36C00A908CD /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560792122E36C00A908CD /* APIClient.swift */; };
 		97A5607C2122EFD200A908CD /* DDragonChampionsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A5607B2122EFD200A908CD /* DDragonChampionsFile.swift */; };
@@ -161,6 +173,18 @@
 		978AC5A4212EEDEA00C5CCCD /* SummonerSpellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummonerSpellData.swift; sourceTree = "<group>"; };
 		978AC5A6212EEE0300C5CCCD /* SummonerSpell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummonerSpell.swift; sourceTree = "<group>"; };
 		978AC5A8212F020B00C5CCCD /* DataDragonSummonerSpellBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDragonSummonerSpellBusiness.swift; sourceTree = "<group>"; };
+		978AC5B0212F47E400C5CCCD /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
+		978AC5B2212F4ABA00C5CCCD /* SummonerId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummonerId.swift; sourceTree = "<group>"; };
+		978AC5B4212F512500C5CCCD /* AccountId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountId.swift; sourceTree = "<group>"; };
+		978AC5B6212F514200C5CCCD /* ChampionId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionId.swift; sourceTree = "<group>"; };
+		978AC5B8212F514F00C5CCCD /* SkinId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinId.swift; sourceTree = "<group>"; };
+		978AC5BA212F515B00C5CCCD /* ProfileIconId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileIconId.swift; sourceTree = "<group>"; };
+		978AC5BC212F517B00C5CCCD /* SummonerSpellId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummonerSpellId.swift; sourceTree = "<group>"; };
+		978AC5BE212F518400C5CCCD /* GameId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameId.swift; sourceTree = "<group>"; };
+		978AC5C0212F518B00C5CCCD /* ProviderId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderId.swift; sourceTree = "<group>"; };
+		978AC5C2212F51A200C5CCCD /* LeagueId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueId.swift; sourceTree = "<group>"; };
+		978AC5C4212F51AE00C5CCCD /* TournamentId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentId.swift; sourceTree = "<group>"; };
+		978AC5C6212F51BA00C5CCCD /* TournamentCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentCode.swift; sourceTree = "<group>"; };
 		97A560772122E32C00A908CD /* RiotAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiotAPI.swift; sourceTree = "<group>"; };
 		97A560792122E36C00A908CD /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		97A5607B2122EFD200A908CD /* DDragonChampionsFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDragonChampionsFile.swift; sourceTree = "<group>"; };
@@ -537,6 +561,18 @@
 			isa = PBXGroup;
 			children = (
 				97E31460211C33E900C9F739 /* TypeAlias.swift */,
+				978AC5B0212F47E400C5CCCD /* Identifier.swift */,
+				978AC5B2212F4ABA00C5CCCD /* SummonerId.swift */,
+				978AC5B4212F512500C5CCCD /* AccountId.swift */,
+				978AC5B6212F514200C5CCCD /* ChampionId.swift */,
+				978AC5B8212F514F00C5CCCD /* SkinId.swift */,
+				978AC5BA212F515B00C5CCCD /* ProfileIconId.swift */,
+				978AC5BC212F517B00C5CCCD /* SummonerSpellId.swift */,
+				978AC5BE212F518400C5CCCD /* GameId.swift */,
+				978AC5C0212F518B00C5CCCD /* ProviderId.swift */,
+				978AC5C2212F51A200C5CCCD /* LeagueId.swift */,
+				978AC5C4212F51AE00C5CCCD /* TournamentId.swift */,
+				978AC5C6212F51BA00C5CCCD /* TournamentCode.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -704,7 +740,10 @@
 				97A5607C2122EFD200A908CD /* DDragonChampionsFile.swift in Sources */,
 				97A5608F21236FCF00A908CD /* DDragonVersions.swift in Sources */,
 				97D38D8B210C72E900150CF9 /* RankedPosition.swift in Sources */,
+				978AC5B3212F4ABA00C5CCCD /* SummonerId.swift in Sources */,
+				978AC5BF212F518400C5CCCD /* GameId.swift in Sources */,
 				97D38DC5210CCC6B00150CF9 /* TeamBan.swift in Sources */,
+				978AC5B5212F512500C5CCCD /* AccountId.swift in Sources */,
 				97D38D7F210C69FE00150CF9 /* Champion.swift in Sources */,
 				97D38DCF210CCDFD00150CF9 /* LegacyMastery.swift in Sources */,
 				97A560C52127070200A908CD /* DataDragonProfileIconBusiness.swift in Sources */,
@@ -712,16 +751,19 @@
 				97D38DC9210CCCB800150CF9 /* MatchParticipantStats.swift in Sources */,
 				97D38DD3210CF03000150CF9 /* MatchFrame.swift in Sources */,
 				978AC59E212ED26500C5CCCD /* ChampionRole.swift in Sources */,
+				978AC5BB212F515B00C5CCCD /* ProfileIconId.swift in Sources */,
 				97A56097212381C700A908CD /* ChampionAdditionalDetails.swift in Sources */,
 				97691807211359D100F8AF3B /* RawRequester.swift in Sources */,
 				97225C2F212865E1001025EB /* Map.swift in Sources */,
 				97A560D8212716B700A908CD /* StringExtension.swift in Sources */,
 				97A560A7212623D000A908CD /* SkinData.swift in Sources */,
 				978AC5A5212EEDEA00C5CCCD /* SummonerSpellData.swift in Sources */,
+				978AC5BD212F517B00C5CCCD /* SummonerSpellId.swift in Sources */,
 				97225C31212891DB001025EB /* QueueMode.swift in Sources */,
 				97A560D62127151900A908CD /* IntExtension.swift in Sources */,
 				97D38DEC210DFEEC00150CF9 /* TournamentInfo.swift in Sources */,
 				9736CCD22120E172008E31A0 /* Endpoint.swift in Sources */,
+				978AC5B1212F47E400C5CCCD /* Identifier.swift in Sources */,
 				97D38DE5210DFCB100150CF9 /* TournamentEventList.swift in Sources */,
 				97D38DE3210DFC7000150CF9 /* TournamentEvent.swift in Sources */,
 				97D38D39210A75B800150CF9 /* Logger.swift in Sources */,
@@ -730,6 +772,7 @@
 				9736CCD92120F037008E31A0 /* MapType.swift in Sources */,
 				97D38D91210C85AC00150CF9 /* RankedMethod.swift in Sources */,
 				97D38D93210C88E800150CF9 /* RankedBusiness.swift in Sources */,
+				978AC5C7212F51BA00C5CCCD /* TournamentCode.swift in Sources */,
 				97D38DC7210CCCA400150CF9 /* MatchParticipantIdentity.swift in Sources */,
 				97D38DDF210D16C400150CF9 /* ThirdPartyCodeMethod.swift in Sources */,
 				97D38DCD210CCDE200150CF9 /* LegacyRune.swift in Sources */,
@@ -745,6 +788,7 @@
 				97A560822122F41E00A908CD /* ChampionStats.swift in Sources */,
 				97D38D99210C9D3900150CF9 /* Incident.swift in Sources */,
 				9736CCD72120EFB5008E31A0 /* PickType.swift in Sources */,
+				978AC5C5212F51AE00C5CCCD /* TournamentId.swift in Sources */,
 				97D38D24210A532B00150CF9 /* ObjectMapper.swift in Sources */,
 				97D38D9B210C9D4100150CF9 /* Message.swift in Sources */,
 				97D38D33210A5F7200150CF9 /* SummonerBusiness.swift in Sources */,
@@ -753,12 +797,14 @@
 				97D38DD7210CF04E00150CF9 /* MatchPosition.swift in Sources */,
 				978AC5A9212F020B00C5CCCD /* DataDragonSummonerSpellBusiness.swift in Sources */,
 				97A5607E2122F0FD00A908CD /* ChampionsDetails.swift in Sources */,
+				978AC5C1212F518B00C5CCCD /* ProviderId.swift in Sources */,
 				978AC5A3212ED9F300C5CCCD /* DDragonSummonerSpellsFile.swift in Sources */,
 				97D38DBB210CC78B00150CF9 /* MatchReference.swift in Sources */,
 				97D38DEE210DFFAB00150CF9 /* TournamentRegion.swift in Sources */,
 				97D38D7D210C69CB00150CF9 /* ChampionList.swift in Sources */,
 				97D38DBD210CCB3A00150CF9 /* Match.swift in Sources */,
 				97A560932123774400A908CD /* DataDragonVersionBusiness.swift in Sources */,
+				978AC5C3212F51A200C5CCCD /* LeagueId.swift in Sources */,
 				97D38D1B210A4D8D00150CF9 /* Summoner.swift in Sources */,
 				97D38D81210C6BFB00150CF9 /* ChampionMethod.swift in Sources */,
 				97D38D47210A80AA00150CF9 /* MethodPaths.swift in Sources */,
@@ -768,6 +814,7 @@
 				97D38D8F210C7E8D00150CF9 /* Queue.swift in Sources */,
 				97D38D31210A5CDA00150CF9 /* SummonerMethod.swift in Sources */,
 				97A56095212381B900A908CD /* ChampionDetails.swift in Sources */,
+				978AC5B7212F514200C5CCCD /* ChampionId.swift in Sources */,
 				97D38D9D210C9D4E00150CF9 /* Translation.swift in Sources */,
 				97A560D42127123D00A908CD /* DatetimeEnums.swift in Sources */,
 				97D38DDD210D0CEF00150CF9 /* MatchBusiness.swift in Sources */,
@@ -777,6 +824,7 @@
 				97A560C02126F97C00A908CD /* ServicesUrl.swift in Sources */,
 				97D38DF2210E0B0A00150CF9 /* TournamentInitializer.swift in Sources */,
 				97D38DD1210CF02300150CF9 /* MatchTimeline.swift in Sources */,
+				978AC5B9212F514F00C5CCCD /* SkinId.swift in Sources */,
 				97D38DB9210CC75E00150CF9 /* MatchList.swift in Sources */,
 				97A560A32125CB0000A908CD /* RiotAPIRESTRequester.swift in Sources */,
 				97D38DAF210CABA700150CF9 /* GameCustomObject.swift in Sources */,

@@ -22,7 +22,7 @@ internal class SkinData: Decodable {
         case hasChromas = "chromas"
     }
     
-    public init(skinId: String, skinNumber: Int, name: String, hasChromas: Bool) {
+    public init(skinId: SkinId, skinNumber: Int, name: String, hasChromas: Bool) {
         self.skinId = skinId
         self.skinNumber = skinNumber
         self.name = name
@@ -31,7 +31,7 @@ internal class SkinData: Decodable {
     
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.skinId = try container.decode(String.self, forKey: .skinId)
+        self.skinId = try SkinId(container.decode(String.self, forKey: .skinId))
         self.skinNumber = try container.decode(Int.self, forKey: .skinNumber)
         self.name = try container.decode(String.self, forKey: .name)
         self.hasChromas = try container.decode(Bool.self, forKey: .hasChromas)

@@ -77,7 +77,10 @@ public class RiotAPI: APIClient {
     }
     
     public func getMatchIds(by tournamentCode: TournamentCode, on region: Region, handler: @escaping ([GameId]?, String?) -> Void) {
-        MatchBusiness.getMatch(method: .MatchIdsByTournamentCode(code: tournamentCode), region: region, key: self.key, handler: handler)
+        let handlerIds: ([Long]?, String?) -> Void = { (ids, error) in
+            handler(ids?.map { GameId($0) }, error)
+        }
+        MatchBusiness.getMatch(method: .MatchIdsByTournamentCode(code: tournamentCode), region: region, key: self.key, handler: handlerIds)
     }
     
     public func getMatch(by gameId: GameId, and tournamentCode: TournamentCode, on region: Region, handler: @escaping (Match?, String?) -> Void) {
@@ -129,7 +132,10 @@ public class RiotAPI: APIClient {
     }
     
     public func createStubTournamentCode(tournamentId: TournamentId, amount: Int? = nil, info: TournamentInfo, handler: @escaping ([TournamentCode]?, String?) -> Void) {
-        TournamentStubBusiness.manageTournament(method: .CreateCodes(amount: amount, tournamentId: tournamentId, info: info), key: self.key, handler: handler)
+        let handlerCodes: ([String]?, String?) -> Void = { (codes, error) in
+            handler(codes?.map { TournamentCode($0) }, error)
+        }
+        TournamentStubBusiness.manageTournament(method: .CreateCodes(amount: amount, tournamentId: tournamentId, info: info), key: self.key, handler: handlerCodes)
     }
     
     public func getStubTournamentEvents(tournamentCode: TournamentCode, handler: @escaping ([TournamentEvent]?, String?) -> Void) {
@@ -137,10 +143,16 @@ public class RiotAPI: APIClient {
     }
     
     public func createStubTournamentProvider(hostRegion: TournamentRegion, hostUrl: String, handler: @escaping (ProviderId?, String?) -> Void) {
-        TournamentStubBusiness.manageTournament(method: .CreateProvider(callbackUrl: hostUrl, region: hostRegion), key: self.key, handler: handler)
+        let handlerId: (Int?, String?) -> Void = { (id, error) in
+            handler(id == nil ? nil : ProviderId(id!), error)
+        }
+        TournamentStubBusiness.manageTournament(method: .CreateProvider(callbackUrl: hostUrl, region: hostRegion), key: self.key, handler: handlerId)
     }
     
     public func createStubTournament(providerId: ProviderId, named name: String, handler: @escaping (TournamentId?, String?) -> Void) {
-        TournamentStubBusiness.manageTournament(method: .CreateTournament(name: name, providerId: providerId), key: self.key, handler: handler)
+        let handlerId: (Long?, String?) -> Void = { (id, error) in
+            handler(id == nil ? nil : TournamentId(id!), error)
+        }
+        TournamentStubBusiness.manageTournament(method: .CreateTournament(name: name, providerId: providerId), key: self.key, handler: handlerId)
     }
 }

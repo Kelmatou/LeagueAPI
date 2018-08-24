@@ -37,11 +37,11 @@ public class Summoner: Decodable {
     
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try container.decode(SummonerId.self, forKey: .id)
-        self.accountId = try container.decode(AccountId.self, forKey: .accountId)
+        self.id = try SummonerId(container.decode(Long.self, forKey: .id))
+        self.accountId = try AccountId(container.decode(Long.self, forKey: .accountId))
         self.name = try container.decode(String.self, forKey: .name)
         self.level = try container.decode(Long.self, forKey: .level)
-        self.iconId = try container.decode(ProfileIconId.self, forKey: .iconId)
+        self.iconId = try ProfileIconId(container.decode(Long.self, forKey: .iconId))
         let timestamp: Long = try container.decode(Long.self, forKey: .revisionDate)
         self.revisionDate = Datetime(timestamp: timestamp)
     }

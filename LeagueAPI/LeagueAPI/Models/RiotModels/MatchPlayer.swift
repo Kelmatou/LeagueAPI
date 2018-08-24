@@ -43,11 +43,11 @@ public class MatchPlayer: Decodable {
     
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.currentAccountId = try container.decode(AccountId.self, forKey: .currentAccountId)
-        self.accountId = try container.decode(AccountId.self, forKey: .accountId)
-        self.summonerId = try container.decode(SummonerId.self, forKey: .summonerId)
+        self.currentAccountId = try AccountId(container.decode(Long.self, forKey: .currentAccountId))
+        self.accountId = try AccountId(container.decode(Long.self, forKey: .accountId))
+        self.summonerId = try SummonerId(container.decode(Long.self, forKey: .summonerId))
         self.summonerName = try container.decode(String.self, forKey: .summonerName)
-        self.profileIconId = try container.decode(ProfileIconId.self, forKey: .profileIconId)
+        self.profileIconId = try ProfileIconId(container.decode(Long.self, forKey: .profileIconId))
         self.currentPlatformId = try container.decode(String.self, forKey: .currentPlatformId)
         self.platformId = try container.decode(String.self, forKey: .platformId)
         self.matchHistoryUri = try container.decode(String.self, forKey: .matchHistoryUri)

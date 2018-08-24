@@ -52,7 +52,7 @@ public class GameInfo: Decodable {
     
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.gameId = try container.decode(GameId.self, forKey: .gameId)
+        self.gameId = try GameId(container.decode(Long.self, forKey: .gameId))
         let timestamp: Long = try container.decode(Long.self, forKey: .gameStartTime)
         self.gameStartTime = Datetime(timestamp: timestamp)
         self.platformId = try container.decode(String.self, forKey: .platformId)

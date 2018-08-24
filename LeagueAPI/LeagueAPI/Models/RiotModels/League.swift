@@ -34,7 +34,7 @@ public class League: Decodable {
     
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.leagueId = try container.decode(LeagueId.self, forKey: .leagueId)
+        self.leagueId = try LeagueId(container.decode(String.self, forKey: .leagueId))
         self.name = try container.decode(String.self, forKey: .name)
         self.tier = try container.decode(String.self, forKey: .tier)
         self.queue = try Queue(container.decode(String.self, forKey: .queue))

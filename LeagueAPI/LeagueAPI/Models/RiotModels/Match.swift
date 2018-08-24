@@ -60,7 +60,7 @@ public class Match: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.season = try Season(container.decode(Int.self, forKey: .seasonId))
         self.queueMode = try QueueMode(container.decode(Long.self, forKey: .queueId))
-        self.gameId = try container.decode(GameId.self, forKey: .gameId)
+        self.gameId = try GameId(container.decode(Long.self, forKey: .gameId))
         self.participants = try container.decode([MatchParticipantIdentity].self, forKey: .participants)
         self.patch = try container.decode(String.self, forKey: .patch)
         self.platformId = try container.decode(String.self, forKey: .platformId)

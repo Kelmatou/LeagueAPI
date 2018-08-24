@@ -26,6 +26,6 @@ public class TeamBan: Decodable {
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.banTurn = try container.decode(Int.self, forKey: .banTurn)
-        self.championId = try container.decode(ChampionId.self, forKey: .championId)
+        self.championId = try ChampionId(container.decode(Long.self, forKey: .championId))
     }
 }

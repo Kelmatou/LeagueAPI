@@ -50,13 +50,13 @@ public class Participant: Decodable {
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.summonerName = try container.decode(String.self, forKey: .summonerName)
-        self.profileIconId = try container.decode(ProfileIconId.self, forKey: .profileIconId)
-        self.championId = try container.decode(ChampionId.self, forKey: .championId)
+        self.profileIconId = try ProfileIconId(container.decode(Long.self, forKey: .profileIconId))
+        self.championId = try ChampionId(container.decode(Long.self, forKey: .championId))
         self.isBot = try container.decode(Bool.self, forKey: .isBot)
         self.teamId = try container.decode(Long.self, forKey: .teamId)
-        self.summonerSpell1 = try container.decode(SummonerSpellId.self, forKey: .summonerSpell1)
-        self.summonerSpell2 = try container.decode(SummonerSpellId.self, forKey: .summonerSpell2)
-        self.summonerId = try? container.decode(SummonerId.self, forKey: .summonerId)
+        self.summonerSpell1 = try SummonerSpellId(container.decode(Long.self, forKey: .summonerSpell1))
+        self.summonerSpell2 = try SummonerSpellId(container.decode(Long.self, forKey: .summonerSpell2))
+        self.summonerId = try? SummonerId(container.decode(Long.self, forKey: .summonerId))
         self.runePage = try? container.decode(RunePage.self, forKey: .runePage)
         self.customizedObjects = try? container.decode([GameCustomObject].self, forKey: .customizedObjects)
     }

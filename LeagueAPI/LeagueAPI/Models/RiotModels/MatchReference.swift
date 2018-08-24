@@ -43,10 +43,10 @@ public class MatchReference: Decodable {
     
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.gameId = try container.decode(GameId.self, forKey: .gameId)
+        self.gameId = try GameId(container.decode(Long.self, forKey: .gameId))
         self.season = try container.decode(Int.self, forKey: .season)
         self.queue = try QueueMode(container.decode(Long.self, forKey: .queue))
-        self.championId = try container.decode(ChampionId.self, forKey: .championId)
+        self.championId = try ChampionId(container.decode(Long.self, forKey: .championId))
         self.lane = try container.decode(String.self, forKey: .lane)
         self.role = try container.decode(String.self, forKey: .role)
         self.platformId = try container.decode(String.self, forKey: .platformId)

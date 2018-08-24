@@ -37,7 +37,7 @@ public class Champion: Decodable {
     
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try container.decode(ChampionId.self, forKey: .id)
+        self.id = try ChampionId(container.decode(Long.self, forKey: .id))
         self.freeToPlay = try container.decode(Bool.self, forKey: .freeToPlay)
         self.enabled = try container.decode(Bool.self, forKey: .enabled)
         self.rankedEnabled = try container.decode(Bool.self, forKey: .rankedEnabled)

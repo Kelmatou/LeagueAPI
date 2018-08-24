@@ -43,7 +43,7 @@ internal class SummonerSpellData: Decodable {
     
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try SummonerSpellId(container.decode(String.self, forKey: .id))!
+        self.id = try SummonerSpellId(Long(container.decode(String.self, forKey: .id))!)
         self.nameId = try container.decode(String.self, forKey: .nameId)
         self.name = try container.decode(String.self, forKey: .name)
         self.description = try container.decode(String.self, forKey: .description)

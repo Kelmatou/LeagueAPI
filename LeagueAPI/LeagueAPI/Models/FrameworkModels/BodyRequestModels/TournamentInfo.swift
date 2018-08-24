@@ -45,7 +45,7 @@ public class TournamentInfo: Encodable {
         try container.encode(self.teamSize, forKey: .teamSize)
         try container.encode(self.pickType.rawValue, forKey: .pickType)
         if let allowedSummonerIds = self.allowedSummonerIds {
-            try container.encode(allowedSummonerIds, forKey: .allowedSummonerIds)
+            try container.encode(allowedSummonerIds.map { $0.value }, forKey: .allowedSummonerIds)
         }
         try container.encode(self.mapType.rawValue, forKey: .mapType)
         if let metadata = self.metadata {

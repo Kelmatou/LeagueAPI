@@ -46,7 +46,7 @@ internal class ChampionsDetails: Decodable {
     
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.championId = try ChampionId(container.decode(String.self, forKey: .championId))!
+        self.championId = try ChampionId(Long(container.decode(String.self, forKey: .championId))!)
         self.championIdName = try container.decode(String.self, forKey: .championIdName)
         self.name = try container.decode(String.self, forKey: .name)
         self.title = try container.decode(String.self, forKey: .title)
