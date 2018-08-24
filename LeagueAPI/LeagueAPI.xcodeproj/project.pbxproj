@@ -38,6 +38,7 @@
 		978AC5C3212F51A200C5CCCD /* LeagueId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5C2212F51A200C5CCCD /* LeagueId.swift */; };
 		978AC5C5212F51AE00C5CCCD /* TournamentId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5C4212F51AE00C5CCCD /* TournamentId.swift */; };
 		978AC5C7212F51BA00C5CCCD /* TournamentCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5C6212F51BA00C5CCCD /* TournamentCode.swift */; };
+		978AC5CC212FFC0400C5CCCD /* ItemId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5CB212FFC0400C5CCCD /* ItemId.swift */; };
 		97A560782122E32C00A908CD /* RiotAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560772122E32C00A908CD /* RiotAPI.swift */; };
 		97A5607A2122E36C00A908CD /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560792122E36C00A908CD /* APIClient.swift */; };
 		97A5607C2122EFD200A908CD /* DDragonChampionsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A5607B2122EFD200A908CD /* DDragonChampionsFile.swift */; };
@@ -185,6 +186,7 @@
 		978AC5C2212F51A200C5CCCD /* LeagueId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueId.swift; sourceTree = "<group>"; };
 		978AC5C4212F51AE00C5CCCD /* TournamentId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentId.swift; sourceTree = "<group>"; };
 		978AC5C6212F51BA00C5CCCD /* TournamentCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentCode.swift; sourceTree = "<group>"; };
+		978AC5CB212FFC0400C5CCCD /* ItemId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemId.swift; sourceTree = "<group>"; };
 		97A560772122E32C00A908CD /* RiotAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiotAPI.swift; sourceTree = "<group>"; };
 		97A560792122E36C00A908CD /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		97A5607B2122EFD200A908CD /* DDragonChampionsFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDragonChampionsFile.swift; sourceTree = "<group>"; };
@@ -568,6 +570,7 @@
 				978AC5B8212F514F00C5CCCD /* SkinId.swift */,
 				978AC5BA212F515B00C5CCCD /* ProfileIconId.swift */,
 				978AC5BC212F517B00C5CCCD /* SummonerSpellId.swift */,
+				978AC5CB212FFC0400C5CCCD /* ItemId.swift */,
 				978AC5BE212F518400C5CCCD /* GameId.swift */,
 				978AC5C0212F518B00C5CCCD /* ProviderId.swift */,
 				978AC5C2212F51A200C5CCCD /* LeagueId.swift */,
@@ -755,6 +758,7 @@
 				97A56097212381C700A908CD /* ChampionAdditionalDetails.swift in Sources */,
 				97691807211359D100F8AF3B /* RawRequester.swift in Sources */,
 				97225C2F212865E1001025EB /* Map.swift in Sources */,
+				978AC5CC212FFC0400C5CCCD /* ItemId.swift in Sources */,
 				97A560D8212716B700A908CD /* StringExtension.swift in Sources */,
 				97A560A7212623D000A908CD /* SkinData.swift in Sources */,
 				978AC5A5212EEDEA00C5CCCD /* SummonerSpellData.swift in Sources */,

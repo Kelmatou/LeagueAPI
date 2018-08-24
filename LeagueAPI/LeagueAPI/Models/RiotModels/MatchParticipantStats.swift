@@ -15,13 +15,13 @@ public class MatchParticipantStats: Decodable {
     public var champLevel: Int
     public var goldEarned: Int
     public var goldSpent: Int
-    public var item0: Int
-    public var item1: Int
-    public var item2: Int
-    public var item3: Int
-    public var item4: Int
-    public var item5: Int
-    public var item6: Int
+    public var item0: ItemId
+    public var item1: ItemId
+    public var item2: ItemId
+    public var item3: ItemId
+    public var item4: ItemId
+    public var item5: ItemId
+    public var item6: ItemId
     public var rune0: Int?
     public var rune1: Int?
     public var rune2: Int?
@@ -228,7 +228,7 @@ public class MatchParticipantStats: Decodable {
         case nodeCaptureAssist = "nodeCaptureAssist"
     }
     
-    public init(participantId: Int, win: Bool, champLevel: Int, goldEarned: Int, goldSpent: Int, item0: Int, item1: Int, item2: Int, item3: Int, item4: Int, item5: Int, item6: Int, rune0: Int?, rune1: Int?, rune2: Int?, rune3: Int?, rune4: Int?, rune5: Int?, rune0Var1: Int?, rune0Var2: Int?, rune0Var3: Int?, rune1Var1: Int?, rune1Var2: Int?, rune1Var3: Int?, rune2Var1: Int?, rune2Var2: Int?, rune2Var3: Int?, rune3Var1: Int?, rune3Var2: Int?, rune3Var3: Int?, rune4Var1: Int?, rune4Var2: Int?, rune4Var3: Int?, rune5Var1: Int?, rune5Var2: Int?, rune5Var3: Int?, doubleKills: Int, tripleKills: Int, quadraKills: Int, pentaKills: Int, totalPlayerScore: Int, playerScore0: Int, playerScore1: Int, playerScore2: Int, playerScore3: Int, playerScore4: Int, playerScore5: Int, playerScore6: Int, playerScore7: Int, playerScore8: Int, playerScore9: Int, totalScoreRank: Int, visionScore: Long, firstBloodKill: Bool, firstBloodAssist: Bool, firstInhibitorKill: Bool?, firstInhibitorAssist: Bool?, firstTowerKill: Bool?, firstTowerAssist: Bool?, kills: Int, deaths: Int, assists: Int, unrealKills: Int, wardsPlayed: Int?, wardsKilled: Int?, sigthWardsBoughtInGame: Int?, visionWardsBoughtInGame: Int?, primaryRunePath: Int?, secondaryRunePath: Int?, neutralMinionsKilled: Int, totalDamageDealt: Long, totalDamageDealtToChampions: Long, damageDealtToObjectives: Long, damageDealtToTurrets: Long?, trueDamageDealt: Long, trueDamageDealtToChampions: Long, magicDamageDealt: Long, magicDamageDealtToChampions: Long, physicalDamageDealt: Long, physicalDamageDealtToChampions: Long, totalDamageTaken: Long, trueDamageTaken: Long, magicalDamageTaken: Long, physicalDamageTaken: Long, damageSelfMitigated: Long, totalHeal: Long, totalUnitsHealed: Int, largestMultiKill: Int, largestCritialStrike: Int?, largestKillingSpree: Int, teamObjective: Int?, combatPlayerScore: Int, objectivePlayerScore: Int, neutralMinionsKilledTeamJungle: Int?, neutralMinionsKilledEnemyJungle: Int?, killingSprees: Int, inhibitorKills: Int?, turretKills: Int?, totalMinionsKilled: Int, totalTimeCrowdControlDealt: Int, longestTimeSpentLiving: Int, timeCCingOthers: Long, altarsCaptures: Int?, altarsNeutralized: Int?, nodeNeutralize: Int?, nodeNeutralizeAssist: Int?, nodeCaptureAssist: Int?) {
+    public init(participantId: Int, win: Bool, champLevel: Int, goldEarned: Int, goldSpent: Int, item0: ItemId, item1: ItemId, item2: ItemId, item3: ItemId, item4: ItemId, item5: ItemId, item6: ItemId, rune0: Int?, rune1: Int?, rune2: Int?, rune3: Int?, rune4: Int?, rune5: Int?, rune0Var1: Int?, rune0Var2: Int?, rune0Var3: Int?, rune1Var1: Int?, rune1Var2: Int?, rune1Var3: Int?, rune2Var1: Int?, rune2Var2: Int?, rune2Var3: Int?, rune3Var1: Int?, rune3Var2: Int?, rune3Var3: Int?, rune4Var1: Int?, rune4Var2: Int?, rune4Var3: Int?, rune5Var1: Int?, rune5Var2: Int?, rune5Var3: Int?, doubleKills: Int, tripleKills: Int, quadraKills: Int, pentaKills: Int, totalPlayerScore: Int, playerScore0: Int, playerScore1: Int, playerScore2: Int, playerScore3: Int, playerScore4: Int, playerScore5: Int, playerScore6: Int, playerScore7: Int, playerScore8: Int, playerScore9: Int, totalScoreRank: Int, visionScore: Long, firstBloodKill: Bool, firstBloodAssist: Bool, firstInhibitorKill: Bool?, firstInhibitorAssist: Bool?, firstTowerKill: Bool?, firstTowerAssist: Bool?, kills: Int, deaths: Int, assists: Int, unrealKills: Int, wardsPlayed: Int?, wardsKilled: Int?, sigthWardsBoughtInGame: Int?, visionWardsBoughtInGame: Int?, primaryRunePath: Int?, secondaryRunePath: Int?, neutralMinionsKilled: Int, totalDamageDealt: Long, totalDamageDealtToChampions: Long, damageDealtToObjectives: Long, damageDealtToTurrets: Long?, trueDamageDealt: Long, trueDamageDealtToChampions: Long, magicDamageDealt: Long, magicDamageDealtToChampions: Long, physicalDamageDealt: Long, physicalDamageDealtToChampions: Long, totalDamageTaken: Long, trueDamageTaken: Long, magicalDamageTaken: Long, physicalDamageTaken: Long, damageSelfMitigated: Long, totalHeal: Long, totalUnitsHealed: Int, largestMultiKill: Int, largestCritialStrike: Int?, largestKillingSpree: Int, teamObjective: Int?, combatPlayerScore: Int, objectivePlayerScore: Int, neutralMinionsKilledTeamJungle: Int?, neutralMinionsKilledEnemyJungle: Int?, killingSprees: Int, inhibitorKills: Int?, turretKills: Int?, totalMinionsKilled: Int, totalTimeCrowdControlDealt: Int, longestTimeSpentLiving: Int, timeCCingOthers: Long, altarsCaptures: Int?, altarsNeutralized: Int?, nodeNeutralize: Int?, nodeNeutralizeAssist: Int?, nodeCaptureAssist: Int?) {
         self.participantId = participantId
         self.win = win
         self.champLevel = champLevel
@@ -345,13 +345,13 @@ public class MatchParticipantStats: Decodable {
         self.champLevel = try container.decode(Int.self, forKey: .champLevel)
         self.goldEarned = try container.decode(Int.self, forKey: .goldEarned)
         self.goldSpent = try container.decode(Int.self, forKey: .goldSpent)
-        self.item0 = try container.decode(Int.self, forKey: .item0)
-        self.item1 = try container.decode(Int.self, forKey: .item1)
-        self.item2 = try container.decode(Int.self, forKey: .item2)
-        self.item3 = try container.decode(Int.self, forKey: .item3)
-        self.item4 = try container.decode(Int.self, forKey: .item4)
-        self.item5 = try container.decode(Int.self, forKey: .item5)
-        self.item6 = try container.decode(Int.self, forKey: .item6)
+        self.item0 = try ItemId(container.decode(Int.self, forKey: .item0))
+        self.item1 = try ItemId(container.decode(Int.self, forKey: .item1))
+        self.item2 = try ItemId(container.decode(Int.self, forKey: .item2))
+        self.item3 = try ItemId(container.decode(Int.self, forKey: .item3))
+        self.item4 = try ItemId(container.decode(Int.self, forKey: .item4))
+        self.item5 = try ItemId(container.decode(Int.self, forKey: .item5))
+        self.item6 = try ItemId(container.decode(Int.self, forKey: .item6))
         self.rune0 = try? container.decode(Int.self, forKey: .rune0)
         self.rune1 = try? container.decode(Int.self, forKey: .rune1)
         self.rune2 = try? container.decode(Int.self, forKey: .rune2)

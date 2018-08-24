@@ -20,7 +20,7 @@ public class MatchEvent: Decodable {
     public var beforeId: Int?
     public var afterId: Int?
     public var position: MatchPosition?
-    public var itemId: Int?
+    public var itemId: ItemId?
     public var creatorId: Int?
     public var skillSlot: Int?
     public var pointCaptured: String?
@@ -60,7 +60,7 @@ public class MatchEvent: Decodable {
         case timestamp = "timestamp"
     }
     
-    public init(type: String, eventType: String?, participantId: Int?, teamId: Int?, killerId: Int?, victimId: Int?, assistingParticipantIds: [Int]?, beforeId: Int?, afterId: Int?, position: MatchPosition?, itemId: Int?, creatorId: Int?, skillSlot: Int?, pointCaptured: String?, towerType: String?, ascendedType: String?, levelUpType: String?, wardType: String?, monsterType: String?, monsterSubType: String?, laneType: String?, buildingType: String?, timestamp: Datetime) {
+    public init(type: String, eventType: String?, participantId: Int?, teamId: Int?, killerId: Int?, victimId: Int?, assistingParticipantIds: [Int]?, beforeId: Int?, afterId: Int?, position: MatchPosition?, itemId: ItemId?, creatorId: Int?, skillSlot: Int?, pointCaptured: String?, towerType: String?, ascendedType: String?, levelUpType: String?, wardType: String?, monsterType: String?, monsterSubType: String?, laneType: String?, buildingType: String?, timestamp: Datetime) {
         self.type = type
         self.eventType = eventType
         self.participantId = participantId
@@ -98,7 +98,7 @@ public class MatchEvent: Decodable {
         self.beforeId = try? container.decode(Int.self, forKey: .beforeId)
         self.afterId = try? container.decode(Int.self, forKey: .afterId)
         self.position = try? container.decode(MatchPosition.self, forKey: .position)
-        self.itemId = try? container.decode(Int.self, forKey: .itemId)
+        self.itemId = try? ItemId(container.decode(Int.self, forKey: .itemId))
         self.creatorId = try? container.decode(Int.self, forKey: .creatorId)
         self.skillSlot = try? container.decode(Int.self, forKey: .skillSlot)
         self.pointCaptured = try? container.decode(String.self, forKey: .pointCaptured)
