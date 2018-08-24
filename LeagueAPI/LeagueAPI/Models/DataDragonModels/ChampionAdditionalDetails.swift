@@ -12,10 +12,12 @@ internal class ChampionAdditionalDetails {
     
     public var skins: [Skin]
     public var lore: String
+    public var spells: [ChampionSpell]
     
-    public init(skins: [Skin], lore: String) {
+    public init(skins: [Skin], lore: String, spells: [ChampionSpell]) {
         self.skins = skins
         self.lore = lore
+        self.spells = spells
     }
     
     public init(championAdditionalData: ChampionAdditionalDetailsData, version: String) {
@@ -23,5 +25,8 @@ internal class ChampionAdditionalDetails {
             return Skin(from: $0, version: version, championNameId: championAdditionalData.championIdName)
         }
         self.lore = championAdditionalData.lore
+        self.spells = championAdditionalData.spells.map {
+            return ChampionSpell(from: $0, version: version)
+        }
     }
 }

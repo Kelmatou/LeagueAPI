@@ -45,6 +45,8 @@
 		978AC5D42130097000C5CCCD /* ItemShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5D32130097000C5CCCD /* ItemShop.swift */; };
 		978AC5D62130138C00C5CCCD /* DataDragonItemBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5D52130138C00C5CCCD /* DataDragonItemBusiness.swift */; };
 		978AC5F021307A8A00C5CCCD /* BuildInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5EF21307A8A00C5CCCD /* BuildInfo.swift */; };
+		978AC5F221307BB300C5CCCD /* ChampionSpell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5F121307BB300C5CCCD /* ChampionSpell.swift */; };
+		978AC5F421307FCC00C5CCCD /* ChampionSpellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5F321307FCC00C5CCCD /* ChampionSpellData.swift */; };
 		97A560782122E32C00A908CD /* RiotAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560772122E32C00A908CD /* RiotAPI.swift */; };
 		97A5607A2122E36C00A908CD /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560792122E36C00A908CD /* APIClient.swift */; };
 		97A5607C2122EFD200A908CD /* DDragonChampionsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A5607B2122EFD200A908CD /* DDragonChampionsFile.swift */; };
@@ -199,6 +201,8 @@
 		978AC5D32130097000C5CCCD /* ItemShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemShop.swift; sourceTree = "<group>"; };
 		978AC5D52130138C00C5CCCD /* DataDragonItemBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDragonItemBusiness.swift; sourceTree = "<group>"; };
 		978AC5EF21307A8A00C5CCCD /* BuildInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildInfo.swift; sourceTree = "<group>"; };
+		978AC5F121307BB300C5CCCD /* ChampionSpell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionSpell.swift; sourceTree = "<group>"; };
+		978AC5F321307FCC00C5CCCD /* ChampionSpellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionSpellData.swift; sourceTree = "<group>"; };
 		97A560772122E32C00A908CD /* RiotAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiotAPI.swift; sourceTree = "<group>"; };
 		97A560792122E36C00A908CD /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		97A5607B2122EFD200A908CD /* DDragonChampionsFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDragonChampionsFile.swift; sourceTree = "<group>"; };
@@ -361,6 +365,8 @@
 				97A56096212381C700A908CD /* ChampionAdditionalDetails.swift */,
 				97A560B421263DD400A908CD /* ChampionAdditionalDetailsData.swift */,
 				97A56094212381B900A908CD /* ChampionDetails.swift */,
+				978AC5F121307BB300C5CCCD /* ChampionSpell.swift */,
+				978AC5F321307FCC00C5CCCD /* ChampionSpellData.swift */,
 				97A560982123822700A908CD /* Skin.swift */,
 				97A560A6212623D000A908CD /* SkinData.swift */,
 				97A560832122FFA800A908CD /* SkinImages.swift */,
@@ -768,6 +774,7 @@
 				978AC5B3212F4ABA00C5CCCD /* SummonerId.swift in Sources */,
 				978AC5BF212F518400C5CCCD /* GameId.swift in Sources */,
 				97D38DC5210CCC6B00150CF9 /* TeamBan.swift in Sources */,
+				978AC5F421307FCC00C5CCCD /* ChampionSpellData.swift in Sources */,
 				978AC5B5212F512500C5CCCD /* AccountId.swift in Sources */,
 				97D38D7F210C69FE00150CF9 /* Champion.swift in Sources */,
 				97D38DCF210CCDFD00150CF9 /* LegacyMastery.swift in Sources */,
@@ -800,6 +807,7 @@
 				97D38D93210C88E800150CF9 /* RankedBusiness.swift in Sources */,
 				978AC5C7212F51BA00C5CCCD /* TournamentCode.swift in Sources */,
 				97D38DC7210CCCA400150CF9 /* MatchParticipantIdentity.swift in Sources */,
+				978AC5F221307BB300C5CCCD /* ChampionSpell.swift in Sources */,
 				97D38DDF210D16C400150CF9 /* ThirdPartyCodeMethod.swift in Sources */,
 				97D38DCD210CCDE200150CF9 /* LegacyRune.swift in Sources */,
 				97D38D95210C9D2100150CF9 /* ServiceStatus.swift in Sources */,

@@ -31,7 +31,7 @@ public class Season {
     
     public convenience init?(_ season: Seasons) {
         guard season != .Unknown else {
-            Logger.error("Cannot create Season object with .Unknown type")
+            Logger.error("Cannot create Season object with .Unknown season")
             return nil
         }
         self.init(season.rawValue)

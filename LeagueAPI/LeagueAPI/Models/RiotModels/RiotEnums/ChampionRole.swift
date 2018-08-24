@@ -24,7 +24,7 @@ public class ChampionRole: Equatable {
     
     public init?(_ role: Role) {
         guard role != .Unknown else {
-            Logger.error("Cannot create ChampionRole object with .Unknown type")
+            Logger.error("Cannot create ChampionRole object with .Unknown role")
             return nil
         }
         self.role = role
