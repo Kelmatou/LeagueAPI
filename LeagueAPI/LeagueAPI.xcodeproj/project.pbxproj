@@ -47,6 +47,8 @@
 		978AC5F021307A8A00C5CCCD /* BuildInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5EF21307A8A00C5CCCD /* BuildInfo.swift */; };
 		978AC5F221307BB300C5CCCD /* ChampionSpell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5F121307BB300C5CCCD /* ChampionSpell.swift */; };
 		978AC5F421307FCC00C5CCCD /* ChampionSpellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5F321307FCC00C5CCCD /* ChampionSpellData.swift */; };
+		978AC5FC2130A32600C5CCCD /* ChampionPassive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5FB2130A32600C5CCCD /* ChampionPassive.swift */; };
+		978AC5FE2130A40400C5CCCD /* ChampionPassiveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5FD2130A40400C5CCCD /* ChampionPassiveData.swift */; };
 		97A560782122E32C00A908CD /* RiotAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560772122E32C00A908CD /* RiotAPI.swift */; };
 		97A5607A2122E36C00A908CD /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560792122E36C00A908CD /* APIClient.swift */; };
 		97A5607C2122EFD200A908CD /* DDragonChampionsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A5607B2122EFD200A908CD /* DDragonChampionsFile.swift */; };
@@ -203,6 +205,8 @@
 		978AC5EF21307A8A00C5CCCD /* BuildInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildInfo.swift; sourceTree = "<group>"; };
 		978AC5F121307BB300C5CCCD /* ChampionSpell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionSpell.swift; sourceTree = "<group>"; };
 		978AC5F321307FCC00C5CCCD /* ChampionSpellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionSpellData.swift; sourceTree = "<group>"; };
+		978AC5FB2130A32600C5CCCD /* ChampionPassive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionPassive.swift; sourceTree = "<group>"; };
+		978AC5FD2130A40400C5CCCD /* ChampionPassiveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionPassiveData.swift; sourceTree = "<group>"; };
 		97A560772122E32C00A908CD /* RiotAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiotAPI.swift; sourceTree = "<group>"; };
 		97A560792122E36C00A908CD /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		97A5607B2122EFD200A908CD /* DDragonChampionsFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDragonChampionsFile.swift; sourceTree = "<group>"; };
@@ -367,6 +371,8 @@
 				97A56094212381B900A908CD /* ChampionDetails.swift */,
 				978AC5F121307BB300C5CCCD /* ChampionSpell.swift */,
 				978AC5F321307FCC00C5CCCD /* ChampionSpellData.swift */,
+				978AC5FB2130A32600C5CCCD /* ChampionPassive.swift */,
+				978AC5FD2130A40400C5CCCD /* ChampionPassiveData.swift */,
 				97A560982123822700A908CD /* Skin.swift */,
 				97A560A6212623D000A908CD /* SkinData.swift */,
 				97A560832122FFA800A908CD /* SkinImages.swift */,
@@ -791,6 +797,7 @@
 				97A560D8212716B700A908CD /* StringExtension.swift in Sources */,
 				97A560A7212623D000A908CD /* SkinData.swift in Sources */,
 				978AC5A5212EEDEA00C5CCCD /* SummonerSpellData.swift in Sources */,
+				978AC5FE2130A40400C5CCCD /* ChampionPassiveData.swift in Sources */,
 				978AC5BD212F517B00C5CCCD /* SummonerSpellId.swift in Sources */,
 				97225C31212891DB001025EB /* QueueMode.swift in Sources */,
 				97A560D62127151900A908CD /* IntExtension.swift in Sources */,
@@ -817,6 +824,7 @@
 				97D38D85210C727300150CF9 /* League.swift in Sources */,
 				97225C352128A2D8001025EB /* Season.swift in Sources */,
 				9736CCD42120EB96008E31A0 /* SpectatorType.swift in Sources */,
+				978AC5FC2130A32600C5CCCD /* ChampionPassive.swift in Sources */,
 				97D38DBF210CCC2100150CF9 /* MatchParticipant.swift in Sources */,
 				97D38D43210A7B4900150CF9 /* Region.swift in Sources */,
 				97225C3321289928001025EB /* Place.swift in Sources */,
