@@ -18,7 +18,7 @@ open class Logger {
     }
     
     public internal(set) static var channels: [Channel : Bool] = [
-        .Debug: true,
+        .Debug: BuildInfo.isDebug,
         .Info : true,
         .Warning : true,
         .Error : true

@@ -44,6 +44,7 @@
 		978AC5D22130009800C5CCCD /* ItemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5D12130009800C5CCCD /* ItemData.swift */; };
 		978AC5D42130097000C5CCCD /* ItemShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5D32130097000C5CCCD /* ItemShop.swift */; };
 		978AC5D62130138C00C5CCCD /* DataDragonItemBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5D52130138C00C5CCCD /* DataDragonItemBusiness.swift */; };
+		978AC5F021307A8A00C5CCCD /* BuildInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5EF21307A8A00C5CCCD /* BuildInfo.swift */; };
 		97A560782122E32C00A908CD /* RiotAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560772122E32C00A908CD /* RiotAPI.swift */; };
 		97A5607A2122E36C00A908CD /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560792122E36C00A908CD /* APIClient.swift */; };
 		97A5607C2122EFD200A908CD /* DDragonChampionsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A5607B2122EFD200A908CD /* DDragonChampionsFile.swift */; };
@@ -197,6 +198,7 @@
 		978AC5D12130009800C5CCCD /* ItemData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemData.swift; sourceTree = "<group>"; };
 		978AC5D32130097000C5CCCD /* ItemShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemShop.swift; sourceTree = "<group>"; };
 		978AC5D52130138C00C5CCCD /* DataDragonItemBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDragonItemBusiness.swift; sourceTree = "<group>"; };
+		978AC5EF21307A8A00C5CCCD /* BuildInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildInfo.swift; sourceTree = "<group>"; };
 		97A560772122E32C00A908CD /* RiotAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiotAPI.swift; sourceTree = "<group>"; };
 		97A560792122E36C00A908CD /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		97A5607B2122EFD200A908CD /* DDragonChampionsFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDragonChampionsFile.swift; sourceTree = "<group>"; };
@@ -470,6 +472,7 @@
 				97A560D52127151900A908CD /* IntExtension.swift */,
 				97A560D7212716B700A908CD /* StringExtension.swift */,
 				97225C21212850D2001025EB /* Duration.swift */,
+				978AC5EF21307A8A00C5CCCD /* BuildInfo.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -800,6 +803,7 @@
 				97D38DDF210D16C400150CF9 /* ThirdPartyCodeMethod.swift in Sources */,
 				97D38DCD210CCDE200150CF9 /* LegacyRune.swift in Sources */,
 				97D38D95210C9D2100150CF9 /* ServiceStatus.swift in Sources */,
+				978AC5F021307A8A00C5CCCD /* BuildInfo.swift in Sources */,
 				978AC5A7212EEE0300C5CCCD /* SummonerSpell.swift in Sources */,
 				97D38DB7210CC2FE00150CF9 /* SpectatorBusiness.swift in Sources */,
 				97D38D85210C727300150CF9 /* League.swift in Sources */,
