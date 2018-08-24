@@ -14,6 +14,7 @@ internal class ItemData: Decodable {
     public var presentation: String
     public var description: String
     public var shop: ItemShop
+    public var composedByItemIds: [ItemId]
     public var evolutionItemIds: [ItemId]
     public var tags: [String]
     public var availableMaps: [Map]
@@ -23,16 +24,18 @@ internal class ItemData: Decodable {
         case presentation = "plaintext"
         case description = "description"
         case shop = "gold"
+        case composedByItemIds = "from"
         case evolutionItemIds = "into"
         case tags = "tags"
         case availableMaps = "maps"
     }
     
-    public init(name: String, presentation: String, description: String, shop: ItemShop, evolutionItemIds: [ItemId], tags: [String], availableMaps: [Map]) {
+    public init(name: String, presentation: String, description: String, shop: ItemShop, composedByItemIds: [ItemId], evolutionItemIds: [ItemId], tags: [String], availableMaps: [Map]) {
         self.name = name
         self.presentation = presentation
         self.description = description
         self.shop = shop
+        self.composedByItemIds = composedByItemIds
         self.evolutionItemIds = evolutionItemIds
         self.tags = tags
         self.availableMaps = availableMaps
@@ -44,10 +47,18 @@ internal class ItemData: Decodable {
         self.presentation = try container.decode(String.self, forKey: .presentation)
         self.description = try container.decode(String.self, forKey: .description)
         self.shop = try container.decode(ItemShop.self, forKey: .shop)
-        let evolutionItemIdsInt: [Int] = try container.decode([Int].self, forKey: .evolutionItemIds)
-        self.evolutionItemIds = evolutionItemIdsInt.map { ItemId($0) }
+        let composedByItemIdsInt: [String]? = try? container.decode([String].self, forKey: .composedByItemIds)
+        self.composedByItemIds = composedByItemIdsInt?.map { ItemId(Int($0)!) } ?? []
+        let evolutionItemIdsInt: [String]? = try? container.decode([String].self, forKey: .evolutionItemIds)
+        self.evolutionItemIds = evolutionItemIdsInt?.map { ItemId(Int($0)!) } ?? []
         self.tags = try container.decode([String].self, forKey: .tags)
-        let availableMapIds: [Long] = try container.decode([Long].self, forKey: .availableMaps)
-        self.availableMaps = availableMapIds.map( { Map($0) } )
+        let availableMapIds: [String : Bool] = try container.decode([String : Bool].self, forKey: .availableMaps)
+        self.availableMaps = availableMapIds.filter { dictionary in
+            let (_, value) = dictionary
+            return value
+        }.map { dictionary in
+            let (key, _) = dictionary
+            return Map(Long(key)!)
+        }
     }
 }

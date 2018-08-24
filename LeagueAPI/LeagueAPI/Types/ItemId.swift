@@ -8,4 +8,9 @@
 
 import Foundation
 
-public class ItemId: Identifier<Int> {}
+public class ItemId: Identifier<Int> {
+    
+    public static var NoItemId: ItemId {
+        return ItemId(0)
+    }
+}

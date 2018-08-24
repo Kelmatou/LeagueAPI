@@ -20,7 +20,11 @@ public class Identifier<T: Codable & Equatable>: Equatable, CustomStringConverti
         self.value = value
     }
     
-    public static func == (lhs: Identifier<T>, rhs: Identifier<T>) -> Bool {
+    public static func ==(lhs: Identifier<T>, rhs: Identifier<T>) -> Bool {
         return lhs.value == rhs.value
+    }
+    
+    public static func ==(lhs: Identifier<T>, rhs: T) -> Bool {
+        return lhs.value == rhs
     }
 }
