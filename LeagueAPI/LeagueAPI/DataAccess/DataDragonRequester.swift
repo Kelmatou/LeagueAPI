@@ -23,6 +23,7 @@ internal class DataDragonRequester {
     private var championAdditionalDetails: [String : DDragonChampionFile?] = [:]
     private var profileIconFile: DDragonProfileIconsFile?
     private var summonerSpellsFile: DDragonSummonerSpellsFile?
+    private var itemsFile: DDragonItemsFile?
     
     // MARK: - Methods
     
@@ -102,6 +103,22 @@ internal class DataDragonRequester {
                 RESTRequester().requestObject(.GET, url: summonerSpellsUrl, asType: DDragonSummonerSpellsFile.self) { (summonerSpellsFile, _, _, error) in
                     self.summonerSpellsFile = summonerSpellsFile
                     completion(summonerSpellsFile, error)
+                }
+            }
+        }
+    }
+    
+    public func getItems(completion: @escaping (DDragonItemsFile?, String?) -> Void) {
+        if let itemsFile = self.itemsFile {
+            completion(itemsFile, nil)
+        }
+        else {
+            getDataVersions() { (versions, error) in
+                guard let versions = versions else { completion(nil, error); return }
+                let itemsUrl: String = "\(ServicesUrl.DDragonCdn)/\(versions.item)/data/en_US/item.json"
+                RESTRequester().requestObject(.GET, url: itemsUrl, asType: DDragonItemsFile.self) { (itemsFile, _, _, error) in
+                    self.itemsFile = itemsFile
+                    completion(itemsFile, error)
                 }
             }
         }
