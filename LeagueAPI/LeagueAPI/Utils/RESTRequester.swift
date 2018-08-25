@@ -34,7 +34,8 @@ internal class RESTRequester {
      - parameter handler: allows the user to make actions just after request ended (Data, ResponseCode, Headers, String)
      */
     public func request(_ method: AccessMethod, url: String, headers: [String : String]? = nil, body: Data? = nil, handler: @escaping (Data?, HttpResponseCode, Headers?, String?) -> Void) {
-        if let uri = URL(string: url) {
+        let urlPercentEncoding: String? = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        if let urlPercentEncoding = urlPercentEncoding, let uri = URL(string: urlPercentEncoding) {
             var request: URLRequest = URLRequest(url: uri)
             request.httpMethod = method.rawValue
             request.httpBody = body
