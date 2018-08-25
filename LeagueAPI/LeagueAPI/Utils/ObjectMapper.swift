@@ -23,17 +23,21 @@ internal class ObjectMapper {
                 let dataJson: T = try JSONDecoder().decode(T.self, from: data)
                 return (dataJson, nil)
             }
-            catch DecodingError.dataCorrupted {
-                errorReason = "data received was not json format"
-            }
-            catch DecodingError.keyNotFound(let key, _) {
-                errorReason = "key \"\(key.stringValue)\" was not found"
+            catch DecodingError.keyNotFound(let key, let context) {
+                let keyPath: String = getJsonPath(from: context.codingPath)
+                errorReason = "key \"\(key.stringValue)\" was not found in \(keyPath)"
             }
             catch DecodingError.valueNotFound(let valueType, let context) {
-                errorReason = "A \(valueType) was expected for key \"\(context.codingPath.last?.stringValue ?? "(no key)")\", but no value was associated"
+                let keyPath: String = getJsonPath(from: context.codingPath)
+                errorReason = "A \(valueType) was expected for key \"\(context.codingPath.last?.stringValue ?? "(no key)")\", but no value was associated. Full path: \(keyPath)"
             }
             catch DecodingError.typeMismatch(let typeExcepted, let context) {
-                errorReason = "A \(typeExcepted) was expected for key \"\(context.codingPath.last?.stringValue ?? "(no key)")\""
+                let keyPath: String = getJsonPath(from: context.codingPath)
+                errorReason = "A \(typeExcepted) was expected for key \"\(context.codingPath.last?.stringValue ?? "(no key)")\". Full path \(keyPath)"
+            }
+            catch DecodingError.dataCorrupted(let context) {
+                let keyPath: String = getJsonPath(from: context.codingPath)
+                errorReason = "\(context.debugDescription) for path \(keyPath)"
             }
             catch {
             }
@@ -53,5 +57,16 @@ internal class ObjectMapper {
             Logger.error("Failed to encode an object")
             return nil
         }
+    }
+    
+    private static func getJsonPath(from keys: [CodingKey]) -> String {
+        var result: String = ""
+        for key in keys {
+            if !result.isEmpty {
+                result += "->"
+            }
+            result += key.stringValue
+        }
+        return result
     }
 }

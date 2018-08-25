@@ -16,6 +16,8 @@ internal class DataDragonRequester {
     
     private init() {}
     
+    private let AcceptCharsetUtf8: [String : String] = ["Accept-Charset" : "utf-8"]
+    
     // MARK: - Cache
     
     private var versions: DDragonVersions?
@@ -37,7 +39,7 @@ internal class DataDragonRequester {
         }
         else {
             let versionUrl: String = "\(ServicesUrl.DDragonUrl)/realms/na.json"
-            RESTRequester().requestObject(.GET, url: versionUrl, asType: DDragonVersions.self) { (versions, _, _, error) in
+            RESTRequester().requestObject(.GET, url: versionUrl, headers: AcceptCharsetUtf8, asType: DDragonVersions.self) { (versions, _, _, error) in
                 self.versions = versions
                 completion(versions, error)
             }
@@ -52,7 +54,7 @@ internal class DataDragonRequester {
             getDataVersions() { (versions, error) in
                 guard let versions = versions else { completion(nil, error); return }
                 let championsUrl: String = "\(ServicesUrl.DDragonCdn)/\(versions.champion)/data/en_US/champion.json"
-                RESTRequester().requestObject(.GET, url: championsUrl, asType: DDragonChampionsFile.self) { (championsDetails, _, _, error) in
+                RESTRequester().requestObject(.GET, url: championsUrl, headers: self.AcceptCharsetUtf8, asType: DDragonChampionsFile.self) { (championsDetails, _, _, error) in
                     self.championsDetails = championsDetails
                     completion(championsDetails, error)
                 }
@@ -68,7 +70,7 @@ internal class DataDragonRequester {
             getDataVersions() { (versions, error) in
                 guard let versions = versions else { completion(nil, error); return }
                 let championUrl: String = "\(ServicesUrl.DDragonCdn)/\(versions.champion)/data/en_US/champion/\(name).json"
-                RESTRequester().requestObject(.GET, url: championUrl, asType: DDragonChampionFile.self) { (championDetails, _, _, error) in
+                RESTRequester().requestObject(.GET, url: championUrl, headers: self.AcceptCharsetUtf8, asType: DDragonChampionFile.self) { (championDetails, _, _, error) in
                     self.championAdditionalDetails[name.lowercased()] = championDetails
                     completion(championDetails, error)
                 }
@@ -84,7 +86,7 @@ internal class DataDragonRequester {
             getDataVersions() { (versions, error) in
                 guard let versions = versions else { completion(nil, error); return }
                 let profileIconsUrl: String = "\(ServicesUrl.DDragonCdn)/\(versions.profileIcon)/data/en_US/profileicon.json"
-                RESTRequester().requestObject(.GET, url: profileIconsUrl, asType: DDragonProfileIconsFile.self) { (profileIconFile, _, _, error) in
+                RESTRequester().requestObject(.GET, url: profileIconsUrl, headers: self.AcceptCharsetUtf8, asType: DDragonProfileIconsFile.self) { (profileIconFile, _, _, error) in
                     self.profileIconFile = profileIconFile
                     completion(profileIconFile, error)
                 }
@@ -100,7 +102,7 @@ internal class DataDragonRequester {
             getDataVersions() { (versions, error) in
                 guard let versions = versions else { completion(nil, error); return }
                 let summonerSpellsUrl: String = "\(ServicesUrl.DDragonCdn)/\(versions.summoner)/data/en_US/summoner.json"
-                RESTRequester().requestObject(.GET, url: summonerSpellsUrl, asType: DDragonSummonerSpellsFile.self) { (summonerSpellsFile, _, _, error) in
+                RESTRequester().requestObject(.GET, url: summonerSpellsUrl, headers: self.AcceptCharsetUtf8, asType: DDragonSummonerSpellsFile.self) { (summonerSpellsFile, _, _, error) in
                     self.summonerSpellsFile = summonerSpellsFile
                     completion(summonerSpellsFile, error)
                 }
@@ -116,7 +118,7 @@ internal class DataDragonRequester {
             getDataVersions() { (versions, error) in
                 guard let versions = versions else { completion(nil, error); return }
                 let itemsUrl: String = "\(ServicesUrl.DDragonCdn)/\(versions.item)/data/en_US/item.json"
-                RESTRequester().requestObject(.GET, url: itemsUrl, asType: DDragonItemsFile.self) { (itemsFile, _, _, error) in
+                RESTRequester().requestObject(.GET, url: itemsUrl, headers: self.AcceptCharsetUtf8, asType: DDragonItemsFile.self) { (itemsFile, _, _, error) in
                     self.itemsFile = itemsFile
                     completion(itemsFile, error)
                 }
