@@ -19,12 +19,18 @@ internal class DataDragonSummonerSpellBusiness {
     public static func getSummonerSpell(by id: SummonerSpellId, completion: @escaping (SummonerSpell?, String?) -> Void) {
         getSummonerSpells() { (summonerSpells, error) in
             if let summonerSpells = summonerSpells {
-                if let summonerSpell = summonerSpells.first(where: { $0.id == id }) {
-                    completion(summonerSpell, nil)
-                }
-                else {
-                    completion(nil, "Summoner spell with id=\(id) not found.")
-                }
+                summonerSpells.firstMatch(where: { $0.id == id }, notFoundMessage: "Summoner spell with id=\(id) not found.", completion: completion)
+            }
+            else {
+                completion(nil, error)
+            }
+        }
+    }
+    
+    public static func getSummonerSpell(byName name: String, completion: @escaping (SummonerSpell?, String?) -> Void) {
+        getSummonerSpells() { (summonerSpells, error) in
+            if let summonerSpells = summonerSpells {
+                summonerSpells.firstMatch(where: { $0.name.equals(name) || $0.nameId.equals(name) }, notFoundMessage: "Summoner spell with name=\(name) not found.", completion: completion)
             }
             else {
                 completion(nil, error)

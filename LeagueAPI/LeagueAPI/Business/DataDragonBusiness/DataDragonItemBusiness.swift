@@ -23,12 +23,7 @@ internal class DataDragonItemBusiness {
         else {
             getItems() { (items, error) in
                 if let items = items {
-                    if let item = items.first(where: { $0.id == id }) {
-                        completion(item, nil)
-                    }
-                    else {
-                        completion(nil, "Item with id=\(id) not found.")
-                    }
+                    items.firstMatch(where: { $0.id == id }, notFoundMessage: "Item with id=\(id) not found.", completion: completion)
                 }
                 else {
                     completion(nil, error)
@@ -40,12 +35,7 @@ internal class DataDragonItemBusiness {
     public static func getItem(byName name: String, completion: @escaping (Item?, String?) -> Void) {
         getItems() { (items, error) in
             if let items = items {
-                if let item = items.first(where: { $0.name.lowercased() == name.lowercased() }) {
-                    completion(item, nil)
-                }
-                else {
-                    completion(nil, "Item with name=\(name) not found.")
-                }
+                items.firstMatch(where: { $0.name.equals(name) }, notFoundMessage: "Item with name=\(name) not found.", completion: completion)
             }
             else {
                 completion(nil, error)
@@ -56,7 +46,7 @@ internal class DataDragonItemBusiness {
     public static func getItems(byTag tag: String, completion: @escaping ([Item]?, String?) -> Void) {
         getItems() { (items, error) in
             if let items = items {
-                completion(items.filter { $0.tags.contains(where: { $0.lowercased() == tag.lowercased() }) }, error)
+                completion(items.filter { $0.tags.contains(where: { $0.equals(tag) }) }, error)
             }
             else {
                 completion(nil, error)

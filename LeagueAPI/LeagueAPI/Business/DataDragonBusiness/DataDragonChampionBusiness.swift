@@ -22,7 +22,7 @@ internal class DataDragonChampionBusiness {
     public static func getChampionDetails(byName name: String, completion: @escaping (ChampionDetails?, String?) -> Void) {
         let filterFunction: ((String, ChampionsDetails)) -> Bool = { (keyValue) -> Bool in
             let (_, value) = keyValue
-            return value.name.lowercased() == name.lowercased() || value.championIdName.lowercased() == name.lowercased()
+            return value.name.equals(name) || value.championIdName.equals(name)
         }
         let filterEqualValue: String = "name=\(name)"
         getChampionDetails(filterFunction: filterFunction, filterEqualValue: filterEqualValue, completion: completion)

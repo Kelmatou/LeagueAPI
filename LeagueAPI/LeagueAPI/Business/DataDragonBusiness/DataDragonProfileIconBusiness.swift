@@ -19,12 +19,7 @@ internal class DataDragonProfileIconBusiness {
     public static func getProfileIcon(by id: ProfileIconId, completion: @escaping (ProfileIcon?, String?) -> Void) {
         DataDragonRequester.instance.getProfileIcons() { (profileIconFile, error) in
             if let profileIconFile = profileIconFile {
-                if let profileIcon = profileIconFile.profileIcons.first(where: { $0.id == id }) {
-                    completion(profileIcon, nil)
-                }
-                else {
-                    completion(nil, "Profile icon with id=\(id) not found.")
-                }
+                profileIconFile.profileIcons.firstMatch(where: { $0.id == id }, notFoundMessage: "Profile icon with id=\(id) not found.", completion: completion)
             }
             else {
                 completion(nil, error)

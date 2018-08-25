@@ -69,6 +69,10 @@ public class LeagueAPI: APIClient {
         DataDragonSummonerSpellBusiness.getSummonerSpell(by: id, completion: handler)
     }
     
+    public func getSummonerSpell(byName name: String, handler: @escaping (SummonerSpell?, String?) -> Void) {
+        DataDragonSummonerSpellBusiness.getSummonerSpell(byName: name, completion: handler)
+    }
+    
     // MARK: - Item
     
     public func getItems(handler: @escaping ([Item]?, String?) -> Void) {

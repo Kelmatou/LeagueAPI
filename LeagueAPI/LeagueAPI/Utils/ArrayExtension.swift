@@ -16,7 +16,7 @@ public extension Array {
         }
     }
     
-    public func firstMatch(filterFunction: (Element) -> Bool, notFoundMessage: String? = nil, completion: @escaping (Element?, String?) -> Void) {
+    public func firstMatch(where filterFunction: (Element) -> Bool, notFoundMessage: String? = nil, completion: @escaping (Element?, String?) -> Void) {
         if let match = self.first(where: filterFunction) {
             completion(match, nil)
         }
