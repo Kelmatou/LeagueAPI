@@ -22,12 +22,14 @@ public class ChampionDetails {
     public var ressourceType: RessourceType
     public var stats: ChampionStats
     public var difficulties: ChampionDifficulties
+    public var allyTips: [String]
+    public var enemyTips: [String]
     
     public var images: SkinImages? {
         return skins.first?.skinImages
     }
     
-    public init(championId: ChampionId, name: String, title: String, skins: [Skin], spells: [ChampionSpell], passive: ChampionPassive, presentationText: String, lore: String, roles: [ChampionRole], ressourceType: RessourceType, stats: ChampionStats, difficulties: ChampionDifficulties) {
+    public init(championId: ChampionId, name: String, title: String, skins: [Skin], spells: [ChampionSpell], passive: ChampionPassive, presentationText: String, lore: String, roles: [ChampionRole], ressourceType: RessourceType, stats: ChampionStats, difficulties: ChampionDifficulties, allyTips: [String], enemyTips: [String]) {
         self.championId = championId
         self.name = name
         self.title = title
@@ -40,6 +42,8 @@ public class ChampionDetails {
         self.ressourceType = ressourceType
         self.stats = stats
         self.difficulties = difficulties
+        self.allyTips = allyTips
+        self.enemyTips = enemyTips
     }
     
     internal init(details: ChampionsDetails, additionalDetails: ChampionAdditionalDetails) {
@@ -55,5 +59,7 @@ public class ChampionDetails {
         self.ressourceType = details.ressourceType
         self.stats = details.stats
         self.difficulties = details.difficulties
+        self.allyTips = additionalDetails.allyTips
+        self.enemyTips = additionalDetails.enemyTips
     }
 }

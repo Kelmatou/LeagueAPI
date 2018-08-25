@@ -46,8 +46,8 @@ internal class ChampionSpellData: Decodable {
         self.id = try container.decode(String.self, forKey: .id)
         self.name = try container.decode(String.self, forKey: .name)
         self.description = try container.decode(String.self, forKey: .description)
-        let cooldownValues: [Int] = try container.decode([Int].self, forKey: .cooldowns)
-        self.cooldowns = cooldownValues.map { Duration(seconds: Double($0)) }
+        let cooldownValues: [Double] = try container.decode([Double].self, forKey: .cooldowns)
+        self.cooldowns = cooldownValues.map { Duration(seconds: $0) }
         self.costs = try container.decode([Int].self, forKey: .costs)
         self.costType = try container.decode(String.self, forKey: .costType)
         self.ranges = try container.decode([Int].self, forKey: .ranges)
