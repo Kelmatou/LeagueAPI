@@ -10,7 +10,7 @@ import Foundation
 
 public class RunePath: Decodable {
     
-    public var id: RuneId
+    public var id: RunePathId
     public var nameId: String
     public var name: String
     public var image: ImageWithUrl
@@ -24,7 +24,7 @@ public class RunePath: Decodable {
         case runeStages = "slots"
     }
     
-    public init(id: RuneId, nameId: String, name: String, image: ImageWithUrl, runeStages: [RuneStage]) {
+    public init(id: RunePathId, nameId: String, name: String, image: ImageWithUrl, runeStages: [RuneStage]) {
         self.id = id
         self.nameId = nameId
         self.name = name
@@ -34,7 +34,7 @@ public class RunePath: Decodable {
     
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try RuneId(container.decode(Int.self, forKey: .id))
+        self.id = try RunePathId(container.decode(Long.self, forKey: .id))
         self.nameId = try container.decode(String.self, forKey: .nameId)
         self.name = try container.decode(String.self, forKey: .name)
         let pathToIcon: String = try container.decode(String.self, forKey: .image)

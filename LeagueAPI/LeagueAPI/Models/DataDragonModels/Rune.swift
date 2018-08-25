@@ -37,7 +37,7 @@ public class Rune: Decodable {
     
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try RuneId(container.decode(Int.self, forKey: .id))
+        self.id = try RuneId(container.decode(Long.self, forKey: .id))
         self.nameId = try container.decode(String.self, forKey: .nameId)
         self.name = try container.decode(String.self, forKey: .name)
         let pathToIcon: String = try container.decode(String.self, forKey: .image)

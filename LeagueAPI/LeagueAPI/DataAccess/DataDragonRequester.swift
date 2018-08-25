@@ -127,7 +127,7 @@ internal class DataDragonRequester {
         }
     }
     
-    public func getRunes(completion: @escaping ([RunePath]?, String?) -> Void) {
+    public func getRunePaths(completion: @escaping ([RunePath]?, String?) -> Void) {
         if let runePaths = self.runePaths {
             completion(runePaths, nil)
         }
@@ -135,8 +135,8 @@ internal class DataDragonRequester {
             getDataVersions() { (versions, error) in
                 guard let versions = versions else { completion(nil, error); return }
                 // Riot does not expose rune reforged version so we take language which is usually the last version
-                let itemsUrl: String = "\(ServicesUrl.DDragonCdn)/\(versions.language)/data/en_US/runesReforged.json"
-                RESTRequester().requestObject(.GET, url: itemsUrl, headers: self.AcceptCharsetUtf8, asType: [RunePath].self) { (runePaths, _, _, error) in
+                let runePathsUrl: String = "\(ServicesUrl.DDragonCdn)/\(versions.language)/data/en_US/runesReforged.json"
+                RESTRequester().requestObject(.GET, url: runePathsUrl, headers: self.AcceptCharsetUtf8, asType: [RunePath].self) { (runePaths, _, _, error) in
                     self.runePaths = runePaths
                     completion(runePaths, error)
                 }

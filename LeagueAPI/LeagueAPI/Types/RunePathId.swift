@@ -7,3 +7,5 @@
 //
 
 import Foundation
+
+public class RunePathId: Identifier<Long> {}

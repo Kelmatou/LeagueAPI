@@ -46,4 +46,8 @@ internal extension String {
         let substring: Substring = self[range]
         return String(substring)
     }
+    
+    internal func equals(_ str: String) -> Bool {
+        return self.lowercased() == str.lowercased()
+    }
 }

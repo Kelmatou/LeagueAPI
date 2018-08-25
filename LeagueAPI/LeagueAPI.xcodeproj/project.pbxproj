@@ -53,6 +53,9 @@
 		978AC61C2131671100C5CCCD /* RuneId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC61B2131671100C5CCCD /* RuneId.swift */; };
 		978AC61E213168FB00C5CCCD /* RunePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC61D213168FB00C5CCCD /* RunePath.swift */; };
 		978AC6202131696000C5CCCD /* RuneStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC61F2131696000C5CCCD /* RuneStage.swift */; };
+		978AC62221316C9E00C5CCCD /* DataDragonRuneBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC62121316C9E00C5CCCD /* DataDragonRuneBusiness.swift */; };
+		978AC62421316EF000C5CCCD /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC62321316EF000C5CCCD /* ArrayExtension.swift */; };
+		978AC62C2131ED1D00C5CCCD /* RunePathId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC62B2131ED1D00C5CCCD /* RunePathId.swift */; };
 		97A560782122E32C00A908CD /* RiotAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560772122E32C00A908CD /* RiotAPI.swift */; };
 		97A5607A2122E36C00A908CD /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560792122E36C00A908CD /* APIClient.swift */; };
 		97A5607C2122EFD200A908CD /* DDragonChampionsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A5607B2122EFD200A908CD /* DDragonChampionsFile.swift */; };
@@ -215,6 +218,9 @@
 		978AC61B2131671100C5CCCD /* RuneId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuneId.swift; sourceTree = "<group>"; };
 		978AC61D213168FB00C5CCCD /* RunePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunePath.swift; sourceTree = "<group>"; };
 		978AC61F2131696000C5CCCD /* RuneStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuneStage.swift; sourceTree = "<group>"; };
+		978AC62121316C9E00C5CCCD /* DataDragonRuneBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDragonRuneBusiness.swift; sourceTree = "<group>"; };
+		978AC62321316EF000C5CCCD /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		978AC62B2131ED1D00C5CCCD /* RunePathId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunePathId.swift; sourceTree = "<group>"; };
 		97A560772122E32C00A908CD /* RiotAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiotAPI.swift; sourceTree = "<group>"; };
 		97A560792122E36C00A908CD /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		97A5607B2122EFD200A908CD /* DDragonChampionsFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDragonChampionsFile.swift; sourceTree = "<group>"; };
@@ -426,6 +432,7 @@
 				97A560C42127070200A908CD /* DataDragonProfileIconBusiness.swift */,
 				978AC5A8212F020B00C5CCCD /* DataDragonSummonerSpellBusiness.swift */,
 				978AC5D52130138C00C5CCCD /* DataDragonItemBusiness.swift */,
+				978AC62121316C9E00C5CCCD /* DataDragonRuneBusiness.swift */,
 			);
 			path = DataDragonBusiness;
 			sourceTree = "<group>";
@@ -494,6 +501,7 @@
 				97A5608721232DED00A908CD /* ImageWithUrl.swift */,
 				97A560D52127151900A908CD /* IntExtension.swift */,
 				97A560D7212716B700A908CD /* StringExtension.swift */,
+				978AC62321316EF000C5CCCD /* ArrayExtension.swift */,
 				97225C21212850D2001025EB /* Duration.swift */,
 				978AC5EF21307A8A00C5CCCD /* BuildInfo.swift */,
 			);
@@ -612,6 +620,7 @@
 				978AC5BA212F515B00C5CCCD /* ProfileIconId.swift */,
 				978AC5BC212F517B00C5CCCD /* SummonerSpellId.swift */,
 				978AC5CB212FFC0400C5CCCD /* ItemId.swift */,
+				978AC62B2131ED1D00C5CCCD /* RunePathId.swift */,
 				978AC61B2131671100C5CCCD /* RuneId.swift */,
 				978AC5BE212F518400C5CCCD /* GameId.swift */,
 				978AC5C0212F518B00C5CCCD /* ProviderId.swift */,
@@ -808,6 +817,7 @@
 				97691807211359D100F8AF3B /* RawRequester.swift in Sources */,
 				97225C2F212865E1001025EB /* Map.swift in Sources */,
 				978AC5CC212FFC0400C5CCCD /* ItemId.swift in Sources */,
+				978AC62421316EF000C5CCCD /* ArrayExtension.swift in Sources */,
 				97A560D8212716B700A908CD /* StringExtension.swift in Sources */,
 				97A560A7212623D000A908CD /* SkinData.swift in Sources */,
 				978AC5A5212EEDEA00C5CCCD /* SummonerSpellData.swift in Sources */,
@@ -816,6 +826,7 @@
 				97225C31212891DB001025EB /* QueueMode.swift in Sources */,
 				97A560D62127151900A908CD /* IntExtension.swift in Sources */,
 				97D38DEC210DFEEC00150CF9 /* TournamentInfo.swift in Sources */,
+				978AC62221316C9E00C5CCCD /* DataDragonRuneBusiness.swift in Sources */,
 				9736CCD22120E172008E31A0 /* Endpoint.swift in Sources */,
 				978AC5B1212F47E400C5CCCD /* Identifier.swift in Sources */,
 				97D38DE5210DFCB100150CF9 /* TournamentEventList.swift in Sources */,
@@ -826,6 +837,7 @@
 				9736CCD92120F037008E31A0 /* MapType.swift in Sources */,
 				97D38D91210C85AC00150CF9 /* RankedMethod.swift in Sources */,
 				97D38D93210C88E800150CF9 /* RankedBusiness.swift in Sources */,
+				978AC62C2131ED1D00C5CCCD /* RunePathId.swift in Sources */,
 				978AC5C7212F51BA00C5CCCD /* TournamentCode.swift in Sources */,
 				97D38DC7210CCCA400150CF9 /* MatchParticipantIdentity.swift in Sources */,
 				978AC5F221307BB300C5CCCD /* ChampionSpell.swift in Sources */,

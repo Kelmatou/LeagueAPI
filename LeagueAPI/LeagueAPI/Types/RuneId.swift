@@ -8,4 +8,4 @@
 
 import Foundation
 
-public class RuneId: Identifier<Int> {}
+public class RuneId: Identifier<Long> {}

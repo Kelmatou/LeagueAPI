@@ -86,4 +86,30 @@ public class LeagueAPI: APIClient {
     public func getItems(byTag tag: String, handler: @escaping ([Item]?, String?) -> Void) {
         DataDragonItemBusiness.getItems(byTag: tag, completion: handler)
     }
+    
+    // MARK: - Rune
+    
+    public func getRunePaths(handler: @escaping ([RunePath]?, String?) -> Void) {
+        DataDragonRuneBusiness.getRunePaths(completion: handler)
+    }
+    
+    public func getRunePath(by id: RunePathId, handler: @escaping (RunePath?, String?) -> Void) {
+        DataDragonRuneBusiness.getRunePath(by: id, completion: handler)
+    }
+    
+    public func getRunePath(byName name: String, handler: @escaping (RunePath?, String?) -> Void) {
+        DataDragonRuneBusiness.getRunePath(byName: name, completion: handler)
+    }
+    
+    public func getRunes(forPathId pathId: RunePathId? = nil, handler: @escaping ([Rune]?, String?) -> Void) {
+        DataDragonRuneBusiness.getRunes(forPathId: pathId, completion: handler)
+    }
+    
+    public func getRune(by id: RuneId, handler: @escaping (Rune?, String?) -> Void) {
+        DataDragonRuneBusiness.getRune(by: id, completion: handler)
+    }
+    
+    public func getRune(byName name: String, handler: @escaping (Rune?, String?) -> Void) {
+        DataDragonRuneBusiness.getRune(byName: name, completion: handler)
+    }
 }
