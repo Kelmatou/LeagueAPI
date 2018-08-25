@@ -49,6 +49,10 @@
 		978AC5F421307FCC00C5CCCD /* ChampionSpellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5F321307FCC00C5CCCD /* ChampionSpellData.swift */; };
 		978AC5FC2130A32600C5CCCD /* ChampionPassive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5FB2130A32600C5CCCD /* ChampionPassive.swift */; };
 		978AC5FE2130A40400C5CCCD /* ChampionPassiveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC5FD2130A40400C5CCCD /* ChampionPassiveData.swift */; };
+		978AC61A2131635200C5CCCD /* Rune.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC6192131635200C5CCCD /* Rune.swift */; };
+		978AC61C2131671100C5CCCD /* RuneId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC61B2131671100C5CCCD /* RuneId.swift */; };
+		978AC61E213168FB00C5CCCD /* RunePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC61D213168FB00C5CCCD /* RunePath.swift */; };
+		978AC6202131696000C5CCCD /* RuneStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC61F2131696000C5CCCD /* RuneStage.swift */; };
 		97A560782122E32C00A908CD /* RiotAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560772122E32C00A908CD /* RiotAPI.swift */; };
 		97A5607A2122E36C00A908CD /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560792122E36C00A908CD /* APIClient.swift */; };
 		97A5607C2122EFD200A908CD /* DDragonChampionsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A5607B2122EFD200A908CD /* DDragonChampionsFile.swift */; };
@@ -207,6 +211,10 @@
 		978AC5F321307FCC00C5CCCD /* ChampionSpellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionSpellData.swift; sourceTree = "<group>"; };
 		978AC5FB2130A32600C5CCCD /* ChampionPassive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionPassive.swift; sourceTree = "<group>"; };
 		978AC5FD2130A40400C5CCCD /* ChampionPassiveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionPassiveData.swift; sourceTree = "<group>"; };
+		978AC6192131635200C5CCCD /* Rune.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rune.swift; sourceTree = "<group>"; };
+		978AC61B2131671100C5CCCD /* RuneId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuneId.swift; sourceTree = "<group>"; };
+		978AC61D213168FB00C5CCCD /* RunePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunePath.swift; sourceTree = "<group>"; };
+		978AC61F2131696000C5CCCD /* RuneStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuneStage.swift; sourceTree = "<group>"; };
 		97A560772122E32C00A908CD /* RiotAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiotAPI.swift; sourceTree = "<group>"; };
 		97A560792122E36C00A908CD /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		97A5607B2122EFD200A908CD /* DDragonChampionsFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDragonChampionsFile.swift; sourceTree = "<group>"; };
@@ -386,6 +394,9 @@
 				978AC5CF2130008E00C5CCCD /* Item.swift */,
 				978AC5D12130009800C5CCCD /* ItemData.swift */,
 				978AC5D32130097000C5CCCD /* ItemShop.swift */,
+				978AC61D213168FB00C5CCCD /* RunePath.swift */,
+				978AC61F2131696000C5CCCD /* RuneStage.swift */,
+				978AC6192131635200C5CCCD /* Rune.swift */,
 			);
 			path = DataDragonModels;
 			sourceTree = "<group>";
@@ -601,6 +612,7 @@
 				978AC5BA212F515B00C5CCCD /* ProfileIconId.swift */,
 				978AC5BC212F517B00C5CCCD /* SummonerSpellId.swift */,
 				978AC5CB212FFC0400C5CCCD /* ItemId.swift */,
+				978AC61B2131671100C5CCCD /* RuneId.swift */,
 				978AC5BE212F518400C5CCCD /* GameId.swift */,
 				978AC5C0212F518B00C5CCCD /* ProviderId.swift */,
 				978AC5C2212F51A200C5CCCD /* LeagueId.swift */,
@@ -751,6 +763,7 @@
 				97A5608A21234B5600A908CD /* DDragonChampionFile.swift in Sources */,
 				97A560A12125C07C00A908CD /* HttpResponseCode.swift in Sources */,
 				97D38DD5210CF04000150CF9 /* MatchParticipantFrame.swift in Sources */,
+				978AC61C2131671100C5CCCD /* RuneId.swift in Sources */,
 				97E31449211B9F9800C9F739 /* ErrorStatus.swift in Sources */,
 				97D38DF0210E0A9000150CF9 /* TournamentProvider.swift in Sources */,
 				97E31447211B9E9700C9F739 /* ErrorMessage.swift in Sources */,
@@ -771,6 +784,7 @@
 				97D38DA1210CA3A100150CF9 /* StatusBusiness.swift in Sources */,
 				97A560D0212711DF00A908CD /* DateToken.swift in Sources */,
 				978AC5CE2130002F00C5CCCD /* DDragonItemsFile.swift in Sources */,
+				978AC61A2131635200C5CCCD /* Rune.swift in Sources */,
 				97A560C72127071200A908CD /* DataDragonChampionBusiness.swift in Sources */,
 				97D38D2F210A5B7E00150CF9 /* LeagueMethod.swift in Sources */,
 				97D38D83210C6E9B00150CF9 /* ChampionBusiness.swift in Sources */,
@@ -824,6 +838,7 @@
 				97D38D85210C727300150CF9 /* League.swift in Sources */,
 				97225C352128A2D8001025EB /* Season.swift in Sources */,
 				9736CCD42120EB96008E31A0 /* SpectatorType.swift in Sources */,
+				978AC61E213168FB00C5CCCD /* RunePath.swift in Sources */,
 				978AC5FC2130A32600C5CCCD /* ChampionPassive.swift in Sources */,
 				97D38DBF210CCC2100150CF9 /* MatchParticipant.swift in Sources */,
 				97D38D43210A7B4900150CF9 /* Region.swift in Sources */,
@@ -862,6 +877,7 @@
 				97A560D42127123D00A908CD /* DatetimeEnums.swift in Sources */,
 				97D38DDD210D0CEF00150CF9 /* MatchBusiness.swift in Sources */,
 				978AC5D62130138C00C5CCCD /* DataDragonItemBusiness.swift in Sources */,
+				978AC6202131696000C5CCCD /* RuneStage.swift in Sources */,
 				97D38D7B210C5D8500150CF9 /* ChampionMasteryMethod.swift in Sources */,
 				97D38D4B210A823E00150CF9 /* Version.swift in Sources */,
 				97225C22212850D2001025EB /* Duration.swift in Sources */,

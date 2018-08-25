@@ -10,20 +10,20 @@ import Foundation
 
 internal class SkinData: Decodable {
     
-    public var skinId: SkinId
+    public var id: SkinId
     public var skinNumber: Int
     public var name: String
     public var hasChromas: Bool
     
     enum CodingKeys: String, CodingKey {
-        case skinId = "id"
+        case id = "id"
         case skinNumber = "num"
         case name = "name"
         case hasChromas = "chromas"
     }
     
-    public init(skinId: SkinId, skinNumber: Int, name: String, hasChromas: Bool) {
-        self.skinId = skinId
+    public init(id: SkinId, skinNumber: Int, name: String, hasChromas: Bool) {
+        self.id = id
         self.skinNumber = skinNumber
         self.name = name
         self.hasChromas = hasChromas
@@ -31,7 +31,7 @@ internal class SkinData: Decodable {
     
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.skinId = try SkinId(container.decode(String.self, forKey: .skinId))
+        self.id = try SkinId(container.decode(String.self, forKey: .id))
         self.skinNumber = try container.decode(Int.self, forKey: .skinNumber)
         self.name = try container.decode(String.self, forKey: .name)
         self.hasChromas = try container.decode(Bool.self, forKey: .hasChromas)

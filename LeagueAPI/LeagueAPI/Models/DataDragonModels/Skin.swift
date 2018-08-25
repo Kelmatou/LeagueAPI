@@ -10,14 +10,14 @@ import Foundation
 
 public class Skin {
     
-    public var skinId: SkinId
+    public var id: SkinId
     public var skinNumber: Int
     public var name: String
     public var hasChromas: Bool
     public var skinImages: SkinImages
     
-    public init(skinId: SkinId, skinNumber: Int, name: String, hasChromas: Bool, skinImages: SkinImages) {
-        self.skinId = skinId
+    public init(id: SkinId, skinNumber: Int, name: String, hasChromas: Bool, skinImages: SkinImages) {
+        self.id = id
         self.skinNumber = skinNumber
         self.name = name
         self.hasChromas = hasChromas
@@ -25,7 +25,7 @@ public class Skin {
     }
     
     internal init(from data: SkinData, version: String, championNameId: String) {
-        self.skinId = data.skinId
+        self.id = data.id
         self.skinNumber = data.skinNumber
         self.name = data.name
         self.hasChromas = data.hasChromas
