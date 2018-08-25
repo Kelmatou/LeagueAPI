@@ -26,6 +26,7 @@ internal class DataDragonRequester {
     private var profileIconFile: DDragonProfileIconsFile?
     private var summonerSpellsFile: DDragonSummonerSpellsFile?
     private var itemsFile: DDragonItemsFile?
+    private var runePaths: [RunePath]?
     
     // MARK: - Methods
     
@@ -121,6 +122,23 @@ internal class DataDragonRequester {
                 RESTRequester().requestObject(.GET, url: itemsUrl, headers: self.AcceptCharsetUtf8, asType: DDragonItemsFile.self) { (itemsFile, _, _, error) in
                     self.itemsFile = itemsFile
                     completion(itemsFile, error)
+                }
+            }
+        }
+    }
+    
+    public func getRunes(completion: @escaping ([RunePath]?, String?) -> Void) {
+        if let runePaths = self.runePaths {
+            completion(runePaths, nil)
+        }
+        else {
+            getDataVersions() { (versions, error) in
+                guard let versions = versions else { completion(nil, error); return }
+                // Riot does not expose rune reforged version so we take language which is usually the last version
+                let itemsUrl: String = "\(ServicesUrl.DDragonCdn)/\(versions.language)/data/en_US/runesReforged.json"
+                RESTRequester().requestObject(.GET, url: itemsUrl, headers: self.AcceptCharsetUtf8, asType: [RunePath].self) { (runePaths, _, _, error) in
+                    self.runePaths = runePaths
+                    completion(runePaths, error)
                 }
             }
         }
