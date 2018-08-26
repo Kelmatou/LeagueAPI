@@ -56,6 +56,7 @@
 		978AC62221316C9E00C5CCCD /* DataDragonRuneBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC62121316C9E00C5CCCD /* DataDragonRuneBusiness.swift */; };
 		978AC62421316EF000C5CCCD /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC62321316EF000C5CCCD /* ArrayExtension.swift */; };
 		978AC62C2131ED1D00C5CCCD /* RunePathId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC62B2131ED1D00C5CCCD /* RunePathId.swift */; };
+		978AC6372132AE9500C5CCCD /* RateLimitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978AC6362132AE9500C5CCCD /* RateLimitManager.swift */; };
 		97A560782122E32C00A908CD /* RiotAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560772122E32C00A908CD /* RiotAPI.swift */; };
 		97A5607A2122E36C00A908CD /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560792122E36C00A908CD /* APIClient.swift */; };
 		97A5607C2122EFD200A908CD /* DDragonChampionsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A5607B2122EFD200A908CD /* DDragonChampionsFile.swift */; };
@@ -221,6 +222,7 @@
 		978AC62121316C9E00C5CCCD /* DataDragonRuneBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDragonRuneBusiness.swift; sourceTree = "<group>"; };
 		978AC62321316EF000C5CCCD /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		978AC62B2131ED1D00C5CCCD /* RunePathId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunePathId.swift; sourceTree = "<group>"; };
+		978AC6362132AE9500C5CCCD /* RateLimitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateLimitManager.swift; sourceTree = "<group>"; };
 		97A560772122E32C00A908CD /* RiotAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiotAPI.swift; sourceTree = "<group>"; };
 		97A560792122E36C00A908CD /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		97A5607B2122EFD200A908CD /* DDragonChampionsFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDragonChampionsFile.swift; sourceTree = "<group>"; };
@@ -563,6 +565,7 @@
 				97D38D28210A549500150CF9 /* APIKey.swift */,
 				97D38D36210A6AC900150CF9 /* RateLimit.swift */,
 				97D38D72210B9ED300150CF9 /* Rate.swift */,
+				978AC6362132AE9500C5CCCD /* RateLimitManager.swift */,
 				97D38D3E210A7B0B00150CF9 /* ServiceProxy.swift */,
 				97D38D2D210A5B5700150CF9 /* Methods */,
 				97D38DEA210DFEC000150CF9 /* BodyRequestModels */,
@@ -835,6 +838,7 @@
 				97A5608C2123572600A908CD /* DataDragonRequester.swift in Sources */,
 				97D38D3F210A7B0B00150CF9 /* ServiceProxy.swift in Sources */,
 				9736CCD92120F037008E31A0 /* MapType.swift in Sources */,
+				978AC6372132AE9500C5CCCD /* RateLimitManager.swift in Sources */,
 				97D38D91210C85AC00150CF9 /* RankedMethod.swift in Sources */,
 				97D38D93210C88E800150CF9 /* RankedBusiness.swift in Sources */,
 				978AC62C2131ED1D00C5CCCD /* RunePathId.swift in Sources */,

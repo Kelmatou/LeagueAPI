@@ -16,6 +16,19 @@ public extension Array {
         }
     }
     
+    public mutating func keepLast(n: Int) {
+        guard n > 0 else { self = []; return }
+        guard n < self.count else { return }
+        let numberToRemove: Int = self.count - n
+        self.removeFirst(numberToRemove)
+    }
+    
+    public mutating func fill(with element: Element, untilCount newCount: Int) {
+        while self.count < newCount {
+            self.append(element)
+        }
+    }
+    
     public func firstMatch(where filterFunction: (Element) -> Bool, notFoundMessage: String? = nil, completion: @escaping (Element?, String?) -> Void) {
         if let match = self.first(where: filterFunction) {
             completion(match, nil)

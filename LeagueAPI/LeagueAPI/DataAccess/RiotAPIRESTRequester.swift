@@ -15,6 +15,9 @@ internal class RiotAPIRESTRequester: RESTRequester {
             if responseCode == .Ok || responseCode == .Unknown {
                 handler(data, responseCode, allHeaders, error)
             }
+            else if responseCode == .Forbidden && !self.hasAppRateHeaders(headers: headers) {
+                handler(nil, responseCode, allHeaders, "API key is invalid or expired")
+            }
             else {
                 let dataConversion: (ErrorStatus?, String?) = ObjectMapper.convert(data, into: ErrorStatus.self)
                 if let errorStatus = dataConversion.0 {
@@ -25,5 +28,9 @@ internal class RiotAPIRESTRequester: RESTRequester {
                 }
             }
         }
+    }
+    
+    private func hasAppRateHeaders(headers: RESTRequester.Headers?) -> Bool {
+        return headers != nil && headers!["X-NewRelic-App-Data"] != nil
     }
 }

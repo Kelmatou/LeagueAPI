@@ -17,8 +17,10 @@ internal class RateLimit {
     public private(set) var currentRequestNb: Int
     
     public var hasReachLimit: Bool {
+        Logger.debug("Knowing current rate limit is \(self.current), with \(self.currentRequestNb) request sent, there are \(self.limit - self.current - self.currentRequestNb) requests available.")
         if self.current + self.currentRequestNb < self.limit { return false }
         clean()
+        Logger.debug("After clean, current rate limit is \(self.current), which is \(self.creations.count + self.currentRequestNb >= self.limit ? "not enough " : "") to accept new request sending")
         return self.creations.count + self.currentRequestNb >= self.limit
     }
     
@@ -26,11 +28,11 @@ internal class RateLimit {
         self.current = current
         self.limit = limit
         self.duration = duration
-        self.creations = [Date()]
+        self.creations = Array<Date>(repeating: Date(), count: current)
         self.currentRequestNb = 0
     }
     
-    public func countNewRequest() {
+    public func countRequestSent() {
         self.currentRequestNb += 1
     }
     
@@ -40,11 +42,18 @@ internal class RateLimit {
         }
     }
     
+    // It is considered to be merged with a new RateLimit.
+    // New RateLimit have 'current' times the same creation date
     public func merge(with newRateLimit: RateLimit) {
         self.current = newRateLimit.current
-        self.creations.append(newRateLimit.creations[0])
-        self.currentRequestNb += newRateLimit.currentRequestNb
+        self.creations.keepLast(n: self.current - 1)
         self.clean()
+        if self.current > 0 {
+            let newDate: Date = newRateLimit.creations[0] // Not check but we want a crash if predicate
+                                                    // "have 'current' times the same date" is not respected
+            self.creations.fill(with: newDate, untilCount: self.current)
+        }
+        self.currentRequestNb += newRateLimit.currentRequestNb
     }
     
     public func status() -> String {
@@ -54,15 +63,6 @@ internal class RateLimit {
     private func clean() {
         self.creations = self.creations.filter { date in
             return -date.timeIntervalSinceNow < Double(duration) }
-    }
-    
-    internal func adjustRecords() {
-        while self.creations.count < self.current {
-            self.creations.insert(self.creations.first ?? Date(), at: 0)
-        }
-        while self.creations.count > self.current {
-            self.creations.remove(at: 0)
-        }
     }
     
     public static func array(from currentAndDurationList: String, and limitAndDurationList: String) -> [RateLimit] {
@@ -92,16 +92,23 @@ extension Array where Element:RateLimit {
             for rateLimit in result {
                 if rateLimit.duration == newRateLimit.duration {
                     rateLimit.merge(with: newRateLimit)
-                    rateLimit.countRequestReceived()
                     found = true
                     break
                 }
             }
             if !found {
-                newRateLimit.adjustRecords()
                 result.append(newRateLimit)
             }
         }
         self = result as! Array<Element>
+    }
+    
+    internal func hasReachRateLimit() -> Bool {
+        for rateLimit in self {
+            if rateLimit.hasReachLimit {
+                return true
+            }
+        }
+        return false
     }
 }
