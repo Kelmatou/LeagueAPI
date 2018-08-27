@@ -37,4 +37,29 @@ public extension Array {
             completion(nil, notFoundMessage)
         }
     }
+    
+    public mutating func removeAll(where removeCondition: (Element) -> Bool) {
+        self = self.filter { !removeCondition($0) }
+    }
+    
+    @discardableResult public mutating func removeFirst(where removeCondition: @escaping (Element) -> Bool) -> Element? {
+        let elementToRemove: Element? = self.first(where: { removeCondition($0) })
+        var found: Bool = false
+        let removeFirstCondition: (Element) -> Bool = { element in
+            guard !found else {
+                return false
+            }
+            found = removeCondition(element)
+            return found
+        }
+        self = self.filter { !removeFirstCondition($0) }
+        return elementToRemove
+    }
+}
+
+extension Array where Element: Equatable {
+    
+    public mutating func remove(_ element: Element) {
+        self = self.filter { $0 != element }
+    }
 }

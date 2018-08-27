@@ -155,4 +155,14 @@ public class RiotAPI: APIClient {
         }
         TournamentStubBusiness.manageTournament(method: .CreateTournament(name: name, providerId: providerId), key: self.key, handler: handlerId)
     }
+    
+    // MARK - Other
+    
+    public static func cancelAllDelayedRequests() {
+        APIBusiness.cancelAllDelayedRequests()
+    }
+    
+    public static func delayedRequestNumber() -> Int {
+        return APIBusiness.delayedRequestNumber()
+    }
 }

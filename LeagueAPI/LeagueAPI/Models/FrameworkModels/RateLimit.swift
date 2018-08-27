@@ -17,10 +17,8 @@ internal class RateLimit {
     public private(set) var currentRequestNb: Int
     
     public var hasReachLimit: Bool {
-        Logger.debug("Knowing current rate limit is \(self.current), with \(self.currentRequestNb) request sent, there are \(self.limit - self.current - self.currentRequestNb) requests available.")
         if self.current + self.currentRequestNb < self.limit { return false }
         clean()
-        Logger.debug("After clean, current rate limit is \(self.current), which is \(self.creations.count + self.currentRequestNb >= self.limit ? "not enough " : "") to accept new request sending")
         return self.creations.count + self.currentRequestNb >= self.limit
     }
     
@@ -49,7 +47,7 @@ internal class RateLimit {
         self.creations.keepLast(n: self.current - 1)
         self.clean()
         if self.current > 0 {
-            let newDate: Date = newRateLimit.creations[0] // Not check but we want a crash if predicate
+            let newDate: Date = newRateLimit.creations[0] // Not checked but we want a crash if predicate
                                                     // "have 'current' times the same date" is not respected
             self.creations.fill(with: newDate, untilCount: self.current)
         }
@@ -58,6 +56,19 @@ internal class RateLimit {
     
     public func status() -> String {
         return "\(current)/\(limit) - \(duration)s (has \(creations.count) records and \(currentRequestNb) current requests)"
+    }
+    
+    public func durationUntilRateLimitPasses() -> Duration {
+        if self.current < self.limit { return Duration(seconds: 0) }
+        let firstCreationDate: Date = self.creations[0] // Not checked but we want a crash if not existing
+        let timeFromNow: TimeInterval = -firstCreationDate.timeIntervalSinceNow
+        Logger.debug("First creation date was \(timeFromNow)s ago (\(Datetime(date: firstCreationDate).toString())")
+        let delayMargin: Double = 1 // Margin. Number of seconds to be safe with Riot's time
+        var secondsToWait: Double = Double(self.duration) - timeFromNow + delayMargin
+        if secondsToWait < 0 {
+            secondsToWait = 0
+        }
+        return Duration(seconds: secondsToWait)
     }
     
     private func clean() {
@@ -110,5 +121,16 @@ extension Array where Element:RateLimit {
             }
         }
         return false
+    }
+    
+    internal func maximumDurationUntilRateLimitPasses() -> Duration {
+        var maxDuration: Duration = Duration(seconds: 0)
+        for rateLimit in self {
+            let rateLimitDuration: Duration = rateLimit.durationUntilRateLimitPasses()
+            if rateLimitDuration > maxDuration {
+                maxDuration = rateLimitDuration
+            }
+        }
+        return maxDuration
     }
 }

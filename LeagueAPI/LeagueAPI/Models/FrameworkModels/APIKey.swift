@@ -21,4 +21,8 @@ internal class APIKey {
     public func hasReachRateLimit(for method: LeagueMethod) -> Bool {
         return rateLimitManager.hasReachLimit(for: method)
     }
+    
+    public func durationUntilRateLimitPasses(for method: LeagueMethod) -> Duration {
+        return rateLimitManager.durationUntilRateLimitPasses(for: method)
+    }
 }

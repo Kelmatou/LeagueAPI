@@ -18,6 +18,14 @@ internal class APIBusiness {
         self.method = method
     }
     
+    public static func cancelAllDelayedRequests() {
+        LeagueRequester.cancelDelayedRequests()
+    }
+    
+    public static func delayedRequestNumber() -> Int {
+        return LeagueRequester.delayedRequestNumber()
+    }
+    
     public func request<DataType: Decodable>(handler: @escaping (DataType?, String?) -> Void) {
         let requester: LeagueRequester = LeagueRequester(key: self.key)
         requester.request(method: self.method) { (result, error) in

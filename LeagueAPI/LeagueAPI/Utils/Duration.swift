@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Duration {
+public class Duration: Equatable, Comparable {
     
     private let millisecondsPerSecond: Double = 1000
     private let millisecondsPerMinute: Double = 1000 * 60
@@ -80,6 +80,14 @@ public class Duration {
         let secondStr: String = unitToString(self.seconds, unitName: "second", happen: " ")
         let millisecondStr: String = unitToString(self.milliseconds, unitName: "millisecond")
         return "\(dayStr)\(hourStr)\(minuteStr)\(secondStr)\(millisecondStr)"
+    }
+    
+    public static func ==(lhs: Duration, rhs: Duration) -> Bool {
+        return lhs.durationMilliseconds == rhs.durationMilliseconds
+    }
+    
+    public static func <(lhs: Duration, rhs: Duration) -> Bool {
+        return lhs.durationMilliseconds < rhs.durationMilliseconds
     }
     
     private func unitToString(_ value: Double, unitName: String, happen: String = "") -> String {

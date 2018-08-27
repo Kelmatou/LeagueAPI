@@ -52,11 +52,11 @@ internal class RESTRequester {
                 }
                 let allHeaders: Headers? = httpResponse?.allHeaderFields
                 let responseCode: HttpResponseCode = HttpResponseCode(httpResponse?.statusCode ?? -1)
-                Logger.print("Server responsed with code \(responseCode.codeValue)")
+                Logger.info("Server responsed with code \(responseCode.codeValue) (\(responseCode.errorMessage() ?? "No description"))")
                 let errorValue: String? = error?.localizedDescription ?? responseCode.errorMessage()
                 handler(data, responseCode, allHeaders, errorValue)
             }
-            Logger.print("Requesting: \(url)")
+            Logger.info("Requesting: \(url)")
             task.resume()
         }
         else {

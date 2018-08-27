@@ -88,6 +88,11 @@
 		97A560D8212716B700A908CD /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560D7212716B700A908CD /* StringExtension.swift */; };
 		97A560DA212737D700A908CD /* DDragonProfileIconsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560D9212737D700A908CD /* DDragonProfileIconsFile.swift */; };
 		97A560DC21273BDC00A908CD /* ProfileIconData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A560DB21273BDC00A908CD /* ProfileIconData.swift */; };
+		97B7B87E21344F23005C9B94 /* ExploringLeagueRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B7B87D21344F23005C9B94 /* ExploringLeagueRequest.swift */; };
+		97B7B8822134554B005C9B94 /* DelayedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B7B8812134554B005C9B94 /* DelayedRequest.swift */; };
+		97B7B884213455B4005C9B94 /* DurationDelayedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B7B883213455B4005C9B94 /* DurationDelayedRequest.swift */; };
+		97B7B886213456AD005C9B94 /* DelayedTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B7B885213456AD005C9B94 /* DelayedTask.swift */; };
+		97B7B88821345BEE005C9B94 /* ExploringRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B7B88721345BEE005C9B94 /* ExploringRequest.swift */; };
 		97D38D1B210A4D8D00150CF9 /* Summoner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D1A210A4D8D00150CF9 /* Summoner.swift */; };
 		97D38D22210A521000150CF9 /* RESTRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D21210A521000150CF9 /* RESTRequester.swift */; };
 		97D38D24210A532B00150CF9 /* ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D23210A532B00150CF9 /* ObjectMapper.swift */; };
@@ -254,6 +259,11 @@
 		97A560D7212716B700A908CD /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		97A560D9212737D700A908CD /* DDragonProfileIconsFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDragonProfileIconsFile.swift; sourceTree = "<group>"; };
 		97A560DB21273BDC00A908CD /* ProfileIconData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileIconData.swift; sourceTree = "<group>"; };
+		97B7B87D21344F23005C9B94 /* ExploringLeagueRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploringLeagueRequest.swift; sourceTree = "<group>"; };
+		97B7B8812134554B005C9B94 /* DelayedRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelayedRequest.swift; sourceTree = "<group>"; };
+		97B7B883213455B4005C9B94 /* DurationDelayedRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationDelayedRequest.swift; sourceTree = "<group>"; };
+		97B7B885213456AD005C9B94 /* DelayedTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelayedTask.swift; sourceTree = "<group>"; };
+		97B7B88721345BEE005C9B94 /* ExploringRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploringRequest.swift; sourceTree = "<group>"; };
 		97D38D1A210A4D8D00150CF9 /* Summoner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summoner.swift; sourceTree = "<group>"; };
 		97D38D21210A521000150CF9 /* RESTRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTRequester.swift; sourceTree = "<group>"; };
 		97D38D23210A532B00150CF9 /* ObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMapper.swift; sourceTree = "<group>"; };
@@ -449,6 +459,17 @@
 			path = Datetime;
 			sourceTree = "<group>";
 		};
+		97B7B87C21344F01005C9B94 /* RequestModels */ = {
+			isa = PBXGroup;
+			children = (
+				97B7B88721345BEE005C9B94 /* ExploringRequest.swift */,
+				97B7B87D21344F23005C9B94 /* ExploringLeagueRequest.swift */,
+				97B7B8812134554B005C9B94 /* DelayedRequest.swift */,
+				97B7B883213455B4005C9B94 /* DurationDelayedRequest.swift */,
+			);
+			path = RequestModels;
+			sourceTree = "<group>";
+		};
 		97D38D19210A4D7700150CF9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -506,6 +527,7 @@
 				978AC62321316EF000C5CCCD /* ArrayExtension.swift */,
 				97225C21212850D2001025EB /* Duration.swift */,
 				978AC5EF21307A8A00C5CCCD /* BuildInfo.swift */,
+				97B7B885213456AD005C9B94 /* DelayedTask.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -567,6 +589,7 @@
 				97D38D72210B9ED300150CF9 /* Rate.swift */,
 				978AC6362132AE9500C5CCCD /* RateLimitManager.swift */,
 				97D38D3E210A7B0B00150CF9 /* ServiceProxy.swift */,
+				97B7B87C21344F01005C9B94 /* RequestModels */,
 				97D38D2D210A5B5700150CF9 /* Methods */,
 				97D38DEA210DFEC000150CF9 /* BodyRequestModels */,
 			);
@@ -757,6 +780,7 @@
 				97D38DA9210CA88100150CF9 /* Observer.swift in Sources */,
 				97A560782122E32C00A908CD /* RiotAPI.swift in Sources */,
 				978AC5D02130008E00C5CCCD /* Item.swift in Sources */,
+				97B7B8822134554B005C9B94 /* DelayedRequest.swift in Sources */,
 				97D38D45210A7BEF00150CF9 /* Platform.swift in Sources */,
 				97D38D35210A623A00150CF9 /* LeagueAPI.swift in Sources */,
 				97A560802122F24600A908CD /* ChampionDifficulties.swift in Sources */,
@@ -777,6 +801,7 @@
 				97D38DD5210CF04000150CF9 /* MatchParticipantFrame.swift in Sources */,
 				978AC61C2131671100C5CCCD /* RuneId.swift in Sources */,
 				97E31449211B9F9800C9F739 /* ErrorStatus.swift in Sources */,
+				97B7B886213456AD005C9B94 /* DelayedTask.swift in Sources */,
 				97D38DF0210E0A9000150CF9 /* TournamentProvider.swift in Sources */,
 				97E31447211B9E9700C9F739 /* ErrorMessage.swift in Sources */,
 				97A5607A2122E36C00A908CD /* APIClient.swift in Sources */,
@@ -814,6 +839,7 @@
 				97D38D97210C9D2C00150CF9 /* Service.swift in Sources */,
 				97D38DC9210CCCB800150CF9 /* MatchParticipantStats.swift in Sources */,
 				97D38DD3210CF03000150CF9 /* MatchFrame.swift in Sources */,
+				97B7B884213455B4005C9B94 /* DurationDelayedRequest.swift in Sources */,
 				978AC59E212ED26500C5CCCD /* ChampionRole.swift in Sources */,
 				978AC5BB212F515B00C5CCCD /* ProfileIconId.swift in Sources */,
 				97A56097212381C700A908CD /* ChampionAdditionalDetails.swift in Sources */,
@@ -871,6 +897,7 @@
 				97D38DD7210CF04E00150CF9 /* MatchPosition.swift in Sources */,
 				978AC5A9212F020B00C5CCCD /* DataDragonSummonerSpellBusiness.swift in Sources */,
 				97A5607E2122F0FD00A908CD /* ChampionsDetails.swift in Sources */,
+				97B7B87E21344F23005C9B94 /* ExploringLeagueRequest.swift in Sources */,
 				978AC5C1212F518B00C5CCCD /* ProviderId.swift in Sources */,
 				978AC5A3212ED9F300C5CCCD /* DDragonSummonerSpellsFile.swift in Sources */,
 				97D38DBB210CC78B00150CF9 /* MatchReference.swift in Sources */,
@@ -894,6 +921,7 @@
 				97D38DDD210D0CEF00150CF9 /* MatchBusiness.swift in Sources */,
 				978AC5D62130138C00C5CCCD /* DataDragonItemBusiness.swift in Sources */,
 				978AC6202131696000C5CCCD /* RuneStage.swift in Sources */,
+				97B7B88821345BEE005C9B94 /* ExploringRequest.swift in Sources */,
 				97D38D7B210C5D8500150CF9 /* ChampionMasteryMethod.swift in Sources */,
 				97D38D4B210A823E00150CF9 /* Version.swift in Sources */,
 				97225C22212850D2001025EB /* Duration.swift in Sources */,

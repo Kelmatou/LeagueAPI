@@ -37,9 +37,9 @@ open class Logger {
         Swift.print("Debug: \(message)")
     }
     
-    open static func print(_ message: String) {
+    open static func info(_ message: String) {
         guard channels[.Info] ?? true else { return }
-        Swift.print(message)
+        Swift.print("LeagueAPI: \(message)")
     }
     
     open static func warning(_ message: String) {

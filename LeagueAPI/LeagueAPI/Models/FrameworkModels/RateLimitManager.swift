@@ -51,6 +51,18 @@ internal class RateLimitManager {
         return false
     }
     
+    public func durationUntilRateLimitPasses(for method: LeagueMethod) -> Duration {
+        return max(self.durationUntilAppRateLimitPasses(), self.durationUntilMethodLimitPasses(for: method))
+    }
+    
+    public func durationUntilAppRateLimitPasses() -> Duration {
+        return self.appRateLimit.maximumDurationUntilRateLimitPasses()
+    }
+    
+    public func durationUntilMethodLimitPasses(for method: LeagueMethod) -> Duration {
+        return self.methodLimits[method.getMethodSignature()]?.maximumDurationUntilRateLimitPasses() ?? Duration(seconds: 0)
+    }
+    
     public func countRequestSent(for method: LeagueMethod) {
         self.countRequestForAppRateLimit(sent: true)
         self.countRequestForMethodLimit(method: method.getMethodSignature(), sent: true)
