@@ -12,10 +12,22 @@ internal class RateLimitManager {
     
     public private(set) var appRateLimit: [RateLimit]
     public private(set) var methodLimits: Dictionary<String, [RateLimit]>
+    public var exploringAppRateLimit: Bool // When set to true, request is in progress to know AppRateLimit
+    public var methodRateLimitExplorerSent: [String] // Methods in array have a request to know limit
     
     public init(appRateLimit: [RateLimit] = [], methodLimits: [String: [RateLimit]]? = nil) {
         self.appRateLimit = appRateLimit
         self.methodLimits = methodLimits ?? Dictionary()
+        self.exploringAppRateLimit = false
+        self.methodRateLimitExplorerSent = []
+    }
+    
+    public func hasAppRateLimitInformations() -> Bool {
+        return !self.appRateLimit.isEmpty
+    }
+    
+    public func hasMethodLimitInformations(for method: LeagueMethod) -> Bool {
+        return self.methodLimits[method.getMethodSignature()] != nil
     }
     
     public func hasReachLimit(for method: LeagueMethod) -> Bool {

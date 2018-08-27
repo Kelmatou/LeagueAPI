@@ -44,6 +44,35 @@ internal class LeagueRequester {
     }
     
     private func canMakeRequest(for method: LeagueMethod) -> Bool {
-        return !self.key.hasReachRateLimit(for: method)
+        let rateLimit: RateLimitManager = self.key.rateLimitManager
+        if rateLimit.hasAppRateLimitInformations() {
+            Logger.debug("Has information about App Rate Limit")
+            if rateLimit.hasReachAppRateLimit() { return false }
+            Logger.debug("Has not reached App Rate Limit")
+            if rateLimit.hasMethodLimitInformations(for: method) {
+                Logger.debug("Has information about Method Limit \(method.getMethodSignature())")
+                return !rateLimit.hasReachMethodLimit(for: method)
+            }
+            else {
+                let signature: String = method.getMethodSignature()
+                Logger.debug("Does not have information about Method Limit \(signature)")
+                let acceptRequest: Bool = !rateLimit.methodRateLimitExplorerSent.contains(signature)
+                if acceptRequest {
+                    Logger.debug("Exploring Method Limit \(signature)")
+                    rateLimit.methodRateLimitExplorerSent.append(signature)
+                }
+                else {
+                    Logger.debug("Another request was already granted Method Limit Exploring for \(signature)")
+                }
+                return acceptRequest
+            }
+        }
+        else {
+            Logger.debug("Does not have information about App Rate Limit")
+            let acceptRequest: Bool = !rateLimit.exploringAppRateLimit
+            rateLimit.exploringAppRateLimit = true
+            Logger.debug(acceptRequest ? "Exploring App Rate Limit" : "Another request was already granted App Rate Limit Exploring")
+            return acceptRequest
+        }
     }
 }
