@@ -71,7 +71,7 @@ Riot API provides data related to players, that are evolving when you play. Leag
 * [Server Status](https://github.com/Kelmatou/LeagueAPI/wiki/Status)
 * [Verification Code](https://github.com/Kelmatou/LeagueAPI/wiki/Verification-Code)
 * [Tournament Stub](https://github.com/Kelmatou/LeagueAPI/wiki/Tournament-Stub)
-* [Tournaments](https://github.com/Kelmatou/LeagueAPI/wiki/Tournaments) (Not available yet)
+* [Tournaments](https://github.com/Kelmatou/LeagueAPI/wiki/Tournaments)
 
 ### Custom Methods 
 
