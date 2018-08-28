@@ -41,13 +41,13 @@ public class TournamentInfo: Encodable {
     
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(self.spectatorType.rawValue, forKey: .spectatorType)
+        try container.encode(self.spectatorType.type.rawValue, forKey: .spectatorType)
         try container.encode(self.teamSize, forKey: .teamSize)
-        try container.encode(self.pickType.rawValue, forKey: .pickType)
+        try container.encode(self.pickType.type.rawValue, forKey: .pickType)
         if let allowedSummonerIds = self.allowedSummonerIds {
             try container.encode(allowedSummonerIds.map { $0.value }, forKey: .allowedSummonerIds)
         }
-        try container.encode(self.mapType.rawValue, forKey: .mapType)
+        try container.encode(self.mapType.type.rawValue, forKey: .mapType)
         if let metadata = self.metadata {
             try container.encode(metadata, forKey: .metadata)
         }
