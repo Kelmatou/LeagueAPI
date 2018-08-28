@@ -64,6 +64,9 @@ internal class LeagueRequester {
             if responseCode == .Forbidden && headers != nil && headers!["Retry-After"] != nil {
                 self.handleRateLimitExceeded(headers: headers, method: method, handler: handler)
             }
+            else if responseCode == .Forbidden && method is TournamentMethod {
+                handler(nil, "Invalid API Key for official Tournament method")
+            }
             else {
                 handler(result, error)
             }

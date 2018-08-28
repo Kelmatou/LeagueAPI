@@ -156,6 +156,56 @@ public class RiotAPI: APIClient {
         TournamentStubBusiness.manageTournament(method: .CreateTournament(name: name, providerId: providerId), key: self.key, handler: handlerId)
     }
     
+    // MARK: - Tournament
+    
+    public func newTournament(hostRegion: TournamentRegion, named name: String, hostUrl: String, amount: Int? = nil, info: TournamentInfo, handler: @escaping ((ProviderId, TournamentId, [TournamentCode])?, String?) -> Void) {
+        createTournamentProvider(hostRegion: hostRegion, hostUrl: hostUrl) { (providerId, error) in
+            guard let providerId = providerId, error == nil else { handler(nil, error); return }
+            self.createTournament(providerId: providerId, named: name) { (tournamentId, error) in
+                guard let tournamentId = tournamentId, error == nil else { handler(nil, error); return }
+                self.createTournamentCode(tournamentId: tournamentId, amount: amount, info: info) { (codes, error) in
+                    handler((providerId, tournamentId, codes ?? []), error)
+                }
+            }
+        }
+    }
+    
+    public func createTournamentCode(tournamentId: TournamentId, amount: Int? = nil, info: TournamentInfo, handler: @escaping ([TournamentCode]?, String?) -> Void) {
+        let handlerCodes: ([String]?, String?) -> Void = { (codes, error) in
+            handler(codes?.map { TournamentCode($0) }, error)
+        }
+        TournamentBusiness.manageTournament(method: .CreateCodes(amount: amount, tournamentId: tournamentId, info: info), key: self.key, handler: handlerCodes)
+    }
+    
+    public func updateTournament(tournamentCode: TournamentCode, updatedInfo: TournamentUpdate? = nil, handler: @escaping (String?) -> Void) {
+        let errorHandler: (EmptyReply?, String?) -> Void = { (_, error) in
+            handler(error)
+        }
+        TournamentBusiness.manageTournament(method: .UpdateTournamentInfo(code: tournamentCode, updatedInfo: updatedInfo), key: self.key, handler: errorHandler)
+    }
+    
+    public func getTournamentInfo(tournamentCode: TournamentCode, handler: @escaping (TournamentDetails?, String?) -> Void) {
+        TournamentBusiness.manageTournament(method: .GetTournamentInfo(code: tournamentCode), key: self.key, handler: handler)
+    }
+    
+    public func getTournamentEvents(tournamentCode: TournamentCode, handler: @escaping ([TournamentEvent]?, String?) -> Void) {
+        TournamentBusiness.getTournamentEvents(method: .EventsByTournamentCode(code: tournamentCode), key: self.key, handler: handler)
+    }
+    
+    public func createTournamentProvider(hostRegion: TournamentRegion, hostUrl: String, handler: @escaping (ProviderId?, String?) -> Void) {
+        let handlerId: (Int?, String?) -> Void = { (id, error) in
+            handler(id == nil ? nil : ProviderId(id!), error)
+        }
+        TournamentBusiness.manageTournament(method: .CreateProvider(callbackUrl: hostUrl, region: hostRegion), key: self.key, handler: handlerId)
+    }
+    
+    public func createTournament(providerId: ProviderId, named name: String, handler: @escaping (TournamentId?, String?) -> Void) {
+        let handlerId: (Long?, String?) -> Void = { (id, error) in
+            handler(id == nil ? nil : TournamentId(id!), error)
+        }
+        TournamentBusiness.manageTournament(method: .CreateTournament(name: name, providerId: providerId), key: self.key, handler: handlerId)
+    }
+    
     // MARK - Other
     
     public static func cancelAllDelayedRequests() {

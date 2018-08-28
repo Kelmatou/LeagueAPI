@@ -10,7 +10,7 @@ import Foundation
 
 internal class TournamentMethod: LeagueMethod {
     
-    public enum TournamentStubMethods {
+    public enum TournamentMethods {
         case CreateCodes(amount: Int?, tournamentId: TournamentId, info: TournamentInfo)
         case UpdateTournamentInfo(code: TournamentCode, updatedInfo: TournamentUpdate?)
         case GetTournamentInfo(code: TournamentCode)
@@ -20,9 +20,9 @@ internal class TournamentMethod: LeagueMethod {
     }
     
     private var host: Endpoint
-    private var method: TournamentStubMethods
+    private var method: TournamentMethods
     
-    public init(method: TournamentStubMethods) {
+    public init(method: TournamentMethods) {
         self.method = method
         self.host = .America
     }
