@@ -41,9 +41,9 @@ If none of these helped you, open an issue describing your problem and I'll try 
 
 ## 📋 Requirements 📋
 
-The only required element from framework user is a Riot API Key.
+The only required element from the framework user is a Riot API Key.
 You'll get one by visiting https://developer.riotgames.com. Create an account and on you dashboard, you'll be able to generate your key.
-By default, Riot will generate a 'Development Key', which expired in 24h. When your application is ready to be deployed and respects Riot API usage conditions, you can apply for a 'Production Key'.
+By default, Riot will generate a 'Development Key', which expires in 24h. When your application is ready to be deployed and respects Riot API usage conditions, you can apply for a 'Production Key'.
 Please note that you should agree with [Riot API usage policy](https://developer.riotgames.com/policies.html)
 
 ## 😈 First Blood 😈
