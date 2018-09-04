@@ -75,7 +75,7 @@ Riot API provides data related to players, that are evolving when you play. Leag
 
 ### Custom Methods 
 
-Some League of Legends data only change with patches (champions, items...). Those data can be found directly with out created LeagueAPI instance `league`. You'll be able to get data on:
+Some League of Legends data only change with patches (champions, items...). Those data can be found directly without creating a LeagueAPI instance `league`. You'll be able to get data on:
 
 * [Patch](https://github.com/Kelmatou/LeagueAPI/wiki/Patch)
 * [Champions](https://github.com/Kelmatou/LeagueAPI/wiki/Champions-(Detailed))
