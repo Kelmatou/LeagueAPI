@@ -91,5 +91,5 @@ If you found LeagueAPI helpfull or cool to use don't hesitate to promote it by a
 
 ## Author
 
-Antoine Clop (Kelmatou)
+Antoine Clop ([Kelmatou](https://github.com/Kelmatou))  
 Ronan Cendrier ([Hanoki](https://github.com/Hanoki))
