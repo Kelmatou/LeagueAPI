@@ -33,6 +33,7 @@ public class Map {
         case DarkStarMap = 16
         case StarGuardianMap = 18
         case ProjectMap = 19
+        case OdysseyMap = 20
         case NexusBlitzMap = 21
         case Unknown = -1
     }
@@ -77,6 +78,8 @@ public class Map {
             self.init(map: .StarGuardianMap, place: .ValoranCityPark, note: "Star Guardian Invasion map")
         case Maps.ProjectMap.rawValue:
             self.init(map: .ProjectMap, place: .Substructure43, note: "PROJECT: Hunters map")
+        case Maps.OdysseyMap.rawValue:
+            self.init(map: .OdysseyMap, place: .CrashSite, note: "Odyssey map")
         case Maps.NexusBlitzMap.rawValue:
             self.init(map: .NexusBlitzMap, place: .NexusBlitz, note: "Nexus Blitz map")
         default:

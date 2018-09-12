@@ -28,6 +28,7 @@ public class GameMode {
         case StarGuardian = "STARGUARDIAN"
         case Project = "PROJECT"
         case NexusBlitz = "GAMEMODEX"
+        case Odyssey = "ODYSSEY"
         case PraticeTool = "PRACTICETOOL"
         case SnowUrf = "SNOWURF"
         case TutorialModule1 = "TUTORIAL_MODULE_1"
@@ -82,6 +83,8 @@ public class GameMode {
             self.mode = GameModes.Project
         case GameModes.NexusBlitz.rawValue:
             self.mode = GameModes.NexusBlitz
+        case GameModes.Odyssey.rawValue:
+            self.mode = GameModes.Odyssey
         case GameModes.PraticeTool.rawValue:
             self.mode = GameModes.PraticeTool
         case GameModes.SnowUrf.rawValue:

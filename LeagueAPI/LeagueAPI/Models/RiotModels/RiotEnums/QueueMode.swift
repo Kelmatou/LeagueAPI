@@ -78,6 +78,11 @@ public class QueueMode {
         case ProjectHunters = 1000
         case SnowArurf = 1010
         case OneforAll = 1020
+        case OdysseyIntro = 1030
+        case OdysseyCadet = 1040
+        case OdysseyCrewMember = 1050
+        case OdysseyCaptain = 1060
+        case OdysseyOnslaught = 1070
         case NexusBlitz = 1200
         case Unknown = -1
     }
@@ -234,6 +239,16 @@ public class QueueMode {
             self.init(mode: .SnowArurf, place: .SummonersRift)
         case QueueModes.OneforAll.rawValue:
             self.init(mode: .OneforAll, place: .SummonersRift)
+        case QueueModes.OdysseyIntro.rawValue:
+            self.init(mode: .OdysseyIntro, place: .CrashSite)
+        case QueueModes.OdysseyCadet.rawValue:
+            self.init(mode: .OdysseyCadet, place: .CrashSite)
+        case QueueModes.OdysseyCrewMember.rawValue:
+            self.init(mode: .OdysseyCrewMember, place: .CrashSite)
+        case QueueModes.OdysseyCaptain.rawValue:
+            self.init(mode: .OdysseyCaptain, place: .CrashSite)
+        case QueueModes.OdysseyOnslaught.rawValue:
+            self.init(mode: .OdysseyOnslaught, place: .CrashSite)
         case QueueModes.NexusBlitz.rawValue:
             self.init(mode: .NexusBlitz, place: .NexusBlitz)
         default:

@@ -19,5 +19,6 @@ public enum Place: String {
     case ValoranCityPark = "Valoran City Park"
     case Substructure43 = "Substructure 43"
     case NexusBlitz = "Nexus Blitz"
+    case CrashSite = "Crash Site"
     case Unknown = "Unknown"
 }
