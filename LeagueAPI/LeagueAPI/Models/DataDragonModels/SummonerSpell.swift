@@ -14,13 +14,13 @@ public class SummonerSpell {
     public var nameId: String
     public var name: String
     public var description: String
-    public var cooldown: Int
+    public var cooldown: Double
     public var range: Int
     public var unlockLevel: Int
     public var image: ImageWithUrl
     public var availableGameModes: [GameMode]
     
-    public init(id: SummonerSpellId, nameId: String, name: String, description: String, cooldown: Int, range: Int, unlockLevel: Int, image: ImageWithUrl, availableGameModes: [GameMode]) {
+    public init(id: SummonerSpellId, nameId: String, name: String, description: String, cooldown: Double, range: Int, unlockLevel: Int, image: ImageWithUrl, availableGameModes: [GameMode]) {
         self.id = id
         self.nameId = nameId
         self.name = name

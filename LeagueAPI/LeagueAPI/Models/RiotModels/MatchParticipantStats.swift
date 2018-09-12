@@ -63,8 +63,8 @@ public class MatchParticipantStats: Decodable {
     public var playerScore9: Int
     public var totalScoreRank: Int
     public var visionScore: Long
-    public var firstBloodKill: Bool
-    public var firstBloodAssist: Bool
+    public var firstBloodKill: Bool?
+    public var firstBloodAssist: Bool?
     public var firstInhibitorKill: Bool?
     public var firstInhibitorAssist: Bool?
     public var firstTowerKill: Bool?
@@ -73,7 +73,7 @@ public class MatchParticipantStats: Decodable {
     public var deaths: Int
     public var assists: Int
     public var unrealKills: Int
-    public var wardsPlayed: Int?
+    public var wardsPlaced: Int?
     public var wardsKilled: Int?
     public var sigthWardsBoughtInGame: Int?
     public var visionWardsBoughtInGame: Int?
@@ -182,7 +182,7 @@ public class MatchParticipantStats: Decodable {
         case deaths = "deaths"
         case assists = "assists"
         case unrealKills = "unrealKills"
-        case wardsPlayed = "wardsPlayed"
+        case wardsPlaced = "wardsPlaced"
         case wardsKilled = "wardsKilled"
         case sigthWardsBoughtInGame = "sigthWardsBoughtInGame"
         case visionWardsBoughtInGame = "visionWardsBoughtInGame"
@@ -228,7 +228,7 @@ public class MatchParticipantStats: Decodable {
         case nodeCaptureAssist = "nodeCaptureAssist"
     }
     
-    public init(participantId: Int, win: Bool, champLevel: Int, goldEarned: Int, goldSpent: Int, item0: ItemId, item1: ItemId, item2: ItemId, item3: ItemId, item4: ItemId, item5: ItemId, item6: ItemId, rune0: RuneId?, rune1: RuneId?, rune2: RuneId?, rune3: RuneId?, rune4: RuneId?, rune5: RuneId?, rune0Var1: Int?, rune0Var2: Int?, rune0Var3: Int?, rune1Var1: Int?, rune1Var2: Int?, rune1Var3: Int?, rune2Var1: Int?, rune2Var2: Int?, rune2Var3: Int?, rune3Var1: Int?, rune3Var2: Int?, rune3Var3: Int?, rune4Var1: Int?, rune4Var2: Int?, rune4Var3: Int?, rune5Var1: Int?, rune5Var2: Int?, rune5Var3: Int?, doubleKills: Int, tripleKills: Int, quadraKills: Int, pentaKills: Int, totalPlayerScore: Int, playerScore0: Int, playerScore1: Int, playerScore2: Int, playerScore3: Int, playerScore4: Int, playerScore5: Int, playerScore6: Int, playerScore7: Int, playerScore8: Int, playerScore9: Int, totalScoreRank: Int, visionScore: Long, firstBloodKill: Bool, firstBloodAssist: Bool, firstInhibitorKill: Bool?, firstInhibitorAssist: Bool?, firstTowerKill: Bool?, firstTowerAssist: Bool?, kills: Int, deaths: Int, assists: Int, unrealKills: Int, wardsPlayed: Int?, wardsKilled: Int?, sigthWardsBoughtInGame: Int?, visionWardsBoughtInGame: Int?, primaryRunePath: RunePathId?, secondaryRunePath: RunePathId?, neutralMinionsKilled: Int, totalDamageDealt: Long, totalDamageDealtToChampions: Long, damageDealtToObjectives: Long, damageDealtToTurrets: Long?, trueDamageDealt: Long, trueDamageDealtToChampions: Long, magicDamageDealt: Long, magicDamageDealtToChampions: Long, physicalDamageDealt: Long, physicalDamageDealtToChampions: Long, totalDamageTaken: Long, trueDamageTaken: Long, magicalDamageTaken: Long, physicalDamageTaken: Long, damageSelfMitigated: Long, totalHeal: Long, totalUnitsHealed: Int, largestMultiKill: Int, largestCritialStrike: Int?, largestKillingSpree: Int, teamObjective: Int?, combatPlayerScore: Int, objectivePlayerScore: Int, neutralMinionsKilledTeamJungle: Int?, neutralMinionsKilledEnemyJungle: Int?, killingSprees: Int, inhibitorKills: Int?, turretKills: Int?, totalMinionsKilled: Int, totalTimeCrowdControlDealt: Int, longestTimeSpentLiving: Int, timeCCingOthers: Long, altarsCaptures: Int?, altarsNeutralized: Int?, nodeNeutralize: Int?, nodeNeutralizeAssist: Int?, nodeCaptureAssist: Int?) {
+    public init(participantId: Int, win: Bool, champLevel: Int, goldEarned: Int, goldSpent: Int, item0: ItemId, item1: ItemId, item2: ItemId, item3: ItemId, item4: ItemId, item5: ItemId, item6: ItemId, rune0: RuneId?, rune1: RuneId?, rune2: RuneId?, rune3: RuneId?, rune4: RuneId?, rune5: RuneId?, rune0Var1: Int?, rune0Var2: Int?, rune0Var3: Int?, rune1Var1: Int?, rune1Var2: Int?, rune1Var3: Int?, rune2Var1: Int?, rune2Var2: Int?, rune2Var3: Int?, rune3Var1: Int?, rune3Var2: Int?, rune3Var3: Int?, rune4Var1: Int?, rune4Var2: Int?, rune4Var3: Int?, rune5Var1: Int?, rune5Var2: Int?, rune5Var3: Int?, doubleKills: Int, tripleKills: Int, quadraKills: Int, pentaKills: Int, totalPlayerScore: Int, playerScore0: Int, playerScore1: Int, playerScore2: Int, playerScore3: Int, playerScore4: Int, playerScore5: Int, playerScore6: Int, playerScore7: Int, playerScore8: Int, playerScore9: Int, totalScoreRank: Int, visionScore: Long, firstBloodKill: Bool?, firstBloodAssist: Bool?, firstInhibitorKill: Bool?, firstInhibitorAssist: Bool?, firstTowerKill: Bool?, firstTowerAssist: Bool?, kills: Int, deaths: Int, assists: Int, unrealKills: Int, wardsPlaced: Int?, wardsKilled: Int?, sigthWardsBoughtInGame: Int?, visionWardsBoughtInGame: Int?, primaryRunePath: RunePathId?, secondaryRunePath: RunePathId?, neutralMinionsKilled: Int, totalDamageDealt: Long, totalDamageDealtToChampions: Long, damageDealtToObjectives: Long, damageDealtToTurrets: Long?, trueDamageDealt: Long, trueDamageDealtToChampions: Long, magicDamageDealt: Long, magicDamageDealtToChampions: Long, physicalDamageDealt: Long, physicalDamageDealtToChampions: Long, totalDamageTaken: Long, trueDamageTaken: Long, magicalDamageTaken: Long, physicalDamageTaken: Long, damageSelfMitigated: Long, totalHeal: Long, totalUnitsHealed: Int, largestMultiKill: Int, largestCritialStrike: Int?, largestKillingSpree: Int, teamObjective: Int?, combatPlayerScore: Int, objectivePlayerScore: Int, neutralMinionsKilledTeamJungle: Int?, neutralMinionsKilledEnemyJungle: Int?, killingSprees: Int, inhibitorKills: Int?, turretKills: Int?, totalMinionsKilled: Int, totalTimeCrowdControlDealt: Int, longestTimeSpentLiving: Int, timeCCingOthers: Long, altarsCaptures: Int?, altarsNeutralized: Int?, nodeNeutralize: Int?, nodeNeutralizeAssist: Int?, nodeCaptureAssist: Int?) {
         self.participantId = participantId
         self.win = win
         self.champLevel = champLevel
@@ -292,7 +292,7 @@ public class MatchParticipantStats: Decodable {
         self.deaths = deaths
         self.assists = assists
         self.unrealKills = unrealKills
-        self.wardsPlayed = wardsPlayed
+        self.wardsPlaced = wardsPlaced
         self.wardsKilled = wardsKilled
         self.sigthWardsBoughtInGame = sigthWardsBoughtInGame
         self.visionWardsBoughtInGame = visionWardsBoughtInGame
@@ -393,8 +393,8 @@ public class MatchParticipantStats: Decodable {
         self.playerScore9 = try container.decode(Int.self, forKey: .playerScore9)
         self.totalScoreRank = try container.decode(Int.self, forKey: .totalScoreRank)
         self.visionScore = try container.decode(Long.self, forKey: .visionScore)
-        self.firstBloodKill = try container.decode(Bool.self, forKey: .firstBloodKill)
-        self.firstBloodAssist = try container.decode(Bool.self, forKey: .firstBloodAssist)
+        self.firstBloodKill = try? container.decode(Bool.self, forKey: .firstBloodKill)
+        self.firstBloodAssist = try? container.decode(Bool.self, forKey: .firstBloodAssist)
         self.firstInhibitorKill = try? container.decode(Bool.self, forKey: .firstInhibitorKill)
         self.firstInhibitorAssist = try? container.decode(Bool.self, forKey: .firstInhibitorAssist)
         self.firstTowerKill = try? container.decode(Bool.self, forKey: .firstTowerKill)
@@ -403,7 +403,7 @@ public class MatchParticipantStats: Decodable {
         self.deaths = try container.decode(Int.self, forKey: .deaths)
         self.assists = try container.decode(Int.self, forKey: .assists)
         self.unrealKills = try container.decode(Int.self, forKey: .unrealKills)
-        self.wardsPlayed = try? container.decode(Int.self, forKey: .wardsPlayed)
+        self.wardsPlaced = try? container.decode(Int.self, forKey: .wardsPlaced)
         self.wardsKilled = try? container.decode(Int.self, forKey: .wardsKilled)
         self.sigthWardsBoughtInGame = try? container.decode(Int.self, forKey: .sigthWardsBoughtInGame)
         self.visionWardsBoughtInGame = try? container.decode(Int.self, forKey: .visionWardsBoughtInGame)

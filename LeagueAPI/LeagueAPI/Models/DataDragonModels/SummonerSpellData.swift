@@ -14,7 +14,7 @@ internal class SummonerSpellData: Decodable {
     public var nameId: String
     public var name: String
     public var description: String
-    public var cooldown: Int
+    public var cooldown: Double
     public var range: Int
     public var unlockLevel: Int
     public var availableGameModes: [GameMode]
@@ -30,7 +30,7 @@ internal class SummonerSpellData: Decodable {
         case range = "rangeBurn"
     }
     
-    public init(id: SummonerSpellId, nameId: String, name: String, description: String, cooldown: Int, range: Int, unlockLevel: Int, availableGameModes: [GameMode]) {
+    public init(id: SummonerSpellId, nameId: String, name: String, description: String, cooldown: Double, range: Int, unlockLevel: Int, availableGameModes: [GameMode]) {
         self.id = id
         self.nameId = nameId
         self.name = name
@@ -47,7 +47,7 @@ internal class SummonerSpellData: Decodable {
         self.nameId = try container.decode(String.self, forKey: .nameId)
         self.name = try container.decode(String.self, forKey: .name)
         self.description = try container.decode(String.self, forKey: .description)
-        self.cooldown = try Int(container.decode(String.self, forKey: .cooldown))!
+        self.cooldown = try Double(container.decode(String.self, forKey: .cooldown))!
         self.range = try Int(container.decode(String.self, forKey: .range))!
         self.unlockLevel = try container.decode(Int.self, forKey: .unlockLevel)
         let gameModesStr: [String] = try container.decode([String].self, forKey: .gameModes)

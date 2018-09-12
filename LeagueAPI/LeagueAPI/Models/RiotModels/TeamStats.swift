@@ -68,7 +68,7 @@ public class TeamStats: Decodable {
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.teamId = try container.decode(Int.self, forKey: .teamId)
-        let winValue: String = try container.decode(String.self, forKey: .win)
+        let winValue: String = (try? container.decode(String.self, forKey: .win)) ?? "Fail" // Bot team does not have a win property so we assume they lost in this case
         self.win = winValue == "Win"
         self.bans = try container.decode([TeamBan].self, forKey: .bans)
         self.firstDragon = try container.decode(Bool.self, forKey: .firstDragon)
