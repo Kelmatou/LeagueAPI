@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "LeagueAPI"
-  s.version      = "1.0.1"
+  s.version      = "1.1.0"
   s.summary      = "League of Legends API Framework in Swift"
 
   # This description is used to generate tags and improve search results.
@@ -26,6 +26,7 @@ Pod::Spec.new do |s|
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
   LeagueAPI provides League of Legends data, images related to players, champions, games...
+  References in Riot Public Library: https://discussion.developer.riotgames.com/articles/61/public-libraries-for-the-riot-games-api.html
                    DESC
 
   s.homepage     = "https://github.com/Kelmatou/LeagueAPI"
