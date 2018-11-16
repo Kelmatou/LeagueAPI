@@ -13,6 +13,7 @@
 		97225C31212891DB001025EB /* QueueMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97225C30212891DB001025EB /* QueueMode.swift */; };
 		97225C3321289928001025EB /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97225C3221289928001025EB /* Place.swift */; };
 		97225C352128A2D8001025EB /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97225C342128A2D8001025EB /* Season.swift */; };
+		9729BEFE219EB662005F8311 /* ChampionRotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9729BEFD219EB662005F8311 /* ChampionRotations.swift */; };
 		9736CCD22120E172008E31A0 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9736CCD12120E172008E31A0 /* Endpoint.swift */; };
 		9736CCD42120EB96008E31A0 /* SpectatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9736CCD32120EB96008E31A0 /* SpectatorType.swift */; };
 		9736CCD72120EFB5008E31A0 /* PickType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9736CCD62120EFB5008E31A0 /* PickType.swift */; };
@@ -114,8 +115,6 @@
 		97D38D77210C5C4A00150CF9 /* APIBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D76210C5C4A00150CF9 /* APIBusiness.swift */; };
 		97D38D79210C5D4600150CF9 /* ChampionMasteryBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D78210C5D4600150CF9 /* ChampionMasteryBusiness.swift */; };
 		97D38D7B210C5D8500150CF9 /* ChampionMasteryMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D7A210C5D8500150CF9 /* ChampionMasteryMethod.swift */; };
-		97D38D7D210C69CB00150CF9 /* ChampionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D7C210C69CB00150CF9 /* ChampionList.swift */; };
-		97D38D7F210C69FE00150CF9 /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D7E210C69FE00150CF9 /* Champion.swift */; };
 		97D38D81210C6BFB00150CF9 /* ChampionMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D80210C6BFB00150CF9 /* ChampionMethod.swift */; };
 		97D38D83210C6E9B00150CF9 /* ChampionBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D82210C6E9B00150CF9 /* ChampionBusiness.swift */; };
 		97D38D85210C727300150CF9 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D84210C727300150CF9 /* League.swift */; };
@@ -189,6 +188,7 @@
 		97225C30212891DB001025EB /* QueueMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueMode.swift; sourceTree = "<group>"; };
 		97225C3221289928001025EB /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		97225C342128A2D8001025EB /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
+		9729BEFD219EB662005F8311 /* ChampionRotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionRotations.swift; sourceTree = "<group>"; };
 		9736CCD12120E172008E31A0 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		9736CCD32120EB96008E31A0 /* SpectatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectatorType.swift; sourceTree = "<group>"; };
 		9736CCD62120EFB5008E31A0 /* PickType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickType.swift; sourceTree = "<group>"; };
@@ -290,8 +290,6 @@
 		97D38D76210C5C4A00150CF9 /* APIBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBusiness.swift; sourceTree = "<group>"; };
 		97D38D78210C5D4600150CF9 /* ChampionMasteryBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMasteryBusiness.swift; sourceTree = "<group>"; };
 		97D38D7A210C5D8500150CF9 /* ChampionMasteryMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMasteryMethod.swift; sourceTree = "<group>"; };
-		97D38D7C210C69CB00150CF9 /* ChampionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionList.swift; sourceTree = "<group>"; };
-		97D38D7E210C69FE00150CF9 /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
 		97D38D80210C6BFB00150CF9 /* ChampionMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMethod.swift; sourceTree = "<group>"; };
 		97D38D82210C6E9B00150CF9 /* ChampionBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionBusiness.swift; sourceTree = "<group>"; };
 		97D38D84210C727300150CF9 /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
@@ -549,8 +547,6 @@
 				9736CCD52120EBA9008E31A0 /* RiotEnums */,
 				97D38D1A210A4D8D00150CF9 /* Summoner.swift */,
 				97D38D74210C57E300150CF9 /* ChampionMastery.swift */,
-				97D38D7C210C69CB00150CF9 /* ChampionList.swift */,
-				97D38D7E210C69FE00150CF9 /* Champion.swift */,
 				97D38D84210C727300150CF9 /* League.swift */,
 				97D38D86210C728300150CF9 /* LeagueInfo.swift */,
 				97D38D88210C729900150CF9 /* Series.swift */,
@@ -590,6 +586,7 @@
 				97E31446211B9E9600C9F739 /* ErrorMessage.swift */,
 				97E67E8D21359F5500E8E1B7 /* TournamentDetails.swift */,
 				97E67E912135B64D00E8E1B7 /* EmptyReply.swift */,
+				9729BEFD219EB662005F8311 /* ChampionRotations.swift */,
 			);
 			path = RiotModels;
 			sourceTree = "<group>";
@@ -852,7 +849,6 @@
 				97E67E8A21359B4900E8E1B7 /* TournamentMethod.swift in Sources */,
 				978AC5F421307FCC00C5CCCD /* ChampionSpellData.swift in Sources */,
 				978AC5B5212F512500C5CCCD /* AccountId.swift in Sources */,
-				97D38D7F210C69FE00150CF9 /* Champion.swift in Sources */,
 				97D38DCF210CCDFD00150CF9 /* LegacyMastery.swift in Sources */,
 				97A560C52127070200A908CD /* DataDragonProfileIconBusiness.swift in Sources */,
 				97D38D97210C9D2C00150CF9 /* Service.swift in Sources */,
@@ -921,7 +917,6 @@
 				978AC5A3212ED9F300C5CCCD /* DDragonSummonerSpellsFile.swift in Sources */,
 				97D38DBB210CC78B00150CF9 /* MatchReference.swift in Sources */,
 				97D38DEE210DFFAB00150CF9 /* TournamentRegion.swift in Sources */,
-				97D38D7D210C69CB00150CF9 /* ChampionList.swift in Sources */,
 				97D38DBD210CCB3A00150CF9 /* Match.swift in Sources */,
 				97A560932123774400A908CD /* DataDragonVersionBusiness.swift in Sources */,
 				978AC5C3212F51A200C5CCCD /* LeagueId.swift in Sources */,
@@ -942,6 +937,7 @@
 				978AC5D62130138C00C5CCCD /* DataDragonItemBusiness.swift in Sources */,
 				978AC6202131696000C5CCCD /* RuneStage.swift in Sources */,
 				97B7B88821345BEE005C9B94 /* ExploringRequest.swift in Sources */,
+				9729BEFE219EB662005F8311 /* ChampionRotations.swift in Sources */,
 				97D38D7B210C5D8500150CF9 /* ChampionMasteryMethod.swift in Sources */,
 				97D38D4B210A823E00150CF9 /* Version.swift in Sources */,
 				97225C22212850D2001025EB /* Duration.swift in Sources */,

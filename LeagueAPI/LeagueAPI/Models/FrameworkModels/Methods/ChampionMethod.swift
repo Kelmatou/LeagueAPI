@@ -11,8 +11,7 @@ import Foundation
 internal class ChampionMethod: LeagueMethod {
     
     public enum ChampionMethods {
-        case All(freeToPlay: Bool)
-        case ById(id: ChampionId)
+        case ChampionRotation
     }
     
     private var service: ServiceProxy
@@ -33,12 +32,10 @@ internal class ChampionMethod: LeagueMethod {
     
     func getMethodUrl() -> String {
         let entrypoint: String = self.service.hostUrl
-        let commonPath: String = "https://\(entrypoint)\(MethodPaths.Platform.rawValue)/\(Version.RiotAPI)/champions"
+        let commonPath: String = "https://\(entrypoint)\(MethodPaths.Platform.rawValue)/\(Version.RiotAPI)"
         switch self.method {
-        case .All(let freeToPlay):
-            return "\(commonPath)?freeToPlay=\(freeToPlay)"
-        case .ById(let id):
-            return "\(commonPath)/\(id)"
+        case .ChampionRotation:
+            return "\(commonPath)/champion-rotations"
         }
     }
     

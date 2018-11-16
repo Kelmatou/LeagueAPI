@@ -26,12 +26,8 @@ public class RiotAPI: APIClient {
     
     // MARK: - Champion
     
-    public func getAllChampions(freeToPlayOnly: Bool = false, on region: Region, handler: @escaping ([Champion]?, String?) -> Void) {
-        ChampionBusiness.getChampionList(method: .All(freeToPlay: freeToPlayOnly), region: region, key: self.key, handler: handler)
-    }
-    
-    public func getChampion(by championId: ChampionId, on region: Region, handler: @escaping (Champion?, String?) -> Void) {
-        ChampionBusiness.getChampion(method: .ById(id: championId), region: region, key: self.key, handler: handler)
+    public func getChampionRotation(on region: Region, handler: @escaping (ChampionRotations?, String?) -> Void) {
+        ChampionBusiness.getChampion(method: .ChampionRotation, region: region, key: self.key, handler: handler)
     }
     
     // MARK: - Ranked
