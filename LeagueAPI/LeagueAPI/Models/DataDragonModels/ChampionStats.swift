@@ -26,7 +26,7 @@ public class ChampionStats: Decodable {
     public var magicResistancePerLevel: Double
     public var criticalChance: Double
     public var criticalChancePerLevel: Double
-    public var attackSpeedOffset: Double
+    public var attackSpeedOffset: Double?
     public var attackSpeedPerLevel: Double
     public var attackRange: Double
     public var movementSpeed: Double
@@ -54,7 +54,7 @@ public class ChampionStats: Decodable {
         case movementSpeed = "movespeed"
     }
     
-    public init(health: Double, healthPerLevel: Double, healthRegen: Double, healthRegenPerLevel: Double, ressource: Double, ressourcePerLevel: Double, ressourceRegen: Double, ressourceRegenPerLevel: Double, attackDamage: Double, attackDamagePerLevel: Double, armor: Double, armorPerLevel: Double, magicResistance: Double, magicResistancePerLevel: Double, criticalChance: Double, criticalChancePerLevel: Double, attackSpeedOffset: Double, attackSpeedPerLevel: Double, attackRange: Double, movementSpeed: Double) {
+    public init(health: Double, healthPerLevel: Double, healthRegen: Double, healthRegenPerLevel: Double, ressource: Double, ressourcePerLevel: Double, ressourceRegen: Double, ressourceRegenPerLevel: Double, attackDamage: Double, attackDamagePerLevel: Double, armor: Double, armorPerLevel: Double, magicResistance: Double, magicResistancePerLevel: Double, criticalChance: Double, criticalChancePerLevel: Double, attackSpeedOffset: Double?, attackSpeedPerLevel: Double, attackRange: Double, movementSpeed: Double) {
         self.health = health
         self.healthPerLevel = healthPerLevel
         self.healthRegen = healthRegen
@@ -95,7 +95,7 @@ public class ChampionStats: Decodable {
         self.magicResistancePerLevel = try container.decode(Double.self, forKey: .magicResistancePerLevel)
         self.criticalChance = try container.decode(Double.self, forKey: .criticalChance)
         self.criticalChancePerLevel = try container.decode(Double.self, forKey: .criticalChancePerLevel)
-        self.attackSpeedOffset = try container.decode(Double.self, forKey: .attackSpeedOffset)
+        self.attackSpeedOffset = try? container.decode(Double.self, forKey: .attackSpeedOffset)
         self.attackSpeedPerLevel = try container.decode(Double.self, forKey: .attackSpeedPerLevel)
         self.attackRange = try container.decode(Double.self, forKey: .attackRange)
         self.movementSpeed = try container.decode(Double.self, forKey: .movementSpeed)
