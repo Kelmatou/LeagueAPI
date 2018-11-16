@@ -24,30 +24,30 @@ open class Logger {
         .Error : true
     ]
     
-    open static func setAllChannels(enabled: Bool) {
+    public static func setAllChannels(enabled: Bool) {
         channels = channels.mapValues { (_) in return enabled }
     }
     
-    open static func setChannel(_ channel: Channel, enabled: Bool) {
+    public static func setChannel(_ channel: Channel, enabled: Bool) {
         channels[channel] = enabled
     }
     
-    open static func debug(_ message: String) {
+    public static func debug(_ message: String) {
         guard channels[.Debug] ?? true else { return }
         Swift.print("Debug: \(message)")
     }
     
-    open static func info(_ message: String) {
+    public static func info(_ message: String) {
         guard channels[.Info] ?? true else { return }
         Swift.print("LeagueAPI: \(message)")
     }
     
-    open static func warning(_ message: String) {
+    public static func warning(_ message: String) {
         guard channels[.Warning] ?? true else { return }
         Swift.print("Warning: \(message)")
     }
     
-    open static func error(_ message: String) {
+    public static func error(_ message: String) {
         guard channels[.Error] ?? true else { return }
         Swift.print("Error: \(message)")
     }
