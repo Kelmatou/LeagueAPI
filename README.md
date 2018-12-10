@@ -84,8 +84,8 @@ Some League of Legends data only change with patches (champions, items...). Thos
 * [Summoner Spells](https://github.com/Kelmatou/LeagueAPI/wiki/Summoner-Spells)
 * [Runes](https://github.com/Kelmatou/LeagueAPI/wiki/Runes)
 
-Full documentation is available [here](https://github.com/Kelmatou/LeagueAPI/wiki)
-Note that only last release will appear in documentation. See previous revisions for older LeagueAPI version.
+Full documentation is available [here](https://github.com/Kelmatou/LeagueAPI/wiki).  
+Note that only the last release will appear in the documentation. See previous revisions for older LeagueAPI versions.
 
 ## Make LeagueAPI Grow Up!
 
