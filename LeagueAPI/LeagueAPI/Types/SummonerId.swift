@@ -8,4 +8,4 @@
 
 import Foundation
 
-public class SummonerId: Identifier<Long> {}
+public class SummonerId: Identifier<String> {}

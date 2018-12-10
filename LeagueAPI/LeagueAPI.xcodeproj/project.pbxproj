@@ -178,6 +178,7 @@
 		97E67E8E21359F5500E8E1B7 /* TournamentDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E67E8D21359F5500E8E1B7 /* TournamentDetails.swift */; };
 		97E67E902135A92C00E8E1B7 /* TournamentBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E67E8F2135A92C00E8E1B7 /* TournamentBusiness.swift */; };
 		97E67E922135B64D00E8E1B7 /* EmptyReply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E67E912135B64D00E8E1B7 /* EmptyReply.swift */; };
+		97EACE8D21BEA13A00B0B9EA /* SummonerPuuid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EACE8C21BEA13A00B0B9EA /* SummonerPuuid.swift */; };
 		97FB449A210A493000C092AB /* LeagueAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 97FB4498210A492F00C092AB /* LeagueAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -353,6 +354,7 @@
 		97E67E8D21359F5500E8E1B7 /* TournamentDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentDetails.swift; sourceTree = "<group>"; };
 		97E67E8F2135A92C00E8E1B7 /* TournamentBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentBusiness.swift; sourceTree = "<group>"; };
 		97E67E912135B64D00E8E1B7 /* EmptyReply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyReply.swift; sourceTree = "<group>"; };
+		97EACE8C21BEA13A00B0B9EA /* SummonerPuuid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummonerPuuid.swift; sourceTree = "<group>"; };
 		97FB4495210A492F00C092AB /* LeagueAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeagueAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97FB4498210A492F00C092AB /* LeagueAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeagueAPI.h; sourceTree = "<group>"; };
 		97FB4499210A492F00C092AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -651,6 +653,7 @@
 			children = (
 				97E31460211C33E900C9F739 /* TypeAlias.swift */,
 				978AC5B0212F47E400C5CCCD /* Identifier.swift */,
+				97EACE8C21BEA13A00B0B9EA /* SummonerPuuid.swift */,
 				978AC5B2212F4ABA00C5CCCD /* SummonerId.swift */,
 				978AC5B4212F512500C5CCCD /* AccountId.swift */,
 				978AC5B6212F514200C5CCCD /* ChampionId.swift */,
@@ -923,6 +926,7 @@
 				97D38D1B210A4D8D00150CF9 /* Summoner.swift in Sources */,
 				97D38D81210C6BFB00150CF9 /* ChampionMethod.swift in Sources */,
 				97D38D47210A80AA00150CF9 /* MethodPaths.swift in Sources */,
+				97EACE8D21BEA13A00B0B9EA /* SummonerPuuid.swift in Sources */,
 				97D38D77210C5C4A00150CF9 /* APIBusiness.swift in Sources */,
 				97D38D73210B9ED300150CF9 /* Rate.swift in Sources */,
 				97D38D37210A6AC900150CF9 /* RateLimit.swift in Sources */,

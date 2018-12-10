@@ -8,4 +8,4 @@
 
 import Foundation
 
-public class AccountId: Identifier<Long> {}
+public class AccountId: Identifier<String> {}

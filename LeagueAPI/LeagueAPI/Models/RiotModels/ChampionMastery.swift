@@ -47,7 +47,7 @@ public class ChampionMastery: Decodable {
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.championId = try ChampionId(container.decode(Long.self, forKey: .championId))
-        self.summonerId = try SummonerId(container.decode(Long.self, forKey: .summonerId))
+        self.summonerId = try SummonerId(container.decode(String.self, forKey: .summonerId))
         self.championLevel = try container.decode(Int.self, forKey: .championLevel)
         self.championPoints = try container.decode(Int.self, forKey: .championPoints)
         self.championPointsUntilNextLevel = try container.decode(Long.self, forKey: .championPointsUntilNextLevel)

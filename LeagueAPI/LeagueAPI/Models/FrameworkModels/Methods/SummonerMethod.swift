@@ -13,6 +13,7 @@ internal class SummonerMethod: LeagueMethod {
     public enum SummonerMethods {
         case ByAccountId(id: AccountId)
         case ByName(name: String)
+        case byPuuid(puuid: SummonerPuuid)
         case ById(id: SummonerId)
     }
     
@@ -32,7 +33,7 @@ internal class SummonerMethod: LeagueMethod {
         switch self.method {
         case .ByAccountId:
             return "SummonerByAccountId"
-        case .ByName, .ById:
+        case .ByName, .ById, .byPuuid:
             return "SummonerBy-\(self.service.region.rawValue)"
         }
     }
@@ -45,6 +46,8 @@ internal class SummonerMethod: LeagueMethod {
             return "\(commonPath)/by-account/\(id)"
         case .ByName(let name):
             return "\(commonPath)/by-name/\(name)"
+        case .byPuuid(let puuid):
+            return "\(commonPath)/by-puuid/\(puuid)"
         case .ById(let id):
             return "\(commonPath)/\(id)"
         }
@@ -56,7 +59,7 @@ internal class SummonerMethod: LeagueMethod {
     
     func getWarningMessage() -> String? {
         switch self.method {
-        case .ByAccountId, .ByName:
+        case .ByAccountId, .ByName, .byPuuid:
             return nil
         case .ById:
             return "Too many calls to unexisting Summoner(by SummonerId) may result in Blacklist"

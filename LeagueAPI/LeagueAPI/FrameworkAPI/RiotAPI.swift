@@ -103,6 +103,10 @@ public class RiotAPI: APIClient {
         SummonerBusiness.getSummoner(method: .ByName(name: name), region: region, key: self.key, handler: handler)
     }
     
+    public func getSummoner(by puuid: SummonerPuuid, on region: Region, handler: @escaping (Summoner?, String?) -> Void) {
+        SummonerBusiness.getSummoner(method: .byPuuid(puuid: puuid), region: region, key: self.key, handler: handler)
+    }
+    
     public func getSummoner(by summonerId: SummonerId, on region: Region, handler: @escaping (Summoner?, String?) -> Void) {
         SummonerBusiness.getSummoner(method: .ById(id: summonerId), region: region, key: self.key, handler: handler)
     }

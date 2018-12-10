@@ -56,7 +56,7 @@ public class Participant: Decodable {
         self.teamId = try container.decode(Long.self, forKey: .teamId)
         self.summonerSpell1 = try SummonerSpellId(container.decode(Long.self, forKey: .summonerSpell1))
         self.summonerSpell2 = try SummonerSpellId(container.decode(Long.self, forKey: .summonerSpell2))
-        self.summonerId = try? SummonerId(container.decode(Long.self, forKey: .summonerId))
+        self.summonerId = try? SummonerId(container.decode(String.self, forKey: .summonerId))
         self.runePage = try? container.decode(RunePage.self, forKey: .runePage)
         self.customizedObjects = try? container.decode([GameCustomObject].self, forKey: .customizedObjects)
     }

@@ -65,7 +65,7 @@ public class TournamentDetails: Decodable {
         self.password = try container.decode(String.self, forKey: .password)
         self.code = try TournamentCode(container.decode(String.self, forKey: .code))
         self.teamSize = try container.decode(Int.self, forKey: .teamSize)
-        let participants: [Long]? = try? container.decode([Long].self, forKey: .participantIds)
+        let participants: [String]? = try? container.decode([String].self, forKey: .participantIds)
         if let participants = participants {
             self.participantIds = participants.map { SummonerId($0) }
         }
