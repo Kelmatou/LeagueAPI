@@ -95,7 +95,7 @@ public class RiotAPI: APIClient {
     
     // MARK: - Summoner
     
-    public func getSummonerByAccountId(accountId: AccountId, on region: Region, handler: @escaping (Summoner?, String?) -> Void) {
+    public func getSummoner(by accountId: AccountId, on region: Region, handler: @escaping (Summoner?, String?) -> Void) {
         SummonerBusiness.getSummoner(method: .ByAccountId(id: accountId), region: region, key: self.key, handler: handler)
     }
     
