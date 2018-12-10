@@ -73,6 +73,8 @@ Riot API provides data related to players, that are evolving when you play. Leag
 * [Tournament Stub](https://github.com/Kelmatou/LeagueAPI/wiki/Tournament-Stub)
 * [Tournaments](https://github.com/Kelmatou/LeagueAPI/wiki/Tournaments)
 
+**LeagueAPI now uses Riot API v4, as v3 will be deprecated on 28th january 2018**
+
 ### Custom Methods 
 
 Some League of Legends data only change with patches (champions, items...). Those data can be found directly without creating a LeagueAPI instance `league`. You'll be able to get data on:
