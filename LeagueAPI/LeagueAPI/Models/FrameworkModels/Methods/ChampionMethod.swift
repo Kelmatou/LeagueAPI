@@ -32,7 +32,7 @@ internal class ChampionMethod: LeagueMethod {
     
     func getMethodUrl() -> String {
         let entrypoint: String = self.service.hostUrl
-        let commonPath: String = "https://\(entrypoint)\(MethodPaths.Platform.rawValue)/\(Version.RiotAPI)"
+        let commonPath: String = "https://\(entrypoint)\(MethodPaths.Platform.rawValue)/v3"
         switch self.method {
         case .ChampionRotation:
             return "\(commonPath)/champion-rotations"
