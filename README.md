@@ -73,7 +73,7 @@ Riot API provides data related to players, that are evolving when you play. Leag
 * [Tournament Stub](https://github.com/Kelmatou/LeagueAPI/wiki/Tournament-Stub)
 * [Tournaments](https://github.com/Kelmatou/LeagueAPI/wiki/Tournaments)
 
-**LeagueAPI now uses Riot API v4, as v3 will be deprecated on 28th january 2018**
+**LeagueAPI now uses Riot API v4, as v3 will be deprecated on 28th january 2019**
 
 ### Custom Methods 
 
