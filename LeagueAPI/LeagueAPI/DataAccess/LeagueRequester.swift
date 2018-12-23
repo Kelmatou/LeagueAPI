@@ -105,6 +105,8 @@ internal class LeagueRequester {
         if exploring {
             let exploringRequest: ExploringLeagueRequest<ResultType> = ExploringLeagueRequest(identifier: identifier, handler: { (result, error) in
                 let exploringRequestCreated = LeagueRequester.exploringRequests.removeFirst(where: { $0.getidentifier() == identifier })
+                let isAppRateLimitExplorer: Bool = identifier == nil
+                self.key.rateLimitManager.exploringAppRateLimit = !isAppRateLimitExplorer
                 if let exploringRequestCreated = exploringRequestCreated {
                     exploringRequestCreated.getWaitingRequests().forEach { $0.request() }
                 }
