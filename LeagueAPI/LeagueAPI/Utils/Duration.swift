@@ -100,8 +100,15 @@ public class Duration: Equatable, Comparable {
     }
     
     private func duration(between millisecondsPerUnitLower: Double, and millisecondsPerUnitGreater: Double) -> Double {
-        let under: Double = self.durationMilliseconds.remainder(dividingBy: millisecondsPerUnitGreater)
+        var under: Double {
+            if self.durationMilliseconds >= millisecondsPerUnitGreater {
+                return self.durationMilliseconds.remainder(dividingBy: millisecondsPerUnitGreater)
+            }
+            else {
+                return self.durationMilliseconds
+            }
+        }
         let precise: Double = under / millisecondsPerUnitLower
-        return precise.rounded()
+        return floor(precise)
     }
 }
