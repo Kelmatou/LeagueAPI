@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Identifier<T: Codable & Equatable>: Equatable, CustomStringConvertible {
+public class Identifier<T: Codable & Hashable>: Equatable, CustomStringConvertible, Hashable {
     
     public var value: T
     
@@ -26,5 +26,9 @@ public class Identifier<T: Codable & Equatable>: Equatable, CustomStringConverti
     
     public static func ==(lhs: Identifier<T>, rhs: T) -> Bool {
         return lhs.value == rhs
+    }
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(self.value)
     }
 }
