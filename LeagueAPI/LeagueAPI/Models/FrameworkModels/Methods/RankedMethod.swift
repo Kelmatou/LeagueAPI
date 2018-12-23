@@ -12,6 +12,7 @@ internal class RankedMethod: LeagueMethod {
     
     public enum RankedMethods {
         case ChallengerByQueue(queue: Queue)
+        case GrandMasterByQueue(queue: Queue)
         case MasterByQueue(queue: Queue)
         case LeagueById(id: LeagueId)
         case PositionsById(id: SummonerId)
@@ -31,7 +32,7 @@ internal class RankedMethod: LeagueMethod {
     
     func getMethodSignature() -> String {
         switch self.method {
-        case .LeagueById, .ChallengerByQueue, .MasterByQueue:
+        case .LeagueById, .ChallengerByQueue, .GrandMasterByQueue, .MasterByQueue:
             return "League"
         case .PositionsById:
             return "PositionsById-\(self.service.region.rawValue)"
@@ -44,6 +45,8 @@ internal class RankedMethod: LeagueMethod {
         switch self.method {
         case .ChallengerByQueue(let queue):
             return "\(commonPath)/challengerleagues/by-queue/\(queue.type.rawValue)"
+        case .GrandMasterByQueue(let queue):
+            return "\(commonPath)/grandmasterleagues/by-queue/\(queue.type.rawValue)"
         case .LeagueById(let id):
             return "\(commonPath)/leagues/\(id)"
         case .MasterByQueue(let queue):
@@ -59,7 +62,7 @@ internal class RankedMethod: LeagueMethod {
     
     func getWarningMessage() -> String? {
         switch self.method {
-        case .ChallengerByQueue, .MasterByQueue, .PositionsById:
+        case .ChallengerByQueue, .GrandMasterByQueue, .MasterByQueue, .PositionsById:
             return nil
         case .LeagueById:
             return "Too many calls to unexisting League(by LeagueId) may result in Blacklist"

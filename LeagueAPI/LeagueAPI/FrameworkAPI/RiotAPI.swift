@@ -36,6 +36,10 @@ public class RiotAPI: APIClient {
         RankedBusiness.getRanked(method: .ChallengerByQueue(queue: queue), region: region, key: self.key, handler: handler)
     }
     
+    public func getGrandMasterLeague(for queue: Queue, on region: Region, handler: @escaping (League?, String?) -> Void) {
+        RankedBusiness.getRanked(method: .GrandMasterByQueue(queue: queue), region: region, key: self.key, handler: handler)
+    }
+    
     public func getLeague(by leagueId: LeagueId, on region: Region, handler: @escaping (League?, String?) -> Void) {
         RankedBusiness.getRanked(method: .LeagueById(id: leagueId), region: region, key: self.key, handler: handler)
     }
