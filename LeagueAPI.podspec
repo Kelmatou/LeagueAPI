@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "LeagueAPI"
-  s.version      = "1.1.0"
+  s.version      = "1.3.0"
   s.summary      = "League of Legends API Framework in Swift"
 
   # This description is used to generate tags and improve search results.
@@ -97,7 +97,7 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = "Classes/**/*.h"
 
-  s.swift_version = "4.1"
+  s.swift_version = "4.2"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
