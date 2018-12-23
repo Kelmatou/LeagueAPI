@@ -22,7 +22,7 @@ public class ChampionMastery: Decodable {
     
     enum CodingKeys: String, CodingKey {
         case championId = "championId"
-        case summonerId = "playerId"
+        case summonerId = "summonerId"
         case championLevel = "championLevel"
         case championPoints = "championPoints"
         case championPointsUntilNextLevel = "championPointsUntilNextLevel"
