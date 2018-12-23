@@ -11,6 +11,7 @@ import Foundation
 public class RankedTier {
     
     public enum Tiers: String {
+        case Unranked = "UNRANKED"
         case Iron = "IRON"
         case Bronze = "BRONZE"
         case Silver = "SILVER"
@@ -35,6 +36,8 @@ public class RankedTier {
     
     internal init(_ tier: String) {
         switch tier {
+        case Tiers.Unranked.rawValue:
+            self.tier = .Unranked
         case Tiers.Iron.rawValue:
             self.tier = .Iron
         case Tiers.Bronze.rawValue:

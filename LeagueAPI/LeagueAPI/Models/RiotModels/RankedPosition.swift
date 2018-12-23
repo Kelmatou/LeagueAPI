@@ -10,7 +10,7 @@ import Foundation
 
 public class RankedPosition: Decodable {
     
-    public var tier: String
+    public var tier: RankedTier
     public var leagueId: LeagueId
     public var leagueName: String
     public var leagueInfo: LeagueInfo
@@ -23,7 +23,7 @@ public class RankedPosition: Decodable {
         case queue = "queueType"
     }
     
-    public init(tier: String, leagueId: LeagueId, leagueName: String, leagueInfo: LeagueInfo, queue: Queue) {
+    public init(tier: RankedTier, leagueId: LeagueId, leagueName: String, leagueInfo: LeagueInfo, queue: Queue) {
         self.tier = tier
         self.leagueId = leagueId
         self.leagueName = leagueName
@@ -33,7 +33,7 @@ public class RankedPosition: Decodable {
     
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.tier = try container.decode(String.self, forKey: .tier)
+        self.tier = try RankedTier(container.decode(String.self, forKey: .tier))
         self.leagueId = try LeagueId(container.decode(String.self, forKey: .leagueId))
         self.leagueName = try container.decode(String.self, forKey: .leagueName)
         self.leagueInfo = try LeagueInfo(from: decoder)

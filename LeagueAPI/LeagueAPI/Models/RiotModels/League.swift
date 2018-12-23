@@ -12,7 +12,7 @@ public class League: Decodable {
     
     public var leagueId: LeagueId
     public var name: String
-    public var tier: String
+    public var tier: RankedTier
     public var queue: Queue
     public var leagueInfoList: [LeagueInfo]
     
@@ -24,7 +24,7 @@ public class League: Decodable {
         case leagueInfoList = "entries"
     }
     
-    public init(leagueId: LeagueId, name: String, tier: String, queue: Queue, leagueInfoList: [LeagueInfo]) {
+    public init(leagueId: LeagueId, name: String, tier: RankedTier, queue: Queue, leagueInfoList: [LeagueInfo]) {
         self.leagueId = leagueId
         self.name = name
         self.tier = tier
@@ -36,7 +36,7 @@ public class League: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.leagueId = try LeagueId(container.decode(String.self, forKey: .leagueId))
         self.name = try container.decode(String.self, forKey: .name)
-        self.tier = try container.decode(String.self, forKey: .tier)
+        self.tier = try RankedTier(container.decode(String.self, forKey: .tier))
         self.queue = try Queue(container.decode(String.self, forKey: .queue))
         self.leagueInfoList = try container.decode([LeagueInfo].self, forKey: .leagueInfoList)
     }
