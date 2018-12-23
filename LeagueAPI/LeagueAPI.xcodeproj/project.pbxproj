@@ -94,6 +94,15 @@
 		97B7B884213455B4005C9B94 /* DurationDelayedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B7B883213455B4005C9B94 /* DurationDelayedRequest.swift */; };
 		97B7B886213456AD005C9B94 /* DelayedTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B7B885213456AD005C9B94 /* DelayedTask.swift */; };
 		97B7B88821345BEE005C9B94 /* ExploringRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B7B88721345BEE005C9B94 /* ExploringRequest.swift */; };
+		97CAEA7421CFC49C00F18373 /* Platinum_Emblem.png in Resources */ = {isa = PBXBuildFile; fileRef = 97CAEA6B21CFC49A00F18373 /* Platinum_Emblem.png */; };
+		97CAEA7521CFC49C00F18373 /* Gold_Emblem.png in Resources */ = {isa = PBXBuildFile; fileRef = 97CAEA6C21CFC49B00F18373 /* Gold_Emblem.png */; };
+		97CAEA7621CFC49C00F18373 /* Challenger_Emblem.png in Resources */ = {isa = PBXBuildFile; fileRef = 97CAEA6D21CFC49B00F18373 /* Challenger_Emblem.png */; };
+		97CAEA7721CFC49C00F18373 /* Diamond_Emblem.png in Resources */ = {isa = PBXBuildFile; fileRef = 97CAEA6E21CFC49B00F18373 /* Diamond_Emblem.png */; };
+		97CAEA7821CFC49C00F18373 /* Bronze_Emblem.png in Resources */ = {isa = PBXBuildFile; fileRef = 97CAEA6F21CFC49B00F18373 /* Bronze_Emblem.png */; };
+		97CAEA7921CFC49C00F18373 /* Grandmaster_Emblem.png in Resources */ = {isa = PBXBuildFile; fileRef = 97CAEA7021CFC49B00F18373 /* Grandmaster_Emblem.png */; };
+		97CAEA7A21CFC49C00F18373 /* Master_Emblem.png in Resources */ = {isa = PBXBuildFile; fileRef = 97CAEA7121CFC49B00F18373 /* Master_Emblem.png */; };
+		97CAEA7B21CFC49C00F18373 /* Silver_Emblem.png in Resources */ = {isa = PBXBuildFile; fileRef = 97CAEA7221CFC49C00F18373 /* Silver_Emblem.png */; };
+		97CAEA7C21CFC49C00F18373 /* Iron_Emblem.png in Resources */ = {isa = PBXBuildFile; fileRef = 97CAEA7321CFC49C00F18373 /* Iron_Emblem.png */; };
 		97D38D1B210A4D8D00150CF9 /* Summoner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D1A210A4D8D00150CF9 /* Summoner.swift */; };
 		97D38D22210A521000150CF9 /* RESTRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D21210A521000150CF9 /* RESTRequester.swift */; };
 		97D38D24210A532B00150CF9 /* ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D23210A532B00150CF9 /* ObjectMapper.swift */; };
@@ -270,6 +279,15 @@
 		97B7B883213455B4005C9B94 /* DurationDelayedRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationDelayedRequest.swift; sourceTree = "<group>"; };
 		97B7B885213456AD005C9B94 /* DelayedTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelayedTask.swift; sourceTree = "<group>"; };
 		97B7B88721345BEE005C9B94 /* ExploringRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploringRequest.swift; sourceTree = "<group>"; };
+		97CAEA6B21CFC49A00F18373 /* Platinum_Emblem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Platinum_Emblem.png; sourceTree = "<group>"; };
+		97CAEA6C21CFC49B00F18373 /* Gold_Emblem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gold_Emblem.png; sourceTree = "<group>"; };
+		97CAEA6D21CFC49B00F18373 /* Challenger_Emblem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Challenger_Emblem.png; sourceTree = "<group>"; };
+		97CAEA6E21CFC49B00F18373 /* Diamond_Emblem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Diamond_Emblem.png; sourceTree = "<group>"; };
+		97CAEA6F21CFC49B00F18373 /* Bronze_Emblem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bronze_Emblem.png; sourceTree = "<group>"; };
+		97CAEA7021CFC49B00F18373 /* Grandmaster_Emblem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Grandmaster_Emblem.png; sourceTree = "<group>"; };
+		97CAEA7121CFC49B00F18373 /* Master_Emblem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Master_Emblem.png; sourceTree = "<group>"; };
+		97CAEA7221CFC49C00F18373 /* Silver_Emblem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Silver_Emblem.png; sourceTree = "<group>"; };
+		97CAEA7321CFC49C00F18373 /* Iron_Emblem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Iron_Emblem.png; sourceTree = "<group>"; };
 		97D38D1A210A4D8D00150CF9 /* Summoner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summoner.swift; sourceTree = "<group>"; };
 		97D38D21210A521000150CF9 /* RESTRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTRequester.swift; sourceTree = "<group>"; };
 		97D38D23210A532B00150CF9 /* ObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMapper.swift; sourceTree = "<group>"; };
@@ -479,6 +497,22 @@
 				97B7B883213455B4005C9B94 /* DurationDelayedRequest.swift */,
 			);
 			path = RequestModels;
+			sourceTree = "<group>";
+		};
+		97CAEA6A21CFC48000F18373 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				97CAEA6F21CFC49B00F18373 /* Bronze_Emblem.png */,
+				97CAEA6D21CFC49B00F18373 /* Challenger_Emblem.png */,
+				97CAEA6E21CFC49B00F18373 /* Diamond_Emblem.png */,
+				97CAEA6C21CFC49B00F18373 /* Gold_Emblem.png */,
+				97CAEA7021CFC49B00F18373 /* Grandmaster_Emblem.png */,
+				97CAEA7321CFC49C00F18373 /* Iron_Emblem.png */,
+				97CAEA7121CFC49B00F18373 /* Master_Emblem.png */,
+				97CAEA6B21CFC49A00F18373 /* Platinum_Emblem.png */,
+				97CAEA7221CFC49C00F18373 /* Silver_Emblem.png */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		97D38D19210A4D7700150CF9 /* Models */ = {
@@ -698,6 +732,7 @@
 				97D38D2C210A5AB800150CF9 /* Constants */,
 				97E3145F211C33BC00C9F739 /* Types */,
 				97D38D1F210A511D00150CF9 /* Utils */,
+				97CAEA6A21CFC48000F18373 /* Assets */,
 				97FB4498210A492F00C092AB /* LeagueAPI.h */,
 				97FB4499210A492F00C092AB /* Info.plist */,
 			);
@@ -773,6 +808,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97CAEA7421CFC49C00F18373 /* Platinum_Emblem.png in Resources */,
+				97CAEA7521CFC49C00F18373 /* Gold_Emblem.png in Resources */,
+				97CAEA7B21CFC49C00F18373 /* Silver_Emblem.png in Resources */,
+				97CAEA7C21CFC49C00F18373 /* Iron_Emblem.png in Resources */,
+				97CAEA7821CFC49C00F18373 /* Bronze_Emblem.png in Resources */,
+				97CAEA7721CFC49C00F18373 /* Diamond_Emblem.png in Resources */,
+				97CAEA7921CFC49C00F18373 /* Grandmaster_Emblem.png in Resources */,
+				97CAEA7A21CFC49C00F18373 /* Master_Emblem.png in Resources */,
+				97CAEA7621CFC49C00F18373 /* Challenger_Emblem.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
