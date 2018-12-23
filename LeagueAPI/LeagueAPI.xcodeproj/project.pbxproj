@@ -103,6 +103,9 @@
 		97CAEA7A21CFC49C00F18373 /* Master_Emblem.png in Resources */ = {isa = PBXBuildFile; fileRef = 97CAEA7121CFC49B00F18373 /* Master_Emblem.png */; };
 		97CAEA7B21CFC49C00F18373 /* Silver_Emblem.png in Resources */ = {isa = PBXBuildFile; fileRef = 97CAEA7221CFC49C00F18373 /* Silver_Emblem.png */; };
 		97CAEA7C21CFC49C00F18373 /* Iron_Emblem.png in Resources */ = {isa = PBXBuildFile; fileRef = 97CAEA7321CFC49C00F18373 /* Iron_Emblem.png */; };
+		97CAEA7E21CFC5D800F18373 /* RankedTier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CAEA7D21CFC5D800F18373 /* RankedTier.swift */; };
+		97CAEA8121CFC74F00F18373 /* RankedTierBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CAEA8021CFC74F00F18373 /* RankedTierBusiness.swift */; };
+		97CAEA8321CFC7F600F18373 /* LocalAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CAEA8221CFC7F600F18373 /* LocalAssets.swift */; };
 		97D38D1B210A4D8D00150CF9 /* Summoner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D1A210A4D8D00150CF9 /* Summoner.swift */; };
 		97D38D22210A521000150CF9 /* RESTRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D21210A521000150CF9 /* RESTRequester.swift */; };
 		97D38D24210A532B00150CF9 /* ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D23210A532B00150CF9 /* ObjectMapper.swift */; };
@@ -288,6 +291,9 @@
 		97CAEA7121CFC49B00F18373 /* Master_Emblem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Master_Emblem.png; sourceTree = "<group>"; };
 		97CAEA7221CFC49C00F18373 /* Silver_Emblem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Silver_Emblem.png; sourceTree = "<group>"; };
 		97CAEA7321CFC49C00F18373 /* Iron_Emblem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Iron_Emblem.png; sourceTree = "<group>"; };
+		97CAEA7D21CFC5D800F18373 /* RankedTier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankedTier.swift; sourceTree = "<group>"; };
+		97CAEA8021CFC74F00F18373 /* RankedTierBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankedTierBusiness.swift; sourceTree = "<group>"; };
+		97CAEA8221CFC7F600F18373 /* LocalAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAssets.swift; sourceTree = "<group>"; };
 		97D38D1A210A4D8D00150CF9 /* Summoner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summoner.swift; sourceTree = "<group>"; };
 		97D38D21210A521000150CF9 /* RESTRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTRequester.swift; sourceTree = "<group>"; };
 		97D38D23210A532B00150CF9 /* ObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMapper.swift; sourceTree = "<group>"; };
@@ -407,6 +413,7 @@
 				97225C3221289928001025EB /* Place.swift */,
 				97225C342128A2D8001025EB /* Season.swift */,
 				978AC59D212ED26500C5CCCD /* ChampionRole.swift */,
+				97CAEA7D21CFC5D800F18373 /* RankedTier.swift */,
 			);
 			path = RiotEnums;
 			sourceTree = "<group>";
@@ -515,6 +522,14 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		97CAEA7F21CFC72500F18373 /* LeagueAPIBusiness */ = {
+			isa = PBXGroup;
+			children = (
+				97CAEA8021CFC74F00F18373 /* RankedTierBusiness.swift */,
+			);
+			path = LeagueAPIBusiness;
+			sourceTree = "<group>";
+		};
 		97D38D19210A4D7700150CF9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -534,6 +549,7 @@
 				97691806211359D100F8AF3B /* RawRequester.swift */,
 				97A560A22125CB0000A908CD /* RiotAPIRESTRequester.swift */,
 				97A5608B2123572600A908CD /* DataDragonRequester.swift */,
+				97CAEA8221CFC7F600F18373 /* LocalAssets.swift */,
 			);
 			path = DataAccess;
 			sourceTree = "<group>";
@@ -543,6 +559,7 @@
 			children = (
 				97A560902123770600A908CD /* RiotAPIBusiness */,
 				97A560912123772300A908CD /* DataDragonBusiness */,
+				97CAEA7F21CFC72500F18373 /* LeagueAPIBusiness */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -857,6 +874,7 @@
 				97D38DCB210CCCDB00150CF9 /* MatchParticipantTimeline.swift in Sources */,
 				97D38DC3210CCC4700150CF9 /* TeamStats.swift in Sources */,
 				97A560BE2126F4FD00A908CD /* ProfileIcon.swift in Sources */,
+				97CAEA8321CFC7F600F18373 /* LocalAssets.swift in Sources */,
 				97A5608A21234B5600A908CD /* DDragonChampionFile.swift in Sources */,
 				97A560A12125C07C00A908CD /* HttpResponseCode.swift in Sources */,
 				97D38DD5210CF04000150CF9 /* MatchParticipantFrame.swift in Sources */,
@@ -899,6 +917,8 @@
 				97D38DCF210CCDFD00150CF9 /* LegacyMastery.swift in Sources */,
 				97A560C52127070200A908CD /* DataDragonProfileIconBusiness.swift in Sources */,
 				97D38D97210C9D2C00150CF9 /* Service.swift in Sources */,
+				97CAEA8121CFC74F00F18373 /* RankedTierBusiness.swift in Sources */,
+				97CAEA7E21CFC5D800F18373 /* RankedTier.swift in Sources */,
 				97D38DC9210CCCB800150CF9 /* MatchParticipantStats.swift in Sources */,
 				97D38DD3210CF03000150CF9 /* MatchFrame.swift in Sources */,
 				97B7B884213455B4005C9B94 /* DurationDelayedRequest.swift in Sources */,
