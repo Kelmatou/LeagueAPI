@@ -19,7 +19,7 @@ internal class RateLimit {
     public var hasReachLimit: Bool {
         if self.current + self.currentRequestNb < self.limit { return false }
         clean()
-        return self.creations.count + self.currentRequestNb >= self.limit
+        return self.current + self.currentRequestNb >= self.limit
     }
     
     public init(current: Int, limit: Int, duration: Int) {
@@ -44,7 +44,7 @@ internal class RateLimit {
     // New RateLimit have 'current' times the same creation date
     public func merge(with newRateLimit: RateLimit) {
         self.current = newRateLimit.current
-        self.creations.keepLast(n: self.current - 1)
+        self.creations.keepLast(n: self.current - 1) // -1: Booking place for new entering request
         self.clean()
         if self.current > 0 {
             let newDate: Date = newRateLimit.creations[0] // Not checked but we want a crash if predicate
@@ -59,7 +59,7 @@ internal class RateLimit {
     }
     
     public func durationUntilRateLimitPasses() -> Duration {
-        if self.current < self.limit { return Duration(seconds: 0) }
+        if !hasReachLimit { return Duration(seconds: 0) }
         let firstCreationDate: Date = self.creations[0] // Not checked but we want a crash if not existing
         let timeFromNow: TimeInterval = -firstCreationDate.timeIntervalSinceNow
         Logger.debug("First creation date was \(timeFromNow)s ago (\(Datetime(date: firstCreationDate).toString())")
@@ -74,6 +74,7 @@ internal class RateLimit {
     private func clean() {
         self.creations = self.creations.filter { date in
             return -date.timeIntervalSinceNow < Double(duration) }
+        self.current = self.creations.count
     }
     
     public static func array(from currentAndDurationList: String, and limitAndDurationList: String) -> [RateLimit] {
