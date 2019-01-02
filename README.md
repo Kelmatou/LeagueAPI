@@ -52,6 +52,8 @@ Starting using this framework requires you to create an instance of LeagueAPI by
 
 `let league = LeagueAPI(APIToken: "*INSERT YOUR KEY HERE*")`
 
+Now use this instance everywhere, you shouldn't recreate the LeagueAPI variable.
+
 ## 🧐 And then? 🧐
 
 LeagueAPI has 2 major parts:
