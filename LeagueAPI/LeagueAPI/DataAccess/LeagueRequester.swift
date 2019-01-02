@@ -146,7 +146,12 @@ internal class LeagueRequester {
     }
     
     private func handleRateLimitExceeded<ResultType: Decodable>(headers: RESTRequester.Headers?, method: LeagueMethod, handler: @escaping (ResultType?, String?) -> Void) {
-        Logger.error("App Rate Limit violation! If this happens frequently, please open an issue at https://github.com/Kelmatou/LeagueAPI/issues")
+        if self.key.rateLimitManager.exploringAppRateLimit {
+            Logger.warning("App Rate Limit violation! LeagueAPI tried to reach Riot API but first call received App Rate Limit Exception. This may happen and is a normal behavior but if it happens to frequently may result in blacklist of the API key")
+        }
+        else {
+            Logger.error("App Rate Limit violation! Make sure you created only one LeagueAPI object in your application. If this happens frequently, please open an issue at https://github.com/Kelmatou/LeagueAPI/issues")
+        }
         if let headers = headers, let retryAfter = headers["Retry-After"] as? Int {
             let durationUntilRateLimitPasses: Duration = Duration(seconds: Double(retryAfter))
             Logger.error("Request is not lost and will be re-executed in \(durationUntilRateLimitPasses.seconds)s")
