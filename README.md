@@ -76,7 +76,7 @@ Riot API provides data related to players, that are evolving when you play. Leag
 * [Tournaments](https://github.com/Kelmatou/LeagueAPI/wiki/Tournaments)
 
 **LeagueAPI now uses Riot API v4, as v3 will be deprecated on 28th january 2019.**  
-**❗️Upgrading to LeagueAPI 1.2.0 will break SummonerId or AccountId you may store.❗️**
+**❗️Upgrading to LeagueAPI >= 1.2.0 will break any SummonerId or AccountId you may have stored.❗️**
 
 ### Custom Methods 
 
