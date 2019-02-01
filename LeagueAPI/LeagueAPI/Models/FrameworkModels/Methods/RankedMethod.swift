@@ -16,6 +16,8 @@ internal class RankedMethod: LeagueMethod {
         case MasterByQueue(queue: Queue)
         case LeagueById(id: LeagueId)
         case PositionsById(id: SummonerId)
+        case PositionalRankQueues
+        case PositionalQueue(queue: Queue, division: RankedDivision, position: GameRole, page: Int)
     }
     
     private var service: ServiceProxy
@@ -32,7 +34,7 @@ internal class RankedMethod: LeagueMethod {
     
     func getMethodSignature() -> String {
         switch self.method {
-        case .LeagueById, .ChallengerByQueue, .GrandMasterByQueue, .MasterByQueue:
+        case .LeagueById, .ChallengerByQueue, .GrandMasterByQueue, .MasterByQueue, .PositionalRankQueues, .PositionalQueue:
             return "League"
         case .PositionsById:
             return "PositionsById-\(self.service.region.rawValue)"
@@ -53,6 +55,10 @@ internal class RankedMethod: LeagueMethod {
             return "\(commonPath)/masterleagues/by-queue/\(queue.type.rawValue)"
         case .PositionsById(let id):
             return "\(commonPath)/positions/by-summoner/\(id)"
+        case .PositionalRankQueues:
+            return "\(commonPath)/positional-rank-queues"
+        case .PositionalQueue(let queue, let division, let position, let page):
+            return "\(commonPath)/positions/\(queue.type.rawValue)/\(division.tier.tier.rawValue)/\(division.divisionRoman)/\(position.rawValue)/\(page)"
         }
     }
     
@@ -62,7 +68,7 @@ internal class RankedMethod: LeagueMethod {
     
     func getWarningMessage() -> String? {
         switch self.method {
-        case .ChallengerByQueue, .GrandMasterByQueue, .MasterByQueue, .PositionsById:
+        case .ChallengerByQueue, .GrandMasterByQueue, .MasterByQueue, .PositionsById, .PositionalRankQueues, .PositionalQueue:
             return nil
         case .LeagueById:
             return "Too many calls to unexisting League(by LeagueId) may result in Blacklist"

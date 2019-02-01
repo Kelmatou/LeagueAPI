@@ -56,6 +56,14 @@ public class RiotAPI: APIClient {
         RankedBusiness.getRankedPosition(in: queue, method: .PositionsById(id: summonerId), region: region, key: self.key, handler: handler)
     }
     
+    public func getPositionalRankQueues(on region: Region, handler: @escaping ([String]?, String?) -> Void) {
+        RankedBusiness.getRanked(method: .PositionalRankQueues, region: region, key: self.key, handler: handler)
+    }
+    
+    public func getPositionalQueue(on region: Region, queue: Queue, division: RankedDivision, position: GameRole, page: Int = 0, handler: @escaping ([RankedPosition]?, String?) -> Void) {
+        RankedBusiness.getRanked(method: .PositionalQueue(queue: queue, division: division, position: position, page: page), region: region, key: self.key, handler: handler)
+    }
+    
     // MARK: - Status
     
     public func getStatus(on region: Region, handler: @escaping (ServiceStatus?, String?) -> Void) {

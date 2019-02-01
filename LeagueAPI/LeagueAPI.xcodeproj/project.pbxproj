@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		558F33492204897D006D2EA1 /* GameRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F33482204897D006D2EA1 /* GameRole.swift */; };
+		558F334B220489ED006D2EA1 /* RankedDivision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F334A220489ED006D2EA1 /* RankedDivision.swift */; };
 		97225C22212850D2001025EB /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97225C21212850D2001025EB /* Duration.swift */; };
 		97225C2D21286235001025EB /* GameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97225C2C21286235001025EB /* GameType.swift */; };
 		97225C2F212865E1001025EB /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97225C2E212865E1001025EB /* Map.swift */; };
@@ -195,6 +197,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		558F33482204897D006D2EA1 /* GameRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRole.swift; sourceTree = "<group>"; };
+		558F334A220489ED006D2EA1 /* RankedDivision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankedDivision.swift; sourceTree = "<group>"; };
 		97225C21212850D2001025EB /* Duration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
 		97225C2C21286235001025EB /* GameType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameType.swift; sourceTree = "<group>"; };
 		97225C2E212865E1001025EB /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
@@ -414,6 +418,7 @@
 				97225C342128A2D8001025EB /* Season.swift */,
 				978AC59D212ED26500C5CCCD /* ChampionRole.swift */,
 				97CAEA7D21CFC5D800F18373 /* RankedTier.swift */,
+				558F33482204897D006D2EA1 /* GameRole.swift */,
 			);
 			path = RiotEnums;
 			sourceTree = "<group>";
@@ -640,6 +645,7 @@
 				97E67E8D21359F5500E8E1B7 /* TournamentDetails.swift */,
 				97E67E912135B64D00E8E1B7 /* EmptyReply.swift */,
 				9729BEFD219EB662005F8311 /* ChampionRotations.swift */,
+				558F334A220489ED006D2EA1 /* RankedDivision.swift */,
 			);
 			path = RiotModels;
 			sourceTree = "<group>";
@@ -881,6 +887,7 @@
 				978AC61C2131671100C5CCCD /* RuneId.swift in Sources */,
 				97E31449211B9F9800C9F739 /* ErrorStatus.swift in Sources */,
 				97B7B886213456AD005C9B94 /* DelayedTask.swift in Sources */,
+				558F33492204897D006D2EA1 /* GameRole.swift in Sources */,
 				97D38DF0210E0A9000150CF9 /* TournamentProvider.swift in Sources */,
 				97E67E8C21359C1400E8E1B7 /* TournamentUpdate.swift in Sources */,
 				97E31447211B9E9700C9F739 /* ErrorMessage.swift in Sources */,
@@ -951,6 +958,7 @@
 				97D38D93210C88E800150CF9 /* RankedBusiness.swift in Sources */,
 				978AC62C2131ED1D00C5CCCD /* RunePathId.swift in Sources */,
 				978AC5C7212F51BA00C5CCCD /* TournamentCode.swift in Sources */,
+				558F334B220489ED006D2EA1 /* RankedDivision.swift in Sources */,
 				97D38DC7210CCCA400150CF9 /* MatchParticipantIdentity.swift in Sources */,
 				978AC5F221307BB300C5CCCD /* ChampionSpell.swift in Sources */,
 				97D38DDF210D16C400150CF9 /* ThirdPartyCodeMethod.swift in Sources */,
