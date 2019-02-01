@@ -46,6 +46,9 @@ public class MatchParticipantStats: Decodable {
     public var rune5Var1: Int?
     public var rune5Var2: Int?
     public var rune5Var3: Int?
+    public var statPerk0: Int?
+    public var statPerk1: Int?
+    public var statPerk2: Int?
     public var doubleKills: Int
     public var tripleKills: Int
     public var quadraKills: Int
@@ -155,6 +158,9 @@ public class MatchParticipantStats: Decodable {
         case rune5Var1 = "perk5Var1"
         case rune5Var2 = "perk5Var2"
         case rune5Var3 = "perk5Var3"
+        case statPerk0 = "statPerk0"
+        case statPerk1 = "statPerk1"
+        case statPerk2 = "statPerk2"
         case doubleKills = "doubleKills"
         case tripleKills = "tripleKills"
         case quadraKills = "quadraKills"
@@ -228,7 +234,7 @@ public class MatchParticipantStats: Decodable {
         case nodeCaptureAssist = "nodeCaptureAssist"
     }
     
-    public init(participantId: Int, win: Bool, champLevel: Int, goldEarned: Int, goldSpent: Int, item0: ItemId, item1: ItemId, item2: ItemId, item3: ItemId, item4: ItemId, item5: ItemId, item6: ItemId, rune0: RuneId?, rune1: RuneId?, rune2: RuneId?, rune3: RuneId?, rune4: RuneId?, rune5: RuneId?, rune0Var1: Int?, rune0Var2: Int?, rune0Var3: Int?, rune1Var1: Int?, rune1Var2: Int?, rune1Var3: Int?, rune2Var1: Int?, rune2Var2: Int?, rune2Var3: Int?, rune3Var1: Int?, rune3Var2: Int?, rune3Var3: Int?, rune4Var1: Int?, rune4Var2: Int?, rune4Var3: Int?, rune5Var1: Int?, rune5Var2: Int?, rune5Var3: Int?, doubleKills: Int, tripleKills: Int, quadraKills: Int, pentaKills: Int, totalPlayerScore: Int, playerScore0: Int, playerScore1: Int, playerScore2: Int, playerScore3: Int, playerScore4: Int, playerScore5: Int, playerScore6: Int, playerScore7: Int, playerScore8: Int, playerScore9: Int, totalScoreRank: Int, visionScore: Long, firstBloodKill: Bool?, firstBloodAssist: Bool?, firstInhibitorKill: Bool?, firstInhibitorAssist: Bool?, firstTowerKill: Bool?, firstTowerAssist: Bool?, kills: Int, deaths: Int, assists: Int, unrealKills: Int, wardsPlaced: Int?, wardsKilled: Int?, sigthWardsBoughtInGame: Int?, visionWardsBoughtInGame: Int?, primaryRunePath: RunePathId?, secondaryRunePath: RunePathId?, neutralMinionsKilled: Int, totalDamageDealt: Long, totalDamageDealtToChampions: Long, damageDealtToObjectives: Long, damageDealtToTurrets: Long?, trueDamageDealt: Long, trueDamageDealtToChampions: Long, magicDamageDealt: Long, magicDamageDealtToChampions: Long, physicalDamageDealt: Long, physicalDamageDealtToChampions: Long, totalDamageTaken: Long, trueDamageTaken: Long, magicalDamageTaken: Long, physicalDamageTaken: Long, damageSelfMitigated: Long, totalHeal: Long, totalUnitsHealed: Int, largestMultiKill: Int, largestCritialStrike: Int?, largestKillingSpree: Int, teamObjective: Int?, combatPlayerScore: Int, objectivePlayerScore: Int, neutralMinionsKilledTeamJungle: Int?, neutralMinionsKilledEnemyJungle: Int?, killingSprees: Int, inhibitorKills: Int?, turretKills: Int?, totalMinionsKilled: Int, totalTimeCrowdControlDealt: Int, longestTimeSpentLiving: Int, timeCCingOthers: Long, altarsCaptures: Int?, altarsNeutralized: Int?, nodeNeutralize: Int?, nodeNeutralizeAssist: Int?, nodeCaptureAssist: Int?) {
+    public init(participantId: Int, win: Bool, champLevel: Int, goldEarned: Int, goldSpent: Int, item0: ItemId, item1: ItemId, item2: ItemId, item3: ItemId, item4: ItemId, item5: ItemId, item6: ItemId, rune0: RuneId?, rune1: RuneId?, rune2: RuneId?, rune3: RuneId?, rune4: RuneId?, rune5: RuneId?, rune0Var1: Int?, rune0Var2: Int?, rune0Var3: Int?, rune1Var1: Int?, rune1Var2: Int?, rune1Var3: Int?, rune2Var1: Int?, rune2Var2: Int?, rune2Var3: Int?, rune3Var1: Int?, rune3Var2: Int?, rune3Var3: Int?, rune4Var1: Int?, rune4Var2: Int?, rune4Var3: Int?, rune5Var1: Int?, rune5Var2: Int?, rune5Var3: Int?, statPerk0: Int?, statPerk1: Int?, statPerk2: Int?, doubleKills: Int, tripleKills: Int, quadraKills: Int, pentaKills: Int, totalPlayerScore: Int, playerScore0: Int, playerScore1: Int, playerScore2: Int, playerScore3: Int, playerScore4: Int, playerScore5: Int, playerScore6: Int, playerScore7: Int, playerScore8: Int, playerScore9: Int, totalScoreRank: Int, visionScore: Long, firstBloodKill: Bool?, firstBloodAssist: Bool?, firstInhibitorKill: Bool?, firstInhibitorAssist: Bool?, firstTowerKill: Bool?, firstTowerAssist: Bool?, kills: Int, deaths: Int, assists: Int, unrealKills: Int, wardsPlaced: Int?, wardsKilled: Int?, sigthWardsBoughtInGame: Int?, visionWardsBoughtInGame: Int?, primaryRunePath: RunePathId?, secondaryRunePath: RunePathId?, neutralMinionsKilled: Int, totalDamageDealt: Long, totalDamageDealtToChampions: Long, damageDealtToObjectives: Long, damageDealtToTurrets: Long?, trueDamageDealt: Long, trueDamageDealtToChampions: Long, magicDamageDealt: Long, magicDamageDealtToChampions: Long, physicalDamageDealt: Long, physicalDamageDealtToChampions: Long, totalDamageTaken: Long, trueDamageTaken: Long, magicalDamageTaken: Long, physicalDamageTaken: Long, damageSelfMitigated: Long, totalHeal: Long, totalUnitsHealed: Int, largestMultiKill: Int, largestCritialStrike: Int?, largestKillingSpree: Int, teamObjective: Int?, combatPlayerScore: Int, objectivePlayerScore: Int, neutralMinionsKilledTeamJungle: Int?, neutralMinionsKilledEnemyJungle: Int?, killingSprees: Int, inhibitorKills: Int?, turretKills: Int?, totalMinionsKilled: Int, totalTimeCrowdControlDealt: Int, longestTimeSpentLiving: Int, timeCCingOthers: Long, altarsCaptures: Int?, altarsNeutralized: Int?, nodeNeutralize: Int?, nodeNeutralizeAssist: Int?, nodeCaptureAssist: Int?) {
         self.participantId = participantId
         self.win = win
         self.champLevel = champLevel
@@ -265,6 +271,9 @@ public class MatchParticipantStats: Decodable {
         self.rune5Var1 = rune5Var1
         self.rune5Var2 = rune5Var2
         self.rune5Var3 = rune5Var3
+        self.statPerk0 = statPerk0
+        self.statPerk1 = statPerk1
+        self.statPerk2 = statPerk2
         self.doubleKills = doubleKills
         self.tripleKills = tripleKills
         self.quadraKills = quadraKills
@@ -376,6 +385,9 @@ public class MatchParticipantStats: Decodable {
         self.rune5Var1 = try? container.decode(Int.self, forKey: .rune5Var1)
         self.rune5Var2 = try? container.decode(Int.self, forKey: .rune5Var2)
         self.rune5Var3 = try? container.decode(Int.self, forKey: .rune5Var3)
+        self.statPerk0 = try? container.decode(Int.self, forKey: .statPerk0)
+        self.statPerk1 = try? container.decode(Int.self, forKey: .statPerk1)
+        self.statPerk2 = try? container.decode(Int.self, forKey: .statPerk2)
         self.doubleKills = try container.decode(Int.self, forKey: .doubleKills)
         self.tripleKills = try container.decode(Int.self, forKey: .tripleKills)
         self.quadraKills = try container.decode(Int.self, forKey: .quadraKills)
