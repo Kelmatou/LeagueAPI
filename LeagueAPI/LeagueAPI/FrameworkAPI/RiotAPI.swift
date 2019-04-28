@@ -48,20 +48,16 @@ public class RiotAPI: APIClient {
         RankedBusiness.getRanked(method: .MasterByQueue(queue: queue), region: region, key: self.key, handler: handler)
     }
     
-    public func getRankedPositions(for summonerId: SummonerId, on region: Region, handler: @escaping ([RankedPosition]?, String?) -> Void) {
-        RankedBusiness.getRanked(method: .PositionsById(id: summonerId), region: region, key: self.key, handler: handler)
+    public func getRankedEntries(for summonerId: SummonerId, on region: Region, handler: @escaping ([RankedEntry]?, String?) -> Void) {
+        RankedBusiness.getRanked(method: .EntriesById(id: summonerId), region: region, key: self.key, handler: handler)
     }
     
-    public func getRankedPosition(for summonerId: SummonerId, in queue: Queue, on region: Region, handler: @escaping (RankedPosition?, String?) -> Void) {
-        RankedBusiness.getRankedPosition(in: queue, method: .PositionsById(id: summonerId), region: region, key: self.key, handler: handler)
+    public func getRankedEntry(for summonerId: SummonerId, in queue: Queue, on region: Region, handler: @escaping (RankedEntry?, String?) -> Void) {
+        RankedBusiness.getRankedEntry(in: queue, method: .EntriesById(id: summonerId), region: region, key: self.key, handler: handler)
     }
     
-    public func getPositionalRankQueues(on region: Region, handler: @escaping ([String]?, String?) -> Void) {
-        RankedBusiness.getRanked(method: .PositionalRankQueues, region: region, key: self.key, handler: handler)
-    }
-    
-    public func getPositionalQueue(on region: Region, queue: Queue, division: RankedDivision, position: GameRole, page: Int = 0, handler: @escaping ([RankedPosition]?, String?) -> Void) {
-        RankedBusiness.getRanked(method: .PositionalQueue(queue: queue, division: division, position: position, page: page), region: region, key: self.key, handler: handler)
+    public func getQueueEntries(on region: Region, queue: Queue, division: RankedDivision, page: Int = 1, handler: @escaping ([RankedEntry]?, String?) -> Void) {
+        RankedBusiness.getRanked(method: .QueueEntries(queue: queue, division: division, page: page), region: region, key: self.key, handler: handler)
     }
     
     // MARK: - Status

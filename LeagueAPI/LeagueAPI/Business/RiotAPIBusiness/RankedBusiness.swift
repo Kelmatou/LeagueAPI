@@ -10,8 +10,8 @@ import Foundation
 
 internal class RankedBusiness {
     
-    public static func getRankedPosition(in queue: Queue, method: RankedMethod.RankedMethods, region: Region, key: APIKey, handler: @escaping (RankedPosition?, String?) -> Void) {
-        let completion: ([RankedPosition]?, String?) -> Void = { (positionList, error) in
+    public static func getRankedEntry(in queue: Queue, method: RankedMethod.RankedMethods, region: Region, key: APIKey, handler: @escaping (RankedEntry?, String?) -> Void) {
+        let completion: ([RankedEntry]?, String?) -> Void = { (positionList, error) in
             handler(positionList?.filter { position in position.queue.type.rawValue == queue.type.rawValue }.first ?? nil, error)
         }
         getRanked(method: method, region: region, key: key, handler: completion)

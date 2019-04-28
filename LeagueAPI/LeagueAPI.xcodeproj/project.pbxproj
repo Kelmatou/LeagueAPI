@@ -134,7 +134,7 @@
 		97D38D85210C727300150CF9 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D84210C727300150CF9 /* League.swift */; };
 		97D38D87210C728300150CF9 /* LeagueInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D86210C728300150CF9 /* LeagueInfo.swift */; };
 		97D38D89210C729900150CF9 /* Series.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D88210C729900150CF9 /* Series.swift */; };
-		97D38D8B210C72E900150CF9 /* RankedPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D8A210C72E900150CF9 /* RankedPosition.swift */; };
+		97D38D8B210C72E900150CF9 /* RankedEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D8A210C72E900150CF9 /* RankedEntry.swift */; };
 		97D38D8F210C7E8D00150CF9 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D8E210C7E8D00150CF9 /* Queue.swift */; };
 		97D38D91210C85AC00150CF9 /* RankedMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D90210C85AC00150CF9 /* RankedMethod.swift */; };
 		97D38D93210C88E800150CF9 /* RankedBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38D92210C88E800150CF9 /* RankedBusiness.swift */; };
@@ -324,7 +324,7 @@
 		97D38D84210C727300150CF9 /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
 		97D38D86210C728300150CF9 /* LeagueInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueInfo.swift; sourceTree = "<group>"; };
 		97D38D88210C729900150CF9 /* Series.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Series.swift; sourceTree = "<group>"; };
-		97D38D8A210C72E900150CF9 /* RankedPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankedPosition.swift; sourceTree = "<group>"; };
+		97D38D8A210C72E900150CF9 /* RankedEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankedEntry.swift; sourceTree = "<group>"; };
 		97D38D8E210C7E8D00150CF9 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		97D38D90210C85AC00150CF9 /* RankedMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankedMethod.swift; sourceTree = "<group>"; };
 		97D38D92210C88E800150CF9 /* RankedBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankedBusiness.swift; sourceTree = "<group>"; };
@@ -608,7 +608,7 @@
 				97D38D84210C727300150CF9 /* League.swift */,
 				97D38D86210C728300150CF9 /* LeagueInfo.swift */,
 				97D38D88210C729900150CF9 /* Series.swift */,
-				97D38D8A210C72E900150CF9 /* RankedPosition.swift */,
+				97D38D8A210C72E900150CF9 /* RankedEntry.swift */,
 				97D38D94210C9D2100150CF9 /* ServiceStatus.swift */,
 				97D38D96210C9D2C00150CF9 /* Service.swift */,
 				97D38D98210C9D3900150CF9 /* Incident.swift */,
@@ -914,7 +914,7 @@
 				97D38D83210C6E9B00150CF9 /* ChampionBusiness.swift in Sources */,
 				97A5607C2122EFD200A908CD /* DDragonChampionsFile.swift in Sources */,
 				97A5608F21236FCF00A908CD /* DDragonVersions.swift in Sources */,
-				97D38D8B210C72E900150CF9 /* RankedPosition.swift in Sources */,
+				97D38D8B210C72E900150CF9 /* RankedEntry.swift in Sources */,
 				978AC5B3212F4ABA00C5CCCD /* SummonerId.swift in Sources */,
 				978AC5BF212F518400C5CCCD /* GameId.swift in Sources */,
 				97D38DC5210CCC6B00150CF9 /* TeamBan.swift in Sources */,

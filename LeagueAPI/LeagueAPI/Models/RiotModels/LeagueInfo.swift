@@ -17,6 +17,10 @@ public class LeagueInfo: Decodable {
     public var series: Series?
     public var wins: Int
     public var losses: Int
+    public var hotStreak: Bool
+    public var veteran: Bool
+    public var freshBlood: Bool
+    public var inactive: Bool
     
     enum CodingKeys: String, CodingKey {
         case summonerId = "summonerId"
@@ -26,9 +30,13 @@ public class LeagueInfo: Decodable {
         case series = "miniSeries"
         case wins = "wins"
         case losses = "losses"
+        case hotStreak = "hotStreak"
+        case veteran = "veteran"
+        case freshBlood = "freshBlood"
+        case inactive = "inactive"
     }
     
-    public init(summonerId: SummonerId, summonerName: String, rank: String, leaguePoints: Int, series: Series?, wins: Int, losses: Int) {
+    public init(summonerId: SummonerId, summonerName: String, rank: String, leaguePoints: Int, series: Series?, wins: Int, losses: Int, hotStreak: Bool, veteran: Bool, freshBlood: Bool, inactive: Bool) {
         self.summonerId = summonerId
         self.summonerName = summonerName
         self.rank = rank
@@ -36,6 +44,10 @@ public class LeagueInfo: Decodable {
         self.series = series
         self.wins = wins
         self.losses = losses
+        self.hotStreak = hotStreak
+        self.veteran = veteran
+        self.freshBlood = freshBlood
+        self.inactive = inactive
     }
     
     public required init(from decoder: Decoder) throws {
@@ -47,5 +59,9 @@ public class LeagueInfo: Decodable {
         self.series = try? container.decode(Series.self, forKey: .series)
         self.wins = try container.decode(Int.self, forKey: .wins)
         self.losses = try container.decode(Int.self, forKey: .losses)
+        self.hotStreak = try container.decode(Bool.self, forKey: .hotStreak)
+        self.veteran = try container.decode(Bool.self, forKey: .veteran)
+        self.freshBlood = try container.decode(Bool.self, forKey: .freshBlood)
+        self.inactive = try container.decode(Bool.self, forKey: .inactive)
     }
 }
