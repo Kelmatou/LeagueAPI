@@ -18,7 +18,7 @@ internal extension Int {
      
      - returns: true if value is in range [min, max]
      */
-    internal func isBetween(min: Int?, max: Int?) -> Bool {
+    func isBetween(min: Int?, max: Int?) -> Bool {
         if let min = min {
             if let max = max  {
                 return self >= min && self <= max

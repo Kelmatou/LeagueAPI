@@ -10,7 +10,7 @@ import Foundation
 
 public extension Datetime {
     
-    public enum Month: String {
+    enum Month: String {
         case January = "January"
         case February = "February"
         case March = "March"
@@ -25,7 +25,7 @@ public extension Datetime {
         case December = "December"
     }
     
-    public enum WeekDay: String {
+    enum WeekDay: String {
         case Monday = "Monday"
         case Tuesday = "Tuesday"
         case Wednesday = "Wednesday"
@@ -42,7 +42,7 @@ public extension Datetime {
      
      - returns: a Month representing month's name or nil if 1 > val or 12 < val
      */
-    public static func monthFromInt(_ val: Int) -> Month? {
+    static func monthFromInt(_ val: Int) -> Month? {
         switch val {
         case 1:  return .January
         case 2:  return .February
@@ -67,7 +67,7 @@ public extension Datetime {
      
      - returns: an index between 1 and 12 included
      */
-    public static func intFromMonth(_ month: Month) -> Int {
+    static func intFromMonth(_ month: Month) -> Int {
         switch month {
         case .January:   return 1
         case .February:  return 2
@@ -91,7 +91,7 @@ public extension Datetime {
      
      - returns: a Month representing month's name or nil if no match value was found
      */
-    public static func shortToLongMonth(_ short: String) -> Month? {
+    static func shortToLongMonth(_ short: String) -> Month? {
         switch short {
         case "Jan": return .January
         case "Feb": return .February
@@ -116,7 +116,7 @@ public extension Datetime {
      
      - returns: a WeekDay representing day's name or nil if 0 > val or 6 < val
      */
-    public static func weekDayFromInt(_ val: Int) -> WeekDay? {
+    static func weekDayFromInt(_ val: Int) -> WeekDay? {
         switch val {
         case 0:  return .Monday
         case 1:  return .Tuesday

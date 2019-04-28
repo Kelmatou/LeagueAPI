@@ -10,26 +10,26 @@ import Foundation
 
 public extension Array {
     
-    public mutating func append(_ sequence: Array) {
+    mutating func append(_ sequence: Array) {
         for element in sequence {
             self.append(element)
         }
     }
     
-    public mutating func keepLast(n: Int) {
+    mutating func keepLast(n: Int) {
         guard n > 0 else { self = []; return }
         guard n < self.count else { return }
         let numberToRemove: Int = self.count - n
         self.removeFirst(numberToRemove)
     }
     
-    public mutating func fill(with element: Element, untilCount newCount: Int) {
+    mutating func fill(with element: Element, untilCount newCount: Int) {
         while self.count < newCount {
             self.append(element)
         }
     }
     
-    public func firstMatch(where filterFunction: (Element) -> Bool, notFoundMessage: String? = nil, completion: @escaping (Element?, String?) -> Void) {
+    func firstMatch(where filterFunction: (Element) -> Bool, notFoundMessage: String? = nil, completion: @escaping (Element?, String?) -> Void) {
         if let match = self.first(where: filterFunction) {
             completion(match, nil)
         }
@@ -38,11 +38,11 @@ public extension Array {
         }
     }
     
-    public mutating func removeAll(where removeCondition: (Element) -> Bool) {
+    mutating func removeAll(where removeCondition: (Element) -> Bool) {
         self = self.filter { !removeCondition($0) }
     }
     
-    @discardableResult public mutating func removeFirst(where removeCondition: @escaping (Element) -> Bool) -> Element? {
+    @discardableResult mutating func removeFirst(where removeCondition: @escaping (Element) -> Bool) -> Element? {
         let elementToRemove: Element? = self.first(where: { removeCondition($0) })
         var found: Bool = false
         let removeFirstCondition: (Element) -> Bool = { element in

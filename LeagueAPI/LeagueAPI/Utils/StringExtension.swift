@@ -17,7 +17,7 @@ internal extension String {
      
      - returns: a substring starting at start index and finishing at the end of current string. nil is returned if startIndex is out of range
      */
-    internal func substring(startIndex: Int) -> String? {
+    func substring(startIndex: Int) -> String? {
         guard startIndex >= 0 && startIndex <= count else {
             return nil
         }
@@ -35,7 +35,7 @@ internal extension String {
      - returns: a substring starting at start index with a length() of length. If length parameter is too big, stops at the last character.
      nil is returned if startIndex is out of range or if a negative length was passed.
      */
-    internal func substring(startIndex: Int, length: Int) -> String? {
+    func substring(startIndex: Int, length: Int) -> String? {
         guard startIndex >= 0 && startIndex <= count && length >= 0 else {
             return nil
         }
@@ -47,7 +47,7 @@ internal extension String {
         return String(substring)
     }
     
-    internal func equals(_ str: String) -> Bool {
+    func equals(_ str: String) -> Bool {
         return self.lowercased() == str.lowercased()
     }
 }
