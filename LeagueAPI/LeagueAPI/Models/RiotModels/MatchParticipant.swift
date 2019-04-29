@@ -15,7 +15,7 @@ public class MatchParticipant: Decodable {
     public var championId: ChampionId
     public var summonerSpell1: SummonerSpellId
     public var summonerSpell2: SummonerSpellId
-    public var highestAchievedSeasonTier: RankedTier
+    public var highestAchievedSeasonTier: RankedTier?
     public var stats: MatchParticipantStats
     public var timeline: MatchParticipantTimeline
     public var runes: [LegacyRune]?
@@ -34,7 +34,7 @@ public class MatchParticipant: Decodable {
         case masteries = "masteries"
     }
     
-    public init(participantId: Int, teamId: Int, championId: ChampionId, summonerSpell1: SummonerSpellId, summonerSpell2: SummonerSpellId, highestAchievedSeasonTier: RankedTier, stats: MatchParticipantStats, timeline: MatchParticipantTimeline, runes: [LegacyRune]? = nil, masteries: [LegacyMastery]? = nil) {
+    public init(participantId: Int, teamId: Int, championId: ChampionId, summonerSpell1: SummonerSpellId, summonerSpell2: SummonerSpellId, highestAchievedSeasonTier: RankedTier?, stats: MatchParticipantStats, timeline: MatchParticipantTimeline, runes: [LegacyRune]? = nil, masteries: [LegacyMastery]? = nil) {
         self.participantId = participantId
         self.teamId = teamId
         self.championId = championId
@@ -54,7 +54,7 @@ public class MatchParticipant: Decodable {
         self.championId = try ChampionId(container.decode(Long.self, forKey: .championId))
         self.summonerSpell1 = try SummonerSpellId(container.decode(Long.self, forKey: .summonerSpell1))
         self.summonerSpell2 = try SummonerSpellId(container.decode(Long.self, forKey: .summonerSpell2))
-        self.highestAchievedSeasonTier = try RankedTier(container.decode(String.self, forKey: .highestAchievedSeasonTier))
+        self.highestAchievedSeasonTier = try? RankedTier(container.decode(String.self, forKey: .highestAchievedSeasonTier))
         self.stats = try container.decode(MatchParticipantStats.self, forKey: .stats)
         self.timeline = try container.decode(MatchParticipantTimeline.self, forKey: .timeline)
         self.runes = try? container.decode([LegacyRune].self, forKey: .runes)

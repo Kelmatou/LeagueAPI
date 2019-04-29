@@ -23,6 +23,8 @@ public class Season {
         case Season7 = 9
         case Preseason8 = 10
         case Season8 = 11
+        case Preseason9 = 12
+        case Season9 = 13
         case Unknown = -1
     }
     
@@ -68,6 +70,10 @@ public class Season {
             self.init(season: Seasons.Preseason8, name: "Preseason 8")
         case Seasons.Season8.rawValue:
             self.init(season: Seasons.Season8, name: "Season 8")
+        case Seasons.Preseason9.rawValue:
+            self.init(season: Seasons.Preseason9, name: "Preseason 9")
+        case Seasons.Season9.rawValue:
+            self.init(season: Seasons.Season9, name: "Season 9")
         default:
             Logger.warning("Season id \"\(id)\" unknown (check for LeagueAPI update)")
             self.init(season: .Unknown, name: "Unknown season with id=\(id)")

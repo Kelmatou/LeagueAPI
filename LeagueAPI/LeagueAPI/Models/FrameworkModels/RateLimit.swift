@@ -61,7 +61,7 @@ internal class RateLimit {
         if !hasReachLimit { return Duration(seconds: 0) }
         let firstCreationDate: Date = self.creations.first ?? Date()
         let timeFromNow: TimeInterval = -firstCreationDate.timeIntervalSinceNow
-        Logger.debug("First creation date was \(timeFromNow)s ago (\(Datetime(date: firstCreationDate).toString())")
+        Logger.debug("First creation date was \(timeFromNow)s ago (\(Datetime(date: firstCreationDate).toString()))")
         let delayMargin: Double = 1 // Margin. Number of seconds to be safe with Riot's time
         var secondsToWait: Double = Double(self.duration) - timeFromNow + delayMargin
         if secondsToWait < 0 {
