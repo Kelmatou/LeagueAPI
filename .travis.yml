@@ -18,18 +18,27 @@ jobs:
       name: "iOS 12"
       env: DESTINATION="OS=12.2,name=iPhone XS"  SCHEME="$FRAMEWORK_SCHEME"
       script: ./scripts/compile.sh
+
+    - stage: Compile
       name: "iOS 11"
       env: DESTINATION="OS=11.4,name=iPhone X"  SCHEME="$FRAMEWORK_SCHEME"
       script: ./scripts/compile.sh
+
+    - stage: Compile
       name: "iOS 10"
       env: DESTINATION="OS=10.3.1,name=iPhone 7"  SCHEME="$FRAMEWORK_SCHEME"
       script: ./scripts/compile.sh
+
+    - stage: Compile
       name: "iOS 9"
       env: DESTINATION="OS=9.3,name=iPhone 6s"  SCHEME="$FRAMEWORK_SCHEME"
       script: ./scripts/compile.sh
+
+    - stage: Compile
       name: "iOS 8"
       env: DESTINATION="OS=8.1,name=iPhone 6"  SCHEME="$FRAMEWORK_SCHEME"
       script: ./scripts/compile.sh
+
     - stage: Deploy
       script: ./scripts/deploy_process.sh
 
