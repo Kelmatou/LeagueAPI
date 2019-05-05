@@ -3,10 +3,15 @@ os: osx
 osx_image: xcode10.2
 language: swift
 
+branch:
+  only:
+    - master
+
 env:
   global:
     - XCODEPROJ=LeagueAPI/LeagueAPI.xcodeproj
     - FRAMEWORK_SCHEME=LeagueAPI
+    - TRAVIS_TAG="$(git tag -l --contains HEAD)" # Replace empty TRAVIS_TAG
 
 jobs:
   include:
@@ -19,25 +24,25 @@ jobs:
       name: "iOS 11"
       env: DESTINATION="OS=11.4,name=iPhone X"  SCHEME="$FRAMEWORK_SCHEME"
       script: ./scripts/compile.sh
-      if: branch = master
+      if: tag IS present
 
     - stage: Compile
       name: "iOS 10"
       env: DESTINATION="OS=10.3.1,name=iPhone 7"  SCHEME="$FRAMEWORK_SCHEME"
       script: ./scripts/compile.sh
-      if: branch = master
+      if: tag IS present
 
     - stage: Compile
       name: "iOS 9"
       env: DESTINATION="OS=9.3,name=iPhone 6s"  SCHEME="$FRAMEWORK_SCHEME"
       script: ./scripts/compile.sh
-      if: branch = master
+      if: tag IS present
 
     - stage: Compile
       name: "iOS 8"
       env: DESTINATION="OS=8.1,name=iPhone 6"  SCHEME="$FRAMEWORK_SCHEME"
       script: ./scripts/compile.sh
-      if: branch = master
+      if: tag IS present
 
     - stage: Deploy
       script: ./scripts/deploy_process.sh
