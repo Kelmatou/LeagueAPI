@@ -19,6 +19,8 @@ env:
 
 script:
   - set -o pipefail # Without this, xcpretty will not return xcodebuild result
+  - echo "TAGS ARE: $TRAVIS_TAG"
+  - echo "GIT TAGS: $GIT_TAG"
   - xcodebuild -project "$XCODEPROJ" -scheme "$SCHEME" | xcpretty
 
 before_deploy: ./scripts/before_deploy.sh $TRAVIS_TAG
