@@ -23,8 +23,8 @@ script:
   - set -o pipefail # Without this, xcpretty will not return xcodebuild result
   - xcodebuild -project "$XCODEPROJ" -scheme "$SCHEME" | xcpretty
 
-  - if [ "$DEPLOY_IF_TAGS" = "TRUE" ]; then
-      TRAVIS_TAG="$GIT_TAG"
+  - if [ "$DEPLOY_IF_TAGS" == "TRUE" ]; then
+      TRAVIS_TAG="$GIT_TAG";
     fi
 
 before_deploy: ./scripts/before_deploy.sh $TRAVIS_TAG
