@@ -7,6 +7,8 @@
 
 League API is a League of Legends Framework in Swift. It provides an easy way to get League's data into your iOS application.
 
+<img width="200" src="https://github.com/Kelmatou/LeagueAPI/blob/master/screenshots/homepage.png"> <img width="200" src="https://github.com/Kelmatou/LeagueAPI/blob/master/screenshots/live_game.gif"> <img width="200" src="https://github.com/Kelmatou/LeagueAPI/blob/master/screenshots/history.gif"> <img width="200" src="https://github.com/Kelmatou/LeagueAPI/blob/master/screenshots/champion_info.png">
+
 ## 🚧 Installation 🚧
 
 ### Carthage
@@ -79,9 +81,6 @@ Riot API provides data related to players, that are evolving when you play. Leag
 * [Verification Code](https://github.com/Kelmatou/LeagueAPI/wiki/Verification-Code)
 * [Tournament Stub](https://github.com/Kelmatou/LeagueAPI/wiki/Tournament-Stub)
 * [Tournaments](https://github.com/Kelmatou/LeagueAPI/wiki/Tournaments)
-
-**LeagueAPI now uses Riot API v4, as v3 will be deprecated on 28th january 2019.**  
-**❗️Upgrading to LeagueAPI 1.2.0 will break SummonerId or AccountId you may store.❗️**
 
 ### Custom Methods 
 
