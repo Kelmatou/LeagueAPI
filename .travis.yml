@@ -10,6 +10,7 @@ env:
   global:
     - XCODEPROJ=LeagueAPI/LeagueAPI.xcodeproj
     - FRAMEWORK_SCHEME=LeagueAPI
+    - GIT_TAG="$(git tag -l --contains HEAD)"
   matrix:
     - DESTINATION="OS=12.2,name=iPhone XS"  SCHEME="$FRAMEWORK_SCHEME"
     - DESTINATION="OS=11.4,name=iPhone X"   SCHEME="$FRAMEWORK_SCHEME"
@@ -21,6 +22,7 @@ script:
   - set -o pipefail # Without this, xcpretty will not return xcodebuild result
   - echo "TAGS ARE $TRAVIS_TAG"
   - echo "GIT TAGS $GIT_TAG"
+  - TRAVIS_TAG="$GIT_TAG"
   - xcodebuild -project "$XCODEPROJ" -scheme "$SCHEME" | xcpretty
 
 before_deploy: ./scripts/before_deploy.sh $TRAVIS_TAG
