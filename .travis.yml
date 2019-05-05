@@ -1,11 +1,9 @@
 os: osx
 osx_image: xcode10.2
 language: swift
-
 branches:
   only:
     - master
-
 env:
   global:
     - XCODEPROJ=LeagueAPI/LeagueAPI.xcodeproj
@@ -16,18 +14,13 @@ env:
     - DESTINATION="OS=10.3.1,name=iPhone 7" SCHEME="$FRAMEWORK_SCHEME"
     - DESTINATION="OS=9.3,name=iPhone 6s"   SCHEME="$FRAMEWORK_SCHEME"
     - DESTINATION="OS=8.1,name=iPhone 6"    SCHEME="$FRAMEWORK_SCHEME"
-
 script:
   set -o pipefail # Without this, xcpretty will not return xcodebuild result
-
   xcodebuild -project "$XCODEPROJ" -scheme "$SCHEME" | xcpretty
-
 before_deploy: ./scripts/before_deploy.sh $TRAVIS_TAG
-
 deploy:
   provider: script
   script: ./scripts/deploy.sh $TRAVIS_TAG
   on:
     tags: true
-
 after_deploy: ./scripts/after_deploy.sh $TRAVIS_TAG
