@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-GIT_TAG="$(git tag -l --contains HEAD)"
+OLD_GIT_TAG="$(git tag -l --contains HEAD)"
+GIT_TAG="$TRAVIS_TAG"
+echo "OLD_GIT_TAG $OLD_GIT_TAG"
+echo "GIT_TAG $GIT_TAG"
 
 echo "Getting git tag"
 if [ "$GIT_TAG" != "" ]; then

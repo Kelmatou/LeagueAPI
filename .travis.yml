@@ -3,10 +3,6 @@ os: osx
 osx_image: xcode10.2
 language: swift
 
-branches:
-  only:
-    - master
-
 env:
   global:
     - XCODEPROJ=LeagueAPI/LeagueAPI.xcodeproj
@@ -23,21 +19,25 @@ jobs:
       name: "iOS 11"
       env: DESTINATION="OS=11.4,name=iPhone X"  SCHEME="$FRAMEWORK_SCHEME"
       script: ./scripts/compile.sh
+      if: branch = master
 
     - stage: Compile
       name: "iOS 10"
       env: DESTINATION="OS=10.3.1,name=iPhone 7"  SCHEME="$FRAMEWORK_SCHEME"
       script: ./scripts/compile.sh
+      if: branch = master
 
     - stage: Compile
       name: "iOS 9"
       env: DESTINATION="OS=9.3,name=iPhone 6s"  SCHEME="$FRAMEWORK_SCHEME"
       script: ./scripts/compile.sh
+      if: branch = master
 
     - stage: Compile
       name: "iOS 8"
       env: DESTINATION="OS=8.1,name=iPhone 6"  SCHEME="$FRAMEWORK_SCHEME"
       script: ./scripts/compile.sh
+      if: branch = master
 
     - stage: Deploy
       script: ./scripts/deploy_process.sh
@@ -45,4 +45,4 @@ jobs:
 stages:
   - Compile
   - name: Deploy
-    if: tag IS present
+    if: (branch = master) AND (tag IS present)
