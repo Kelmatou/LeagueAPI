@@ -14,7 +14,7 @@ source ~/.rvm/scripts/rvm
 rvm use default
 
 echo "Deploying LeagueAPI ($RELEASE_VERSION) to cocoapod"
-pod trunk push
+pod trunk push LeagueAPI.podspec --allow-warnings # allow-warnings is a workaround because cocoapod does not support swift 5
 
 if [ $? -eq 0 ]; then
   echo "LeagueAPI ($RELEASE_VERSION) is now deployed on cocoapod!"

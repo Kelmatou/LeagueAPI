@@ -13,18 +13,19 @@ env:
     - FRAMEWORK_SCHEME=LeagueAPI
     - GIT_TAG="$(git tag -l --contains HEAD)"
   matrix:
-    - DESTINATION="OS=12.2,name=iPhone XS"  SCHEME="$FRAMEWORK_SCHEME"
-    - DESTINATION="OS=11.4,name=iPhone X"   SCHEME="$FRAMEWORK_SCHEME"
-    - DESTINATION="OS=10.3.1,name=iPhone 7" SCHEME="$FRAMEWORK_SCHEME"
-    - DESTINATION="OS=9.3,name=iPhone 6s"   SCHEME="$FRAMEWORK_SCHEME"
-    - DESTINATION="OS=8.1,name=iPhone 6"    SCHEME="$FRAMEWORK_SCHEME"
+    - DESTINATION="OS=12.2,name=iPhone XS"  SCHEME="$FRAMEWORK_SCHEME" DEPLOY_IF_TAGS="FALSE"
+    - DESTINATION="OS=11.4,name=iPhone X"   SCHEME="$FRAMEWORK_SCHEME" DEPLOY_IF_TAGS="FALSE"
+    - DESTINATION="OS=10.3.1,name=iPhone 7" SCHEME="$FRAMEWORK_SCHEME" DEPLOY_IF_TAGS="FALSE"
+    - DESTINATION="OS=9.3,name=iPhone 6s"   SCHEME="$FRAMEWORK_SCHEME" DEPLOY_IF_TAGS="FALSE"
+    - DESTINATION="OS=8.1,name=iPhone 6"    SCHEME="$FRAMEWORK_SCHEME" DEPLOY_IF_TAGS="TRUE" # Last job will check tags to deploy
 
 script:
   - set -o pipefail # Without this, xcpretty will not return xcodebuild result
-  - echo "TAGS ARE $TRAVIS_TAG"
-  - echo "GIT TAGS $GIT_TAG"
-  - TRAVIS_TAG="$GIT_TAG"
   - xcodebuild -project "$XCODEPROJ" -scheme "$SCHEME" | xcpretty
+
+  - if [ "$DEPLOY_IF_TAGS" = "TRUE" ]; then
+      TRAVIS_TAG="$GIT_TAG"
+    fi
 
 before_deploy: ./scripts/before_deploy.sh $TRAVIS_TAG
 
