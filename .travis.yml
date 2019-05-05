@@ -50,4 +50,4 @@ jobs:
 stages:
   - Compile
   - name: Deploy
-    if: (branch = master) AND (tag IS present)
+    if: tag IS present
