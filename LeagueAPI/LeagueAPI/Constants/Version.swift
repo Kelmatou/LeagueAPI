@@ -8,8 +8,8 @@
 
 import Foundation
 
-internal class Version {
+public class Version {
     
-    public static let LeagueAPI: String = "v2.0.0"
+    public static let LeagueAPI: String = "v\(Bundle(for: Version.self).infoDictionary!["CFBundleShortVersionString"] ?? "Unknown")"
     public static let RiotAPI: String = "v4"
 }

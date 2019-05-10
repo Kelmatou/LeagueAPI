@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -764,13 +764,13 @@
 /* Begin PBXFileReference section */
 		558F33482204897D006D2EA1 /* GameRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRole.swift; sourceTree = "<group>"; };
 		558F334A220489ED006D2EA1 /* RankedDivision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankedDivision.swift; sourceTree = "<group>"; };
-		9704351F228502330073F296 /* LeagueAPI_TvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeagueAPI_TvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9704351F228502330073F296 /* LeagueAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeagueAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97043521228502330073F296 /* LeagueAPI_TvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeagueAPI_TvOS.h; sourceTree = "<group>"; };
 		97043522228502330073F296 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		970435F12285030D0073F296 /* LeagueAPI_WatchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeagueAPI_WatchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		970435F12285030D0073F296 /* LeagueAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeagueAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		970435F32285030D0073F296 /* LeagueAPI_WatchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeagueAPI_WatchOS.h; sourceTree = "<group>"; };
 		970435F42285030D0073F296 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		97043772228505A00073F296 /* LeagueAPI_MacOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeagueAPI_MacOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97043772228505A00073F296 /* LeagueAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeagueAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97043774228505A00073F296 /* LeagueAPI_MacOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeagueAPI_MacOS.h; sourceTree = "<group>"; };
 		97043775228505A00073F296 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97043835228515AA0073F296 /* MacOSTypealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacOSTypealias.swift; sourceTree = "<group>"; };
@@ -958,7 +958,7 @@
 		97E67E8F2135A92C00E8E1B7 /* TournamentBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentBusiness.swift; sourceTree = "<group>"; };
 		97E67E912135B64D00E8E1B7 /* EmptyReply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyReply.swift; sourceTree = "<group>"; };
 		97EACE8C21BEA13A00B0B9EA /* SummonerPuuid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummonerPuuid.swift; sourceTree = "<group>"; };
-		97FB4495210A492F00C092AB /* LeagueAPI_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeagueAPI_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97FB4495210A492F00C092AB /* LeagueAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeagueAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97FB4498210A492F00C092AB /* LeagueAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeagueAPI.h; sourceTree = "<group>"; };
 		97FB4499210A492F00C092AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1375,10 +1375,10 @@
 		97FB4496210A492F00C092AB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				97FB4495210A492F00C092AB /* LeagueAPI_iOS.framework */,
-				9704351F228502330073F296 /* LeagueAPI_TvOS.framework */,
-				970435F12285030D0073F296 /* LeagueAPI_WatchOS.framework */,
-				97043772228505A00073F296 /* LeagueAPI_MacOS.framework */,
+				97FB4495210A492F00C092AB /* LeagueAPI.framework */,
+				9704351F228502330073F296 /* LeagueAPI.framework */,
+				970435F12285030D0073F296 /* LeagueAPI.framework */,
+				97043772228505A00073F296 /* LeagueAPI.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1453,7 +1453,7 @@
 			);
 			name = "LeagueAPI-TvOS";
 			productName = "LeagueAPI-TvOS";
-			productReference = 9704351F228502330073F296 /* LeagueAPI_TvOS.framework */;
+			productReference = 9704351F228502330073F296 /* LeagueAPI.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		970435F02285030D0073F296 /* LeagueAPI-WatchOS */ = {
@@ -1471,7 +1471,7 @@
 			);
 			name = "LeagueAPI-WatchOS";
 			productName = "LeagueAPI-WatchOS";
-			productReference = 970435F12285030D0073F296 /* LeagueAPI_WatchOS.framework */;
+			productReference = 970435F12285030D0073F296 /* LeagueAPI.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		97043771228505A00073F296 /* LeagueAPI-MacOS */ = {
@@ -1489,7 +1489,7 @@
 			);
 			name = "LeagueAPI-MacOS";
 			productName = "LeagueAPI-MacOS";
-			productReference = 97043772228505A00073F296 /* LeagueAPI_MacOS.framework */;
+			productReference = 97043772228505A00073F296 /* LeagueAPI.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		97FB4494210A492F00C092AB /* LeagueAPI-iOS */ = {
@@ -1507,7 +1507,7 @@
 			);
 			name = "LeagueAPI-iOS";
 			productName = LeagueAPI;
-			productReference = 97FB4495210A492F00C092AB /* LeagueAPI_iOS.framework */;
+			productReference = 97FB4495210A492F00C092AB /* LeagueAPI.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -1535,7 +1535,7 @@
 				};
 			};
 			buildConfigurationList = 97FB448F210A492F00C092AB /* Build configuration list for PBXProject "LeagueAPI" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -2384,8 +2384,8 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kelmatou.LeagueAPI.LeagueAPI-TvOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kelmatou.LeagueAPI;
+				PRODUCT_NAME = LeagueAPI;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -2411,8 +2411,8 @@
 					"@loader_path/Frameworks",
 				);
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kelmatou.LeagueAPI.LeagueAPI-TvOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kelmatou.LeagueAPI;
+				PRODUCT_NAME = LeagueAPI;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -2440,8 +2440,8 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kelmatou.LeagueAPI.LeagueAPI-WatchOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kelmatou.LeagueAPI;
+				PRODUCT_NAME = LeagueAPI;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -2468,8 +2468,8 @@
 					"@loader_path/Frameworks",
 				);
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kelmatou.LeagueAPI.LeagueAPI-WatchOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kelmatou.LeagueAPI;
+				PRODUCT_NAME = LeagueAPI;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -2499,8 +2499,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kelmatou.LeagueAPI.LeagueAPI-MacOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kelmatou.LeagueAPI;
+				PRODUCT_NAME = LeagueAPI;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -2527,8 +2527,8 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kelmatou.LeagueAPI.LeagueAPI-MacOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kelmatou.LeagueAPI;
+				PRODUCT_NAME = LeagueAPI;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -2674,8 +2674,8 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kelmatou.LeagueAPI.LeagueAPI-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kelmatou.LeagueAPI;
+				PRODUCT_NAME = LeagueAPI;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -2702,8 +2702,8 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kelmatou.LeagueAPI.LeagueAPI-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kelmatou.LeagueAPI;
+				PRODUCT_NAME = LeagueAPI;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
