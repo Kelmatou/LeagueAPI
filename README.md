@@ -6,7 +6,12 @@
 [![Platform](https://img.shields.io/cocoapods/p/LeagueAPI.svg?style=flat)](https://github.com/Kelmatou/LeagueAPI)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/Kelmatou/LeagueAPI/blob/master/LICENSE)
 
-League API is a League of Legends Framework in Swift. It provides an easy way to get League's data into your iOS application.
+<p align="center">
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+ <img width="200" src="https://github.com/Kelmatou/LeagueAPI/blob/master/screenshots/devices.png">
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+</p>
+League API is a League of Legends Framework in Swift. It provides an easy way to get League's data into your iOS, WatchOS, TvOS and MacOS application.
 
 <img width="200" src="https://github.com/Kelmatou/LeagueAPI/blob/master/screenshots/homepage.png"> <img width="200" src="https://github.com/Kelmatou/LeagueAPI/blob/master/screenshots/live_game.gif"> <img width="200" src="https://github.com/Kelmatou/LeagueAPI/blob/master/screenshots/history.gif"> <img width="200" src="https://github.com/Kelmatou/LeagueAPI/blob/master/screenshots/champion_info.png">
 
@@ -49,7 +54,16 @@ If none of these helped you, open an issue describing your problem and I'll try 
 
 ## 📋 Requirements 📋
 
-The only required element from the framework user is a Riot API Key.
+### 📦 Minimum versions 📦
+
+📱 iOS 8.1  
+⌚ WatchOS 2.0  
+📺 TvOS 9.0  
+💻 MacOS 10.9 (Mavericks)  
+
+### 🔑 Riot API Key 🔑
+
+To use LeagueAPI, you'll require a Riot API Key.
 You'll get one by visiting https://developer.riotgames.com. Create an account and on you dashboard, you'll be able to generate your key.
 By default, Riot will generate a 'Development Key', which expires in 24h. When your application is ready to be deployed and respects Riot API usage conditions, you can apply for a 'Production Key'.
 Please note that you should agree with [Riot API usage policy](https://developer.riotgames.com/policies.html)
