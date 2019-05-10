@@ -30,7 +30,8 @@ Pod::Spec.new do |s|
                    DESC
 
   s.homepage     = "https://github.com/Kelmatou/LeagueAPI"
-  # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
+  s.screenshots  = "https://raw.githubusercontent.com/kelmatou/LeagueAPI/master/screenshots/homepage.png", "https://raw.githubusercontent.com/kelmatou/LeagueAPI/master/screenshots/live_game.gif", "https://raw.githubusercontent.com/kelmatou/LeagueAPI/master/screenshots/history.gif", "https://raw.githubusercontent.com/kelmatou/LeagueAPI/master/screenshots/champion_info.png"
+  s.documentation_url = 'https://github.com/Kelmatou/LeagueAPI/wiki'
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -40,8 +41,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT"
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  s.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -55,8 +55,6 @@ Pod::Spec.new do |s|
   #
 
   s.author             = { "Antoine CLOP" => "antoine.clop@epita.fr" }
-  # Or just: s.author    = "Antoine CLOP"
-  # s.authors            = { "Antoine CLOP" => "antoine.clop@epita.fr" }
   # s.social_media_url   = "http://twitter.com/Antoine CLOP"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -65,15 +63,12 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-   #s.platform     = :ios
-   #s.platform     = :ios, "8.0"
-
   #  When using multiple platforms
    s.ios.deployment_target = "8.0"
-   s.osx.deployment_target = "10.6"
+   s.osx.deployment_target = "10.9"
    s.watchos.deployment_target = "2.0"
    s.tvos.deployment_target = "9.0"
-
+   
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -92,12 +87,12 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "LeagueAPI/**/*.{h,m,swift}"
+  s.source_files  = "LeagueAPI/**/*.swift"
  # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 
-  s.swift_version = "4.2"
+  s.swift_version = "5.0"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
