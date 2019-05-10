@@ -1534,7 +1534,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 97FB448F210A492F00C092AB /* Build configuration list for PBXProject "LeagueAPI-iOS" */;
+			buildConfigurationList = 97FB448F210A492F00C092AB /* Build configuration list for PBXProject "LeagueAPI" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -2740,7 +2740,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		97FB448F210A492F00C092AB /* Build configuration list for PBXProject "LeagueAPI-iOS" */ = {
+		97FB448F210A492F00C092AB /* Build configuration list for PBXProject "LeagueAPI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				97FB449B210A493000C092AB /* Debug */,
