@@ -10,6 +10,6 @@ import Foundation
 
 internal class Version {
     
-    public static let LeagueAPI: String = "v1.5.2"
+    public static let LeagueAPI: String = "v2.0.0"
     public static let RiotAPI: String = "v4"
 }

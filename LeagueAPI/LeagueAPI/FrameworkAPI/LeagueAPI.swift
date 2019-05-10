@@ -8,6 +8,10 @@
 
 import Foundation
 
+#if canImport(UIKit)
+    import UIKit
+#endif
+
 public class LeagueAPI: APIClient {
     
     public private(set) var riotAPI: RiotAPI

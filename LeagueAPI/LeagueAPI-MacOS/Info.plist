@@ -18,7 +18,7 @@
 	<string>2.0.0</string>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
-	<key>NSPrincipalClass</key>
-	<string></string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2019 Antoine Clop. All rights reserved.</string>
 </dict>
 </plist>

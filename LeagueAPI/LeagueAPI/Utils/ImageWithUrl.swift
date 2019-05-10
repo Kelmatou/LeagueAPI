@@ -6,7 +6,9 @@
 //  Copyright © 2018 Antoine Clop. All rights reserved.
 //
 
-import UIKit
+#if canImport(UIKit)
+    import UIKit
+#endif
 
 public class ImageWithUrl {
     

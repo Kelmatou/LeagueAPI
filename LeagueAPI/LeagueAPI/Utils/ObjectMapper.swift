@@ -6,6 +6,8 @@
 //  Copyright © 2018 Antoine Clop. All rights reserved.
 //
 
+import Foundation
+
 internal class ObjectMapper {
     
     /**
