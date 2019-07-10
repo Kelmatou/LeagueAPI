@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "970435F02285030D0073F296"
-               BuildableName = "LeagueAPI_WatchOS.framework"
+               BuildableName = "LeagueAPI.framework"
                BlueprintName = "LeagueAPI-WatchOS"
                ReferencedContainer = "container:LeagueAPI.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "970435F02285030D0073F296"
-            BuildableName = "LeagueAPI_WatchOS.framework"
+            BuildableName = "LeagueAPI.framework"
             BlueprintName = "LeagueAPI-WatchOS"
             ReferencedContainer = "container:LeagueAPI.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "970435F02285030D0073F296"
-            BuildableName = "LeagueAPI_WatchOS.framework"
+            BuildableName = "LeagueAPI.framework"
             BlueprintName = "LeagueAPI-WatchOS"
             ReferencedContainer = "container:LeagueAPI.xcodeproj">
          </BuildableReference>

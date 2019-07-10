@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9704351E228502330073F296"
-               BuildableName = "LeagueAPI_TvOS.framework"
+               BuildableName = "LeagueAPI.framework"
                BlueprintName = "LeagueAPI-TvOS"
                ReferencedContainer = "container:LeagueAPI.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9704351E228502330073F296"
-            BuildableName = "LeagueAPI_TvOS.framework"
+            BuildableName = "LeagueAPI.framework"
             BlueprintName = "LeagueAPI-TvOS"
             ReferencedContainer = "container:LeagueAPI.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9704351E228502330073F296"
-            BuildableName = "LeagueAPI_TvOS.framework"
+            BuildableName = "LeagueAPI.framework"
             BlueprintName = "LeagueAPI-TvOS"
             ReferencedContainer = "container:LeagueAPI.xcodeproj">
          </BuildableReference>

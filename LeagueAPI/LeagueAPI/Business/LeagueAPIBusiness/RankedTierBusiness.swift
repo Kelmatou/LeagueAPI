@@ -17,6 +17,8 @@ internal class RankedTierBusiness {
             switch tier.tier {
             case .Iron:
                 return "Iron_Emblem.png"
+            case .Bronze:
+                return "Bronze_Emblem.png"
             case .Silver:
                 return "Silver_Emblem.png"
             case .Gold:
@@ -31,7 +33,7 @@ internal class RankedTierBusiness {
                 return "Grandmaster_Emblem.png"
             case .Challenger:
                 return "Challenger_Emblem.png"
-            default:
+            case .Unknown, .Unranked:
                 return nil
             }
         }

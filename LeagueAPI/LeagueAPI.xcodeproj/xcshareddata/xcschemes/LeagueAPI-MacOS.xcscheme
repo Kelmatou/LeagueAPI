@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "97043771228505A00073F296"
-               BuildableName = "LeagueAPI_MacOS.framework"
+               BuildableName = "LeagueAPI.framework"
                BlueprintName = "LeagueAPI-MacOS"
                ReferencedContainer = "container:LeagueAPI.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "97043771228505A00073F296"
-            BuildableName = "LeagueAPI_MacOS.framework"
+            BuildableName = "LeagueAPI.framework"
             BlueprintName = "LeagueAPI-MacOS"
             ReferencedContainer = "container:LeagueAPI.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "97043771228505A00073F296"
-            BuildableName = "LeagueAPI_MacOS.framework"
+            BuildableName = "LeagueAPI.framework"
             BlueprintName = "LeagueAPI-MacOS"
             ReferencedContainer = "container:LeagueAPI.xcodeproj">
          </BuildableReference>
