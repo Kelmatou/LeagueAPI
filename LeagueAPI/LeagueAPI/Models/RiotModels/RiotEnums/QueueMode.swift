@@ -83,7 +83,9 @@ public class QueueMode {
         case OdysseyCrewMember = 1050
         case OdysseyCaptain = 1060
         case OdysseyOnslaught = 1070
-        case NexusBlitz = 1200
+        case TeamFightTactics = 1090
+        case RankedTeamFightTactics = 1100
+        case NexusBlitz = 1200 // Queue mode deprecated in patch 9.2
         case Unknown = -1
     }
     

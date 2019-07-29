@@ -35,6 +35,7 @@ public class Map {
         case ProjectMap = 19
         case OdysseyMap = 20
         case NexusBlitzMap = 21
+        case Convergence = 22 // unverified
         case Unknown = -1
     }
     

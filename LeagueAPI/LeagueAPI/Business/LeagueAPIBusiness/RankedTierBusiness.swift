@@ -15,6 +15,8 @@ internal class RankedTierBusiness {
     public static func getEmblem(for tier: RankedTier) -> UIImage? {
         var tierEmblemFile: String? {
             switch tier.tier {
+            case .Unranked:
+                return "Unranked_Emblem.png"
             case .Iron:
                 return "Iron_Emblem.png"
             case .Bronze:
@@ -33,7 +35,7 @@ internal class RankedTierBusiness {
                 return "Grandmaster_Emblem.png"
             case .Challenger:
                 return "Challenger_Emblem.png"
-            case .Unknown, .Unranked:
+            case .Unknown:
                 return nil
             }
         }

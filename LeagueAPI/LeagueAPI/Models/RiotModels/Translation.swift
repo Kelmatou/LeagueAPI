@@ -30,6 +30,6 @@ public class Translation: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.locale = try container.decode(String.self, forKey: .locale)
         self.content = try container.decode(String.self, forKey: .content)
-        self.heading = try container.decode(String.self, forKey: .heading)
+        self.heading = (try container.decode(String?.self, forKey: .heading)) ?? ""
     }
 }

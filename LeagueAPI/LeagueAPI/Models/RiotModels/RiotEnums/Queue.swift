@@ -14,6 +14,7 @@ public class Queue {
         case RankedSolo5V5 = "RANKED_SOLO_5x5"
         case RankedFlex5V5 = "RANKED_FLEX_SR"
         case RankedFlex3V3 = "RANKED_FLEX_TT"
+        case RankedTFT = "RANKED_TFT"
         case Unknown = "Unknown"
     }
     
@@ -35,6 +36,8 @@ public class Queue {
             self.type = .RankedFlex5V5
         case QueueTypes.RankedFlex3V3.rawValue:
             self.type = .RankedFlex3V3
+        case QueueTypes.RankedTFT.rawValue:
+            self.type = .RankedTFT
         default:
             Logger.warning("Queue type \"\(queueType)\" unknown (check for LeagueAPI update)")
             self.type = .Unknown

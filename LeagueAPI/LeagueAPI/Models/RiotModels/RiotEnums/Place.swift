@@ -20,5 +20,6 @@ public enum Place: String {
     case Substructure43 = "Substructure 43"
     case NexusBlitz = "Nexus Blitz"
     case CrashSite = "Crash Site"
+    case Convergence = "Convergence"
     case Unknown = "Unknown"
 }

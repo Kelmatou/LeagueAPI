@@ -574,6 +574,10 @@
 		97043837228515AA0073F296 /* MacOSTypealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97043835228515AA0073F296 /* MacOSTypealias.swift */; };
 		97043838228515AA0073F296 /* MacOSTypealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97043835228515AA0073F296 /* MacOSTypealias.swift */; };
 		97043839228515AA0073F296 /* MacOSTypealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97043835228515AA0073F296 /* MacOSTypealias.swift */; };
+		9708771C22EE9F8000770C93 /* Unranked_Emblem.png in Resources */ = {isa = PBXBuildFile; fileRef = 9708771B22EE9F8000770C93 /* Unranked_Emblem.png */; };
+		9708771D22EE9F8000770C93 /* Unranked_Emblem.png in Resources */ = {isa = PBXBuildFile; fileRef = 9708771B22EE9F8000770C93 /* Unranked_Emblem.png */; };
+		9708771E22EE9F8000770C93 /* Unranked_Emblem.png in Resources */ = {isa = PBXBuildFile; fileRef = 9708771B22EE9F8000770C93 /* Unranked_Emblem.png */; };
+		9708771F22EE9F8000770C93 /* Unranked_Emblem.png in Resources */ = {isa = PBXBuildFile; fileRef = 9708771B22EE9F8000770C93 /* Unranked_Emblem.png */; };
 		97225C22212850D2001025EB /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97225C21212850D2001025EB /* Duration.swift */; };
 		97225C2D21286235001025EB /* GameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97225C2C21286235001025EB /* GameType.swift */; };
 		97225C2F212865E1001025EB /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97225C2E212865E1001025EB /* Map.swift */; };
@@ -774,6 +778,7 @@
 		97043774228505A00073F296 /* LeagueAPI_MacOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeagueAPI_MacOS.h; sourceTree = "<group>"; };
 		97043775228505A00073F296 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97043835228515AA0073F296 /* MacOSTypealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacOSTypealias.swift; sourceTree = "<group>"; };
+		9708771B22EE9F8000770C93 /* Unranked_Emblem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Unranked_Emblem.png; sourceTree = "<group>"; };
 		97225C21212850D2001025EB /* Duration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
 		97225C2C21286235001025EB /* GameType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameType.swift; sourceTree = "<group>"; };
 		97225C2E212865E1001025EB /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
@@ -1145,6 +1150,7 @@
 		97CAEA6A21CFC48000F18373 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				9708771B22EE9F8000770C93 /* Unranked_Emblem.png */,
 				97CAEA6F21CFC49B00F18373 /* Bronze_Emblem.png */,
 				97CAEA6D21CFC49B00F18373 /* Challenger_Emblem.png */,
 				97CAEA6E21CFC49B00F18373 /* Diamond_Emblem.png */,
@@ -1569,6 +1575,7 @@
 				97043737228504FD0073F296 /* Master_Emblem.png in Resources */,
 				97043731228504FD0073F296 /* Bronze_Emblem.png in Resources */,
 				97043739228504FD0073F296 /* Silver_Emblem.png in Resources */,
+				9708771D22EE9F8000770C93 /* Unranked_Emblem.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1585,6 +1592,7 @@
 				97043740228504FE0073F296 /* Master_Emblem.png in Resources */,
 				9704373A228504FE0073F296 /* Bronze_Emblem.png in Resources */,
 				97043742228504FE0073F296 /* Silver_Emblem.png in Resources */,
+				9708771E22EE9F8000770C93 /* Unranked_Emblem.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1601,6 +1609,7 @@
 				97043831228506090073F296 /* Master_Emblem.png in Resources */,
 				9704382B228506090073F296 /* Bronze_Emblem.png in Resources */,
 				97043833228506090073F296 /* Silver_Emblem.png in Resources */,
+				9708771F22EE9F8000770C93 /* Unranked_Emblem.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1617,6 +1626,7 @@
 				97CAEA7921CFC49C00F18373 /* Grandmaster_Emblem.png in Resources */,
 				97CAEA7A21CFC49C00F18373 /* Master_Emblem.png in Resources */,
 				97CAEA7621CFC49C00F18373 /* Challenger_Emblem.png in Resources */,
+				9708771C22EE9F8000770C93 /* Unranked_Emblem.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

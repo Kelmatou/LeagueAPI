@@ -34,6 +34,7 @@ public class GameMode {
         case TutorialModule1 = "TUTORIAL_MODULE_1"
         case TutorialModule2 = "TUTORIAL_MODULE_2"
         case TutorialModule3 = "TUTORIAL_MODULE_3"
+        case TeamFightTactics = "TEAMFIGHTACTICS" // unverified
         case Unknown = "Unknown"
     }
     
