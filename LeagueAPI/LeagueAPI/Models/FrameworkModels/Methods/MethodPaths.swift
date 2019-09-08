@@ -10,6 +10,7 @@ import Foundation
 
 internal enum MethodPaths: String {
     case ChampionMastery = "/lol/champion-mastery"
+    case LeagueExp = "/lol/league-exp"
     case League = "/lol/league"
     case StaticData = "/lol/static-data"
     case Status = "/lol/status"

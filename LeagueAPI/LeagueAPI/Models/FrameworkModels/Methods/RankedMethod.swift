@@ -55,7 +55,7 @@ internal class RankedMethod: LeagueMethod {
         case .EntriesById(let id):
             return "\(commonPath)/entries/by-summoner/\(id)"
         case .QueueEntries(let queue, let division, let page):
-            return "\(commonPath)/entries/\(queue.type.rawValue)/\(division.tier.tier.rawValue)/\(division.divisionRoman)/\(page)"
+            return "\(commonPath)/entries/\(queue.type.rawValue)/\(division.tier.tier.rawValue)/\(division.divisionRoman)?page=\(page)"
         }
     }
     

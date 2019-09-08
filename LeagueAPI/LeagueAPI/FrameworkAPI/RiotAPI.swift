@@ -30,6 +30,12 @@ public class RiotAPI: APIClient {
         ChampionBusiness.getChampion(method: .ChampionRotation, region: region, key: self.key, handler: handler)
     }
     
+    // MARK: - Ranked - EXP
+    
+    public func getQueueEntriesExp(on region: Region, queue: Queue, division: RankedDivision, page: Int = 1, handler: @escaping ([RankedEntry]?, String?) -> Void) {
+        RankedExpBusiness.getRankedExp(method: .QueueEntries(queue: queue, division: division, page: page), region: region, key: self.key, handler: handler)
+    }
+    
     // MARK: - Ranked
     
     public func getChallengerLeague(for queue: Queue, on region: Region, handler: @escaping (League?, String?) -> Void) {

@@ -753,6 +753,14 @@
 		97D38DF0210E0A9000150CF9 /* TournamentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DEF210E0A9000150CF9 /* TournamentProvider.swift */; };
 		97D38DF2210E0B0A00150CF9 /* TournamentInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DF1210E0B0A00150CF9 /* TournamentInitializer.swift */; };
 		97D38DF4210E0C5C00150CF9 /* TournamentStubBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D38DF3210E0C5C00150CF9 /* TournamentStubBusiness.swift */; };
+		97DE80402324ACDE00D50971 /* RankedExpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DE803F2324ACDE00D50971 /* RankedExpMethod.swift */; };
+		97DE80412324ACDE00D50971 /* RankedExpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DE803F2324ACDE00D50971 /* RankedExpMethod.swift */; };
+		97DE80422324ACDE00D50971 /* RankedExpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DE803F2324ACDE00D50971 /* RankedExpMethod.swift */; };
+		97DE80432324ACDE00D50971 /* RankedExpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DE803F2324ACDE00D50971 /* RankedExpMethod.swift */; };
+		97DE80452324ADEA00D50971 /* RankedExpBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DE80442324ADE900D50971 /* RankedExpBusiness.swift */; };
+		97DE80462324ADEA00D50971 /* RankedExpBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DE80442324ADE900D50971 /* RankedExpBusiness.swift */; };
+		97DE80472324ADEA00D50971 /* RankedExpBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DE80442324ADE900D50971 /* RankedExpBusiness.swift */; };
+		97DE80482324ADEA00D50971 /* RankedExpBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DE80442324ADE900D50971 /* RankedExpBusiness.swift */; };
 		97E31447211B9E9700C9F739 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E31446211B9E9600C9F739 /* ErrorMessage.swift */; };
 		97E31449211B9F9800C9F739 /* ErrorStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E31448211B9F9800C9F739 /* ErrorStatus.swift */; };
 		97E31461211C33E900C9F739 /* TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E31460211C33E900C9F739 /* TypeAlias.swift */; };
@@ -954,6 +962,8 @@
 		97D38DEF210E0A9000150CF9 /* TournamentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentProvider.swift; sourceTree = "<group>"; };
 		97D38DF1210E0B0A00150CF9 /* TournamentInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentInitializer.swift; sourceTree = "<group>"; };
 		97D38DF3210E0C5C00150CF9 /* TournamentStubBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentStubBusiness.swift; sourceTree = "<group>"; };
+		97DE803F2324ACDE00D50971 /* RankedExpMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankedExpMethod.swift; sourceTree = "<group>"; };
+		97DE80442324ADE900D50971 /* RankedExpBusiness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankedExpBusiness.swift; sourceTree = "<group>"; };
 		97E31446211B9E9600C9F739 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		97E31448211B9F9800C9F739 /* ErrorStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStatus.swift; sourceTree = "<group>"; };
 		97E31460211C33E900C9F739 /* TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAlias.swift; sourceTree = "<group>"; };
@@ -1101,6 +1111,7 @@
 				97D38D76210C5C4A00150CF9 /* APIBusiness.swift */,
 				97D38D78210C5D4600150CF9 /* ChampionMasteryBusiness.swift */,
 				97D38D82210C6E9B00150CF9 /* ChampionBusiness.swift */,
+				97DE80442324ADE900D50971 /* RankedExpBusiness.swift */,
 				97D38D92210C88E800150CF9 /* RankedBusiness.swift */,
 				97D38DA0210CA3A100150CF9 /* StatusBusiness.swift */,
 				97D38DDC210D0CEF00150CF9 /* MatchBusiness.swift */,
@@ -1319,6 +1330,7 @@
 				97D38D46210A80AA00150CF9 /* MethodPaths.swift */,
 				97D38D7A210C5D8500150CF9 /* ChampionMasteryMethod.swift */,
 				97D38D80210C6BFB00150CF9 /* ChampionMethod.swift */,
+				97DE803F2324ACDE00D50971 /* RankedExpMethod.swift */,
 				97D38D90210C85AC00150CF9 /* RankedMethod.swift */,
 				97D38D9E210CA2E800150CF9 /* StatusMethod.swift */,
 				97D38DDA210CF85D00150CF9 /* MatchMethod.swift */,
@@ -1649,6 +1661,7 @@
 				9704367D228504C60073F296 /* MatchParticipantFrame.swift in Sources */,
 				97043621228504A30073F296 /* RankedTierBusiness.swift in Sources */,
 				97043667228504C60073F296 /* Translation.swift in Sources */,
+				97DE80412324ACDE00D50971 /* RankedExpMethod.swift in Sources */,
 				970436F6228504E80073F296 /* ChampionId.swift in Sources */,
 				970436F1228504E80073F296 /* TypeAlias.swift in Sources */,
 				970437672285055D0073F296 /* TournamentUpdate.swift in Sources */,
@@ -1692,6 +1705,7 @@
 				97043661228504C60073F296 /* Series.swift in Sources */,
 				9704374C228505500073F296 /* ThirdPartyCodeMethod.swift in Sources */,
 				97043683228504C60073F296 /* ErrorMessage.swift in Sources */,
+				97DE80462324ADEA00D50971 /* RankedExpBusiness.swift in Sources */,
 				97043613228504970073F296 /* TournamentStubBusiness.swift in Sources */,
 				970436B5228504D00073F296 /* DDragonChampionFile.swift in Sources */,
 				97043612228504970073F296 /* ThirdPartyCodeBusiness.swift in Sources */,
@@ -1834,6 +1848,7 @@
 				970436A8228504C70073F296 /* MatchParticipantFrame.swift in Sources */,
 				97043622228504A30073F296 /* RankedTierBusiness.swift in Sources */,
 				97043692228504C70073F296 /* Translation.swift in Sources */,
+				97DE80422324ACDE00D50971 /* RankedExpMethod.swift in Sources */,
 				97043707228504E80073F296 /* ChampionId.swift in Sources */,
 				97043702228504E80073F296 /* TypeAlias.swift in Sources */,
 				9704376C2285055D0073F296 /* TournamentUpdate.swift in Sources */,
@@ -1877,6 +1892,7 @@
 				9704368C228504C70073F296 /* Series.swift in Sources */,
 				97043758228505500073F296 /* ThirdPartyCodeMethod.swift in Sources */,
 				970436AE228504C70073F296 /* ErrorMessage.swift in Sources */,
+				97DE80472324ADEA00D50971 /* RankedExpBusiness.swift in Sources */,
 				97043608228504960073F296 /* TournamentStubBusiness.swift in Sources */,
 				970436D2228504D10073F296 /* DDragonChampionFile.swift in Sources */,
 				97043607228504960073F296 /* ThirdPartyCodeBusiness.swift in Sources */,
@@ -2019,6 +2035,7 @@
 				970437ED228505EC0073F296 /* DDragonChampionsFile.swift in Sources */,
 				970437C6228505E50073F296 /* RankedEntry.swift in Sources */,
 				970437E3228505E50073F296 /* MatchPosition.swift in Sources */,
+				97DE80432324ACDE00D50971 /* RankedExpMethod.swift in Sources */,
 				97043795228505BF0073F296 /* LocalAssets.swift in Sources */,
 				970437E4228505E50073F296 /* TournamentEventList.swift in Sources */,
 				970437D5228505E50073F296 /* Match.swift in Sources */,
@@ -2062,6 +2079,7 @@
 				970437A3228505D10073F296 /* RankedMethod.swift in Sources */,
 				97043811228505F90073F296 /* SkinId.swift in Sources */,
 				9704381A228505F90073F296 /* TournamentId.swift in Sources */,
+				97DE80482324ADEA00D50971 /* RankedExpBusiness.swift in Sources */,
 				97043809228505F40073F296 /* Version.swift in Sources */,
 				97043802228505EC0073F296 /* DDragonItemsFile.swift in Sources */,
 				97043814228505F90073F296 /* ItemId.swift in Sources */,
@@ -2204,6 +2222,7 @@
 				97D38DE1210D17B700150CF9 /* ThirdPartyCodeBusiness.swift in Sources */,
 				97D38DA9210CA88100150CF9 /* Observer.swift in Sources */,
 				97A560782122E32C00A908CD /* RiotAPI.swift in Sources */,
+				97DE80402324ACDE00D50971 /* RankedExpMethod.swift in Sources */,
 				978AC5D02130008E00C5CCCD /* Item.swift in Sources */,
 				97B7B8822134554B005C9B94 /* DelayedRequest.swift in Sources */,
 				97D38D45210A7BEF00150CF9 /* Platform.swift in Sources */,
@@ -2247,6 +2266,7 @@
 				97D38DA7210CA86F00150CF9 /* BannedChampion.swift in Sources */,
 				97D38DB1210CABBA00150CF9 /* RunePage.swift in Sources */,
 				97D38DD9210CF05C00150CF9 /* MatchEvent.swift in Sources */,
+				97DE80452324ADEA00D50971 /* RankedExpBusiness.swift in Sources */,
 				97D38DA1210CA3A100150CF9 /* StatusBusiness.swift in Sources */,
 				97A560D0212711DF00A908CD /* DateToken.swift in Sources */,
 				978AC5CE2130002F00C5CCCD /* DDragonItemsFile.swift in Sources */,
