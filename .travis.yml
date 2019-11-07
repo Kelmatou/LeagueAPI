@@ -26,6 +26,7 @@ jobs:
       name: "iOS 12"
       env: DESTINATION="OS=12.4,name=iPhone XS" SCHEME="$FRAMEWORK_IOS_SCHEME"
       script: ./scripts/compile.sh
+      if: tag IS present
 
     - stage: "Compile iOS"
       name: "iOS 11"
@@ -75,9 +76,15 @@ jobs:
       if: tag IS present
 
     - stage: "Compile WatchOS"
+      name: "WatchOS 6"
+      env: DESTINATION="OS=6.1,name=Apple Watch Series 5 - 44mm" SCHEME="$FRAMEWORK_WATCHOS_SCHEME"
+      script: ./scripts/compile.sh
+
+    - stage: "Compile WatchOS"
       name: "WatchOS 5"
       env: DESTINATION="OS=5.3,name=Apple Watch Series 4 - 44mm" SCHEME="$FRAMEWORK_WATCHOS_SCHEME"
       script: ./scripts/compile.sh
+      if: tag IS present
 
     - stage: "Compile WatchOS"
       name: "WatchOS 4"
