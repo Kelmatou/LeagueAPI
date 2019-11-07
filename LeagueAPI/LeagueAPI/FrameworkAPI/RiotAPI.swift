@@ -127,11 +127,11 @@ public class RiotAPI: APIClient {
     
     // MARK: - TFT-RANKED
     
-    public func getTFTChallengerLeague(for queue: Queue, on region: Region, handler: @escaping (League?, String?) -> Void) {
+    public func getTFTChallengerLeague(on region: Region, handler: @escaping (League?, String?) -> Void) {
         TFTRankedBusiness.getRanked(method: .GetChallenger, region: region, key: self.key, handler: handler)
     }
     
-    public func getTFTGrandMasterLeague(for queue: Queue, on region: Region, handler: @escaping (League?, String?) -> Void) {
+    public func getTFTGrandMasterLeague(on region: Region, handler: @escaping (League?, String?) -> Void) {
         TFTRankedBusiness.getRanked(method: .GetGrandMaster, region: region, key: self.key, handler: handler)
     }
     
@@ -139,7 +139,7 @@ public class RiotAPI: APIClient {
         TFTRankedBusiness.getRanked(method: .LeagueById(id: leagueId), region: region, key: self.key, handler: handler)
     }
     
-    public func getTFTMasterLeague(for queue: Queue, on region: Region, handler: @escaping (League?, String?) -> Void) {
+    public func getTFTMasterLeague(on region: Region, handler: @escaping (League?, String?) -> Void) {
         TFTRankedBusiness.getRanked(method:.GetMaster, region: region, key: self.key, handler: handler)
     }
     
@@ -147,11 +147,7 @@ public class RiotAPI: APIClient {
         TFTRankedBusiness.getRanked(method: .EntriesById(id: summonerId), region: region, key: self.key, handler: handler)
     }
     
-    public func getTFTRankedEntry(for summonerId: SummonerId, in queue: Queue, on region: Region, handler: @escaping (RankedEntry?, String?) -> Void) {
-        TFTRankedBusiness.getRankedEntry(in: queue, method: .EntriesById(id: summonerId), region: region, key: self.key, handler: handler)
-    }
-    
-    public func getTFTQueueEntries(on region: Region, division: RankedDivision, page: Int = 1, handler: @escaping ([RankedEntry]?, String?) -> Void) {
+    public func getTFTEntries(on region: Region, division: RankedDivision, page: Int = 1, handler: @escaping ([RankedEntry]?, String?) -> Void) {
         TFTRankedBusiness.getRanked(method: .EntriesByTierAndDivision(division: division, page: page), region: region, key: self.key, handler: handler)
     }
     

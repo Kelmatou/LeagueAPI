@@ -29,7 +29,7 @@ public class TFTParticipant: Decodable {
         case timeEliminated = "time_eliminated"
         case companion = "companion"
         case traits = "traits"
-        case playersEliminated = "players_eliminated"
+        case playersEliminated = "players_eliminated " // Probably a mistake, need to remove extra space later
         case puuid = "puuid"
         case totalDamageToPlayers = "total_damage_to_players"
         case units = "units"

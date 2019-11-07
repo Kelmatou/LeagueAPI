@@ -251,6 +251,10 @@ public class QueueMode {
             self.init(mode: .OdysseyCaptain, place: .CrashSite)
         case QueueModes.OdysseyOnslaught.rawValue:
             self.init(mode: .OdysseyOnslaught, place: .CrashSite)
+        case QueueModes.TeamFightTactics.rawValue:
+            self.init(mode: .TeamFightTactics, place: .Convergence)
+        case QueueModes.RankedTeamFightTactics.rawValue:
+            self.init(mode: .RankedTeamFightTactics, place: .Convergence)
         case QueueModes.NexusBlitz.rawValue:
             self.init(mode: .NexusBlitz, place: .NexusBlitz)
         default:
