@@ -2918,7 +2918,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "armv7s armv7 arm64e arm64";
+				VALID_ARCHS = "armv7s armv7 arm64e arm64 x86_64 i386";
 			};
 			name = Debug;
 		};
@@ -2946,7 +2946,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "armv7s armv7 arm64e arm64";
+				VALID_ARCHS = "armv7s armv7 arm64e arm64 x86_64 i386";
 			};
 			name = Release;
 		};
