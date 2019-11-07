@@ -1,16 +1,16 @@
 //
-//  SummonerMethod.swift
+//  TFTSummonerMethod.swift
 //  LeagueAPI
 //
-//  Created by Antoine Clop on 7/26/18.
-//  Copyright © 2018 Antoine Clop. All rights reserved.
+//  Created by Antoine Clop on 11/6/19.
+//  Copyright © 2019 Antoine Clop. All rights reserved.
 //
 
 import Foundation
 
-internal class SummonerMethod: LeagueMethod {
+internal class TFTSummonerMethod: LeagueMethod {
     
-    public enum SummonerMethods {
+    public enum TFTSummonerMethods {
         case ByAccountId(id: AccountId)
         case ByName(name: String)
         case byPuuid(puuid: SummonerPuuid)
@@ -18,9 +18,9 @@ internal class SummonerMethod: LeagueMethod {
     }
     
     private var service: ServiceProxy
-    private var method: SummonerMethods
+    private var method: TFTSummonerMethods
     
-    public init(method: SummonerMethods, region: Region) {
+    public init(method: TFTSummonerMethods, region: Region) {
         self.method = method
         self.service = ServiceProxy(for: region)
     }
@@ -40,7 +40,7 @@ internal class SummonerMethod: LeagueMethod {
     
     public func getMethodUrl() -> String {
         let entrypoint: String = self.service.hostUrl
-        let commonPath: String = "https://\(entrypoint)\(MethodPaths.Summoner.rawValue)/\(Version.LOL_API)/summoners"
+        let commonPath: String = "https://\(entrypoint)\(MethodPaths.TFTSummoner.rawValue)/\(Version.TFT_API)/summoners"
         switch self.method {
         case .ByAccountId(let id):
             return "\(commonPath)/by-account/\(id)"
@@ -62,7 +62,7 @@ internal class SummonerMethod: LeagueMethod {
         case .ByAccountId, .ByName, .byPuuid:
             return nil
         case .ById:
-            return "Too many calls to unexisting Summoner(by SummonerId) may result in Blacklist"
+            return "Too many calls to unexisting TFTSummoner(by SummonerId) may result in Blacklist"
         }
     }
 }

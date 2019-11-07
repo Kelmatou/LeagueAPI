@@ -35,7 +35,7 @@ internal class RankedExpMethod: LeagueMethod {
     
     func getMethodUrl() -> String {
         let entrypoint: String = self.service.hostUrl
-        let commonPath: String = "https://\(entrypoint)\(MethodPaths.LeagueExp.rawValue)/\(Version.RiotAPI)"
+        let commonPath: String = "https://\(entrypoint)\(MethodPaths.LeagueExp.rawValue)/\(Version.LOL_API)"
         switch self.method {
         case .QueueEntries(let queue, let division, let page):
             return "\(commonPath)/entries/\(queue.type.rawValue)/\(division.tier.tier.rawValue)/\(division.divisionRoman)?page=\(page)"

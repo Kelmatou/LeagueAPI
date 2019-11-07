@@ -11,5 +11,6 @@ import Foundation
 public class Version {
     
     public static let LeagueAPI: String = "v\(Bundle(for: Version.self).infoDictionary!["CFBundleShortVersionString"] ?? "Unknown")"
-    public static let RiotAPI: String = "v4"
+    public static let LOL_API: String = "v4"
+    public static let TFT_API: String = "v1"
 }

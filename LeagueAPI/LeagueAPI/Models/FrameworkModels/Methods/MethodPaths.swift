@@ -17,6 +17,9 @@ internal enum MethodPaths: String {
     case Match = "/lol/match"
     case Spectator = "/lol/spectator"
     case Summoner = "/lol/summoner"
+    case TFTLeague = "/tft/league"
+    case TFTMatch = "/tft/match"
+    case TFTSummoner = "/tft/summoner"
     case Platform = "/lol/platform" // Champion & ThirdPartyCode
     case TournamentStub = "/lol/tournament-stub"
     case Tournament = "/lol/tournament"

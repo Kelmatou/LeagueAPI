@@ -32,7 +32,7 @@ internal class ThirdPartyCodeMethod: LeagueMethod {
     
     public func getMethodUrl() -> String {
         let entrypoint: String = self.service.hostUrl
-        let commonPath: String = "https://\(entrypoint)\(MethodPaths.Platform.rawValue)/\(Version.RiotAPI)/third-party-code"
+        let commonPath: String = "https://\(entrypoint)\(MethodPaths.Platform.rawValue)/\(Version.LOL_API)/third-party-code"
         switch self.method {
         case .ById(let id):
             return "\(commonPath)/by-summoner/\(id)"

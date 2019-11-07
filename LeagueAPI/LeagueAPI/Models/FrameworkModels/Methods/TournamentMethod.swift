@@ -44,7 +44,7 @@ internal class TournamentMethod: LeagueMethod {
     
     public func getMethodUrl() -> String {
         let entrypoint: String = self.host.rawValue
-        let commonPath: String = "https://\(entrypoint)\(MethodPaths.Tournament.rawValue)/\(Version.RiotAPI)"
+        let commonPath: String = "https://\(entrypoint)\(MethodPaths.Tournament.rawValue)/\(Version.LOL_API)"
         switch self.method {
         case .CreateCodes(let amount, let tournamentId, _):
             return "\(commonPath)/codes?tournamentId=\(tournamentId)&count=\(amount ?? 1)"

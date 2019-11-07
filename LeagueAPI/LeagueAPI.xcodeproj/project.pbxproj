@@ -589,6 +589,86 @@
 		9736CCD42120EB96008E31A0 /* SpectatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9736CCD32120EB96008E31A0 /* SpectatorType.swift */; };
 		9736CCD72120EFB5008E31A0 /* PickType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9736CCD62120EFB5008E31A0 /* PickType.swift */; };
 		9736CCD92120F037008E31A0 /* MapType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9736CCD82120F037008E31A0 /* MapType.swift */; };
+		974D8AF12373BECD00149B3E /* TFTMatchMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8AEE2373BECC00149B3E /* TFTMatchMethod.swift */; };
+		974D8AF22373BECD00149B3E /* TFTMatchMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8AEE2373BECC00149B3E /* TFTMatchMethod.swift */; };
+		974D8AF32373BECD00149B3E /* TFTMatchMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8AEE2373BECC00149B3E /* TFTMatchMethod.swift */; };
+		974D8AF42373BECD00149B3E /* TFTMatchMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8AEE2373BECC00149B3E /* TFTMatchMethod.swift */; };
+		974D8AF52373BECD00149B3E /* TFTSummonerMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8AEF2373BECC00149B3E /* TFTSummonerMethod.swift */; };
+		974D8AF62373BECD00149B3E /* TFTSummonerMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8AEF2373BECC00149B3E /* TFTSummonerMethod.swift */; };
+		974D8AF72373BECD00149B3E /* TFTSummonerMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8AEF2373BECC00149B3E /* TFTSummonerMethod.swift */; };
+		974D8AF82373BECD00149B3E /* TFTSummonerMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8AEF2373BECC00149B3E /* TFTSummonerMethod.swift */; };
+		974D8AF92373BECD00149B3E /* TFTRankedMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8AF02373BECC00149B3E /* TFTRankedMethod.swift */; };
+		974D8AFA2373BECD00149B3E /* TFTRankedMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8AF02373BECC00149B3E /* TFTRankedMethod.swift */; };
+		974D8AFB2373BECD00149B3E /* TFTRankedMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8AF02373BECC00149B3E /* TFTRankedMethod.swift */; };
+		974D8AFC2373BECD00149B3E /* TFTRankedMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8AF02373BECC00149B3E /* TFTRankedMethod.swift */; };
+		974D8B002373CDE100149B3E /* TFTSummonerBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8AFD2373CDE100149B3E /* TFTSummonerBusiness.swift */; };
+		974D8B012373CDE100149B3E /* TFTSummonerBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8AFD2373CDE100149B3E /* TFTSummonerBusiness.swift */; };
+		974D8B022373CDE100149B3E /* TFTSummonerBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8AFD2373CDE100149B3E /* TFTSummonerBusiness.swift */; };
+		974D8B032373CDE100149B3E /* TFTSummonerBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8AFD2373CDE100149B3E /* TFTSummonerBusiness.swift */; };
+		974D8B042373CDE100149B3E /* TFTMatchBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8AFE2373CDE100149B3E /* TFTMatchBusiness.swift */; };
+		974D8B052373CDE100149B3E /* TFTMatchBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8AFE2373CDE100149B3E /* TFTMatchBusiness.swift */; };
+		974D8B062373CDE100149B3E /* TFTMatchBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8AFE2373CDE100149B3E /* TFTMatchBusiness.swift */; };
+		974D8B072373CDE100149B3E /* TFTMatchBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8AFE2373CDE100149B3E /* TFTMatchBusiness.swift */; };
+		974D8B082373CDE100149B3E /* TFTRankedBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8AFF2373CDE100149B3E /* TFTRankedBusiness.swift */; };
+		974D8B092373CDE100149B3E /* TFTRankedBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8AFF2373CDE100149B3E /* TFTRankedBusiness.swift */; };
+		974D8B0A2373CDE100149B3E /* TFTRankedBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8AFF2373CDE100149B3E /* TFTRankedBusiness.swift */; };
+		974D8B0B2373CDE100149B3E /* TFTRankedBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8AFF2373CDE100149B3E /* TFTRankedBusiness.swift */; };
+		974D8B0D2373D0ED00149B3E /* TFTGameId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B0C2373D0ED00149B3E /* TFTGameId.swift */; };
+		974D8B0E2373D0ED00149B3E /* TFTGameId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B0C2373D0ED00149B3E /* TFTGameId.swift */; };
+		974D8B0F2373D0ED00149B3E /* TFTGameId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B0C2373D0ED00149B3E /* TFTGameId.swift */; };
+		974D8B102373D0ED00149B3E /* TFTGameId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B0C2373D0ED00149B3E /* TFTGameId.swift */; };
+		974D8B122373D23D00149B3E /* WorldRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B112373D23D00149B3E /* WorldRegion.swift */; };
+		974D8B132373D23D00149B3E /* WorldRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B112373D23D00149B3E /* WorldRegion.swift */; };
+		974D8B142373D23D00149B3E /* WorldRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B112373D23D00149B3E /* WorldRegion.swift */; };
+		974D8B152373D23D00149B3E /* WorldRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B112373D23D00149B3E /* WorldRegion.swift */; };
+		974D8B172373D9FF00149B3E /* TFTMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B162373D9FF00149B3E /* TFTMatch.swift */; };
+		974D8B182373D9FF00149B3E /* TFTMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B162373D9FF00149B3E /* TFTMatch.swift */; };
+		974D8B192373D9FF00149B3E /* TFTMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B162373D9FF00149B3E /* TFTMatch.swift */; };
+		974D8B1A2373D9FF00149B3E /* TFTMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B162373D9FF00149B3E /* TFTMatch.swift */; };
+		974D8B202373DAC800149B3E /* TFTMatchMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B1B2373DAC800149B3E /* TFTMatchMetadata.swift */; };
+		974D8B212373DAC800149B3E /* TFTMatchMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B1B2373DAC800149B3E /* TFTMatchMetadata.swift */; };
+		974D8B222373DAC800149B3E /* TFTMatchMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B1B2373DAC800149B3E /* TFTMatchMetadata.swift */; };
+		974D8B232373DAC800149B3E /* TFTMatchMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B1B2373DAC800149B3E /* TFTMatchMetadata.swift */; };
+		974D8B242373DAC800149B3E /* TFTMatchInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B1C2373DAC800149B3E /* TFTMatchInfo.swift */; };
+		974D8B252373DAC800149B3E /* TFTMatchInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B1C2373DAC800149B3E /* TFTMatchInfo.swift */; };
+		974D8B262373DAC800149B3E /* TFTMatchInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B1C2373DAC800149B3E /* TFTMatchInfo.swift */; };
+		974D8B272373DAC800149B3E /* TFTMatchInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B1C2373DAC800149B3E /* TFTMatchInfo.swift */; };
+		974D8B282373DAC800149B3E /* TFTTrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B1D2373DAC800149B3E /* TFTTrait.swift */; };
+		974D8B292373DAC800149B3E /* TFTTrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B1D2373DAC800149B3E /* TFTTrait.swift */; };
+		974D8B2A2373DAC800149B3E /* TFTTrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B1D2373DAC800149B3E /* TFTTrait.swift */; };
+		974D8B2B2373DAC800149B3E /* TFTTrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B1D2373DAC800149B3E /* TFTTrait.swift */; };
+		974D8B2C2373DAC800149B3E /* TFTParticipant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B1E2373DAC800149B3E /* TFTParticipant.swift */; };
+		974D8B2D2373DAC800149B3E /* TFTParticipant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B1E2373DAC800149B3E /* TFTParticipant.swift */; };
+		974D8B2E2373DAC800149B3E /* TFTParticipant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B1E2373DAC800149B3E /* TFTParticipant.swift */; };
+		974D8B2F2373DAC800149B3E /* TFTParticipant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B1E2373DAC800149B3E /* TFTParticipant.swift */; };
+		974D8B302373DAC800149B3E /* TFTUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B1F2373DAC800149B3E /* TFTUnit.swift */; };
+		974D8B312373DAC800149B3E /* TFTUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B1F2373DAC800149B3E /* TFTUnit.swift */; };
+		974D8B322373DAC800149B3E /* TFTUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B1F2373DAC800149B3E /* TFTUnit.swift */; };
+		974D8B332373DAC800149B3E /* TFTUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B1F2373DAC800149B3E /* TFTUnit.swift */; };
+		974D8B352373DFCC00149B3E /* TFTCompanion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B342373DFCC00149B3E /* TFTCompanion.swift */; };
+		974D8B362373DFCC00149B3E /* TFTCompanion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B342373DFCC00149B3E /* TFTCompanion.swift */; };
+		974D8B372373DFCC00149B3E /* TFTCompanion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B342373DFCC00149B3E /* TFTCompanion.swift */; };
+		974D8B382373DFCC00149B3E /* TFTCompanion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B342373DFCC00149B3E /* TFTCompanion.swift */; };
+		974D8B3A2373ED3B00149B3E /* TFTLeagueId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B392373ED3B00149B3E /* TFTLeagueId.swift */; };
+		974D8B3B2373ED3B00149B3E /* TFTLeagueId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B392373ED3B00149B3E /* TFTLeagueId.swift */; };
+		974D8B3C2373ED3B00149B3E /* TFTLeagueId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B392373ED3B00149B3E /* TFTLeagueId.swift */; };
+		974D8B3D2373ED3B00149B3E /* TFTLeagueId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B392373ED3B00149B3E /* TFTLeagueId.swift */; };
+		974D8B3F2373F38100149B3E /* CompanionSkinId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B3E2373F38100149B3E /* CompanionSkinId.swift */; };
+		974D8B402373F38100149B3E /* CompanionSkinId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B3E2373F38100149B3E /* CompanionSkinId.swift */; };
+		974D8B412373F38100149B3E /* CompanionSkinId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B3E2373F38100149B3E /* CompanionSkinId.swift */; };
+		974D8B422373F38100149B3E /* CompanionSkinId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B3E2373F38100149B3E /* CompanionSkinId.swift */; };
+		974D8B442373F61700149B3E /* TFTStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B432373F61700149B3E /* TFTStage.swift */; };
+		974D8B452373F61700149B3E /* TFTStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B432373F61700149B3E /* TFTStage.swift */; };
+		974D8B462373F61700149B3E /* TFTStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B432373F61700149B3E /* TFTStage.swift */; };
+		974D8B472373F61700149B3E /* TFTStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B432373F61700149B3E /* TFTStage.swift */; };
+		974D8B492373FB6400149B3E /* TFTItemId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B482373FB6300149B3E /* TFTItemId.swift */; };
+		974D8B4A2373FB6400149B3E /* TFTItemId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B482373FB6300149B3E /* TFTItemId.swift */; };
+		974D8B4B2373FB6400149B3E /* TFTItemId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B482373FB6300149B3E /* TFTItemId.swift */; };
+		974D8B4C2373FB6400149B3E /* TFTItemId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B482373FB6300149B3E /* TFTItemId.swift */; };
+		974D8B4E2374054700149B3E /* TFTCharacterId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B4D2374054700149B3E /* TFTCharacterId.swift */; };
+		974D8B4F2374054700149B3E /* TFTCharacterId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B4D2374054700149B3E /* TFTCharacterId.swift */; };
+		974D8B502374054700149B3E /* TFTCharacterId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B4D2374054700149B3E /* TFTCharacterId.swift */; };
+		974D8B512374054700149B3E /* TFTCharacterId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974D8B4D2374054700149B3E /* TFTCharacterId.swift */; };
 		9769180321134E2B00F8AF3B /* JsonRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9769180221134E2B00F8AF3B /* JsonRequester.swift */; };
 		9769180521134E5700F8AF3B /* DataRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9769180421134E5700F8AF3B /* DataRequester.swift */; };
 		97691807211359D100F8AF3B /* RawRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97691806211359D100F8AF3B /* RawRequester.swift */; };
@@ -798,6 +878,26 @@
 		9736CCD32120EB96008E31A0 /* SpectatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectatorType.swift; sourceTree = "<group>"; };
 		9736CCD62120EFB5008E31A0 /* PickType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickType.swift; sourceTree = "<group>"; };
 		9736CCD82120F037008E31A0 /* MapType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapType.swift; sourceTree = "<group>"; };
+		974D8AEE2373BECC00149B3E /* TFTMatchMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFTMatchMethod.swift; sourceTree = "<group>"; };
+		974D8AEF2373BECC00149B3E /* TFTSummonerMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFTSummonerMethod.swift; sourceTree = "<group>"; };
+		974D8AF02373BECC00149B3E /* TFTRankedMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFTRankedMethod.swift; sourceTree = "<group>"; };
+		974D8AFD2373CDE100149B3E /* TFTSummonerBusiness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFTSummonerBusiness.swift; sourceTree = "<group>"; };
+		974D8AFE2373CDE100149B3E /* TFTMatchBusiness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFTMatchBusiness.swift; sourceTree = "<group>"; };
+		974D8AFF2373CDE100149B3E /* TFTRankedBusiness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFTRankedBusiness.swift; sourceTree = "<group>"; };
+		974D8B0C2373D0ED00149B3E /* TFTGameId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFTGameId.swift; sourceTree = "<group>"; };
+		974D8B112373D23D00149B3E /* WorldRegion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldRegion.swift; sourceTree = "<group>"; };
+		974D8B162373D9FF00149B3E /* TFTMatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFTMatch.swift; sourceTree = "<group>"; };
+		974D8B1B2373DAC800149B3E /* TFTMatchMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFTMatchMetadata.swift; sourceTree = "<group>"; };
+		974D8B1C2373DAC800149B3E /* TFTMatchInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFTMatchInfo.swift; sourceTree = "<group>"; };
+		974D8B1D2373DAC800149B3E /* TFTTrait.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFTTrait.swift; sourceTree = "<group>"; };
+		974D8B1E2373DAC800149B3E /* TFTParticipant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFTParticipant.swift; sourceTree = "<group>"; };
+		974D8B1F2373DAC800149B3E /* TFTUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFTUnit.swift; sourceTree = "<group>"; };
+		974D8B342373DFCC00149B3E /* TFTCompanion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFTCompanion.swift; sourceTree = "<group>"; };
+		974D8B392373ED3B00149B3E /* TFTLeagueId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFTLeagueId.swift; sourceTree = "<group>"; };
+		974D8B3E2373F38100149B3E /* CompanionSkinId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanionSkinId.swift; sourceTree = "<group>"; };
+		974D8B432373F61700149B3E /* TFTStage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFTStage.swift; sourceTree = "<group>"; };
+		974D8B482373FB6300149B3E /* TFTItemId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFTItemId.swift; sourceTree = "<group>"; };
+		974D8B4D2374054700149B3E /* TFTCharacterId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFTCharacterId.swift; sourceTree = "<group>"; };
 		9769180221134E2B00F8AF3B /* JsonRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonRequester.swift; sourceTree = "<group>"; };
 		9769180421134E5700F8AF3B /* DataRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequester.swift; sourceTree = "<group>"; };
 		97691806211359D100F8AF3B /* RawRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawRequester.swift; sourceTree = "<group>"; };
@@ -1048,6 +1148,7 @@
 		9736CCD52120EBA9008E31A0 /* RiotEnums */ = {
 			isa = PBXGroup;
 			children = (
+				974D8B112373D23D00149B3E /* WorldRegion.swift */,
 				9736CCD12120E172008E31A0 /* Endpoint.swift */,
 				97D38D42210A7B4900150CF9 /* Region.swift */,
 				97D38D44210A7BEF00150CF9 /* Platform.swift */,
@@ -1108,6 +1209,9 @@
 		97A560902123770600A908CD /* RiotAPIBusiness */ = {
 			isa = PBXGroup;
 			children = (
+				974D8AFE2373CDE100149B3E /* TFTMatchBusiness.swift */,
+				974D8AFF2373CDE100149B3E /* TFTRankedBusiness.swift */,
+				974D8AFD2373CDE100149B3E /* TFTSummonerBusiness.swift */,
 				97D38D76210C5C4A00150CF9 /* APIBusiness.swift */,
 				97D38D78210C5D4600150CF9 /* ChampionMasteryBusiness.swift */,
 				97D38D82210C6E9B00150CF9 /* ChampionBusiness.swift */,
@@ -1295,6 +1399,14 @@
 				97E67E912135B64D00E8E1B7 /* EmptyReply.swift */,
 				9729BEFD219EB662005F8311 /* ChampionRotations.swift */,
 				558F334A220489ED006D2EA1 /* RankedDivision.swift */,
+				974D8B162373D9FF00149B3E /* TFTMatch.swift */,
+				974D8B1C2373DAC800149B3E /* TFTMatchInfo.swift */,
+				974D8B1E2373DAC800149B3E /* TFTParticipant.swift */,
+				974D8B342373DFCC00149B3E /* TFTCompanion.swift */,
+				974D8B432373F61700149B3E /* TFTStage.swift */,
+				974D8B1D2373DAC800149B3E /* TFTTrait.swift */,
+				974D8B1F2373DAC800149B3E /* TFTUnit.swift */,
+				974D8B1B2373DAC800149B3E /* TFTMatchMetadata.swift */,
 			);
 			path = RiotModels;
 			sourceTree = "<group>";
@@ -1326,6 +1438,9 @@
 		97D38D2D210A5B5700150CF9 /* Methods */ = {
 			isa = PBXGroup;
 			children = (
+				974D8AF02373BECC00149B3E /* TFTRankedMethod.swift */,
+				974D8AEE2373BECC00149B3E /* TFTMatchMethod.swift */,
+				974D8AEF2373BECC00149B3E /* TFTSummonerMethod.swift */,
 				97D38D2E210A5B7E00150CF9 /* LeagueMethod.swift */,
 				97D38D46210A80AA00150CF9 /* MethodPaths.swift */,
 				97D38D7A210C5D8500150CF9 /* ChampionMasteryMethod.swift */,
@@ -1358,6 +1473,11 @@
 		97E3145F211C33BC00C9F739 /* Types */ = {
 			isa = PBXGroup;
 			children = (
+				974D8B4D2374054700149B3E /* TFTCharacterId.swift */,
+				974D8B482373FB6300149B3E /* TFTItemId.swift */,
+				974D8B3E2373F38100149B3E /* CompanionSkinId.swift */,
+				974D8B392373ED3B00149B3E /* TFTLeagueId.swift */,
+				974D8B0C2373D0ED00149B3E /* TFTGameId.swift */,
 				97E31460211C33E900C9F739 /* TypeAlias.swift */,
 				978AC5B0212F47E400C5CCCD /* Identifier.swift */,
 				97EACE8C21BEA13A00B0B9EA /* SummonerPuuid.swift */,
@@ -1664,6 +1784,7 @@
 				97DE80412324ACDE00D50971 /* RankedExpMethod.swift in Sources */,
 				970436F6228504E80073F296 /* ChampionId.swift in Sources */,
 				970436F1228504E80073F296 /* TypeAlias.swift in Sources */,
+				974D8B212373DAC800149B3E /* TFTMatchMetadata.swift in Sources */,
 				970437672285055D0073F296 /* TournamentUpdate.swift in Sources */,
 				970436FF228504E80073F296 /* LeagueId.swift in Sources */,
 				970436F2228504E80073F296 /* Identifier.swift in Sources */,
@@ -1671,6 +1792,7 @@
 				970436F5228504E80073F296 /* AccountId.swift in Sources */,
 				9704375E228505560073F296 /* DurationDelayedRequest.swift in Sources */,
 				970436192285049E0073F296 /* DataDragonItemBusiness.swift in Sources */,
+				974D8B252373DAC800149B3E /* TFTMatchInfo.swift in Sources */,
 				9704374D228505500073F296 /* TournamentStubMethod.swift in Sources */,
 				97043668228504C60073F296 /* FeaturedGames.swift in Sources */,
 				970436C3228504D00073F296 /* DDragonProfileIconsFile.swift in Sources */,
@@ -1680,17 +1802,21 @@
 				97043676228504C60073F296 /* MatchParticipant.swift in Sources */,
 				97043673228504C60073F296 /* MatchPlayer.swift in Sources */,
 				97043700228504E80073F296 /* TournamentId.swift in Sources */,
+				974D8B362373DFCC00149B3E /* TFTCompanion.swift in Sources */,
 				97043627228504AF0073F296 /* RiotAPIRESTRequester.swift in Sources */,
 				970436ED228504DA0073F296 /* Version.swift in Sources */,
 				97043628228504AF0073F296 /* DataDragonRequester.swift in Sources */,
 				97043672228504C60073F296 /* MatchParticipantIdentity.swift in Sources */,
 				97043614228504970073F296 /* TournamentBusiness.swift in Sources */,
+				974D8B012373CDE100149B3E /* TFTSummonerBusiness.swift in Sources */,
 				97043743228505500073F296 /* LeagueMethod.swift in Sources */,
 				97043686228504C60073F296 /* ChampionRotations.swift in Sources */,
+				974D8B052373CDE100149B3E /* TFTMatchBusiness.swift in Sources */,
 				970436C0228504D00073F296 /* Skin.swift in Sources */,
 				970436CD228504D00073F296 /* RunePath.swift in Sources */,
 				9704361A2285049E0073F296 /* DataDragonRuneBusiness.swift in Sources */,
 				9704366D228504C60073F296 /* GameCustomObject.swift in Sources */,
+				974D8B312373DAC800149B3E /* TFTUnit.swift in Sources */,
 				97043625228504AF0073F296 /* JsonRequester.swift in Sources */,
 				97043715228504EE0073F296 /* DatetimeEnums.swift in Sources */,
 				9704364A228504C00073F296 /* RankedTier.swift in Sources */,
@@ -1703,12 +1829,14 @@
 				970436162285049E0073F296 /* DataDragonChampionBusiness.swift in Sources */,
 				97043662228504C60073F296 /* RankedEntry.swift in Sources */,
 				97043661228504C60073F296 /* Series.swift in Sources */,
+				974D8B402373F38100149B3E /* CompanionSkinId.swift in Sources */,
 				9704374C228505500073F296 /* ThirdPartyCodeMethod.swift in Sources */,
 				97043683228504C60073F296 /* ErrorMessage.swift in Sources */,
 				97DE80462324ADEA00D50971 /* RankedExpBusiness.swift in Sources */,
 				97043613228504970073F296 /* TournamentStubBusiness.swift in Sources */,
 				970436B5228504D00073F296 /* DDragonChampionFile.swift in Sources */,
 				97043612228504970073F296 /* ThirdPartyCodeBusiness.swift in Sources */,
+				974D8AF22373BECD00149B3E /* TFTMatchMethod.swift in Sources */,
 				97043744228505500073F296 /* MethodPaths.swift in Sources */,
 				970436B8228504D00073F296 /* ChampionStats.swift in Sources */,
 				970436BC228504D00073F296 /* ChampionSpell.swift in Sources */,
@@ -1724,6 +1852,7 @@
 				970436C9228504D00073F296 /* DDragonItemsFile.swift in Sources */,
 				970437632285055D0073F296 /* TournamentRegion.swift in Sources */,
 				970436B3228504D00073F296 /* DDragonVersions.swift in Sources */,
+				974D8B182373D9FF00149B3E /* TFTMatch.swift in Sources */,
 				9704371C228504F30073F296 /* Logger.swift in Sources */,
 				9704366C228504C60073F296 /* Participant.swift in Sources */,
 				970436F8228504E80073F296 /* ProfileIconId.swift in Sources */,
@@ -1731,9 +1860,12 @@
 				970436C4228504D00073F296 /* ProfileIcon.swift in Sources */,
 				97043685228504C60073F296 /* EmptyReply.swift in Sources */,
 				9704365F228504C60073F296 /* League.swift in Sources */,
+				974D8B3B2373ED3B00149B3E /* TFTLeagueId.swift in Sources */,
 				9704375C228505560073F296 /* ExploringLeagueRequest.swift in Sources */,
 				9704363E228504C00073F296 /* Queue.swift in Sources */,
 				9704363C228504C00073F296 /* Region.swift in Sources */,
+				974D8B292373DAC800149B3E /* TFTTrait.swift in Sources */,
+				974D8B4A2373FB6400149B3E /* TFTItemId.swift in Sources */,
 				9704366F228504C60073F296 /* MatchList.swift in Sources */,
 				97043678228504C60073F296 /* MatchParticipantTimeline.swift in Sources */,
 				97043682228504C60073F296 /* ErrorStatus.swift in Sources */,
@@ -1741,12 +1873,16 @@
 				970436C1228504D00073F296 /* SkinData.swift in Sources */,
 				97043647228504C00073F296 /* Place.swift in Sources */,
 				97043679228504C60073F296 /* LegacyRune.swift in Sources */,
+				974D8AF62373BECD00149B3E /* TFTSummonerMethod.swift in Sources */,
 				970436182285049E0073F296 /* DataDragonSummonerSpellBusiness.swift in Sources */,
 				970436FE228504E80073F296 /* ProviderId.swift in Sources */,
+				974D8AFA2373BECD00149B3E /* TFTRankedMethod.swift in Sources */,
 				9704365D228504C60073F296 /* Summoner.swift in Sources */,
+				974D8B2D2373DAC800149B3E /* TFTParticipant.swift in Sources */,
 				970436FB228504E80073F296 /* RunePathId.swift in Sources */,
 				97043645228504C00073F296 /* MapType.swift in Sources */,
 				970436F3228504E80073F296 /* SummonerPuuid.swift in Sources */,
+				974D8B092373CDE100149B3E /* TFTRankedBusiness.swift in Sources */,
 				97043749228505500073F296 /* MatchMethod.swift in Sources */,
 				970436CF228504D00073F296 /* Rune.swift in Sources */,
 				9704365E228504C60073F296 /* ChampionMastery.swift in Sources */,
@@ -1759,6 +1895,7 @@
 				97043746228505500073F296 /* ChampionMethod.swift in Sources */,
 				97043720228504F30073F296 /* StringExtension.swift in Sources */,
 				9704367B228504C60073F296 /* MatchTimeline.swift in Sources */,
+				974D8B0E2373D0ED00149B3E /* TFTGameId.swift in Sources */,
 				970436C8228504D00073F296 /* SummonerSpellData.swift in Sources */,
 				9704364B228504C00073F296 /* GameRole.swift in Sources */,
 				970436C5228504D00073F296 /* ProfileIconData.swift in Sources */,
@@ -1790,6 +1927,7 @@
 				97043643228504C00073F296 /* PickType.swift in Sources */,
 				970436F7228504E80073F296 /* SkinId.swift in Sources */,
 				970437652285055D0073F296 /* TournamentProvider.swift in Sources */,
+				974D8B452373F61700149B3E /* TFTStage.swift in Sources */,
 				970437642285055D0073F296 /* TournamentInfo.swift in Sources */,
 				97043670228504C60073F296 /* MatchReference.swift in Sources */,
 				9704374A228505500073F296 /* SpectatorMethod.swift in Sources */,
@@ -1810,9 +1948,11 @@
 				970436F4228504E80073F296 /* SummonerId.swift in Sources */,
 				970436B6228504D00073F296 /* ChampionsDetails.swift in Sources */,
 				97043684228504C60073F296 /* TournamentDetails.swift in Sources */,
+				974D8B132373D23D00149B3E /* WorldRegion.swift in Sources */,
 				97043646228504C00073F296 /* RessourceType.swift in Sources */,
 				97043745228505500073F296 /* ChampionMasteryMethod.swift in Sources */,
 				9704360E228504970073F296 /* StatusBusiness.swift in Sources */,
+				974D8B4F2374054700149B3E /* TFTCharacterId.swift in Sources */,
 				97043669228504C60073F296 /* GameInfo.swift in Sources */,
 				9704374B228505500073F296 /* SummonerMethod.swift in Sources */,
 				97043642228504C00073F296 /* SpectatorType.swift in Sources */,
@@ -1851,6 +1991,7 @@
 				97DE80422324ACDE00D50971 /* RankedExpMethod.swift in Sources */,
 				97043707228504E80073F296 /* ChampionId.swift in Sources */,
 				97043702228504E80073F296 /* TypeAlias.swift in Sources */,
+				974D8B222373DAC800149B3E /* TFTMatchMetadata.swift in Sources */,
 				9704376C2285055D0073F296 /* TournamentUpdate.swift in Sources */,
 				97043710228504E80073F296 /* LeagueId.swift in Sources */,
 				97043703228504E80073F296 /* Identifier.swift in Sources */,
@@ -1858,6 +1999,7 @@
 				97043706228504E80073F296 /* AccountId.swift in Sources */,
 				97043762228505560073F296 /* DurationDelayedRequest.swift in Sources */,
 				9704361F2285049E0073F296 /* DataDragonItemBusiness.swift in Sources */,
+				974D8B262373DAC800149B3E /* TFTMatchInfo.swift in Sources */,
 				97043759228505500073F296 /* TournamentStubMethod.swift in Sources */,
 				97043693228504C70073F296 /* FeaturedGames.swift in Sources */,
 				970436E0228504D10073F296 /* DDragonProfileIconsFile.swift in Sources */,
@@ -1867,17 +2009,21 @@
 				970436A1228504C70073F296 /* MatchParticipant.swift in Sources */,
 				9704369E228504C70073F296 /* MatchPlayer.swift in Sources */,
 				97043711228504E80073F296 /* TournamentId.swift in Sources */,
+				974D8B372373DFCC00149B3E /* TFTCompanion.swift in Sources */,
 				9704362E228504B00073F296 /* RiotAPIRESTRequester.swift in Sources */,
 				970436EF228504DA0073F296 /* Version.swift in Sources */,
 				9704362F228504B00073F296 /* DataDragonRequester.swift in Sources */,
 				9704369D228504C70073F296 /* MatchParticipantIdentity.swift in Sources */,
 				97043609228504960073F296 /* TournamentBusiness.swift in Sources */,
+				974D8B022373CDE100149B3E /* TFTSummonerBusiness.swift in Sources */,
 				9704374F228505500073F296 /* LeagueMethod.swift in Sources */,
 				970436B1228504C70073F296 /* ChampionRotations.swift in Sources */,
+				974D8B062373CDE100149B3E /* TFTMatchBusiness.swift in Sources */,
 				970436DD228504D10073F296 /* Skin.swift in Sources */,
 				970436EA228504D10073F296 /* RunePath.swift in Sources */,
 				970436202285049E0073F296 /* DataDragonRuneBusiness.swift in Sources */,
 				97043698228504C70073F296 /* GameCustomObject.swift in Sources */,
+				974D8B322373DAC800149B3E /* TFTUnit.swift in Sources */,
 				9704362C228504B00073F296 /* JsonRequester.swift in Sources */,
 				97043718228504EF0073F296 /* DatetimeEnums.swift in Sources */,
 				9704365B228504C00073F296 /* RankedTier.swift in Sources */,
@@ -1890,12 +2036,14 @@
 				9704361C2285049E0073F296 /* DataDragonChampionBusiness.swift in Sources */,
 				9704368D228504C70073F296 /* RankedEntry.swift in Sources */,
 				9704368C228504C70073F296 /* Series.swift in Sources */,
+				974D8B412373F38100149B3E /* CompanionSkinId.swift in Sources */,
 				97043758228505500073F296 /* ThirdPartyCodeMethod.swift in Sources */,
 				970436AE228504C70073F296 /* ErrorMessage.swift in Sources */,
 				97DE80472324ADEA00D50971 /* RankedExpBusiness.swift in Sources */,
 				97043608228504960073F296 /* TournamentStubBusiness.swift in Sources */,
 				970436D2228504D10073F296 /* DDragonChampionFile.swift in Sources */,
 				97043607228504960073F296 /* ThirdPartyCodeBusiness.swift in Sources */,
+				974D8AF32373BECD00149B3E /* TFTMatchMethod.swift in Sources */,
 				97043750228505500073F296 /* MethodPaths.swift in Sources */,
 				970436D5228504D10073F296 /* ChampionStats.swift in Sources */,
 				970436D9228504D10073F296 /* ChampionSpell.swift in Sources */,
@@ -1911,6 +2059,7 @@
 				970436E6228504D10073F296 /* DDragonItemsFile.swift in Sources */,
 				970437682285055D0073F296 /* TournamentRegion.swift in Sources */,
 				970436D0228504D10073F296 /* DDragonVersions.swift in Sources */,
+				974D8B192373D9FF00149B3E /* TFTMatch.swift in Sources */,
 				97043728228504F40073F296 /* Logger.swift in Sources */,
 				97043697228504C70073F296 /* Participant.swift in Sources */,
 				97043709228504E80073F296 /* ProfileIconId.swift in Sources */,
@@ -1918,9 +2067,12 @@
 				970436E1228504D10073F296 /* ProfileIcon.swift in Sources */,
 				970436B0228504C70073F296 /* EmptyReply.swift in Sources */,
 				9704368A228504C70073F296 /* League.swift in Sources */,
+				974D8B3C2373ED3B00149B3E /* TFTLeagueId.swift in Sources */,
 				97043760228505560073F296 /* ExploringLeagueRequest.swift in Sources */,
 				9704364F228504C00073F296 /* Queue.swift in Sources */,
 				9704364D228504C00073F296 /* Region.swift in Sources */,
+				974D8B2A2373DAC800149B3E /* TFTTrait.swift in Sources */,
+				974D8B4B2373FB6400149B3E /* TFTItemId.swift in Sources */,
 				9704369A228504C70073F296 /* MatchList.swift in Sources */,
 				970436A3228504C70073F296 /* MatchParticipantTimeline.swift in Sources */,
 				970436AD228504C70073F296 /* ErrorStatus.swift in Sources */,
@@ -1928,12 +2080,16 @@
 				970436DE228504D10073F296 /* SkinData.swift in Sources */,
 				97043658228504C00073F296 /* Place.swift in Sources */,
 				970436A4228504C70073F296 /* LegacyRune.swift in Sources */,
+				974D8AF72373BECD00149B3E /* TFTSummonerMethod.swift in Sources */,
 				9704361E2285049E0073F296 /* DataDragonSummonerSpellBusiness.swift in Sources */,
 				9704370F228504E80073F296 /* ProviderId.swift in Sources */,
+				974D8AFB2373BECD00149B3E /* TFTRankedMethod.swift in Sources */,
 				97043688228504C70073F296 /* Summoner.swift in Sources */,
+				974D8B2E2373DAC800149B3E /* TFTParticipant.swift in Sources */,
 				9704370C228504E80073F296 /* RunePathId.swift in Sources */,
 				97043656228504C00073F296 /* MapType.swift in Sources */,
 				97043704228504E80073F296 /* SummonerPuuid.swift in Sources */,
+				974D8B0A2373CDE100149B3E /* TFTRankedBusiness.swift in Sources */,
 				97043755228505500073F296 /* MatchMethod.swift in Sources */,
 				970436EC228504D10073F296 /* Rune.swift in Sources */,
 				97043689228504C70073F296 /* ChampionMastery.swift in Sources */,
@@ -1946,6 +2102,7 @@
 				97043752228505500073F296 /* ChampionMethod.swift in Sources */,
 				9704372C228504F40073F296 /* StringExtension.swift in Sources */,
 				970436A6228504C70073F296 /* MatchTimeline.swift in Sources */,
+				974D8B0F2373D0ED00149B3E /* TFTGameId.swift in Sources */,
 				970436E5228504D10073F296 /* SummonerSpellData.swift in Sources */,
 				9704365C228504C00073F296 /* GameRole.swift in Sources */,
 				970436E2228504D10073F296 /* ProfileIconData.swift in Sources */,
@@ -1977,6 +2134,7 @@
 				97043654228504C00073F296 /* PickType.swift in Sources */,
 				97043708228504E80073F296 /* SkinId.swift in Sources */,
 				9704376A2285055D0073F296 /* TournamentProvider.swift in Sources */,
+				974D8B462373F61700149B3E /* TFTStage.swift in Sources */,
 				970437692285055D0073F296 /* TournamentInfo.swift in Sources */,
 				9704369B228504C70073F296 /* MatchReference.swift in Sources */,
 				97043756228505500073F296 /* SpectatorMethod.swift in Sources */,
@@ -1997,9 +2155,11 @@
 				97043705228504E80073F296 /* SummonerId.swift in Sources */,
 				970436D3228504D10073F296 /* ChampionsDetails.swift in Sources */,
 				970436AF228504C70073F296 /* TournamentDetails.swift in Sources */,
+				974D8B142373D23D00149B3E /* WorldRegion.swift in Sources */,
 				97043657228504C00073F296 /* RessourceType.swift in Sources */,
 				97043751228505500073F296 /* ChampionMasteryMethod.swift in Sources */,
 				97043603228504960073F296 /* StatusBusiness.swift in Sources */,
+				974D8B502374054700149B3E /* TFTCharacterId.swift in Sources */,
 				97043694228504C70073F296 /* GameInfo.swift in Sources */,
 				97043757228505500073F296 /* SummonerMethod.swift in Sources */,
 				97043653228504C00073F296 /* SpectatorType.swift in Sources */,
@@ -2038,6 +2198,7 @@
 				97DE80432324ACDE00D50971 /* RankedExpMethod.swift in Sources */,
 				97043795228505BF0073F296 /* LocalAssets.swift in Sources */,
 				970437E4228505E50073F296 /* TournamentEventList.swift in Sources */,
+				974D8B232373DAC800149B3E /* TFTMatchMetadata.swift in Sources */,
 				970437D5228505E50073F296 /* Match.swift in Sources */,
 				970437F1228505EC0073F296 /* ChampionStats.swift in Sources */,
 				970437AB228505D60073F296 /* TournamentRegion.swift in Sources */,
@@ -2045,6 +2206,7 @@
 				970437BB228505DF0073F296 /* RessourceType.swift in Sources */,
 				970437DF228505E50073F296 /* MatchTimeline.swift in Sources */,
 				970437E0228505E50073F296 /* MatchFrame.swift in Sources */,
+				974D8B272373DAC800149B3E /* TFTMatchInfo.swift in Sources */,
 				970437F6228505EC0073F296 /* ChampionSpellData.swift in Sources */,
 				97043798228505C60073F296 /* Rate.swift in Sources */,
 				970437DC228505E50073F296 /* MatchParticipantTimeline.swift in Sources */,
@@ -2054,17 +2216,21 @@
 				97043804228505EC0073F296 /* ItemData.swift in Sources */,
 				9704378C228505B60073F296 /* DataDragonItemBusiness.swift in Sources */,
 				9704381F228506030073F296 /* RESTRequester.swift in Sources */,
+				974D8B382373DFCC00149B3E /* TFTCompanion.swift in Sources */,
 				970437B0228505DF0073F296 /* Endpoint.swift in Sources */,
 				9704380E228505F90073F296 /* SummonerId.swift in Sources */,
 				970437AE228505D60073F296 /* TournamentInitializer.swift in Sources */,
 				97043816228505F90073F296 /* RuneId.swift in Sources */,
 				970437DB228505E50073F296 /* MatchParticipantStats.swift in Sources */,
+				974D8B032373CDE100149B3E /* TFTSummonerBusiness.swift in Sources */,
 				9704380D228505F90073F296 /* SummonerPuuid.swift in Sources */,
 				970437E1228505E50073F296 /* MatchParticipantFrame.swift in Sources */,
+				974D8B072373CDE100149B3E /* TFTMatchBusiness.swift in Sources */,
 				970437B1228505DF0073F296 /* Region.swift in Sources */,
 				970437CC228505E50073F296 /* FeaturedGames.swift in Sources */,
 				97043823228506030073F296 /* PrimitiveType.swift in Sources */,
 				97043800228505EC0073F296 /* SummonerSpell.swift in Sources */,
+				974D8B332373DAC800149B3E /* TFTUnit.swift in Sources */,
 				970437BA228505DF0073F296 /* MapType.swift in Sources */,
 				970437BD228505DF0073F296 /* Season.swift in Sources */,
 				97043782228505B10073F296 /* MatchBusiness.swift in Sources */,
@@ -2077,12 +2243,14 @@
 				970437C5228505E50073F296 /* Series.swift in Sources */,
 				970437D3228505E50073F296 /* MatchList.swift in Sources */,
 				970437A3228505D10073F296 /* RankedMethod.swift in Sources */,
+				974D8B422373F38100149B3E /* CompanionSkinId.swift in Sources */,
 				97043811228505F90073F296 /* SkinId.swift in Sources */,
 				9704381A228505F90073F296 /* TournamentId.swift in Sources */,
 				97DE80482324ADEA00D50971 /* RankedExpBusiness.swift in Sources */,
 				97043809228505F40073F296 /* Version.swift in Sources */,
 				97043802228505EC0073F296 /* DDragonItemsFile.swift in Sources */,
 				97043814228505F90073F296 /* ItemId.swift in Sources */,
+				974D8AF42373BECD00149B3E /* TFTMatchMethod.swift in Sources */,
 				970437DD228505E50073F296 /* LegacyRune.swift in Sources */,
 				970437B3228505DF0073F296 /* Queue.swift in Sources */,
 				97043828228506030073F296 /* Duration.swift in Sources */,
@@ -2098,6 +2266,7 @@
 				970437CE228505E50073F296 /* BannedChampion.swift in Sources */,
 				9704381D228505FE0073F296 /* Datetime.swift in Sources */,
 				970437D8228505E50073F296 /* TeamStats.swift in Sources */,
+				974D8B1A2373D9FF00149B3E /* TFTMatch.swift in Sources */,
 				97043807228505EC0073F296 /* RuneStage.swift in Sources */,
 				970437D9228505E50073F296 /* TeamBan.swift in Sources */,
 				970437D2228505E50073F296 /* RunePage.swift in Sources */,
@@ -2105,9 +2274,12 @@
 				9704379B228505CB0073F296 /* ExploringRequest.swift in Sources */,
 				97043794228505BF0073F296 /* DataDragonRequester.swift in Sources */,
 				97043787228505B10073F296 /* TournamentBusiness.swift in Sources */,
+				974D8B3D2373ED3B00149B3E /* TFTLeagueId.swift in Sources */,
 				97043819228505F90073F296 /* LeagueId.swift in Sources */,
 				97043813228505F90073F296 /* SummonerSpellId.swift in Sources */,
 				970437A5228505D10073F296 /* MatchMethod.swift in Sources */,
+				974D8B2B2373DAC800149B3E /* TFTTrait.swift in Sources */,
+				974D8B4C2373FB6400149B3E /* TFTItemId.swift in Sources */,
 				970437BE228505DF0073F296 /* ChampionRole.swift in Sources */,
 				970437EA228505E50073F296 /* ChampionRotations.swift in Sources */,
 				970437A6228505D10073F296 /* SpectatorMethod.swift in Sources */,
@@ -2115,12 +2287,16 @@
 				9704381B228505F90073F296 /* TournamentCode.swift in Sources */,
 				9704379F228505D10073F296 /* LeagueMethod.swift in Sources */,
 				970437A9228505D10073F296 /* TournamentStubMethod.swift in Sources */,
+				974D8AF82373BECD00149B3E /* TFTSummonerMethod.swift in Sources */,
 				9704378D228505B60073F296 /* DataDragonRuneBusiness.swift in Sources */,
 				97043791228505BF0073F296 /* JsonRequester.swift in Sources */,
+				974D8AFC2373BECD00149B3E /* TFTRankedMethod.swift in Sources */,
 				970437EF228505EC0073F296 /* ChampionsDetails.swift in Sources */,
+				974D8B2F2373DAC800149B3E /* TFTParticipant.swift in Sources */,
 				970437B7228505DF0073F296 /* SpectatorType.swift in Sources */,
 				970437F7228505EC0073F296 /* ChampionPassive.swift in Sources */,
 				9704381C228505FE0073F296 /* DateToken.swift in Sources */,
+				974D8B0B2373CDE100149B3E /* TFTRankedBusiness.swift in Sources */,
 				97043808228505EC0073F296 /* Rune.swift in Sources */,
 				970437C9228505E50073F296 /* Incident.swift in Sources */,
 				9704377A228505AA0073F296 /* APIClient.swift in Sources */,
@@ -2133,6 +2309,7 @@
 				97043789228505B60073F296 /* DataDragonChampionBusiness.swift in Sources */,
 				97043805228505EC0073F296 /* ItemShop.swift in Sources */,
 				9704379C228505CB0073F296 /* ExploringLeagueRequest.swift in Sources */,
+				974D8B102373D0ED00149B3E /* TFTGameId.swift in Sources */,
 				97043786228505B10073F296 /* TournamentStubBusiness.swift in Sources */,
 				970437B6228505DF0073F296 /* GameMode.swift in Sources */,
 				970437CB228505E50073F296 /* Translation.swift in Sources */,
@@ -2164,6 +2341,7 @@
 				97043790228505BF0073F296 /* DataRequester.swift in Sources */,
 				9704380C228505F90073F296 /* Identifier.swift in Sources */,
 				97043783228505B10073F296 /* SpectatorBusiness.swift in Sources */,
+				974D8B472373F61700149B3E /* TFTStage.swift in Sources */,
 				9704382A228506030073F296 /* DelayedTask.swift in Sources */,
 				9704377E228505B10073F296 /* ChampionMasteryBusiness.swift in Sources */,
 				970437D6228505E50073F296 /* MatchParticipantIdentity.swift in Sources */,
@@ -2184,9 +2362,11 @@
 				97043812228505F90073F296 /* ProfileIconId.swift in Sources */,
 				970437B5228505DF0073F296 /* GameType.swift in Sources */,
 				970437C7228505E50073F296 /* ServiceStatus.swift in Sources */,
+				974D8B152373D23D00149B3E /* WorldRegion.swift in Sources */,
 				97043797228505C60073F296 /* RateLimit.swift in Sources */,
 				970437E8228505E50073F296 /* TournamentDetails.swift in Sources */,
 				970437E2228505E50073F296 /* MatchEvent.swift in Sources */,
+				974D8B512374054700149B3E /* TFTCharacterId.swift in Sources */,
 				970437BC228505DF0073F296 /* Place.swift in Sources */,
 				970437A2228505D10073F296 /* ChampionMethod.swift in Sources */,
 				970437C2228505E50073F296 /* ChampionMastery.swift in Sources */,
@@ -2225,6 +2405,7 @@
 				97DE80402324ACDE00D50971 /* RankedExpMethod.swift in Sources */,
 				978AC5D02130008E00C5CCCD /* Item.swift in Sources */,
 				97B7B8822134554B005C9B94 /* DelayedRequest.swift in Sources */,
+				974D8B202373DAC800149B3E /* TFTMatchMetadata.swift in Sources */,
 				97D38D45210A7BEF00150CF9 /* Platform.swift in Sources */,
 				97D38D35210A623A00150CF9 /* LeagueAPI.swift in Sources */,
 				97A560802122F24600A908CD /* ChampionDifficulties.swift in Sources */,
@@ -2232,6 +2413,7 @@
 				9769180521134E5700F8AF3B /* DataRequester.swift in Sources */,
 				97A5608821232DED00A908CD /* ImageWithUrl.swift in Sources */,
 				97D38DB5210CC12800150CF9 /* SpectatorMethod.swift in Sources */,
+				974D8B242373DAC800149B3E /* TFTMatchInfo.swift in Sources */,
 				97D38D87210C728300150CF9 /* LeagueInfo.swift in Sources */,
 				97D38DAB210CA89B00150CF9 /* Participant.swift in Sources */,
 				9769180321134E2B00F8AF3B /* JsonRequester.swift in Sources */,
@@ -2241,17 +2423,21 @@
 				97D38DCB210CCCDB00150CF9 /* MatchParticipantTimeline.swift in Sources */,
 				97D38DC3210CCC4700150CF9 /* TeamStats.swift in Sources */,
 				97A560BE2126F4FD00A908CD /* ProfileIcon.swift in Sources */,
+				974D8B352373DFCC00149B3E /* TFTCompanion.swift in Sources */,
 				97CAEA8321CFC7F600F18373 /* LocalAssets.swift in Sources */,
 				97A5608A21234B5600A908CD /* DDragonChampionFile.swift in Sources */,
 				97A560A12125C07C00A908CD /* HttpResponseCode.swift in Sources */,
 				97D38DD5210CF04000150CF9 /* MatchParticipantFrame.swift in Sources */,
 				978AC61C2131671100C5CCCD /* RuneId.swift in Sources */,
+				974D8B002373CDE100149B3E /* TFTSummonerBusiness.swift in Sources */,
 				97E31449211B9F9800C9F739 /* ErrorStatus.swift in Sources */,
 				97B7B886213456AD005C9B94 /* DelayedTask.swift in Sources */,
+				974D8B042373CDE100149B3E /* TFTMatchBusiness.swift in Sources */,
 				558F33492204897D006D2EA1 /* GameRole.swift in Sources */,
 				97D38DF0210E0A9000150CF9 /* TournamentProvider.swift in Sources */,
 				97E67E8C21359C1400E8E1B7 /* TournamentUpdate.swift in Sources */,
 				97E31447211B9E9700C9F739 /* ErrorMessage.swift in Sources */,
+				974D8B302373DAC800149B3E /* TFTUnit.swift in Sources */,
 				97A5607A2122E36C00A908CD /* APIClient.swift in Sources */,
 				97A560D22127120600A908CD /* Datetime.swift in Sources */,
 				97D38DF4210E0C5C00150CF9 /* TournamentStubBusiness.swift in Sources */,
@@ -2264,12 +2450,14 @@
 				97225C2D21286235001025EB /* GameType.swift in Sources */,
 				97D38DE7210DFD9A00150CF9 /* TournamentStubMethod.swift in Sources */,
 				97D38DA7210CA86F00150CF9 /* BannedChampion.swift in Sources */,
+				974D8B3F2373F38100149B3E /* CompanionSkinId.swift in Sources */,
 				97D38DB1210CABBA00150CF9 /* RunePage.swift in Sources */,
 				97D38DD9210CF05C00150CF9 /* MatchEvent.swift in Sources */,
 				97DE80452324ADEA00D50971 /* RankedExpBusiness.swift in Sources */,
 				97D38DA1210CA3A100150CF9 /* StatusBusiness.swift in Sources */,
 				97A560D0212711DF00A908CD /* DateToken.swift in Sources */,
 				978AC5CE2130002F00C5CCCD /* DDragonItemsFile.swift in Sources */,
+				974D8AF12373BECD00149B3E /* TFTMatchMethod.swift in Sources */,
 				978AC61A2131635200C5CCCD /* Rune.swift in Sources */,
 				97A560C72127071200A908CD /* DataDragonChampionBusiness.swift in Sources */,
 				97D38D2F210A5B7E00150CF9 /* LeagueMethod.swift in Sources */,
@@ -2285,6 +2473,7 @@
 				978AC5B5212F512500C5CCCD /* AccountId.swift in Sources */,
 				97D38DCF210CCDFD00150CF9 /* LegacyMastery.swift in Sources */,
 				97A560C52127070200A908CD /* DataDragonProfileIconBusiness.swift in Sources */,
+				974D8B172373D9FF00149B3E /* TFTMatch.swift in Sources */,
 				97D38D97210C9D2C00150CF9 /* Service.swift in Sources */,
 				97CAEA8121CFC74F00F18373 /* RankedTierBusiness.swift in Sources */,
 				97CAEA7E21CFC5D800F18373 /* RankedTier.swift in Sources */,
@@ -2292,9 +2481,12 @@
 				97D38DD3210CF03000150CF9 /* MatchFrame.swift in Sources */,
 				97B7B884213455B4005C9B94 /* DurationDelayedRequest.swift in Sources */,
 				978AC59E212ED26500C5CCCD /* ChampionRole.swift in Sources */,
+				974D8B3A2373ED3B00149B3E /* TFTLeagueId.swift in Sources */,
 				978AC5BB212F515B00C5CCCD /* ProfileIconId.swift in Sources */,
 				97A56097212381C700A908CD /* ChampionAdditionalDetails.swift in Sources */,
 				97691807211359D100F8AF3B /* RawRequester.swift in Sources */,
+				974D8B282373DAC800149B3E /* TFTTrait.swift in Sources */,
+				974D8B492373FB6400149B3E /* TFTItemId.swift in Sources */,
 				97225C2F212865E1001025EB /* Map.swift in Sources */,
 				978AC5CC212FFC0400C5CCCD /* ItemId.swift in Sources */,
 				978AC62421316EF000C5CCCD /* ArrayExtension.swift in Sources */,
@@ -2302,12 +2494,16 @@
 				97A560A7212623D000A908CD /* SkinData.swift in Sources */,
 				978AC5A5212EEDEA00C5CCCD /* SummonerSpellData.swift in Sources */,
 				978AC5FE2130A40400C5CCCD /* ChampionPassiveData.swift in Sources */,
+				974D8AF52373BECD00149B3E /* TFTSummonerMethod.swift in Sources */,
 				978AC5BD212F517B00C5CCCD /* SummonerSpellId.swift in Sources */,
 				97225C31212891DB001025EB /* QueueMode.swift in Sources */,
+				974D8AF92373BECD00149B3E /* TFTRankedMethod.swift in Sources */,
 				97A560D62127151900A908CD /* IntExtension.swift in Sources */,
+				974D8B2C2373DAC800149B3E /* TFTParticipant.swift in Sources */,
 				97D38DEC210DFEEC00150CF9 /* TournamentInfo.swift in Sources */,
 				978AC62221316C9E00C5CCCD /* DataDragonRuneBusiness.swift in Sources */,
 				9736CCD22120E172008E31A0 /* Endpoint.swift in Sources */,
+				974D8B082373CDE100149B3E /* TFTRankedBusiness.swift in Sources */,
 				978AC5B1212F47E400C5CCCD /* Identifier.swift in Sources */,
 				97D38DE5210DFCB100150CF9 /* TournamentEventList.swift in Sources */,
 				97D38DE3210DFC7000150CF9 /* TournamentEvent.swift in Sources */,
@@ -2320,6 +2516,7 @@
 				97D38D93210C88E800150CF9 /* RankedBusiness.swift in Sources */,
 				978AC62C2131ED1D00C5CCCD /* RunePathId.swift in Sources */,
 				978AC5C7212F51BA00C5CCCD /* TournamentCode.swift in Sources */,
+				974D8B0D2373D0ED00149B3E /* TFTGameId.swift in Sources */,
 				558F334B220489ED006D2EA1 /* RankedDivision.swift in Sources */,
 				97D38DC7210CCCA400150CF9 /* MatchParticipantIdentity.swift in Sources */,
 				978AC5F221307BB300C5CCCD /* ChampionSpell.swift in Sources */,
@@ -2351,6 +2548,7 @@
 				97A5607E2122F0FD00A908CD /* ChampionsDetails.swift in Sources */,
 				97B7B87E21344F23005C9B94 /* ExploringLeagueRequest.swift in Sources */,
 				978AC5C1212F518B00C5CCCD /* ProviderId.swift in Sources */,
+				974D8B442373F61700149B3E /* TFTStage.swift in Sources */,
 				978AC5A3212ED9F300C5CCCD /* DDragonSummonerSpellsFile.swift in Sources */,
 				97D38DBB210CC78B00150CF9 /* MatchReference.swift in Sources */,
 				97D38DEE210DFFAB00150CF9 /* TournamentRegion.swift in Sources */,
@@ -2371,9 +2569,11 @@
 				97D38D9D210C9D4E00150CF9 /* Translation.swift in Sources */,
 				97A560D42127123D00A908CD /* DatetimeEnums.swift in Sources */,
 				97D38DDD210D0CEF00150CF9 /* MatchBusiness.swift in Sources */,
+				974D8B122373D23D00149B3E /* WorldRegion.swift in Sources */,
 				97E67E902135A92C00E8E1B7 /* TournamentBusiness.swift in Sources */,
 				978AC5D62130138C00C5CCCD /* DataDragonItemBusiness.swift in Sources */,
 				978AC6202131696000C5CCCD /* RuneStage.swift in Sources */,
+				974D8B4E2374054700149B3E /* TFTCharacterId.swift in Sources */,
 				97B7B88821345BEE005C9B94 /* ExploringRequest.swift in Sources */,
 				9729BEFE219EB662005F8311 /* ChampionRotations.swift in Sources */,
 				97D38D7B210C5D8500150CF9 /* ChampionMasteryMethod.swift in Sources */,

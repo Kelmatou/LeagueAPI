@@ -43,7 +43,7 @@ internal class MatchMethod: LeagueMethod {
     
     func getMethodUrl() -> String {
         let entrypoint: String = self.service.hostUrl
-        let commonPath: String = "https://\(entrypoint)\(MethodPaths.Match.rawValue)/\(Version.RiotAPI)"
+        let commonPath: String = "https://\(entrypoint)\(MethodPaths.Match.rawValue)/\(Version.LOL_API)"
         switch self.method {
         case .ById(let id):
             return "\(commonPath)/matches/\(id)"

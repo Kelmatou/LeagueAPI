@@ -34,7 +34,7 @@ internal class ChampionMasteryMethod: LeagueMethod {
     
     public func getMethodUrl() -> String {
         let entrypoint: String = self.service.hostUrl
-        let commonPath: String = "https://\(entrypoint)\(MethodPaths.ChampionMastery.rawValue)/\(Version.RiotAPI)"
+        let commonPath: String = "https://\(entrypoint)\(MethodPaths.ChampionMastery.rawValue)/\(Version.LOL_API)"
         switch self.method {
         case .BySummonerId(let id):
             return "\(commonPath)/champion-masteries/by-summoner/\(id)"

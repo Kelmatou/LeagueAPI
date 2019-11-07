@@ -13,8 +13,35 @@ internal class ServiceProxy {
     public private(set) var region: Region
     public private(set) var platforms: [Platform]
     private var host: Endpoint
+    
     public var hostUrl: String {
         return self.host.rawValue
+    }
+    
+    public var worldRegion: WorldRegion {
+        switch self.region {
+        case .NA, .BR, .LAN, .LAS, .OCE, .PBE: // PBE is not officialy on America region
+            return .America
+        case .KR, .JP:
+            return .Asia
+        case .EUNE, .EUW, .TR, .RU:
+            return .Europe
+        }
+    }
+    
+    public var worldRegionEndpoint: Endpoint {
+        switch self.worldRegion {
+        case .America:
+            return .America
+        case .Asia:
+            return .Asia
+        case .Europe:
+            return .Europe
+        }
+    }
+    
+    public var worldRegionHostUrl: String {
+        return self.worldRegionEndpoint.rawValue
     }
     
     private init(region: Region, platforms: [Platform], host: Endpoint) {

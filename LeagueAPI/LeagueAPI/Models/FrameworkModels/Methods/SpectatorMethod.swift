@@ -33,7 +33,7 @@ internal class SpectatorMethod: LeagueMethod {
     
     func getMethodUrl() -> String {
         let entrypoint: String = self.service.hostUrl
-        let commonPath: String = "https://\(entrypoint)\(MethodPaths.Spectator.rawValue)/\(Version.RiotAPI)"
+        let commonPath: String = "https://\(entrypoint)\(MethodPaths.Spectator.rawValue)/\(Version.LOL_API)"
         switch self.method {
         case .BySummonerId(let id):
             return "\(commonPath)/active-games/by-summoner/\(id)"

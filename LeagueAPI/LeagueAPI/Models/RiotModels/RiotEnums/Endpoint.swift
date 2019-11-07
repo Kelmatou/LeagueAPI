@@ -22,4 +22,6 @@ internal enum Endpoint: String {
     case RU = "ru.api.riotgames.com"
     case PBE = "pbe1.api.riotgames.com"
     case America = "americas.api.riotgames.com"
+    case Asia = "asia.api.riotgames.com"
+    case Europe = "europe.api.riotgames.com"
 }
