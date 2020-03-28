@@ -72,6 +72,12 @@ public class RiotAPI: APIClient {
         StatusBusiness.getStatus(method: .GetStatus, region: region, key: self.key, handler: handler)
     }
     
+    // MARK: - LoR Ranked
+    
+    public func getRunneteraLeaderboard(on region: WorldRegion, handler: @escaping ([RunneteraPlayer]?, String?) -> Void) {
+        RunneteraRankedBusiness.getLeaderboard(method: .GetLeaderboard, region: region, key: self.key, handler: handler)
+    }
+    
     // MARK: - Match
     
     public func getMatch(by gameId: GameId, on region: Region, handler: @escaping (Match?, String?) -> Void) {

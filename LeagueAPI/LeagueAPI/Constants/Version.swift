@@ -13,4 +13,5 @@ public class Version {
     public static let LeagueAPI: String = "v\(Bundle(for: Version.self).infoDictionary!["CFBundleShortVersionString"] ?? "Unknown")"
     public static let LOL_API: String = "v4"
     public static let TFT_API: String = "v1"
+    public static let RUNNETERA_API: String = "v1"
 }

@@ -77,5 +77,16 @@ internal class ServiceProxy {
         case .TR:
             self.init(region: region, platforms: [.TR1], host: .TR)
         }
-    }    
+    }
+    
+    public convenience init(for worldRegion: WorldRegion) {
+        switch worldRegion {
+        case .America:
+            self.init(for: .NA)
+        case .Asia:
+            self.init(for: .KR)
+        case .Europe:
+            self.init(for: .EUW)
+        }
+    }
 }
