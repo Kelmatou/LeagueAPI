@@ -29,7 +29,29 @@ public class RiotAPI: APIClient {
     public func getChampionRotation(on region: Region, handler: @escaping (ChampionRotations?, String?) -> Void) {
         ChampionBusiness.getChampion(method: .ChampionRotation, region: region, key: self.key, handler: handler)
     }
+
+    // MARK: - Clash
+       
+    public func getClashPlayers(by summonerId: SummonerId, on region: Region, handler: @escaping ([ClashPlayer]?, String?) -> Void) {
+        ClashBusiness.getClashData(method: .PlayersBySummonerId(summonerId: summonerId), region: region, key: self.key, handler: handler)
+    }
     
+    public func getClashPlayers(by teamId: TeamId, on region: Region, handler: @escaping (ClashTeam?, String?) -> Void) {
+        ClashBusiness.getClashData(method: .TeamsByTeamId(teamId: teamId), region: region, key: self.key, handler: handler)
+    }
+    
+    public func getClashTournaments(on region: Region, handler: @escaping ([ClashTournament]?, String?) -> Void) {
+        ClashBusiness.getClashData(method: .Tournaments, region: region, key: self.key, handler: handler)
+    }
+    
+    public func getClashTournament(by teamId: TeamId, on region: Region, handler: @escaping (ClashTournament?, String?) -> Void) {
+        ClashBusiness.getClashData(method: .TournamentsByTeamId(teamId: teamId), region: region, key: self.key, handler: handler)
+    }
+    
+    public func getClashTournament(by tournamentId: TournamentId, on region: Region, handler: @escaping (ClashTournament?, String?) -> Void) {
+        ClashBusiness.getClashData(method: .TournamentsByTournamentId(tournamentId: tournamentId), region: region, key: self.key, handler: handler)
+    }
+
     // MARK: - Ranked - EXP
     
     public func getQueueEntriesExp(on region: Region, queue: Queue, division: RankedDivision, page: Int = 1, handler: @escaping ([RankedEntry]?, String?) -> Void) {
