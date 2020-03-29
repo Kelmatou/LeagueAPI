@@ -11,7 +11,8 @@
  <img width="200" src="https://github.com/Kelmatou/LeagueAPI/blob/master/screenshots/devices.png">
   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 </p>
-League API is a League of Legends Framework in Swift. It provides an easy way to get League's data into your iOS, WatchOS, TvOS and MacOS application.  
+League API is a League of Legends Framework in Swift. It provides an easy way to get League's data into your iOS, WatchOS, TvOS and MacOS application.
+
 **Support League of Legends, Clash, Teamfight Tactics and League of Runnetera APIs**
 
 <img width="200" src="https://github.com/Kelmatou/LeagueAPI/blob/master/screenshots/homepage.png"> <img width="200" src="https://github.com/Kelmatou/LeagueAPI/blob/master/screenshots/live_game.gif"> <img width="200" src="https://github.com/Kelmatou/LeagueAPI/blob/master/screenshots/history.gif"> <img width="200" src="https://github.com/Kelmatou/LeagueAPI/blob/master/screenshots/champion_info.png">
