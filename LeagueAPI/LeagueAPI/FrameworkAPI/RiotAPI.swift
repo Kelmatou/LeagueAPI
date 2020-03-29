@@ -36,7 +36,7 @@ public class RiotAPI: APIClient {
         ClashBusiness.getClashData(method: .PlayersBySummonerId(summonerId: summonerId), region: region, key: self.key, handler: handler)
     }
     
-    public func getClashPlayers(by teamId: TeamId, on region: Region, handler: @escaping (ClashTeam?, String?) -> Void) {
+    public func getClashTeam(by teamId: TeamId, on region: Region, handler: @escaping (ClashTeam?, String?) -> Void) {
         ClashBusiness.getClashData(method: .TeamsByTeamId(teamId: teamId), region: region, key: self.key, handler: handler)
     }
     

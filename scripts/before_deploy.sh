@@ -26,27 +26,9 @@ if [ $? -ne 0 ]; then
   FILES_NEED_UPDATE="TRUE"
 fi
 
-grep -q "$RELEASE_VERSION" ./LeagueAPI/LeagueAPI/Info.plist
+grep -q "$RELEASE_VERSION" ./LeagueAPI/LeagueAPI.xcodeproj/project.pbxproj
 if [ $? -ne 0 ]; then
-  echo "   Version $RELEASE_VERSION was not updated in iOS Info.plist"
-  FILES_NEED_UPDATE="TRUE"
-fi
-
-grep -q "$RELEASE_VERSION" ./LeagueAPI/LeagueAPI-TvOS/Info.plist
-if [ $? -ne 0 ]; then
-  echo "   Version $RELEASE_VERSION was not updated in TvOS Info.plist"
-  FILES_NEED_UPDATE="TRUE"
-fi
-
-grep -q "$RELEASE_VERSION" ./LeagueAPI/LeagueAPI-WatchOS/Info.plist
-if [ $? -ne 0 ]; then
-  echo "   Version $RELEASE_VERSION was not updated in WatchOS Info.plist"
-  FILES_NEED_UPDATE="TRUE"
-fi
-
-grep -q "$RELEASE_VERSION" ./LeagueAPI/LeagueAPI-MacOS/Info.plist
-if [ $? -ne 0 ]; then
-  echo "   Version $RELEASE_VERSION was not updated in MacOS Info.plist"
+  echo "   Version $RELEASE_VERSION was not updated in project.pbxproj"
   FILES_NEED_UPDATE="TRUE"
 fi
 
