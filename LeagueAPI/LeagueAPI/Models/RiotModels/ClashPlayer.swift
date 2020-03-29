@@ -19,7 +19,7 @@ public class ClashPlayer: Decodable {
         case summonerId = "summonerId"
         case teamId = "teamId"
         case position = "position"
-        case teamRole = "teamRole"
+        case teamRole = "role"
     }
     
     public init(summonerId: SummonerId, teamId: TeamId?, position: GameRole, teamRole: TeamRole) {

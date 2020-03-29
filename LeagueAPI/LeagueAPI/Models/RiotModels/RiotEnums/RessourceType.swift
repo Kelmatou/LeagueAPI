@@ -22,6 +22,7 @@ public class RessourceType {
         case Heat = "Heat"
         case CrimsonRush = "Crimson Rush"
         case Flow = "Flow"
+        case Grit = "Grid"
         case None = "None"
         case Unknown = "Unknown"
     }
@@ -60,6 +61,8 @@ public class RessourceType {
             self.type = .CrimsonRush
         case RessourceTypes.Flow.rawValue:
             self.type = .Flow
+        case RessourceTypes.Grit.rawValue:
+            self.type = .Grit
         case RessourceTypes.None.rawValue:
             self.type = .None
         default:
