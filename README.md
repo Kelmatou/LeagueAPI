@@ -86,9 +86,11 @@ LeagueAPI has 2 major parts:
 
 Riot API provides data related to players, that are evolving when you play. LeagueAPI offers a safe (all problems such as key's rate limit are handled)  wrapper on this Riot service. It is accessible from `league.riotAPI`. From there, you'll access many informations on:
 
+**League of Legends**
 * [Summoners](https://github.com/Kelmatou/LeagueAPI/wiki/Summoners)
 * [Spectator/Live Game](https://github.com/Kelmatou/LeagueAPI/wiki/Spectator---Live-Game)
 * [Ranked/Leagues](https://github.com/Kelmatou/LeagueAPI/wiki/Ranked---Leagues)
+* [Ranked/Leagues EXP](https://github.com/Kelmatou/LeagueAPI/wiki/Ranked-Leagues---EXP)
 * [Match History](https://github.com/Kelmatou/LeagueAPI/wiki/Match-History)
 * [Champion Mastery](https://github.com/Kelmatou/LeagueAPI/wiki/Champion-Mastery)
 * [Champions](https://github.com/Kelmatou/LeagueAPI/wiki/Champions)
@@ -96,6 +98,17 @@ Riot API provides data related to players, that are evolving when you play. Leag
 * [Verification Code](https://github.com/Kelmatou/LeagueAPI/wiki/Verification-Code)
 * [Tournament Stub](https://github.com/Kelmatou/LeagueAPI/wiki/Tournament-Stub)
 * [Tournaments](https://github.com/Kelmatou/LeagueAPI/wiki/Tournaments)
+
+**Clash**
+* [Clash](https://github.com/Kelmatou/LeagueAPI/wiki/Clash)
+
+**Teamfight Tactics**
+* [Summoners](https://github.com/Kelmatou/LeagueAPI/wiki/TFT-Summoners)
+* [Ranked](https://github.com/Kelmatou/LeagueAPI/wiki/TFT-Ranked-Leagues)
+* [Match History](https://github.com/Kelmatou/LeagueAPI/wiki/TFT-Match-History)
+
+**Leagueof Runnetera**
+* [Ranked](https://github.com/Kelmatou/LeagueAPI/wiki/Runnetera-Ranked)
 
 ### Custom Methods 
 
