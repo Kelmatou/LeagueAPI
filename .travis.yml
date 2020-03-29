@@ -6,6 +6,7 @@ language: swift
 branch:
   only:
     - master
+    - /(\d+\.)?(\d+\.)?(\*|\d+)$/
 
 env:
   global:
