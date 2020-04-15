@@ -22,7 +22,7 @@ public class RessourceType {
         case Heat = "Heat"
         case CrimsonRush = "Crimson Rush"
         case Flow = "Flow"
-        case Grit = "Grid"
+        case Grit = "Grit"
         case None = "None"
         case Unknown = "Unknown"
     }

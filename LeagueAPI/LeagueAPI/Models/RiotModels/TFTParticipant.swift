@@ -29,7 +29,8 @@ public class TFTParticipant: Decodable {
         case timeEliminated = "time_eliminated"
         case companion = "companion"
         case traits = "traits"
-        case playersEliminated = "players_eliminated " // Probably a mistake, need to remove extra space later
+        case playersEliminated = "players_eliminated" // There is a bug and sometimes, this field will be named "players_eliminated ".
+        case playersEliminatedLegacy = "players_eliminated "
         case puuid = "puuid"
         case totalDamageToPlayers = "total_damage_to_players"
         case units = "units"
@@ -58,7 +59,12 @@ public class TFTParticipant: Decodable {
         self.timeEliminated = try container.decode(Float.self, forKey: .timeEliminated)
         self.companion = try container.decode(TFTCompanion.self, forKey: .companion)
         self.traits = try container.decode([TFTTrait].self, forKey: .traits)
-        self.playersEliminated = try container.decode(Int.self, forKey: .playersEliminated)
+        if let playersEliminatedValue = try? container.decode(Int.self, forKey: .playersEliminated) {
+            self.playersEliminated = playersEliminatedValue
+        } else {
+            // We're on the legacy field's name
+            self.playersEliminated = try container.decode(Int.self, forKey: .playersEliminatedLegacy)
+        }
         self.puuid = try SummonerPuuid(container.decode(String.self, forKey: .puuid))
         self.totalDamageToPlayers = try container.decode(Int.self, forKey: .totalDamageToPlayers)
         self.units = try container.decode([TFTUnit].self, forKey: .units)
