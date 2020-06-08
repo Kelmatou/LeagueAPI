@@ -60,7 +60,7 @@ If none of these helped you, open an issue describing your problem and I'll try 
 
 📱 iOS 8.1  
 ⌚ WatchOS 2.0  
-📺 TvOS 9.0  
+📺 tvOS 9.0  
 💻 MacOS 10.9 (Mavericks)  
 
 ### 🔑 Riot API Key 🔑
@@ -130,7 +130,7 @@ Note that only the last release will appear in the documentation. See previous r
 ## Make LeagueAPI Grow Up!
 
 If anything you wanted was missing, do not hesitate to open an issue or create a pull request. It could help future developers.
-If you found LeagueAPI helpfull or cool to use don't hesitate to promote it by adding a ⭐️ 😉
+If you found LeagueAPI helpful or cool to use don't hesitate to promote it by adding a ⭐️ 😉
 
 ## Authors
 
