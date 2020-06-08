@@ -47,7 +47,7 @@ League API is a League of Legends Framework in Swift. It provides an easy way to
 
 ### Troubleshooting
 
-This section lists main solutions to be able to `import LeagueAPI` in your project.
+This section lists the main solutions to be able to `import LeagueAPI` in your project.
 
 * Go back to your project, target settings -> Build Settings -> Framework Search Paths, then add the path to LeagueAPI.framework.
 
