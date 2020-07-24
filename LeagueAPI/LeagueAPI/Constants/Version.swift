@@ -15,4 +15,5 @@ public class Version {
     public static let TFT_API: String = "v1"
     public static let RUNNETERA_API: String = "v1"
     public static let CLASH_API: String = "v1"
+    public static let RIOT_API: String = "v1"
 }

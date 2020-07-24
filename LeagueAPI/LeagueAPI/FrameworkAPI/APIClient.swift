@@ -12,7 +12,7 @@ public class APIClient {
     
     internal var key: APIKey
     
-    public init(APIToken: String) {
-        self.key = APIKey(token: APIToken)
+    internal init(apiKey: APIKey) {
+        self.key = apiKey
     }
 }
