@@ -12,7 +12,7 @@ public class LoRAPI: APIClient {
     
     // MARK: - Ranked
     
-    public func getRunneteraLeaderboard(on region: WorldRegion, handler: @escaping ([RunneteraPlayer]?, String?) -> Void) {
+    public func getLeaderboard(on region: WorldRegion, handler: @escaping ([RunneteraPlayer]?, String?) -> Void) {
         RunneteraRankedBusiness.getLeaderboard(method: .GetLeaderboard, region: region, key: self.key, handler: handler)
     }
 }

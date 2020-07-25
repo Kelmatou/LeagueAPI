@@ -85,7 +85,12 @@ public class QueueMode {
         case OdysseyOnslaught = 1070
         case TeamFightTactics = 1090
         case RankedTeamFightTactics = 1100
-        case NexusBlitz = 1200 // Queue mode deprecated in patch 9.2
+        case TutorialTeamFightTactics = 1110
+        case NexusBlitzFirstEdition = 1200 // Queue mode deprecated in patch 9.2
+        case NexusBlitz = 1300
+        case Tutorial1 = 2000
+        case Tutorial2 = 2010
+        case Tutorial3 = 2020
         case Unknown = -1
     }
     
@@ -255,8 +260,18 @@ public class QueueMode {
             self.init(mode: .TeamFightTactics, place: .Convergence)
         case QueueModes.RankedTeamFightTactics.rawValue:
             self.init(mode: .RankedTeamFightTactics, place: .Convergence)
+        case QueueModes.TutorialTeamFightTactics.rawValue:
+            self.init(mode: .TutorialTeamFightTactics, place: .Convergence)
+        case QueueModes.NexusBlitzFirstEdition.rawValue:
+            self.init(mode: .NexusBlitzFirstEdition, place: .NexusBlitz)
         case QueueModes.NexusBlitz.rawValue:
             self.init(mode: .NexusBlitz, place: .NexusBlitz)
+        case QueueModes.Tutorial1.rawValue:
+            self.init(mode: .Tutorial1, place: .SummonersRift)
+        case QueueModes.Tutorial2.rawValue:
+            self.init(mode: .Tutorial2, place: .SummonersRift)
+        case QueueModes.Tutorial3.rawValue:
+            self.init(mode: .Tutorial3, place: .SummonersRift)
         default:
             Logger.warning("Queue mode id \"\(id)\" unknown (check for LeagueAPI update)")
             self.init(mode: .Unknown, place: .Unknown)

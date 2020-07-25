@@ -27,7 +27,7 @@ public class GameMode {
         case DarkStar = "DARKSTAR"
         case StarGuardian = "STARGUARDIAN"
         case Project = "PROJECT"
-        case NexusBlitz = "GAMEMODEX"
+        case NexusBlitzFirstEdition = "GAMEMODEX"
         case Odyssey = "ODYSSEY"
         case PraticeTool = "PRACTICETOOL"
         case SnowUrf = "SNOWURF"
@@ -35,6 +35,7 @@ public class GameMode {
         case TutorialModule2 = "TUTORIAL_MODULE_2"
         case TutorialModule3 = "TUTORIAL_MODULE_3"
         case TeamFightTactics = "TEAMFIGHTACTICS" // unverified
+        case NexusBlitz = "NEXUSBLITZ"
         case Unknown = "Unknown"
     }
     
@@ -82,8 +83,8 @@ public class GameMode {
             self.mode = GameModes.StarGuardian
         case GameModes.Project.rawValue:
             self.mode = GameModes.Project
-        case GameModes.NexusBlitz.rawValue:
-            self.mode = GameModes.NexusBlitz
+        case GameModes.NexusBlitzFirstEdition.rawValue:
+            self.mode = GameModes.NexusBlitzFirstEdition
         case GameModes.Odyssey.rawValue:
             self.mode = GameModes.Odyssey
         case GameModes.PraticeTool.rawValue:
@@ -96,6 +97,8 @@ public class GameMode {
             self.mode = GameModes.TutorialModule2
         case GameModes.TutorialModule3.rawValue:
             self.mode = GameModes.TutorialModule3
+        case GameModes.NexusBlitz.rawValue:
+            self.mode = GameModes.NexusBlitz
         default:
             Logger.warning("Game mode \"\(gameMode)\" unknown (check for LeagueAPI update)")
             self.mode = .Unknown
