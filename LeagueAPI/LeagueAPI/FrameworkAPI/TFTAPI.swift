@@ -70,4 +70,70 @@ public class TFTAPI: APIClient {
     public func getSummoner(by summonerId: SummonerId, on region: Region, handler: @escaping (Summoner?, String?) -> Void) {
         TFTSummonerBusiness.getSummoner(method: .ById(id: summonerId), region: region, key: self.key, handler: handler)
     }
+    
+    // MARK: - Assets
+    
+    // MARK: - Items
+    
+    public func getItem(byId id: TFTItemId) -> TFTItem? {
+        return TFTItemsBusiness.getItem(byId: id)
+    }
+    
+    public func getItem(byName name: String) -> TFTItem? {
+        return TFTItemsBusiness.getItem(byName: name)
+    }
+    
+    public func getItems() -> [TFTItem] {
+        return TFTItemsBusiness.getAllItems()
+    }
+    
+    // MARK: - Champions
+    
+    public func getChampion(byId id: TFTChampionId) -> TFTChampion? {
+        return TFTChampionBusiness.getChampion(byId: id)
+    }
+    
+    public func getChampion(byName name: String) -> TFTChampion? {
+        return TFTChampionBusiness.getChampion(byName: name)
+    }
+    
+    public func getChampions(byCost cost: Int) -> [TFTChampion]? {
+        return TFTChampionBusiness.getChampions(byCost: cost)
+    }
+    
+    public func getChampions(withTrait trait: String) -> [TFTChampion]? {
+        return TFTChampionBusiness.getChampions(withTrait: trait)
+    }
+    
+    public func getAllChampions() -> [TFTChampion] {
+        return TFTChampionBusiness.getAllChampions()
+    }
+    
+    // MARK: - Galaxies
+    
+    public func getGalaxy(byId id: TFTGalaxyId) -> TFTGalaxy? {
+        return TFTGalaxyBusiness.getGalaxy(byId: id)
+    }
+    
+    public func getGalaxy(byName name: String) -> TFTGalaxy? {
+        return TFTGalaxyBusiness.getGalaxy(byName: name)
+    }
+    
+    public func getAllGalaxies() -> [TFTGalaxy] {
+        return TFTGalaxyBusiness.getAllGalaxies()
+    }
+    
+    // MARK: - Traits Infos
+    
+    public func getTraitInfos(byId id: TFTTraitId) -> TFTTraitInfo? {
+        return TFTTraitInfoBusiness.getTraitInfos(byId: id)
+    }
+    
+    public func getTraitInfos(byName name: String) -> TFTTraitInfo? {
+        return TFTTraitInfoBusiness.getTraitInfos(byName: name)
+    }
+    
+    public func getAllTraitInfos() -> [TFTTraitInfo] {
+        return TFTTraitInfoBusiness.getAllTraitInfos()
+    }
 }
