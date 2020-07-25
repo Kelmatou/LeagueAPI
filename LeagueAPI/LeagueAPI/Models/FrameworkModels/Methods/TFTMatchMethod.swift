@@ -11,7 +11,7 @@ import Foundation
 internal class TFTMatchMethod: LeagueMethod {
     
     public enum TFTMatchMethods {
-        case byPuuid(puuid: SummonerPuuid)
+        case byPuuid(puuid: SummonerPuuid, count: Int?)
         case ById(id: TFTGameId)
     }
     
@@ -40,8 +40,8 @@ internal class TFTMatchMethod: LeagueMethod {
         let entrypoint: String = self.service.worldRegionHostUrl
         let commonPath: String = "https://\(entrypoint)\(MethodPaths.TFTMatch.rawValue)/\(Version.TFT_API)/matches"
         switch self.method {
-        case .byPuuid(let puuid):
-            return "\(commonPath)/by-puuid/\(puuid)/ids"
+        case .byPuuid(let puuid, let count):
+            return "\(commonPath)/by-puuid/\(puuid)/ids?count=\(count ?? 20)"
         case .ById(let id):
             return "\(commonPath)/\(id)"
         }

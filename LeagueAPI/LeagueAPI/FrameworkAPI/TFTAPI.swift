@@ -38,7 +38,7 @@ public class TFTAPI: APIClient {
     
     // MARK: - Match
     
-    public func getMatchList(by puuid: SummonerPuuid, on region: Region, handler: @escaping ([TFTGameId]?, String?) -> Void) {
+    public func getMatchList(by puuid: SummonerPuuid, count: Int? = nil, on region: Region, handler: @escaping ([TFTGameId]?, String?) -> Void) {
         let middleHandler: ([String]?, String?) -> Void = { (TFTgameIds, errorMsg) in
             if let TFTgameIds = TFTgameIds {
                 handler(TFTgameIds.map({ TFTGameId($0) }), errorMsg)
@@ -46,7 +46,7 @@ public class TFTAPI: APIClient {
                 handler(nil, errorMsg)
             }
         }
-        TFTMatchBusiness.getMatch(method: .byPuuid(puuid: puuid), region: region, key: self.key, handler: middleHandler)
+        TFTMatchBusiness.getMatch(method: .byPuuid(puuid: puuid, count: count), region: region, key: self.key, handler: middleHandler)
     }
     
     public func getMatch(by gameId: TFTGameId, on region: Region, handler: @escaping (TFTMatch?, String?) -> Void) {
