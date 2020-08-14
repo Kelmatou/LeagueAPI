@@ -75,14 +75,14 @@ internal class RESTRequester {
      - parameter url: the targeted url
      - parameter headers: a dictionary of header [Value : HttpField]
      - parameter body: the content of the message
-     - parameter handler: allows the user to make actions just after request ended (UIImage, String)
+     - parameter handler: allows the user to make actions just after request ended (LAPIImage, String)
      */
-    public func requestImage(_ method: AccessMethod, url: String, headers: [String : String]? = nil, body: Data? = nil, handler: @escaping (UIImage?, HttpResponseCode, Headers?, String?) -> Void) {
+    public func requestImage(_ method: AccessMethod, url: String, headers: [String : String]? = nil, body: Data? = nil, handler: @escaping (LAPIImage?, HttpResponseCode, Headers?, String?) -> Void) {
         request(method, url: url, headers: headers, body: body) {
             (data, responseCode, headers, error) in
-            var responseImage: UIImage?
+            var responseImage: LAPIImage?
             if let data = data, error == nil {
-                responseImage = UIImage(data: data)
+                responseImage = LAPIImage(data: data)
             }
             handler(responseImage, responseCode, headers, error)
         }
@@ -96,7 +96,7 @@ internal class RESTRequester {
      - parameter headers: a dictionary of header [Value : HttpField]
      - parameter body: the content of the message
      - parameter asType: the type of the output object
-     - parameter handler: allows the user to make actions just after request ended (UIImage, String)
+     - parameter handler: allows the user to make actions just after request ended (LAPIImage, String)
      */
     public func requestObject<T: Decodable>(_ method: AccessMethod, url: String, headers: [String : String]? = nil, body: Data? = nil, asType: T.Type, handler: @escaping (T?, HttpResponseCode, Headers?, String?) -> Void) {
         request(method, url: url, headers: headers, body: body) {

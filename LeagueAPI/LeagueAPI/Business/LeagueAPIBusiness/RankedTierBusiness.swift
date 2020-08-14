@@ -6,13 +6,9 @@
 //  Copyright © 2018 Antoine Clop. All rights reserved.
 //
 
-#if canImport(UIKit)
-    import UIKit
-#endif
-
 internal class RankedTierBusiness {
     
-    public static func getEmblem(for tier: RankedTier) -> UIImage? {
+    public static func getEmblem(for tier: RankedTier) -> LAPIImage? {
         var tierEmblemFile: String? {
             switch tier.tier {
             case .Unranked:
@@ -41,6 +37,6 @@ internal class RankedTierBusiness {
         }
         guard let tierEmblemFileUnwrapped = tierEmblemFile else { return nil }
         guard let tierEmblemData = LocalAssets.getAssetData(filename: tierEmblemFileUnwrapped) else { return nil }
-        return UIImage(data: tierEmblemData)
+        return LAPIImage(data: tierEmblemData)
     }
 }
