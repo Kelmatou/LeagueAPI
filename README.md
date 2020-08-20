@@ -1,4 +1,4 @@
-# LeagueAPI
+# LeagueAPI - Documentation
 
 [![Build Status](https://travis-ci.com/Kelmatou/LeagueAPI.svg?branch=master)](https://travis-ci.org/Kelmatou/LeagueAPI)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/LeagueAPI.svg)](https://img.shields.io/cocoapods/v/LeagueAPI.svg)
@@ -7,11 +7,11 @@
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/Kelmatou/LeagueAPI/blob/master/LICENSE)
 
 <p align="center">
-  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
  <img width="200" src="https://github.com/Kelmatou/LeagueAPI/blob/master/screenshots/devices.png">
-  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 </p>
-League API is a League of Legends Framework in Swift. It provides an easy way to get League's data into your iOS, WatchOS, TvOS and MacOS application.
+League API is a League of Legends Framework in Swift. It provides an easy way to get League's data into your iOS, WatchOS, TvOS and MacOS application.  
+
+It is designed to be easy to use, taking advantage of Swift enums. It also comes with some internal mechanisms, to handle any API key rate limit. 
 
 **Support League of Legends, Clash, Teamfight Tactics and League of Runnetera APIs**
 
@@ -60,7 +60,7 @@ If none of these helped you, open an issue describing your problem and I'll try 
 
 📱 iOS 8.1  
 ⌚ WatchOS 2.0  
-📺 tvOS 9.0  
+📺 TvOS 9.0  
 💻 MacOS 10.9 (Mavericks)  
 
 ### 🔑 Riot API Key 🔑
@@ -80,13 +80,23 @@ Now use this instance everywhere, you shouldn't recreate the LeagueAPI variable.
 
 ## 🧐 And then? 🧐
 
-LeagueAPI has 2 major parts:
-* Riot API's methods
-* Other custom methods
+LeagueAPI is divided in 4 different APIs:
+* Riot API
+* League of Legends API
+* Team Fight Tactics API
+* Legends of Runnetera API
 
-### Riot API <img src="https://www.riotgames.com/darkroom/original/06fc475276478d31c559355fa475888c:af22b5d4c9014d23b550ea646eb9dcaf/riot-logo-fist-only.png" width="44" height="40">
+### Riot API
 
-Riot API provides data related to players, that are evolving when you play. LeagueAPI offers a safe (all problems such as key's rate limit are handled)  wrapper on this Riot service. It is accessible from `league.riotAPI`. From there, you'll access many informations on:
+Riot API returns information about Riot Games accounts for each player.  
+It is accessible from `league.riotAPI`. From there you'll access the methods for:
+
+* [Riot Accounts](https://github.com/Kelmatou/LeagueAPI/wiki/Riot-Accounts)
+
+### League of Legends API
+
+League of Legends API contains methods related to League of Legends game.  
+It is accessible through `league.lolAPI`. From there you'll get information about:
 
 **League of Legends**
 * [Summoners](https://github.com/Kelmatou/LeagueAPI/wiki/Summoners)
@@ -100,29 +110,36 @@ Riot API provides data related to players, that are evolving when you play. Leag
 * [Verification Code](https://github.com/Kelmatou/LeagueAPI/wiki/Verification-Code)
 * [Tournament Stub](https://github.com/Kelmatou/LeagueAPI/wiki/Tournament-Stub)
 * [Tournaments](https://github.com/Kelmatou/LeagueAPI/wiki/Tournaments)
-
-**Clash**
-* [Clash](https://github.com/Kelmatou/LeagueAPI/wiki/Clash)
-
-**Teamfight Tactics**
-* [Summoners](https://github.com/Kelmatou/LeagueAPI/wiki/TFT-Summoners)
-* [Ranked](https://github.com/Kelmatou/LeagueAPI/wiki/TFT-Ranked-Leagues)
-* [Match History](https://github.com/Kelmatou/LeagueAPI/wiki/TFT-Match-History)
-
-**Leagueof Runnetera**
-* [Ranked](https://github.com/Kelmatou/LeagueAPI/wiki/Runnetera-Ranked)
-
-### Custom Methods 
-
-Some League of Legends data only change with patches (champions, items...). Those data can be found directly without creating a LeagueAPI instance `league`. You'll be able to get data on:
-
 * [Patch](https://github.com/Kelmatou/LeagueAPI/wiki/Patch)
-* [Champions](https://github.com/Kelmatou/LeagueAPI/wiki/Champions-(Detailed))
 * [Profile Icons](https://github.com/Kelmatou/LeagueAPI/wiki/Profile-Icons)
 * [Items](https://github.com/Kelmatou/LeagueAPI/wiki/Items)
 * [Summoner Spells](https://github.com/Kelmatou/LeagueAPI/wiki/Summoner-Spells)
 * [Runes](https://github.com/Kelmatou/LeagueAPI/wiki/Runes)
 * [Ranked Tier](https://github.com/Kelmatou/LeagueAPI/wiki/Ranked-Tiers)
+* [Champions Detailed](https://github.com/Kelmatou/LeagueAPI/wiki/Champions-(Detailed)) **- deprecated from 3.0.0**
+
+**Clash**
+* [Clash](https://github.com/Kelmatou/LeagueAPI/wiki/Clash)
+
+### Teamfight Tactics
+
+Teamfight Tactics API contains methods related to Teamfight Tactics game.  
+It is accessible through `league.tftAPI`. From there you'll find information for:
+
+* [Summoners](https://github.com/Kelmatou/LeagueAPI/wiki/TFT-Summoners)
+* [Ranked](https://github.com/Kelmatou/LeagueAPI/wiki/TFT-Ranked-Leagues)
+* [Match History](https://github.com/Kelmatou/LeagueAPI/wiki/TFT-Match-History)
+* [Items](https://github.com/Kelmatou/LeagueAPI/wiki/TFT-Items)
+* [Champions](https://github.com/Kelmatou/LeagueAPI/wiki/TFT-Champions)
+* [Galaxies](https://github.com/Kelmatou/LeagueAPI/wiki/TFT-Galaxies)
+* [Traits](https://github.com/Kelmatou/LeagueAPI/wiki/TFT-Traits)
+
+### Leagueof Runnetera
+
+Leagueof Runnetera API contains methods related to Leagueof Runnetera game.  
+It is accessible through `league.lorAPI`. From there you'll get information about:
+
+* [Ranked](https://github.com/Kelmatou/LeagueAPI/wiki/Runnetera-Ranked)
 
 Full documentation is available [here](https://github.com/Kelmatou/LeagueAPI/wiki).  
 Note that only the last release will appear in the documentation. See previous revisions for older LeagueAPI versions.
