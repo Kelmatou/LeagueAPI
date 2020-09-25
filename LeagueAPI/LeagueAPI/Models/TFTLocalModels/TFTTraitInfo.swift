@@ -21,7 +21,7 @@ public class TFTTraitInfo: Decodable {
     public var sets: [TFTTraitTier]
     
     public var icon: LAPIImage {
-        let iconFileName: String = "\(self.name.lowercased()).png"
+        let iconFileName: String = "\(self.name.replacingOccurrences(of: " ", with: "").lowercased()).png"
         let iconData = LocalAssets.getAssetData(filename: iconFileName)!
         return LAPIImage(data: iconData)!
     }

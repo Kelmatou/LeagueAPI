@@ -16,7 +16,9 @@ public class TFTChampion: Decodable {
     public var traitNames: [String]
     
     public var icon: LAPIImage {
-        let iconFileName: String = "\(self.name.replacingOccurrences(of: " ", with: "").lowercased()).png"
+        let noSpaceName: String = self.name.replacingOccurrences(of: " ", with: "")
+        let capitalizedName: String = "\(noSpaceName.prefix(1).uppercased())\(noSpaceName.dropFirst())"
+        let iconFileName: String = "TFT4_\(capitalizedName).png"
         let iconData = LocalAssets.getAssetData(filename: iconFileName)!
         return LAPIImage(data: iconData)!
     }
