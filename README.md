@@ -9,7 +9,7 @@
 <p align="center">
  <img width="200" src="https://github.com/Kelmatou/LeagueAPI/blob/master/screenshots/devices.png">
 </p>
-League API is a League of Legends Framework in Swift. It provides an easy way to get League's data into your iOS, WatchOS, TvOS and MacOS application.  
+League API is a League of Legends Framework in Swift. It provides an easy way to get League's data into your iOS, WatchOS, TvOS and MacOS & Linux application.  
 
 It is designed to be easy to use, taking advantage of Swift enums. It also comes with some internal mechanisms, to handle any API key rate limit. 
 
@@ -131,7 +131,6 @@ It is accessible through `league.tftAPI`. From there you'll find information for
 * [Match History](https://github.com/Kelmatou/LeagueAPI/wiki/TFT-Match-History)
 * [Items](https://github.com/Kelmatou/LeagueAPI/wiki/TFT-Items)
 * [Champions](https://github.com/Kelmatou/LeagueAPI/wiki/TFT-Champions)
-* [Galaxies](https://github.com/Kelmatou/LeagueAPI/wiki/TFT-Galaxies)
 * [Traits](https://github.com/Kelmatou/LeagueAPI/wiki/TFT-Traits)
 
 ### Leagueof Runnetera
@@ -149,7 +148,9 @@ Note that only the last release will appear in the documentation. See previous r
 If anything you wanted was missing, do not hesitate to open an issue or create a pull request. It could help future developers.
 If you found LeagueAPI helpful or cool to use don't hesitate to promote it by adding a ⭐️ 😉
 
-## Authors
+## Contributors
 
-Antoine Clop ([Kelmatou](https://github.com/Kelmatou))  
+Antoine Clop ([Kelmatou](https://github.com/Kelmatou))
 Ronan Cendrier ([Hanoki](https://github.com/Hanoki))
+Ammon Parry ([AmmonP](https://github.com/AmmonP))
+Sandi Karajic ([SKarajic](https://github.com/SKarajic))
