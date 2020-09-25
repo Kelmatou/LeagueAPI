@@ -8,10 +8,6 @@
 
 import Foundation
 
-#if canImport(UIKit)
-    import UIKit
-#endif
-
 public class LoLAPI: APIClient {
     
     // MARK: - Champion Mastery
@@ -346,7 +342,7 @@ public class LoLAPI: APIClient {
     
     // MARK: - Ranked Emblems
     
-    public func getEmblem(for tier: RankedTier) -> UIImage? {
+    public func getEmblem(for tier: RankedTier) -> LAPIImage? {
         return RankedTierBusiness.getEmblem(for: tier)
     }
 }

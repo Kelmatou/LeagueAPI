@@ -8,10 +8,6 @@
 
 import Foundation
 
-#if canImport(UIKit)
-    import UIKit
-#endif
-
 public class TFTChampion: Decodable {
     
     public var id: TFTChampionId
@@ -19,10 +15,10 @@ public class TFTChampion: Decodable {
     public var cost: Int
     public var traitNames: [String]
     
-    public var icon: UIImage {
+    public var icon: LAPIImage {
         let iconFileName: String = "\(self.name.replacingOccurrences(of: " ", with: "").lowercased()).png"
         let iconData = LocalAssets.getAssetData(filename: iconFileName)!
-        return UIImage(data: iconData)!
+        return LAPIImage(data: iconData)!
     }
     
     enum CodingKeys: String, CodingKey {
