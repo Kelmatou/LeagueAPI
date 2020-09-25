@@ -16,6 +16,7 @@ public class TFTItem: Decodable {
     
     public var id: TFTItemId
     public var name: String
+    public var description: String
     
     public var icon: UIImage {
         let iconFileName: String = "\(self.id.value < 10 ? "0" : "")\(self.id).png"
@@ -26,16 +27,19 @@ public class TFTItem: Decodable {
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case name = "name"
+        case description = "description"
     }
     
-    public init(id: TFTItemId, name: String) {
+    public init(id: TFTItemId, name: String, description: String) {
         self.id = id
         self.name = name
+        self.description = description
     }
     
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try TFTItemId(container.decode(Int.self, forKey: .id))
         self.name = try container.decode(String.self, forKey: .name)
+        self.description = try container.decode(String.self, forKey: .description)
     }
 }

@@ -109,20 +109,6 @@ public class TFTAPI: APIClient {
         return TFTChampionBusiness.getAllChampions()
     }
     
-    // MARK: - Galaxies
-    
-    public func getGalaxy(byId id: TFTGalaxyId) -> TFTGalaxy? {
-        return TFTGalaxyBusiness.getGalaxy(byId: id)
-    }
-    
-    public func getGalaxy(byName name: String) -> TFTGalaxy? {
-        return TFTGalaxyBusiness.getGalaxy(byName: name)
-    }
-    
-    public func getAllGalaxies() -> [TFTGalaxy] {
-        return TFTGalaxyBusiness.getAllGalaxies()
-    }
-    
     // MARK: - Traits Infos
     
     public func getTraitInfos(byId id: TFTTraitId) -> TFTTraitInfo? {
