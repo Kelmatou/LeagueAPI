@@ -17,10 +17,10 @@ public class TFTItem: Decodable {
     public var id: TFTItemId
     public var name: String
     
-    public var icon: UIImage {
+    public var icon: LAPIImage {
         let iconFileName: String = "\(self.id.value < 10 ? "0" : "")\(self.id).png"
         let iconData = LocalAssets.getAssetData(filename: iconFileName)!
-        return UIImage(data: iconData)!
+        return LAPIImage(data: iconData)!
     }
     
     enum CodingKeys: String, CodingKey {

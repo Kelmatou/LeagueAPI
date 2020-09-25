@@ -20,10 +20,10 @@ public class TFTTraitInfo: Decodable {
     public var type: String
     public var sets: [TFTTraitTier]
     
-    public var icon: UIImage {
+    public var icon: LAPIImage {
         let iconFileName: String = "\(self.name.lowercased()).png"
         let iconData = LocalAssets.getAssetData(filename: iconFileName)!
-        return UIImage(data: iconData)!
+        return LAPIImage(data: iconData)!
     }
     
     enum CodingKeys: String, CodingKey {
