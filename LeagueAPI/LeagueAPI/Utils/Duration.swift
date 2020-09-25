@@ -33,24 +33,26 @@ public class Duration: Equatable, Comparable {
         return self.durationMilliseconds / millisecondsPerDay
     }
     
-    public var milliseconds: Double {
-        return self.durationMilliseconds.remainder(dividingBy: millisecondsPerSecond)
+    public var milliseconds: Int {
+        let durationMillisecondsRounded = Int(self.durationMilliseconds)
+        let millisecondsPerSecondRounded = Int(millisecondsPerSecond)
+        return durationMillisecondsRounded % millisecondsPerSecondRounded
     }
     
-    public var seconds: Double {
+    public var seconds: Int {
         return duration(between: millisecondsPerSecond, and: millisecondsPerMinute)
     }
     
-    public var minutes: Double {
+    public var minutes: Int {
         return duration(between: millisecondsPerMinute, and: millisecondsPerHour)
     }
     
-    public var hours: Double {
+    public var hours: Int {
         return duration(between: millisecondsPerHour, and: millisecondsPerDay)
     }
     
-    public var days: Double {
-        return (self.durationMilliseconds / millisecondsPerDay).rounded()
+    public var days: Int {
+        return Int((self.durationMilliseconds / millisecondsPerDay).rounded())
     }
     
     public init(milliseconds: Double) {
@@ -90,7 +92,7 @@ public class Duration: Equatable, Comparable {
         return lhs.durationMilliseconds < rhs.durationMilliseconds
     }
     
-    private func unitToString(_ value: Double, unitName: String, happen: String = "") -> String {
+    private func unitToString(_ value: Int, unitName: String, happen: String = "") -> String {
         if value > 0 {
             return "\(value < 10 ? "0" : "")\(Long(value)) \(unitName)\(value == 1 ? "" : "s")\(happen)"
         }
@@ -99,16 +101,18 @@ public class Duration: Equatable, Comparable {
         }
     }
     
-    private func duration(between millisecondsPerUnitLower: Double, and millisecondsPerUnitGreater: Double) -> Double {
+    private func duration(between millisecondsPerUnitLower: Double, and millisecondsPerUnitGreater: Double) -> Int {
         var under: Double {
             if self.durationMilliseconds >= millisecondsPerUnitGreater {
-                return self.durationMilliseconds.remainder(dividingBy: millisecondsPerUnitGreater)
+                let roundedDuration = Int(self.durationMilliseconds)
+                let roundedUnitGreater = Int(millisecondsPerUnitGreater)
+                return Double(roundedDuration % roundedUnitGreater)
             }
             else {
                 return self.durationMilliseconds
             }
         }
         let precise: Double = under / millisecondsPerUnitLower
-        return floor(precise)
+        return Int(floor(precise))
     }
 }

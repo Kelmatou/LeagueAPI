@@ -175,9 +175,9 @@ internal class LeagueRequester {
     }
     
     private func generateRequestIdentifier() -> Int {
-        var random: Int = Int(arc4random_uniform(UInt32.max))
+        var random: Int = Int.random(in: 0 ..< Int.max)
         while LeagueRequester.delayedRequests.contains(where: { $0.identifier == random }) {
-            random = Int(arc4random_uniform(UInt32.max))
+            random = Int.random(in: 0 ..< Int.max)
         }
         return random
     }
