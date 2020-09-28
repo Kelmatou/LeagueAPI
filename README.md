@@ -133,9 +133,9 @@ It is accessible through `league.tftAPI`. From there you'll find information for
 * [Champions](https://github.com/Kelmatou/LeagueAPI/wiki/TFT-Champions)
 * [Traits](https://github.com/Kelmatou/LeagueAPI/wiki/TFT-Traits)
 
-### Leagueof Runnetera
+### Legends of Runnetera
 
-Leagueof Runnetera API contains methods related to Leagueof Runnetera game.  
+Legends of Runnetera API contains methods related to Leagueof Runnetera game.  
 It is accessible through `league.lorAPI`. From there you'll get information about:
 
 * [Ranked](https://github.com/Kelmatou/LeagueAPI/wiki/Runnetera-Ranked)
@@ -150,7 +150,7 @@ If you found LeagueAPI helpful or cool to use don't hesitate to promote it by ad
 
 ## Contributors
 
-Antoine Clop ([Kelmatou](https://github.com/Kelmatou))
-Ronan Cendrier ([Hanoki](https://github.com/Hanoki))
-Ammon Parry ([AmmonP](https://github.com/AmmonP))
+Antoine Clop ([Kelmatou](https://github.com/Kelmatou))  
+Ronan Cendrier ([Hanoki](https://github.com/Hanoki))  
+Ammon Parry ([AmmonP](https://github.com/AmmonP))  
 Sandi Karajic ([SKarajic](https://github.com/SKarajic))
