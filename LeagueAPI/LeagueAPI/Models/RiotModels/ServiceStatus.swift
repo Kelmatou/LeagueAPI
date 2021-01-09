@@ -10,38 +10,34 @@ import Foundation
 
 public class ServiceStatus: Decodable {
     
+    public var id: String
     public var name: String
-    public var hostname: String
-    public var regionTag: String
-    public var services: [Service]
-    public var slug: String
     public var locales: [String]
+    public var maintenances: [Incident]
+    public var incidents: [Incident]
     
     enum CodingKeys: String, CodingKey {
+        case id = "id"
         case name = "name"
-        case hostname = "hostname"
-        case regionTag = "region_tag"
-        case services = "services"
-        case slug = "slug"
         case locales = "locales"
+        case maintenances = "maintenances"
+        case incidents = "incidents"
     }
     
-    public init(name: String, hostname: String, regionTag: String, services: [Service], slug: String, locales: [String]) {
+    public init(id: String, name: String, locales: [String], maintenances: [Incident], incidents: [Incident]) {
+        self.id = id
         self.name = name
-        self.hostname = hostname
-        self.regionTag = regionTag
-        self.services = services
-        self.slug = slug
         self.locales = locales
+        self.maintenances = maintenances
+        self.incidents = incidents
     }
     
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.id = try container.decode(String.self, forKey: .id)
         self.name = try container.decode(String.self, forKey: .name)
-        self.hostname = try container.decode(String.self, forKey: .hostname)
-        self.regionTag = try container.decode(String.self, forKey: .regionTag)
-        self.services = try container.decode([Service].self, forKey: .services)
-        self.slug = try container.decode(String.self, forKey: .slug)
         self.locales = try container.decode([String].self, forKey: .locales)
+        self.maintenances = try container.decode([Incident].self, forKey: .maintenances)
+        self.incidents = try container.decode([Incident].self, forKey: .incidents)
     }
 }
