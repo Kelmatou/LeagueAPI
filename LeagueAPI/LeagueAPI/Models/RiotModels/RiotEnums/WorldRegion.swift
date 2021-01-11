@@ -12,4 +12,5 @@ public enum WorldRegion: String {
     case America
     case Asia
     case Europe
+    case SouthEastAsia
 }

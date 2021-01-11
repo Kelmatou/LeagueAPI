@@ -13,6 +13,12 @@ internal class ServiceProxy {
     public private(set) var region: Region
     public private(set) var platforms: [Platform]
     private var host: Endpoint
+
+    // Only some services use SEA World Region
+    // OCE region was previously in Ameria but will probably fall to SEA in the future
+    // This variable is here so that new services can use SEA region with OCE
+    // Old services will still locate OCE in Ameria
+    public var allowSouthEastAsiaWorldRegion: Bool = false
     
     public var hostUrl: String {
         return self.host.rawValue
@@ -20,12 +26,18 @@ internal class ServiceProxy {
     
     public var worldRegion: WorldRegion {
         switch self.region {
-        case .NA, .BR, .LAN, .LAS, .OCE, .PBE: // PBE is not officialy on America region
+        case .NA, .BR, .LAN, .LAS, .PBE: // PBE is not officialy on America region
             return .America
         case .KR, .JP:
             return .Asia
         case .EUNE, .EUW, .TR, .RU:
             return .Europe
+        case .OCE:
+            if self.allowSouthEastAsiaWorldRegion {
+                return .SouthEastAsia
+            } else {
+                return .America
+            }
         }
     }
     
@@ -37,6 +49,8 @@ internal class ServiceProxy {
             return .Asia
         case .Europe:
             return .Europe
+        case .SouthEastAsia:
+            return .SouthEastAsia
         }
     }
     
@@ -87,6 +101,8 @@ internal class ServiceProxy {
             self.init(for: .KR)
         case .Europe:
             self.init(for: .EUW)
+        case .SouthEastAsia:
+            self.init(for: .OCE)
         }
     }
 }

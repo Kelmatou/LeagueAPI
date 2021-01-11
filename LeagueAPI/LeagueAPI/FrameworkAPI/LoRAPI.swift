@@ -15,4 +15,10 @@ public class LoRAPI: APIClient {
     public func getLeaderboard(on region: WorldRegion, handler: @escaping ([RunneteraPlayer]?, String?) -> Void) {
         RunneteraRankedBusiness.getLeaderboard(method: .GetLeaderboard, region: region, key: self.key, handler: handler)
     }
+    
+    // MARK: - Status
+    
+    public func getStatus(on region: WorldRegion, handler: @escaping (ServiceStatus?, String?) -> Void) {
+        RunneteraStatusBusiness.getStatus(method: .GetStatus, region: region, key: self.key, handler: handler)
+    }
 }
