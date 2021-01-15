@@ -58,7 +58,7 @@ If none of these helped you, open an issue describing your problem and I'll try 
 
 ### 📦 Minimum versions 📦
 
-📱 iOS 8.1  
+📱 iOS 9.0  
 ⌚ WatchOS 2.0  
 📺 TvOS 9.0  
 💻 MacOS 10.9 (Mavericks)  

@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "LeagueAPI"
-  s.version      = "4.0.0"
+  s.version      = "4.1.0"
   s.summary      = "League of Legends API Framework in Swift"
 
   # This description is used to generate tags and improve search results.
@@ -64,7 +64,7 @@ Pod::Spec.new do |s|
   #
 
   #  When using multiple platforms
-   s.ios.deployment_target = "8.0"
+   s.ios.deployment_target = "9.0"
    s.osx.deployment_target = "10.9"
    s.watchos.deployment_target = "2.0"
    s.tvos.deployment_target = "9.0"
