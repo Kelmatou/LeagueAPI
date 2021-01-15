@@ -16,6 +16,7 @@ internal enum MethodPaths: String {
     case League = "/lol/league"
     case StaticData = "/lol/static-data"
     case Status = "/lol/status"
+    case RunneteraMatch = "/lor/match"
     case RunneteraRanked = "/lor/ranked"
     case RunneteraStatus = "/lor/status"
     case Match = "/lol/match"

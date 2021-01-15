@@ -12,6 +12,17 @@ public class LoRAPI: APIClient {
     
     // MARK: - Ranked
     
+    public func getMatchIds(by puuid: SummonerPuuid, on region: WorldRegion, handler: @escaping ([String]?, String?) -> Void) {
+        RunneteraMatchBusiness.getMatchIds(method: .IdsByPuuid(id: puuid), region: region, key: self.key, handler: handler)
+    }
+    
+    // TODO
+    public func getMatch(by matchId: RunneteraMatchId, on region: WorldRegion, handler: @escaping ([RunneteraMatch]?, String?) -> Void) {
+        RunneteraMatchBusiness.getMatch(method: .byMatchId(matchId: matchId), region: region, key: self.key, handler: handler)
+    }
+    
+    // MARK: - Ranked
+    
     public func getLeaderboard(on region: WorldRegion, handler: @escaping ([RunneteraPlayer]?, String?) -> Void) {
         RunneteraRankedBusiness.getLeaderboard(method: .GetLeaderboard, region: region, key: self.key, handler: handler)
     }

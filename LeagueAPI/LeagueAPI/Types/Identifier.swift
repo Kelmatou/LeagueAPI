@@ -16,7 +16,7 @@ public class Identifier<T: Codable & Hashable>: Equatable, CustomStringConvertib
         return "\(value)"
     }
     
-    public init(_ value: T) {
+    public required init(_ value: T) {
         self.value = value
     }
     

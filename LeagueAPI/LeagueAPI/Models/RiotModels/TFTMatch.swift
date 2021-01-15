@@ -11,14 +11,14 @@ import Foundation
 public class TFTMatch: Decodable {
     
     public var info: TFTMatchInfo
-    public var metadata: TFTMatchMetadata
+    public var metadata: MatchMetadata<TFTGameId>
     
     enum CodingKeys: String, CodingKey {
         case info = "info"
         case metadata = "metadata"
     }
     
-    public init(info: TFTMatchInfo, metadata: TFTMatchMetadata) {
+    public init(info: TFTMatchInfo, metadata: MatchMetadata<TFTGameId>) {
         self.info = info
         self.metadata = metadata
     }
@@ -26,6 +26,6 @@ public class TFTMatch: Decodable {
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.info = try container.decode(TFTMatchInfo.self, forKey: .info)
-        self.metadata = try container.decode(TFTMatchMetadata.self, forKey: .metadata)
+        self.metadata = try container.decode(MatchMetadata<TFTGameId>.self, forKey: .metadata)
     }
 }
