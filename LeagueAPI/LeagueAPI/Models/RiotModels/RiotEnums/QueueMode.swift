@@ -86,6 +86,7 @@ public class QueueMode {
         case TeamFightTactics = 1090
         case RankedTeamFightTactics = 1100
         case TutorialTeamFightTactics = 1110
+        case TeamFightTacticsTest = 1111
         case NexusBlitzFirstEdition = 1200 // Queue mode deprecated in patch 9.2
         case NexusBlitz = 1300
         case Tutorial1 = 2000
@@ -262,6 +263,8 @@ public class QueueMode {
             self.init(mode: .RankedTeamFightTactics, place: .Convergence)
         case QueueModes.TutorialTeamFightTactics.rawValue:
             self.init(mode: .TutorialTeamFightTactics, place: .Convergence)
+        case QueueModes.TeamFightTacticsTest.rawValue:
+            self.init(mode: .TeamFightTacticsTest, place: .Convergence)
         case QueueModes.NexusBlitzFirstEdition.rawValue:
             self.init(mode: .NexusBlitzFirstEdition, place: .NexusBlitz)
         case QueueModes.NexusBlitz.rawValue:
