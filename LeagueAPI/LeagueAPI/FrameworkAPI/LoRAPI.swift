@@ -17,7 +17,7 @@ public class LoRAPI: APIClient {
     }
     
     // TODO
-    public func getMatch(by matchId: RunneteraMatchId, on region: WorldRegion, handler: @escaping ([RunneteraMatch]?, String?) -> Void) {
+    public func getMatch(by matchId: RunneteraMatchId, on region: WorldRegion, handler: @escaping (RunneteraMatch?, String?) -> Void) {
         RunneteraMatchBusiness.getMatch(method: .byMatchId(matchId: matchId), region: region, key: self.key, handler: handler)
     }
     
