@@ -10,13 +10,33 @@ import Foundation
 
 internal class TournamentMethod: LeagueMethod {
     
-    public enum TournamentMethods {
+    public enum TournamentMethods: CustomStringConvertible {
         case CreateCodes(amount: Int?, tournamentId: TournamentId, info: TournamentInfo)
         case UpdateTournamentInfo(code: TournamentCode, updatedInfo: TournamentUpdate?)
         case GetTournamentInfo(code: TournamentCode)
         case EventsByTournamentCode(code: TournamentCode)
         case CreateProvider(callbackUrl: String, region: TournamentRegion)
         case CreateTournament(name: String, providerId: ProviderId)
+        
+        public var description: String {
+            var methodDescription: String {
+                switch self {
+                case .CreateCodes:
+                    return "CreateCodes"
+                case .UpdateTournamentInfo:
+                    return "UpdateTournamentInfo"
+                case .GetTournamentInfo:
+                    return "GetTournamentInfo"
+                case .EventsByTournamentCode:
+                    return "EventsByTournamentCode"
+                case .CreateProvider:
+                    return "CreateProvider"
+                case .CreateTournament:
+                    return "CreateTournament"
+                }
+            }
+            return "\(String(describing: TournamentMethods.self))-\(methodDescription)"
+        }
     }
     
     private var host: Endpoint
@@ -39,7 +59,7 @@ internal class TournamentMethod: LeagueMethod {
     }
     
     public func getMethodSignature() -> String {
-        return "Tournament" // Since documentation does not explain Tournament Rate Limit, we create a special queue to count rate limit.
+        return self.method.description
     }
     
     public func getMethodUrl() -> String {

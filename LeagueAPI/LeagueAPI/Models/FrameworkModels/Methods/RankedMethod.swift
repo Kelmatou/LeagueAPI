@@ -10,13 +10,33 @@ import Foundation
 
 internal class RankedMethod: LeagueMethod {
     
-    public enum RankedMethods {
+    public enum RankedMethods: CustomStringConvertible {
         case ChallengerByQueue(queue: Queue)
         case GrandMasterByQueue(queue: Queue)
         case MasterByQueue(queue: Queue)
         case LeagueById(id: LeagueId)
         case EntriesById(id: SummonerId)
         case QueueEntries(queue: Queue, division: RankedDivision, page: Int)
+        
+        public var description: String {
+            var methodDescription: String {
+                switch self {
+                case .ChallengerByQueue:
+                    return "ChallengerByQueue"
+                case .GrandMasterByQueue:
+                    return "GrandMasterByQueue"
+                case .MasterByQueue:
+                    return "MasterByQueue"
+                case .LeagueById:
+                    return "LeagueById"
+                case .EntriesById:
+                    return "EntriesById"
+                case .QueueEntries:
+                    return "QueueEntries"
+                }
+            }
+            return "\(String(describing: RankedMethods.self))-\(methodDescription)"
+        }
     }
     
     private var service: ServiceProxy
@@ -32,12 +52,7 @@ internal class RankedMethod: LeagueMethod {
     }
     
     func getMethodSignature() -> String {
-        switch self.method {
-        case .LeagueById, .ChallengerByQueue, .GrandMasterByQueue, .MasterByQueue, .QueueEntries:
-            return "League"
-        case .EntriesById:
-            return "EntriesById-\(self.service.region.rawValue)"
-        }
+        return self.method.description
     }
     
     func getMethodUrl() -> String {

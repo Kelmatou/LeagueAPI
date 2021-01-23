@@ -10,8 +10,18 @@ import Foundation
 
 internal class RunneteraStatusMethod: LeagueMethod {
     
-    public enum RunneteraStatusMethods {
+    public enum RunneteraStatusMethods: CustomStringConvertible {
         case GetStatus
+        
+        public var description: String {
+            var methodDescription: String {
+                switch self {
+                case .GetStatus:
+                    return "GetStatus"
+                }
+            }
+            return "\(String(describing: RunneteraStatusMethods.self))-\(methodDescription)"
+        }
     }
     
     private var service: ServiceProxy
@@ -28,7 +38,7 @@ internal class RunneteraStatusMethod: LeagueMethod {
     }
     
     public func getMethodSignature() -> String {
-        return "Default"
+        return self.method.description
     }
     
     public func getMethodUrl() -> String {

@@ -10,8 +10,18 @@ import Foundation
 
 internal class ThirdPartyCodeMethod: LeagueMethod {
     
-    public enum ThirdPartyCodeMethods {
+    public enum ThirdPartyCodeMethods: CustomStringConvertible {
         case ById(id: SummonerId)
+        
+        public var description: String {
+            var methodDescription: String {
+                switch self {
+                case .ById:
+                    return "ById"
+                }
+            }
+            return "\(String(describing: ThirdPartyCodeMethods.self))-\(methodDescription)"
+        }
     }
     
     private var service: ServiceProxy
@@ -27,7 +37,7 @@ internal class ThirdPartyCodeMethod: LeagueMethod {
     }
     
     public func getMethodSignature() -> String {
-        return "Default"
+        return self.method.description
     }
     
     public func getMethodUrl() -> String {

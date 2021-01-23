@@ -10,8 +10,18 @@ import Foundation
 
 internal class StatusMethod: LeagueMethod {
     
-    public enum StatusMethods {
+    public enum StatusMethods: CustomStringConvertible {
         case GetStatus
+        
+        public var description: String {
+            var methodDescription: String {
+                switch self {
+                case .GetStatus:
+                    return "GetStatus"
+                }
+            }
+            return "\(String(describing: StatusMethods.self))-\(methodDescription)"
+        }
     }
     
     private var service: ServiceProxy
@@ -27,7 +37,7 @@ internal class StatusMethod: LeagueMethod {
     }
     
     public func getMethodSignature() -> String {
-        return "Default"
+        return self.method.description
     }
     
     public func getMethodUrl() -> String {

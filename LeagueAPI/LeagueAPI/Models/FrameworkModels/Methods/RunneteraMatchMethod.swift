@@ -10,9 +10,21 @@ import Foundation
 
 internal class RunneteraMatchMethod: LeagueMethod {
     
-    public enum RunneteraMatchMethods {
+    public enum RunneteraMatchMethods: CustomStringConvertible {
         case IdsByPuuid(id: SummonerPuuid)
         case byMatchId(matchId: RunneteraMatchId)
+        
+        public var description: String {
+            var methodDescription: String {
+                switch self {
+                case .IdsByPuuid:
+                    return "IdsByPuuid"
+                case .byMatchId:
+                    return "byMatchId"
+                }
+            }
+            return "\(String(describing: RunneteraMatchMethods.self))-\(methodDescription)"
+        }
     }
     
     private var service: ServiceProxy
@@ -28,7 +40,7 @@ internal class RunneteraMatchMethod: LeagueMethod {
     }
     
     public func getMethodSignature() -> String {
-        return "Default"
+        return self.method.description
     }
     
     public func getMethodUrl() -> String {

@@ -10,12 +10,30 @@ import Foundation
 
 internal class MatchMethod: LeagueMethod {
     
-    public enum MatchMethods {
+    public enum MatchMethods: CustomStringConvertible {
         case ById(id: GameId)
         case MatchesByAccountId(id: AccountId, beginTime: Datetime?, endTime: Datetime?, beginIndex: Int?, endIndex: Int?, championId: ChampionId?, queue: QueueMode?, season: Season?)
         case TimelineById(id: GameId)
         case MatchIdsByTournamentCode(code: TournamentCode)
         case ByIdAndTournamentCode(id: GameId, code: TournamentCode)
+        
+        public var description: String {
+            var methodDescription: String {
+                switch self {
+                case .ById:
+                    return "ById"
+                case .MatchesByAccountId:
+                    return "MatchesByAccountId"
+                case .TimelineById:
+                    return "TimelineById"
+                case .MatchIdsByTournamentCode:
+                    return "MatchIdsByTournamentCode"
+                case .ByIdAndTournamentCode:
+                    return "ByIdAndTournamentCode"
+                }
+            }
+            return "\(String(describing: MatchMethods.self))-\(methodDescription)"
+        }
     }
     
     private var service: ServiceProxy
@@ -31,14 +49,7 @@ internal class MatchMethod: LeagueMethod {
     }
     
     func getMethodSignature() -> String {
-        switch self.method {
-        case .ById, .TimelineById:
-            return "MatchAndTimelineById"
-        case .MatchesByAccountId:
-            return "MatchesByAccountId"
-        case .MatchIdsByTournamentCode, .ByIdAndTournamentCode:
-            return "Default"
-        }
+        return self.method.description
     }
     
     func getMethodUrl() -> String {

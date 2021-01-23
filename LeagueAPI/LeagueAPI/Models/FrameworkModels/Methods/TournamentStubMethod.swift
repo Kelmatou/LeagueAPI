@@ -10,11 +10,27 @@ import Foundation
 
 internal class TournamentStubMethod: LeagueMethod {
     
-    public enum TournamentStubMethods {
+    public enum TournamentStubMethods: CustomStringConvertible {
         case CreateCodes(amount: Int?, tournamentId: TournamentId, info: TournamentInfo)
         case EventsByTournamentCode(code: TournamentCode)
         case CreateProvider(callbackUrl: String, region: TournamentRegion)
         case CreateTournament(name: String, providerId: ProviderId)
+        
+        public var description: String {
+            var methodDescription: String {
+                switch self {
+                case .CreateCodes:
+                    return "CreateCodes"
+                case .EventsByTournamentCode:
+                    return "EventsByTournamentCode"
+                case .CreateProvider:
+                    return "CreateProvider"
+                case .CreateTournament:
+                    return "CreateTournament"
+                }
+            }
+            return "\(String(describing: TournamentStubMethods.self))-\(methodDescription)"
+        }
     }
     
     private var host: Endpoint
@@ -35,7 +51,7 @@ internal class TournamentStubMethod: LeagueMethod {
     }
     
     public func getMethodSignature() -> String {
-        return "TournamentStub"
+        return self.method.description
     }
     
     public func getMethodUrl() -> String {

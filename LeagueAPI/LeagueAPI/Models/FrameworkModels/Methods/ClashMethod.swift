@@ -10,12 +10,30 @@ import Foundation
 
 internal class ClashMethod: LeagueMethod {
     
-    public enum ClashMethods {
+    public enum ClashMethods: CustomStringConvertible {
         case PlayersBySummonerId(summonerId: SummonerId)
         case TeamsByTeamId(teamId: TeamId)
         case Tournaments
         case TournamentsByTeamId(teamId: TeamId)
         case TournamentsByTournamentId(tournamentId: TournamentId)
+        
+        public var description: String {
+            var methodDescription: String {
+                switch self {
+                case .PlayersBySummonerId:
+                    return "PlayersBySummonerId"
+                case .TeamsByTeamId:
+                    return "TeamsByTeamId"
+                case .Tournaments:
+                    return "Tournaments"
+                case .TournamentsByTeamId:
+                    return "TournamentsByTeamId"
+                case .TournamentsByTournamentId:
+                    return "TournamentsByTournamentId"
+                }
+            }
+            return "\(String(describing: ClashMethods.self))-\(methodDescription)"
+        }
     }
     
     private var service: ServiceProxy
@@ -31,7 +49,7 @@ internal class ClashMethod: LeagueMethod {
     }
     
     public func getMethodSignature() -> String {
-        return "Default"
+        return self.method.description
     }
     
     public func getMethodUrl() -> String {

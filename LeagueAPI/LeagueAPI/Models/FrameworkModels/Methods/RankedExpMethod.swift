@@ -10,8 +10,18 @@ import Foundation
 
 internal class RankedExpMethod: LeagueMethod {
     
-    public enum RankedExpMethods {
+    public enum RankedExpMethods: CustomStringConvertible {
         case QueueEntries(queue: Queue, division: RankedDivision, page: Int)
+        
+        public var description: String {
+            var methodDescription: String {
+                switch self {
+                case .QueueEntries:
+                    return "QueueEntries"
+                }
+            }
+            return "\(String(describing: RankedExpMethods.self))-\(methodDescription)"
+        }
     }
     
     private var service: ServiceProxy
@@ -27,10 +37,7 @@ internal class RankedExpMethod: LeagueMethod {
     }
     
     func getMethodSignature() -> String {
-        switch self.method {
-        case .QueueEntries:
-            return "League"
-        }
+        return self.method.description
     }
     
     func getMethodUrl() -> String {

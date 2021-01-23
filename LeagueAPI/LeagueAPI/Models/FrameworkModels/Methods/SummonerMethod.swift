@@ -10,11 +10,27 @@ import Foundation
 
 internal class SummonerMethod: LeagueMethod {
     
-    public enum SummonerMethods {
+    public enum SummonerMethods: CustomStringConvertible {
         case ByAccountId(id: AccountId)
         case ByName(name: String)
         case byPuuid(puuid: SummonerPuuid)
         case ById(id: SummonerId)
+        
+        public var description: String {
+            var methodDescription: String {
+                switch self {
+                case .ByAccountId:
+                    return "ByAccountId"
+                case .ByName:
+                    return "ByName"
+                case .byPuuid:
+                    return "byPuuid"
+                case .ById:
+                    return "ById"
+                }
+            }
+            return "\(String(describing: SummonerMethods.self))-\(methodDescription)"
+        }
     }
     
     private var service: ServiceProxy
@@ -30,12 +46,7 @@ internal class SummonerMethod: LeagueMethod {
     }
     
     public func getMethodSignature() -> String {
-        switch self.method {
-        case .ByAccountId:
-            return "SummonerByAccountId"
-        case .ByName, .ById, .byPuuid:
-            return "SummonerBy-\(self.service.region.rawValue)"
-        }
+        return self.method.description
     }
     
     public func getMethodUrl() -> String {

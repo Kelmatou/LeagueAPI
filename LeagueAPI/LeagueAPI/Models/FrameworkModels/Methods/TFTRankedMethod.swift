@@ -10,13 +10,33 @@ import Foundation
 
 internal class TFTRankedMethod: LeagueMethod {
     
-    public enum TFTRankedMethods {
+    public enum TFTRankedMethods: CustomStringConvertible {
         case GetChallenger
         case EntriesByTierAndDivision(division: RankedDivision, page: Int)
         case EntriesById(id: SummonerId)
         case GetGrandMaster
         case LeagueById(id: TFTLeagueId)
         case GetMaster
+        
+        public var description: String {
+            var methodDescription: String {
+                switch self {
+                case .GetChallenger:
+                    return "GetChallenger"
+                case .EntriesByTierAndDivision:
+                    return "EntriesByTierAndDivision"
+                case .EntriesById:
+                    return "EntriesById"
+                case .GetGrandMaster:
+                    return "GetGrandMaster"
+                case .LeagueById:
+                    return "LeagueById"
+                case .GetMaster:
+                    return "GetMaster"
+                }
+            }
+            return "\(String(describing: TFTRankedMethods.self))-\(methodDescription)"
+        }
     }
     
     private var service: ServiceProxy
@@ -32,7 +52,7 @@ internal class TFTRankedMethod: LeagueMethod {
     }
     
     public func getMethodSignature() -> String {
-        return "TFTLeague"
+        return self.method.description
     }
     
     public func getMethodUrl() -> String {

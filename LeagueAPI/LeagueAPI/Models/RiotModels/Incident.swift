@@ -12,7 +12,7 @@ public class Incident: Decodable {
     
     public var id: Long
     public var status: MaintenanceStatus?
-    public var severity: IncidentSeverity
+    public var severity: IncidentSeverity?
     public var titles: [Translation]
     public var updates: [Message]
     public var createdAt: String
@@ -32,7 +32,7 @@ public class Incident: Decodable {
         case platforms = "platforms"
     }
     
-    public init(id: Long, status: MaintenanceStatus, severity: IncidentSeverity, titles: [Translation], updates: [Message], createdAt: String, archiveAt: String, updatedAt: String, platforms: [DevicePlatform]) {
+    public init(id: Long, status: MaintenanceStatus?, severity: IncidentSeverity?, titles: [Translation], updates: [Message], createdAt: String, archiveAt: String?, updatedAt: String?, platforms: [DevicePlatform]) {
         self.id = id
         self.status = status
         self.severity = severity
@@ -48,7 +48,7 @@ public class Incident: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try container.decode(Long.self, forKey: .id)
         self.status = try? MaintenanceStatus(container.decode(String.self, forKey: .status))
-        self.severity = try IncidentSeverity(container.decode(String.self, forKey: .severity))
+        self.severity = try? IncidentSeverity(container.decode(String.self, forKey: .severity))
         self.titles = try container.decode([Translation].self, forKey: .titles)
         self.updates = try container.decode([Message].self, forKey: .updates)
         self.createdAt = try container.decode(String.self, forKey: .createdAt)

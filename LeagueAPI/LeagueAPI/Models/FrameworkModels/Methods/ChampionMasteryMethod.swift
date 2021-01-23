@@ -10,10 +10,24 @@ import Foundation
 
 internal class ChampionMasteryMethod: LeagueMethod {
 
-    public enum ChampionMasteryMethods {
+    public enum ChampionMasteryMethods: CustomStringConvertible {
         case BySummonerId(id: SummonerId)
         case BySummonerIdAndChampionId(summonerId: SummonerId, championId: ChampionId)
         case ScoreBySummonerId(id: SummonerId)
+        
+        public var description: String {
+            var methodDescription: String {
+                switch self {
+                case .BySummonerId:
+                    return "BySummonerId"
+                case .BySummonerIdAndChampionId:
+                    return "BySummonerIdAndChampionId"
+                case .ScoreBySummonerId:
+                    return "ScoreBySummonerId"
+                }
+            }
+            return "\(String(describing: ChampionMasteryMethods.self))-\(methodDescription)"
+        }
     }
     
     private var service: ServiceProxy
@@ -29,7 +43,7 @@ internal class ChampionMasteryMethod: LeagueMethod {
     }
     
     public func getMethodSignature() -> String {
-        return "Default"
+        return self.method.description
     }
     
     public func getMethodUrl() -> String {

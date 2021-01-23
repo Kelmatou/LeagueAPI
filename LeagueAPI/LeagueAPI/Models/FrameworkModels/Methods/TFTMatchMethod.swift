@@ -10,9 +10,21 @@ import Foundation
 
 internal class TFTMatchMethod: LeagueMethod {
     
-    public enum TFTMatchMethods {
+    public enum TFTMatchMethods: CustomStringConvertible {
         case byPuuid(puuid: SummonerPuuid, count: Int?)
         case ById(id: TFTGameId)
+        
+        public var description: String {
+            var methodDescription: String {
+                switch self {
+                case .byPuuid:
+                    return "byPuuid"
+                case .ById:
+                    return "ById"
+                }
+            }
+            return "\(String(describing: TFTMatchMethods.self))-\(methodDescription)"
+        }
     }
     
     private var service: ServiceProxy
@@ -28,12 +40,7 @@ internal class TFTMatchMethod: LeagueMethod {
     }
     
     public func getMethodSignature() -> String {
-        switch self.method {
-        case .byPuuid:
-            return "TFTMatchByPuuid"
-        case .ById:
-            return "TFTMatchById"
-        }
+        return self.method.description
     }
     
     public func getMethodUrl() -> String {

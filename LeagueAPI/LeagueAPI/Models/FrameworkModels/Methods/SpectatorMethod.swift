@@ -10,9 +10,21 @@ import Foundation
 
 internal class SpectatorMethod: LeagueMethod {
     
-    public enum SpectatorMethods {
+    public enum SpectatorMethods: CustomStringConvertible {
         case BySummonerId(id: SummonerId)
         case FeaturedGames
+        
+        public var description: String {
+            var methodDescription: String {
+                switch self {
+                case .BySummonerId:
+                    return "BySummonerId"
+                case .FeaturedGames:
+                    return "FeaturedGames"
+                }
+            }
+            return "\(String(describing: SpectatorMethods.self))-\(methodDescription)"
+        }
     }
     
     private var service: ServiceProxy
@@ -28,7 +40,7 @@ internal class SpectatorMethod: LeagueMethod {
     }
     
     func getMethodSignature() -> String {
-        return "Default"
+        return self.method.description
     }
     
     func getMethodUrl() -> String {

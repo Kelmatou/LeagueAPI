@@ -10,10 +10,24 @@ import Foundation
 
 internal class RiotAccountMethod: LeagueMethod {
     
-    public enum RiotAccountMethods {
+    public enum RiotAccountMethods: CustomStringConvertible {
         case ByPuuid(puuid: SummonerPuuid)
         case ByRiotId(riotId: RiotId)
         case ActiveShardsByGame(puuid: SummonerPuuid, game: ShardGame)
+        
+        public var description: String {
+            var methodDescription: String {
+                switch self {
+                case .ByPuuid:
+                    return "ByPuuid"
+                case .ByRiotId:
+                    return "ByRiotId"
+                case .ActiveShardsByGame:
+                    return "ActiveShardsByGame"
+                }
+            }
+            return "\(String(describing: RiotAccountMethods.self))-\(methodDescription)"
+        }
     }
     
     private var service: ServiceProxy
@@ -29,7 +43,7 @@ internal class RiotAccountMethod: LeagueMethod {
     }
     
     public func getMethodSignature() -> String {
-        return "Default"
+        return self.method.description
     }
     
     public func getMethodUrl() -> String {

@@ -10,8 +10,18 @@ import Foundation
 
 internal class ChampionMethod: LeagueMethod {
     
-    public enum ChampionMethods {
+    public enum ChampionMethods: CustomStringConvertible {
         case ChampionRotation
+        
+        public var description: String {
+            var methodDescription: String {
+                switch self {
+                case .ChampionRotation:
+                    return "ChampionRotation"
+                }
+            }
+            return "\(String(describing: ChampionMethods.self))-\(methodDescription)"
+        }
     }
     
     private var service: ServiceProxy
@@ -27,7 +37,7 @@ internal class ChampionMethod: LeagueMethod {
     }
     
     func getMethodSignature() -> String {
-        return "Champion"
+        return self.method.description
     }
     
     func getMethodUrl() -> String {

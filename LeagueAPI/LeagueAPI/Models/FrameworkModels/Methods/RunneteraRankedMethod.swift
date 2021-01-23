@@ -10,8 +10,18 @@ import Foundation
 
 internal class RunneteraRankedMethod: LeagueMethod {
     
-    public enum RunneteraRankedMethods {
+    public enum RunneteraRankedMethods: CustomStringConvertible {
         case GetLeaderboard
+        
+        public var description: String {
+            var methodDescription: String {
+                switch self {
+                case .GetLeaderboard:
+                    return "GetLeaderboard"
+                }
+            }
+            return "\(String(describing: RunneteraRankedMethods.self))-\(methodDescription)"
+        }
     }
     
     private var service: ServiceProxy
@@ -28,7 +38,7 @@ internal class RunneteraRankedMethod: LeagueMethod {
     }
     
     public func getMethodSignature() -> String {
-        return "Default"
+        return self.method.description
     }
     
     public func getMethodUrl() -> String {
