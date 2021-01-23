@@ -10,11 +10,24 @@ import Foundation
 
 public class GameType {
     
-    public enum Types: String {
+    public enum Types: String, CustomStringConvertible {
         case Custom = "CUSTOM_GAME"
         case MatchMaking = "MATCHED_GAME"
         case Tutorial = "TUTORIAL_GAME"
         case Unknown = "Unknown"
+        
+        public var description: String {
+            switch self {
+            case .Custom:
+                return "Custom"
+            case .MatchMaking:
+                return "Match Making"
+            case .Tutorial:
+                return "Tutorial"
+            case .Unknown:
+                return "Unknown"
+            }
+        }
     }
     
     public private(set) var type: Types

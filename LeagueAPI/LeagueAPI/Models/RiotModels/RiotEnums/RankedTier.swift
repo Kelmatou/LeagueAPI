@@ -10,7 +10,7 @@ import Foundation
 
 public class RankedTier {
     
-    public enum Tiers: String {
+    public enum Tiers: String, CustomStringConvertible {
         case Unranked = "UNRANKED"
         case Iron = "IRON"
         case Bronze = "BRONZE"
@@ -22,6 +22,10 @@ public class RankedTier {
         case GrandMaster = "GRANDMASTER"
         case Challenger = "CHALLENGER"
         case Unknown = "Unknown"
+        
+        public var description: String {
+            return "\(self.rawValue.first?.uppercased() ?? "")\(self.rawValue.dropFirst().lowercased())"
+        }
     }
     
     public private(set) var tier: Tiers

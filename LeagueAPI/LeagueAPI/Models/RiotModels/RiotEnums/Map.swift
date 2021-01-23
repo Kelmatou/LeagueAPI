@@ -20,7 +20,7 @@ public class Map {
         return self.place.rawValue
     }
     
-    public enum Maps: Long {
+    public enum Maps: Long, CustomStringConvertible {
         case SummerSummonersRift = 1
         case AutumnSummonersRift = 2
         case TutorialMap = 3
@@ -37,6 +37,43 @@ public class Map {
         case NexusBlitzMap = 21
         case Convergence = 22 // unverified
         case Unknown = -1
+        
+        public var description: String {
+            switch self {
+            case .SummerSummonersRift:
+                return "Summer Summoner's Rift"
+            case .AutumnSummonersRift:
+                return "Autumn Summoner's Rift"
+            case .TutorialMap:
+                return "Tutorial Map"
+            case .OriginalTwistedTreeline:
+                return "Original Twisted Treeline"
+            case .Dominion:
+                return "Dominion"
+            case .TwistedTreeline:
+                return "Twisted Treeline"
+            case .SummonersRift:
+                return "Summoner's Rift"
+            case .AramHowlingAbyss:
+                return "Howling Abyss"
+            case .AramButchersBridge:
+                return "Butcher's Bridge"
+            case .DarkStarMap:
+                return "Dark Star Map"
+            case .StarGuardianMap:
+                return "Star Guardian Map"
+            case .ProjectMap:
+                return "PROJECT: Map"
+            case .OdysseyMap:
+                return "Odyssey Map"
+            case .NexusBlitzMap:
+                return "Nexus Blitz Map"
+            case .Convergence:
+                return "Convergence"
+            case .Unknown:
+                return "Unknown"
+            }
+        }
     }
     
     public convenience init?(map: Maps) {

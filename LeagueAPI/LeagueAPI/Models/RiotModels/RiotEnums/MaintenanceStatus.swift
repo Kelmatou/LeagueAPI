@@ -10,11 +10,24 @@ import Foundation
 
 public class MaintenanceStatus {
     
-    public enum Status: String {
+    public enum Status: String, CustomStringConvertible {
         case Scheduled = "scheduled"
         case InProgress = "in_progress"
         case Complete = "complete"
         case Unknown = "unknown"
+        
+        public var description: String {
+            switch self {
+            case .Scheduled:
+                return "Scheduled"
+            case .InProgress:
+                return "In Progress"
+            case .Complete:
+                return "Complete"
+            case .Unknown:
+                return "Unknown"
+            }
+        }
     }
 
     public private(set) var status: Status

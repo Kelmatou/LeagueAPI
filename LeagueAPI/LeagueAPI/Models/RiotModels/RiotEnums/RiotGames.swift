@@ -8,11 +8,24 @@
 
 import Foundation
 
-public enum RiotGames: String {
+public enum RiotGames: String, CustomStringConvertible {
     case LEAGUE_OF_LEGENDS = "lol"
     case TFT = "tft"
     case LEGENDS_OF_RUNNETERRA = "lor"
     case VALORANT = "val"
+    
+    public var description: String {
+        switch self {
+        case .LEAGUE_OF_LEGENDS:
+            return "League of Legends"
+        case .TFT:
+            return "Team Fight Tactics"
+        case .LEGENDS_OF_RUNNETERRA:
+            return "Legends of Runneterra"
+        case .VALORANT:
+            return "Valorant"
+        }
+    }
 }
 
 public class ShardGame {

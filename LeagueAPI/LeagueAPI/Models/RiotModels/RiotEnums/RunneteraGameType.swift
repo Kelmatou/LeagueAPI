@@ -10,7 +10,7 @@ import Foundation
 
 public class RunneteraGameType {
     
-    public enum GameType: String {
+    public enum GameType: String, CustomStringConvertible {
         case Ranked = "Ranked"
         case Normal = "Normal"
         case AI = "AI"
@@ -19,6 +19,27 @@ public class RunneteraGameType {
         case Singleton = "Singleton"
         case StandardGauntlet = "StandardGauntlet"
         case Unknown = "unknown"
+        
+        public var description: String {
+            switch self {
+            case .Ranked:
+                return "Ranked"
+            case .Normal:
+                return "Normal"
+            case .AI:
+                return "AI"
+            case .Tutorial:
+                return "Tutorial"
+            case .VanillaTrial:
+                return "Vanilla Trial"
+            case .Singleton:
+                return "Singleton"
+            case .StandardGauntlet:
+                return "Standard Gauntlet"
+            case .Unknown:
+                return "Unknown"
+            }
+        }
     }
 
     public private(set) var gameType: GameType

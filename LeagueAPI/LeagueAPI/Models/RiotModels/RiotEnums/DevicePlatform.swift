@@ -10,7 +10,7 @@ import Foundation
 
 public class DevicePlatform {
     
-    public enum Platform: String {
+    public enum Platform: String, CustomStringConvertible {
         case Windows = "windows"
         case MacOS = "macos"
         case Android = "android"
@@ -19,6 +19,27 @@ public class DevicePlatform {
         case XBone = "xbone"
         case Switch = "switch"
         case Unknown = "unknown"
+        
+        public var description: String {
+            switch self {
+            case .Windows:
+                return "Windows"
+            case .MacOS:
+                return "MacOS"
+            case .Android:
+                return "Android"
+            case .iOS:
+                return "iOS"
+            case .PS4:
+                return "PS4"
+            case .XBone:
+                return "XBone"
+            case .Switch:
+                return "Switch"
+            case .Unknown:
+                return "Unknown"
+            }
+        }
     }
 
     public private(set) var platform: Platform

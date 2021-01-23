@@ -10,7 +10,7 @@ import Foundation
 
 public class ChampionRole: Equatable {
     
-    public enum Role: String {
+    public enum Role: String, CustomStringConvertible {
         case Assassin = "Assassin"
         case Fighter = "Fighter"
         case Mage = "Mage"
@@ -18,6 +18,10 @@ public class ChampionRole: Equatable {
         case Support = "Support"
         case Tank = "Tank"
         case Unknown = "Unknown"
+        
+        public var description: String {
+            return self.rawValue
+        }
     }
     
     public private(set) var role: Role

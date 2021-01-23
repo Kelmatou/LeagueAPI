@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum Place: String {
+public enum Place: String, CustomStringConvertible {
     case SummonersRift = "Summoner's Rift"
     case ProvingGrounds = "The Proving Grounds"
     case TwistedTreeline = "Twisted Treeline"
@@ -22,4 +22,8 @@ public enum Place: String {
     case CrashSite = "Crash Site"
     case Convergence = "Convergence"
     case Unknown = "Unknown"
+    
+    public var description: String {
+        return self.rawValue
+    }
 }

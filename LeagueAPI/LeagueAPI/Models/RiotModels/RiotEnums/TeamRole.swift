@@ -10,10 +10,14 @@ import Foundation
 
 public class TeamRole {
     
-    public enum Roles: String {
+    public enum Roles: String, CustomStringConvertible {
         case CAPTAIN = "CAPTAIN"
         case MEMBER = "MEMBER"
         case UNKNOWN = "UNKNOWN"
+        
+        public var description: String {
+            return "\(self.rawValue.first?.uppercased() ?? "")\(self.rawValue.dropFirst().lowercased())"
+        }
     }
 
     public private(set) var role: Roles

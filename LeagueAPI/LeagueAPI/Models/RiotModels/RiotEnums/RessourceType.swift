@@ -10,7 +10,7 @@ import Foundation
 
 public class RessourceType {
     
-    public enum RessourceTypes: String {
+    public enum RessourceTypes: String, CustomStringConvertible {
         case Mana = "Mana"
         case Energy = "Energy"
         case BloodWell = "Blood Well"
@@ -25,6 +25,10 @@ public class RessourceType {
         case Grit = "Grit"
         case None = "None"
         case Unknown = "Unknown"
+        
+        public var description: String {
+            return self.rawValue
+        }
     }
     
     public private(set) var type: RessourceTypes

@@ -10,11 +10,15 @@ import Foundation
 
 public class RunneteraGameMode {
     
-    public enum GameMode: String {
+    public enum GameMode: String, CustomStringConvertible {
         case Constructed = "Constructed"
         case Expeditions = "Expeditions"
         case Tutorial = "Tutorial"
         case Unknown = "unknown"
+        
+        public var description: String {
+            return self.rawValue
+        }
     }
 
     public private(set) var gameMode: GameMode

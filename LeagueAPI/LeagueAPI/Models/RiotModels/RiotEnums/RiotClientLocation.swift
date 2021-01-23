@@ -10,11 +10,24 @@ import Foundation
 
 public class RiotClientLocation {
     
-    public enum ClientLocation: String {
+    public enum ClientLocation: String, CustomStringConvertible {
         case RiotClient = "riotclient"
         case RiotStatus = "riotstatus"
         case Game = "game"
         case Unknown = "unknown"
+        
+        public var description: String {
+            switch self {
+            case .RiotClient:
+                return "Riot Client"
+            case .RiotStatus:
+                return "Riot Status"
+            case .Game:
+                return "Game"
+            case .Unknown:
+                return "Unknown"
+            }
+        }
     }
 
     public private(set) var location: ClientLocation

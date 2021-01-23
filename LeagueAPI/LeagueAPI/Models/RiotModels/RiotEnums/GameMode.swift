@@ -10,7 +10,7 @@ import Foundation
 
 public class GameMode {
     
-    public enum GameModes: String {
+    public enum GameModes: String, CustomStringConvertible {
         case Classic = "CLASSIC"
         case Odin = "ODIN"
         case Aram = "ARAM"
@@ -37,6 +37,63 @@ public class GameMode {
         case TeamFightTactics = "TEAMFIGHTACTICS" // unverified
         case NexusBlitz = "NEXUSBLITZ"
         case Unknown = "Unknown"
+        
+        public var description: String {
+            switch self {
+            case .Classic:
+                return "Classic"
+            case .Odin:
+                return "Odin"
+            case .Aram:
+                return "Aram"
+            case .Tutorial:
+                return "Tutorial"
+            case .Urf:
+                return "URF"
+            case .DoomBotsTeemo:
+                return "Doom Bots Teemo"
+            case .OneForAll:
+                return "One For All"
+            case .Ascension:
+                return "Ascension"
+            case .Firstblood:
+                return "First blood"
+            case .KingPoro:
+                return "Legend of the King Poro"
+            case .Siege:
+                return "Nexus Siege"
+            case .Assassinate:
+                return "Blood Moon Assassinate"
+            case .Arsr:
+                return "All Random Summoner Rift"
+            case .DarkStar:
+                return "Dark Star"
+            case .StarGuardian:
+                return "Star Guardian"
+            case .Project:
+                return "Nemesis"
+            case .NexusBlitzFirstEdition:
+                return "Nexus Blitz"
+            case .Odyssey:
+                return "Odyssey"
+            case .PraticeTool:
+                return "Pratice Tool"
+            case .SnowUrf:
+                return "Snow URF"
+            case .TutorialModule1:
+                return "Tutorial (Part 1)"
+            case .TutorialModule2:
+                return "Tutorial (Part 2)"
+            case .TutorialModule3:
+                return "Tutorial (Part 3)"
+            case .TeamFightTactics:
+                return "TeamFightTactics"
+            case .NexusBlitz:
+                return "Nexus Blitz"
+            case .Unknown:
+                return "Unknown"
+            }
+        }
     }
     
     public private(set) var mode: GameModes

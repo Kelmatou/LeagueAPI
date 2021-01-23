@@ -10,11 +10,24 @@ import Foundation
 
 public class MapType {
     
-    public enum Types: String {
+    public enum Types: String, CustomStringConvertible {
         case SummonersRift = "SUMMONERS_RIFT"
         case TwistedTreeline = "TWISTED_TREELINE"
         case HowlingAbyss = "HOWLING_ABYSS"
         case Unknown = "Unknown"
+        
+        public var description: String {
+            switch self {
+            case .SummonersRift:
+                return "Summoner's Rift"
+            case .TwistedTreeline:
+                return "Twisted Treeline"
+            case .HowlingAbyss:
+                return "Howling Abyss"
+            case .Unknown:
+                return "Unknown"
+            }
+        }
     }
     
     public private(set) var type: Types

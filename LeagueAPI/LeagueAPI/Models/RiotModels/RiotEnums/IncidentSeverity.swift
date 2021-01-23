@@ -10,11 +10,15 @@ import Foundation
 
 public class IncidentSeverity {
     
-    public enum SeverityLevel: String {
+    public enum SeverityLevel: String, CustomStringConvertible {
         case Info = "info"
         case Warning = "warning"
         case Critical = "critical"
         case Unknown = "unknown"
+        
+        public var description: String {
+            return "\(self.rawValue.first?.uppercased() ?? "")\(self.rawValue.dropFirst().lowercased())"
+        }
     }
 
     public private(set) var severity: SeverityLevel

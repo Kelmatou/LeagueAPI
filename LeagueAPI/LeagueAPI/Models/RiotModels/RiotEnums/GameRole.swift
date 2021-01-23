@@ -10,7 +10,7 @@ import Foundation
 
 public class GameRole {
     
-    public enum Roles: String {
+    public enum Roles: String, CustomStringConvertible {
         case UNSELECTED = "UNSELECTED"
         case FILL = "FILL"
         case TOP = "TOP"
@@ -19,6 +19,14 @@ public class GameRole {
         case BOTTOM = "BOTTOM"
         case SUPPORT = "UTILITY"
         case UNKNOWN = "UNKNOWN"
+        
+        public var description: String {
+            if self == .SUPPORT {
+                return "Support"
+            } else {
+                return "\(self.rawValue.first?.uppercased() ?? "")\(self.rawValue.dropFirst().lowercased())"
+            }
+        }
     }
 
     public private(set) var role: Roles

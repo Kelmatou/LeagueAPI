@@ -10,12 +10,27 @@ import Foundation
 
 public class PickType {
     
-    public enum Types: String {
+    public enum Types: String, CustomStringConvertible {
         case Blind = "BLIND_PICK"
         case Draft = "DRAFT_MODE"
         case AllRandom = "ALL_RANDOM"
         case TournamentDraft = "TOURNAMENT_DRAFT"
         case Unknown = "Unknown"
+        
+        public var description: String {
+            switch self {
+            case .Blind:
+                return "Blind"
+            case .Draft:
+                return "Draft"
+            case .AllRandom:
+                return "All Random"
+            case .TournamentDraft:
+                return "Tournament Draft"
+            case .Unknown:
+                return "Unknown"
+            }
+        }
     }
     
     public private(set) var type: Types

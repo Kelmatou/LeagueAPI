@@ -10,7 +10,7 @@ import Foundation
 
 public class QueueMode {
     
-    public enum QueueModes: Long {
+    public enum QueueModes: Long, CustomStringConvertible {
         case Custom = 0
         case OldBlindPick5v5 = 2 // Deprecated in patch 7.19 in favor of Queue Mode 430
         case OldRankedSolo5v5 = 4 // Deprecated in favor of Queue Mode 420
@@ -93,6 +93,175 @@ public class QueueMode {
         case Tutorial2 = 2010
         case Tutorial3 = 2020
         case Unknown = -1
+        
+        public var description: String {
+            switch self {
+            case .Custom:
+                return "Custom"
+            case .OldBlindPick5v5:
+                return "Blind Pick 5v5"
+            case .OldRankedSolo5v5:
+                return "Ranked Solo 5v5"
+            case .OldRankedPremade5v5:
+                return "Ranked Duo 5v5"
+            case .OldCoopvsAI:
+                return "Coop vs AI"
+            case .OldBlindPick3v3:
+                return "Blind Pick 3v3"
+            case .OldRankedFlex3v3:
+                return "Ranked Flex 3v3"
+            case .OldDraftPick5v5:
+                return "Draft Pick 5v5"
+            case .OldDominionBlindPick:
+                return "Blind Pick Dominion"
+            case .OldDominionDraftPick:
+                return "Draft Pick Dominion"
+            case .OldDominionCoopvsAI:
+                return "Coop vs AI (Dominion)"
+            case .OldCoopvsAIIntroBotSummonersRift:
+                return "Coop vs AI Into"
+            case .OldCoopvsAIBeginnerBotSummonersRift:
+                return "Coop vs AI Beginner"
+            case .OldCoopvsAIIntermediateBotSummonersRift:
+                return "Coop vs AI Intermediate"
+            case .OldRankedTeam3v3:
+                return "Ranked Team 3v3"
+            case .OldRankedTeam5v5:
+                return "Ranked Team 5v5"
+            case .OldCoopvsAIIntermediateBotTwistedTreeline:
+                return "Coop vs AI Intermediate (Twisted Treeline)"
+            case .OldTeamBuilder5v5:
+                return "Team Builder 5v5"
+            case .OldAram:
+                return "Aram"
+            case .OldOneforAll:
+                return "One For All"
+            case .SnowdownShowdown1V1:
+                return "Snowdown Showdown 1v1"
+            case .SnowdownShowdown2V2:
+                return "Snowdown Showdown 2v2"
+            case .HexakillSummonersRift:
+                return "Hexakill"
+            case .UltraRapidFire:
+                return "URF"
+            case .OneForAllMirror:
+                return "One For All (Mirror)"
+            case .CoopvsAIUltraRapidFire:
+                return "Coop vs AI (URF)"
+            case .OldDoomBotsRank1:
+                return "Doom Bots Rank 1"
+            case .OldDoomBotsRank2:
+                return "Doom Bots Rank 2"
+            case .OldDoomBotsRank5:
+                return "Doom Bots Rank 5"
+            case .OldAscension:
+                return "Ascension"
+            case .HexakillTwistedTreeline:
+                return "Hexakill (Twisted Treeline)"
+            case .AramButcherBridge:
+                return "Aram (Butcher Bridge)"
+            case .OldLegendOfThePoroKing:
+                return "Legend of the Poro King"
+            case .Nemesis:
+                return "Nemesis"
+            case .BlackMarketBrawlers:
+                return "Black Market Brawlers"
+            case .OldNexusSiege:
+                return "Nexus Siege"
+            case .DefinitelyNotDominion:
+                return "Definitly Not Dominion"
+            case .OldArurf:
+                return "Arurf"
+            case .AllRandomSummonersRift:
+                return "All Random Summoner Rift"
+            case .DraftPick5v5:
+                return "Draft Pick 5v5"
+            case .OldRankedDynamic5v5:
+                return "Ranked Dynamic 5v5"
+            case .RankedSolo5v5:
+                return "Ranked Solo 5v5"
+            case .BlindPick5v5:
+                return "Blind Pick 5v5"
+            case .RankedFlex5v5:
+                return "Ranked Flex 5v5"
+            case .Aram:
+                return "Aram"
+            case .BlindPick3v3:
+                return "Blind Pick 3v3"
+            case .RankedFlex3v3:
+                return "Ranked Flex 3v3"
+            case .BloodHuntAssassin:
+                return "Blood Hunt Assassin"
+            case .DarkStarSingularity:
+                return "Dark Star Singularity"
+            case .Clash:
+                return "Clash"
+            case .CoopvsAIIntermediateBotTwistedTreeline:
+                return "Coop vs AI Intermediate (Twisted Treeline)"
+            case .CoopvsAIIntroBotTwistedTreeline:
+                return "Coop vs AI Intro (Twisted Treeline)"
+            case .CoopvsAIBeginnerBotTwistedTreeline:
+                return "Coop vs AI Beginner (Twisted Treeline)"
+            case .CoopvsAIIntroBotSummonersRift:
+                return "Coop vs AI Intro"
+            case .CoopvsAIBeginnerBotSummonersRift:
+                return "Coop vs AI Beginner"
+            case .CoopvsAIIntermediateBotSummonersRift:
+                return "Coop vs AI Intermediate"
+            case .Arurf:
+                return "Arurf"
+            case .Ascension:
+                return "Ascension"
+            case .LegendOfThePoroKing:
+                return "Legend of the Poro King"
+            case .NexusSiege:
+                return "Nexus Siege"
+            case .DoomBotsVoting:
+                return "Doom Bots (Voting)"
+            case .DoomBotsStandard:
+                return "Doom Bots"
+            case .StarGuardianInvasionNormal:
+                return "Star Guardian Invasion (Normal)"
+            case .StarGuardianInvasionOnslaught:
+                return "Star Guardian Invasion Onslaught"
+            case .ProjectHunters:
+                return "Project Hunters"
+            case .SnowArurf:
+                return "Snow Arurf"
+            case .OneforAll:
+                return "One for All"
+            case .OdysseyIntro:
+                return "Odyssey Intro"
+            case .OdysseyCadet:
+                return "Odyssey Cadet"
+            case .OdysseyCrewMember:
+                return "Odyssey Member"
+            case .OdysseyCaptain:
+                return "Odyssey Captain"
+            case .OdysseyOnslaught:
+                return "Odyssey Onslaught"
+            case .TeamFightTactics:
+                return "Team Fight Tactics"
+            case .RankedTeamFightTactics:
+                return "Team Fight Tactics (Ranked)"
+            case .TutorialTeamFightTactics:
+                return "Team Fight Tactics (Tutorial)"
+            case .TeamFightTacticsTest:
+                return "Team Fight Tactics (Test)"
+            case .NexusBlitzFirstEdition:
+                return "Nexus Blitz"
+            case .NexusBlitz:
+                return "Nexus Blitz"
+            case .Tutorial1:
+                return "Tutorial (Part 1)"
+            case .Tutorial2:
+                return "Tutorial (Part 2)"
+            case .Tutorial3:
+                return "Tutorial (Part 3)"
+            case .Unknown:
+                return "Unknown"
+            }
+        }
     }
     
     public private(set) var mode: QueueModes
