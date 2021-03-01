@@ -156,8 +156,8 @@
   },
   {
     "id": 38,
-    "name": "Aspect of Dusk",
-    "description": "The holder gains the Dusk trait."
+    "name": "Spirit of the Dragon",
+    "description": "The holder gains the Dragonsoul trait."
   },
   {
     "id": 39,
@@ -268,5 +268,55 @@
     "id": 99,
     "name": "Thief's Gloves",
     "description": "At the beginning of each planning phase, the wearer equips 2 temporary items. Temporary items increase in power based on your player level."
+  },
+  {
+    "id": 9001,
+    "name": "Anima Visage",
+    "description": "The wearer regenerates a percentage of their maximum Health each second."
+  },
+  {
+    "id": 9002,
+    "name": "Death's Defiance",
+    "description": "A percentage of the damage the wearer receives is instead dealt over time as non-lethal damage."
+  },
+  {
+    "id": 9003,
+    "name": "Eternal Winter",
+    "description": "Enemies who damage the wearer have their Attack Speed slowed for several seconds. After being slowed this way a certain number of times, the attacker is Frozen for the duration instead. An enemy can only be Frozen once every several seconds."
+  },
+  {
+    "id": 9004,
+    "name": "Infinity Force",
+    "description": null
+  },
+  {
+    "id": 9005,
+    "name": "Manazane",
+    "description": "After the wearer casts their spell for the first time each combat, they restore Mana over several seconds."
+  },
+  {
+    "id": 9006,
+    "name": "Obsidian Cleaver",
+    "description": "The wearer's attacks and spell damage shred enemy Armor and Magic Resistance by 40% for several seconds."
+  },
+  {
+    "id": 9007,
+    "name": "Randuin's Sanctum",
+    "description": "At the start of combat, all allies adjacent to the wearer gain bonus Armor and Magic Resistance for the rest of combat."
+  },
+  {
+    "id": 9008,
+    "name": "Rocket-Propelled Fist",
+    "description": "At the start of combat, the wearer pulls the farthest enemy into melee range, stunning them for several seconds. Allies within range will prioritize attacking that enemy."
+  },
+  {
+    "id": 9009,
+    "name": "Gold Collector",
+    "description": "The wearer executes enemies below a percentage of health on hit. Executions generate 1 gold."
+  },
+  {
+    "id": 9010,
+    "name": "Zhonya's Paradox",
+    "description": "The first instance of damage that would reduce the wearer below a percentage of their Health is prevented, causing them to become invulnerable for several seconds."
   }
 ]

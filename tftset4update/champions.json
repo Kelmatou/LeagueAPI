@@ -9,15 +9,6 @@
     ]
   },
   {
-    "name": "Ahri",
-    "championId": "TFT4_Ahri",
-    "cost": 4,
-    "traits": [
-      "Set4_Spirit",
-      "Set4_Mage"
-    ]
-  },
-  {
     "name": "Akali",
     "championId": "TFT4_Akali",
     "cost": 3,
@@ -36,21 +27,12 @@
     ]
   },
   {
-    "name": "Aphelios",
-    "championId": "TFT4_Aphelios",
-    "cost": 2,
-    "traits": [
-      "Moonlight",
-      "Hunter"
-    ]
-  },
-  {
-    "name": "Ashe",
-    "championId": "TFT4_Ashe",
+    "name": "Aurelion Sol",
+    "championId": "TFT4_AurelionSol",
     "cost": 4,
     "traits": [
-      "Set4_Elderwood",
-      "Hunter"
+      "Set4_Dragonsoul",
+      "Set4_Mage"
     ]
   },
   {
@@ -64,20 +46,47 @@
     ]
   },
   {
-    "name": "Cassiopeia",
-    "championId": "TFT4_Cassiopeia",
+    "name": "Brand",
+    "championId": "TFT4_Brand",
+    "cost": 1,
+    "traits": [
+      "Set4_Dragonsoul",
+      "Set4_Mage"
+    ]
+  },
+  {
+    "name": "Braum",
+    "championId": "TFT4_Braum",
+    "cost": 2,
+    "traits": [
+      "Set4_Dragonsoul",
+      "Set4_Vanguard"
+    ]
+  },
+  {
+    "name": "Cho'Gath",
+    "championId": "TFT4_ChoGath",
     "cost": 4,
     "traits": [
-      "Dusk",
-      "Set4_Mystic"
+      "Set4_Fabled",
+      "Set4_Brawler"
+    ]
+  },
+  {
+    "name": "Darius",
+    "championId": "TFT4_Darius",
+    "cost": 3,
+    "traits": [
+      "Fortune",
+      "Set4_Slayer"
     ]
   },
   {
     "name": "Diana",
-    "championId": "TFT4_Diana",
+    "championId": "TFT4b_Diana",
     "cost": 1,
     "traits": [
-      "Moonlight",
+      "Set4_Spirit",
       "Set4_Assassin"
     ]
   },
@@ -88,24 +97,6 @@
     "traits": [
       "Cultist",
       "Keeper"
-    ]
-  },
-  {
-    "name": "Evelynn",
-    "championId": "TFT4_Evelynn",
-    "cost": 3,
-    "traits": [
-      "Cultist",
-      "Set4_Shade"
-    ]
-  },
-  {
-    "name": "Ezreal",
-    "championId": "TFT4_Ezreal",
-    "cost": 5,
-    "traits": [
-      "Set4_Elderwood",
-      "Set4_Dazzler"
     ]
   },
   {
@@ -123,15 +114,6 @@
     "cost": 1,
     "traits": [
       "Warlord",
-      "Set4_Vanguard"
-    ]
-  },
-  {
-    "name": "Hecarim",
-    "championId": "TFT4_Hecarim",
-    "cost": 2,
-    "traits": [
-      "Set4_Elderwood",
       "Set4_Vanguard"
     ]
   },
@@ -155,7 +137,7 @@
     ]
   },
   {
-    "name": "Jarvin IV",
+    "name": "Jarvan IV",
     "championId": "TFT4_JarvanIV",
     "cost": 2,
     "traits": [
@@ -170,24 +152,6 @@
     "traits": [
       "Divine",
       "Duelist"
-    ]
-  },
-  {
-    "name": "Jhin",
-    "championId": "TFT4_Jhin",
-    "cost": 4,
-    "traits": [
-      "Cultist",
-      "Sharpshooter"
-    ]
-  },
-  {
-    "name": "Jinx",
-    "championId": "TFT4_Jinx",
-    "cost": 3,
-    "traits": [
-      "Fortune",
-      "Sharpshooter"
     ]
   },
   {
@@ -210,12 +174,12 @@
     ]
   },
   {
-    "name": "Kayn",
-    "championId": "TFT4_Kayn",
-    "cost": 5,
+    "name": "Kayle",
+    "championId": "TFT4_Kayle",
+    "cost": 4,
     "traits": [
-      "Set4_Tormented",
-      "Set4_Shade"
+      "Divine",
+      "Set4_Executioner"
     ]
   },
   {
@@ -229,11 +193,11 @@
   },
   {
     "name": "Kindred",
-    "championId": "TFT4_Kindred",
+    "championId": "TFT4b_Kindred",
     "cost": 3,
     "traits": [
       "Set4_Spirit",
-      "Hunter"
+      "Set4_Executioner"
     ]
   },
   {
@@ -246,39 +210,12 @@
     ]
   },
   {
-    "name": "Lillia",
-    "championId": "TFT4_Lillia",
-    "cost": 5,
-    "traits": [
-      "Dusk",
-      "Set4_Mage"
-    ]
-  },
-  {
-    "name": "Lissandra",
-    "championId": "TFT4_Lissandra",
-    "cost": 1,
-    "traits": [
-      "Moonlight",
-      "Set4_Dazzler"
-    ]
-  },
-  {
     "name": "Lulu",
     "championId": "TFT4_Lulu",
     "cost": 2,
     "traits": [
       "Set4_Elderwood",
       "Set4_Mage"
-    ]
-  },
-  {
-    "name": "Lux",
-    "championId": "TFT4_Lux",
-    "cost": 3,
-    "traits": [
-      "Divine",
-      "Set4_Dazzler"
     ]
   },
   {
@@ -292,20 +229,38 @@
   },
   {
     "name": "Morgana",
-    "championId": "TFT4_Morgana",
+    "championId": "TFT4b_Morgana",
     "cost": 4,
     "traits": [
       "Set4_Enlightened",
-      "Set4_Dazzler"
+      "Set4_Syphoner"
     ]
   },
   {
-    "name": "Nami",
-    "championId": "TFT4_Nami",
+    "name": "Nasus",
+    "championId": "TFT4_Nasus",
     "cost": 1,
     "traits": [
-      "Set4_Enlightened",
-      "Set4_Mage"
+      "Divine",
+      "Set4_Syphoner"
+    ]
+  },
+  {
+    "name": "Nautilus",
+    "championId": "TFT4_Nautilus",
+    "cost": 2,
+    "traits": [
+      "Set4_Fabled",
+      "Set4_Vanguard"
+    ]
+  },
+  {
+    "name": "Neeko",
+    "championId": "TFT4_Neeko",
+    "cost": 3,
+    "traits": [
+      "Set4_Fabled",
+      "Set4_Mystic"
     ]
   },
   {
@@ -327,21 +282,51 @@
     ]
   },
   {
+    "name": "Olaf",
+    "championId": "TFT4_Olaf",
+    "cost": 4,
+    "traits": [
+      "Set4_Dragonsoul",
+      "Set4_Slayer"
+    ]
+  },
+  {
+    "name": "Ornn",
+    "championId": "TFT4_Ornn",
+    "cost": 5,
+    "traits": [
+      "Set4_Elderwood",
+      "Set4_Vanguard",
+      "Set4_Blacksmith"
+    ]
+  },
+  {
     "name": "Pyke",
     "championId": "TFT4_Pyke",
     "cost": 2,
     "traits": [
       "Cultist",
-      "Set4_Assassin"
+      "Set4_Assassin",
+      "Set4_Slayer"
     ]
   },
   {
-    "name": "Riven",
-    "championId": "TFT4_Riven",
-    "cost": 4,
+    "name": "Rakan",
+    "championId": "TFT4_Rakan",
+    "cost": 2,
     "traits": [
-      "Dusk",
+      "Set4_Elderwood",
       "Keeper"
+    ]
+  },
+  {
+    "name": "Samira",
+    "championId": "TFT4_Samira",
+    "cost": 5,
+    "traits": [
+      "Set4_Daredevil",
+      "Sharpshooter",
+      "Set4_Slayer"
     ]
   },
   {
@@ -373,12 +358,30 @@
     ]
   },
   {
-    "name": "Sylas",
-    "championId": "TFT4_Sylas",
-    "cost": 1,
+    "name": "Shyvana",
+    "championId": "TFT4_Shyvana",
+    "cost": 3,
     "traits": [
-      "Moonlight",
+      "Set4_Dragonsoul",
       "Set4_Brawler"
+    ]
+  },
+  {
+    "name": "Sivir",
+    "championId": "TFT4_Sivir",
+    "cost": 3,
+    "traits": [
+      "Cultist",
+      "Sharpshooter"
+    ]
+  },
+  {
+    "name": "Swain",
+    "championId": "TFT4_Swain",
+    "cost": 5,
+    "traits": [
+      "Set4_Dragonsoul",
+      "Set4_Syphoner"
     ]
   },
   {
@@ -409,12 +412,22 @@
     ]
   },
   {
-    "name": "Thresh",
-    "championId": "TFT4_Thresh",
-    "cost": 2,
+    "name": "Tristana",
+    "championId": "TFT4_Tristana",
+    "cost": 1,
     "traits": [
-      "Dusk",
-      "Set4_Vanguard"
+      "Set4_Dragonsoul",
+      "Sharpshooter"
+    ]
+  },
+  {
+    "name": "Tryndamere",
+    "championId": "TFT4_Tryndamere",
+    "cost": 4,
+    "traits": [
+      "Warlord",
+      "Set4_Slayer",
+      "Duelist"
     ]
   },
   {
@@ -424,15 +437,6 @@
     "traits": [
       "Cultist",
       "Set4_Mage"
-    ]
-  },
-  {
-    "name": "Vayne",
-    "championId": "TFT4_Vayne",
-    "cost": 1,
-    "traits": [
-      "Dusk",
-      "Sharpshooter"
     ]
   },
   {
@@ -454,13 +458,12 @@
     ]
   },
   {
-    "name": "Warwick",
-    "championId": "TFT4_Warwick",
-    "cost": 4,
+    "name": "Vladimir",
+    "championId": "TFT4_Vladimir",
+    "cost": 2,
     "traits": [
-      "Divine",
-      "Hunter",
-      "Set4_Brawler"
+      "Cultist",
+      "Set4_Syphoner"
     ]
   },
   {
@@ -473,12 +476,13 @@
     ]
   },
   {
-    "name": "Xin Zhao",
-    "championId": "TFT4_XinZhao",
-    "cost": 3,
+    "name": "Xayah",
+    "championId": "TFT4_Xayah",
+    "cost": 4,
     "traits": [
-      "Warlord",
-      "Duelist"
+      "Set4_Elderwood",
+      "Set4_Executioner",
+      "Keeper"
     ]
   },
   {
@@ -510,11 +514,11 @@
   },
   {
     "name": "Zed",
-    "championId": "TFT4_Zed",
+    "championId": "TFT4b_Zed",
     "cost": 2,
     "traits": [
       "Set4_Ninja",
-      "Set4_Shade"
+      "Set4_Slayer"
     ]
   },
   {
@@ -525,5 +529,11 @@
       "Cultist",
       "Set4_Mystic"
     ]
+  },
+  {
+    "name": "Target Dummy",
+    "championId": "TFT_TrainingDummy",
+    "cost": 2,
+    "traits": []
   }
 ]
