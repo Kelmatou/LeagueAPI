@@ -19,15 +19,6 @@ It is designed to be easy to use, taking advantage of Swift enums. It also comes
 
 ## 🚧 Installation 🚧
 
-### Carthage
-
-* Go in your project, in the folder where is located *YourProject.xcodeproj*.
-* Create a file named *Cartfile* and write `github "Kelmatou/LeagueAPI"` in it.
-* Run `carthage bootstrap --platform iOS` in Terminal.
-* Open *YourProject.xcodeproj* and go to target General settings.
-* Add LeagueAPI.framework in Embedded Binaries.
-* If you can write `import LeagueAPI` in your project without compiler error, you're done. Great job! If it is not the case, read the troubleshooting section below.
-
 ### CocoaPods
 
 * Go in your project, in the folder where is located *YourProject.xcodeproj*.
@@ -37,6 +28,15 @@ It is designed to be easy to use, taking advantage of Swift enums. It also comes
 * Run `pod install`.
 * A *YourProject.xcworkspace* was created. From now, you should open this file instead of *YourProject.xcodeproj*.
 * If you can write `import LeagueAPI` in your project without compiler error, you're done. Great job! If it is not the case, you can open an issue so that I can look at your problem.
+
+### Carthage
+
+* Go in your project, in the folder where is located *YourProject.xcodeproj*.
+* Create a file named *Cartfile* and write `github "Kelmatou/LeagueAPI"` in it.
+* Run `carthage bootstrap --platform iOS --use-xcframeworks` in Terminal (for Xcode < 12, you don't necessarily need to add --use-xcframeworks).
+* Open *YourProject.xcodeproj* and go to target General settings.
+* Add LeagueAPI.framework in Embedded Binaries (located at Carthage/Build/LeagueAPI.xcframework).
+* If you can write `import LeagueAPI` in your project without compiler error, you're done. Great job! If it is not the case, read the troubleshooting section below.
 
 ### Manual
 * Download a Release version [here](https://github.com/Kelmatou/LeagueAPI/releases) (or Github content but you may get a version with experimental changes).
