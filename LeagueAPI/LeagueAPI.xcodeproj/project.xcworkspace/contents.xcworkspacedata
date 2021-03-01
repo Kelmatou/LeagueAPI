@@ -1,7 +1,566 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "group:../../tftset4update"
+      name = "tftset4update">
+      <Group
+         location = "group:traits"
+         name = "traits">
+         <FileRef
+            location = "group:brawler.svg">
+         </FileRef>
+         <FileRef
+            location = "group:divine.svg">
+         </FileRef>
+         <FileRef
+            location = "group:assassin.png">
+         </FileRef>
+         <FileRef
+            location = "group:vanguard.png">
+         </FileRef>
+         <FileRef
+            location = "group:fortune.png">
+         </FileRef>
+         <FileRef
+            location = "group:exile.png">
+         </FileRef>
+         <FileRef
+            location = "group:mage.png">
+         </FileRef>
+         <FileRef
+            location = "group:slayer.svg">
+         </FileRef>
+         <FileRef
+            location = "group:daredevil.png">
+         </FileRef>
+         <FileRef
+            location = "group:blacksmith.svg">
+         </FileRef>
+         <FileRef
+            location = "group:blacksmith.png">
+         </FileRef>
+         <FileRef
+            location = "group:daredevil.svg">
+         </FileRef>
+         <FileRef
+            location = "group:slayer.png">
+         </FileRef>
+         <FileRef
+            location = "group:mage.svg">
+         </FileRef>
+         <FileRef
+            location = "group:exile.svg">
+         </FileRef>
+         <FileRef
+            location = "group:fortune.svg">
+         </FileRef>
+         <FileRef
+            location = "group:assassin.svg">
+         </FileRef>
+         <FileRef
+            location = "group:vanguard.svg">
+         </FileRef>
+         <FileRef
+            location = "group:divine.png">
+         </FileRef>
+         <FileRef
+            location = "group:brawler.png">
+         </FileRef>
+         <FileRef
+            location = "group:dragonsoul.svg">
+         </FileRef>
+         <FileRef
+            location = "group:adept.svg">
+         </FileRef>
+         <FileRef
+            location = "group:fabled.svg">
+         </FileRef>
+         <FileRef
+            location = "group:keeper.svg">
+         </FileRef>
+         <FileRef
+            location = "group:spirit.png">
+         </FileRef>
+         <FileRef
+            location = "group:executioner.svg">
+         </FileRef>
+         <FileRef
+            location = "group:duelist.svg">
+         </FileRef>
+         <FileRef
+            location = "group:emperor.png">
+         </FileRef>
+         <FileRef
+            location = "group:cultist.png">
+         </FileRef>
+         <FileRef
+            location = "group:ninja.png">
+         </FileRef>
+         <FileRef
+            location = "group:enlightened.png">
+         </FileRef>
+         <FileRef
+            location = "group:elderwood.svg">
+         </FileRef>
+         <FileRef
+            location = "group:theboss.png">
+         </FileRef>
+         <FileRef
+            location = "group:syphoner.svg">
+         </FileRef>
+         <FileRef
+            location = "group:sharpshooter.svg">
+         </FileRef>
+         <FileRef
+            location = "group:warlord.png">
+         </FileRef>
+         <FileRef
+            location = "group:mystic.png">
+         </FileRef>
+         <FileRef
+            location = "group:mystic.svg">
+         </FileRef>
+         <FileRef
+            location = "group:warlord.svg">
+         </FileRef>
+         <FileRef
+            location = "group:sharpshooter.png">
+         </FileRef>
+         <FileRef
+            location = "group:theboss.svg">
+         </FileRef>
+         <FileRef
+            location = "group:syphoner.png">
+         </FileRef>
+         <FileRef
+            location = "group:elderwood.png">
+         </FileRef>
+         <FileRef
+            location = "group:enlightened.svg">
+         </FileRef>
+         <FileRef
+            location = "group:ninja.svg">
+         </FileRef>
+         <FileRef
+            location = "group:emperor.svg">
+         </FileRef>
+         <FileRef
+            location = "group:cultist.svg">
+         </FileRef>
+         <FileRef
+            location = "group:duelist.png">
+         </FileRef>
+         <FileRef
+            location = "group:executioner.png">
+         </FileRef>
+         <FileRef
+            location = "group:spirit.svg">
+         </FileRef>
+         <FileRef
+            location = "group:adept.png">
+         </FileRef>
+         <FileRef
+            location = "group:fabled.png">
+         </FileRef>
+         <FileRef
+            location = "group:dragonsoul.png">
+         </FileRef>
+         <FileRef
+            location = "group:keeper.png">
+         </FileRef>
+         <FileRef
+            location = "group:bg.png">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:items.json">
+      </FileRef>
+      <FileRef
+         location = "group:traits.json">
+      </FileRef>
+      <FileRef
+         location = "group:champions.json">
+      </FileRef>
+      <Group
+         location = "group:items"
+         name = "items">
+         <FileRef
+            location = "group:88.png">
+         </FileRef>
+         <FileRef
+            location = "group:77.png">
+         </FileRef>
+         <FileRef
+            location = "group:89.png">
+         </FileRef>
+         <FileRef
+            location = "group:48.png">
+         </FileRef>
+         <FileRef
+            location = "group:49.png">
+         </FileRef>
+         <FileRef
+            location = "group:59.png">
+         </FileRef>
+         <FileRef
+            location = "group:58.png">
+         </FileRef>
+         <FileRef
+            location = "group:99.png">
+         </FileRef>
+         <FileRef
+            location = "group:66.png">
+         </FileRef>
+         <FileRef
+            location = "group:67.png">
+         </FileRef>
+         <FileRef
+            location = "group:14.png">
+         </FileRef>
+         <FileRef
+            location = "group:28.png">
+         </FileRef>
+         <FileRef
+            location = "group:29.png">
+         </FileRef>
+         <FileRef
+            location = "group:01.png">
+         </FileRef>
+         <FileRef
+            location = "group:15.png">
+         </FileRef>
+         <FileRef
+            location = "group:03.png">
+         </FileRef>
+         <FileRef
+            location = "group:17.png">
+         </FileRef>
+         <FileRef
+            location = "group:9009.png">
+         </FileRef>
+         <FileRef
+            location = "group:9008.png">
+         </FileRef>
+         <FileRef
+            location = "group:16.png">
+         </FileRef>
+         <FileRef
+            location = "group:02.png">
+         </FileRef>
+         <FileRef
+            location = "group:06.png">
+         </FileRef>
+         <FileRef
+            location = "group:12.png">
+         </FileRef>
+         <FileRef
+            location = "group:13.png">
+         </FileRef>
+         <FileRef
+            location = "group:07.png">
+         </FileRef>
+         <FileRef
+            location = "group:39.png">
+         </FileRef>
+         <FileRef
+            location = "group:11.png">
+         </FileRef>
+         <FileRef
+            location = "group:05.png">
+         </FileRef>
+         <FileRef
+            location = "group:04.png">
+         </FileRef>
+         <FileRef
+            location = "group:38.png">
+         </FileRef>
+         <FileRef
+            location = "group:35.png">
+         </FileRef>
+         <FileRef
+            location = "group:9003.png">
+         </FileRef>
+         <FileRef
+            location = "group:09.png">
+         </FileRef>
+         <FileRef
+            location = "group:08.png">
+         </FileRef>
+         <FileRef
+            location = "group:34.png">
+         </FileRef>
+         <FileRef
+            location = "group:9002.png">
+         </FileRef>
+         <FileRef
+            location = "group:22.png">
+         </FileRef>
+         <FileRef
+            location = "group:36.png">
+         </FileRef>
+         <FileRef
+            location = "group:9001.png">
+         </FileRef>
+         <FileRef
+            location = "group:37.png">
+         </FileRef>
+         <FileRef
+            location = "group:23.png">
+         </FileRef>
+         <FileRef
+            location = "group:27.png">
+         </FileRef>
+         <FileRef
+            location = "group:33.png">
+         </FileRef>
+         <FileRef
+            location = "group:9005.png">
+         </FileRef>
+         <FileRef
+            location = "group:9004.png">
+         </FileRef>
+         <FileRef
+            location = "group:9010.png">
+         </FileRef>
+         <FileRef
+            location = "group:26.png">
+         </FileRef>
+         <FileRef
+            location = "group:18.png">
+         </FileRef>
+         <FileRef
+            location = "group:9006.png">
+         </FileRef>
+         <FileRef
+            location = "group:24.png">
+         </FileRef>
+         <FileRef
+            location = "group:25.png">
+         </FileRef>
+         <FileRef
+            location = "group:9007.png">
+         </FileRef>
+         <FileRef
+            location = "group:19.png">
+         </FileRef>
+         <FileRef
+            location = "group:56.png">
+         </FileRef>
+         <FileRef
+            location = "group:57.png">
+         </FileRef>
+         <FileRef
+            location = "group:55.png">
+         </FileRef>
+         <FileRef
+            location = "group:69.png">
+         </FileRef>
+         <FileRef
+            location = "group:68.png">
+         </FileRef>
+         <FileRef
+            location = "group:78.png">
+         </FileRef>
+         <FileRef
+            location = "group:44.png">
+         </FileRef>
+         <FileRef
+            location = "group:45.png">
+         </FileRef>
+         <FileRef
+            location = "group:79.png">
+         </FileRef>
+         <FileRef
+            location = "group:47.png">
+         </FileRef>
+         <FileRef
+            location = "group:46.png">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:champions"
+         name = "champions">
+         <FileRef
+            location = "group:TFT4_Vi.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Veigar.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4b_Diana.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Sett.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_LeeSin.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Kalista.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Shyvana.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Talon.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Rakan.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Yasuo.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Nautilus.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Teemo.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Annie.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4b_Morgana.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4b_Zed.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Yuumi.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Akali.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Sivir.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Tristana.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Tryndamere.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Katarina.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Swain.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Yone.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Aatrox.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Elise.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_JarvanIV.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT_TrainingDummy.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4b_Kindred.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_TwistedFate.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Irelia.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Lulu.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Maokai.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_ChoGath.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Ornn.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Nidalee.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Kayle.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Jax.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Garen.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Kennen.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Nunu.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Nasus.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Sejuani.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Zilean.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Janna.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Pyke.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Fiora.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Azir.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Olaf.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_AurelionSol.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Brand.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Neeko.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Shen.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Vladimir.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Braum.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Xayah.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Samira.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Wukong.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_TahmKench.png">
+         </FileRef>
+         <FileRef
+            location = "group:TFT4_Darius.png">
+         </FileRef>
+      </Group>
+   </Group>
    <FileRef
-      location = "self:/Users/antoineclop/Projects/LeagueAPI/LeagueAPI/LeagueAPI.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>
