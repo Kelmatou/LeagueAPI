@@ -42,7 +42,7 @@ internal class StatusMethod: LeagueMethod {
     
     public func getMethodUrl() -> String {
         let entrypoint: String = self.service.hostUrl
-        let commonPath: String = "https://\(entrypoint)\(MethodPaths.Status.rawValue)/v4/platform-data"
+        let commonPath: String = "https://\(entrypoint)\(MethodPaths.Status.rawValue)/\(Version.LOL_API)/platform-data"
         switch self.method {
         case .GetStatus:
             return "\(commonPath)"
@@ -51,6 +51,10 @@ internal class StatusMethod: LeagueMethod {
     
     func getMethodBody() -> Data? {
         return nil
+    }
+    
+    func getCustomHeaders() -> [String: String] {
+        return [:]
     }
     
     func getWarningMessage() -> String? {

@@ -51,6 +51,8 @@ internal class ServiceProxy {
             return .Europe
         case .SouthEastAsia:
             return .SouthEastAsia
+        case .Esports:
+            return .Esports
         }
     }
     
@@ -103,6 +105,8 @@ internal class ServiceProxy {
             self.init(for: .EUW)
         case .SouthEastAsia:
             self.init(for: .OCE)
+        case .Esports:
+            self.init(for: .KR) // there is no real mapping from WorldRegion.Esports to Region
         }
     }
 }

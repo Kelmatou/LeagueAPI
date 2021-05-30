@@ -15,6 +15,7 @@ internal class SummonerMethod: LeagueMethod {
         case ByName(name: String)
         case byPuuid(puuid: SummonerPuuid)
         case ById(id: SummonerId)
+        case ByAuthorizationToken(token: String)
         
         public var description: String {
             var methodDescription: String {
@@ -27,6 +28,8 @@ internal class SummonerMethod: LeagueMethod {
                     return "byPuuid"
                 case .ById:
                     return "ById"
+                case .ByAuthorizationToken:
+                    return "ByAuthorizationToken"
                 }
             }
             return "\(String(describing: SummonerMethods.self))-\(methodDescription)"
@@ -61,6 +64,8 @@ internal class SummonerMethod: LeagueMethod {
             return "\(commonPath)/by-puuid/\(puuid)"
         case .ById(let id):
             return "\(commonPath)/\(id)"
+        case .ByAuthorizationToken:
+            return "\(commonPath)/me"
         }
     }
     
@@ -68,9 +73,18 @@ internal class SummonerMethod: LeagueMethod {
         return nil
     }
     
+    func getCustomHeaders() -> [String: String] {
+        switch self.method {
+        case .ByAuthorizationToken(let token):
+            return ["Authorization": token]
+        case .ByAccountId, .ByName, .byPuuid, .ById:
+            return [:]
+        }
+    }
+    
     func getWarningMessage() -> String? {
         switch self.method {
-        case .ByAccountId, .ByName, .byPuuid:
+        case .ByAccountId, .ByName, .byPuuid, .ByAuthorizationToken:
             return nil
         case .ById:
             return "Too many calls to unexisting Summoner(by SummonerId) may result in Blacklist"

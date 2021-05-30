@@ -33,7 +33,7 @@ internal class LeagueRequester {
         case .Delayed:
             self.handleRequestDelayed(method: method, handler: handler)
         case .Refused:
-            handleRequestRefused(method: method, handler: handler)
+            self.handleRequestRefused(method: method, handler: handler)
         }
     }
     
@@ -50,7 +50,9 @@ internal class LeagueRequester {
         self.key.rateLimitManager.countRequestSent(for: method)
         let accessMethod: RESTRequester.AccessMethod = method.getAccessMethod()
         let methodUrl: String = method.getMethodUrl()
-        let headers: [String: String] = ["X-Riot-Token": self.key.token]
+        let headers: [String: String] = [
+            "X-Riot-Token": self.key.token
+        ].merging(method.getCustomHeaders(), uniquingKeysWith: { (riotHeaderKey, customHeaderKey) in return customHeaderKey })
         let body: Data? = method.getMethodBody()
         
         let completion: (ResultType?, HttpResponseCode, RESTRequester.Headers?, String?) -> Void = { (result, responseCode, headers, error) in

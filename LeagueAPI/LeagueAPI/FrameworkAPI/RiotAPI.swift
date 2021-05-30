@@ -21,4 +21,8 @@ public class RiotAPI: APIClient {
     public func getAccountActiveShards(puuid: SummonerPuuid, game: ShardGame, on region: WorldRegion, handler: @escaping (RiotAccountActiveShard?, String?) -> Void) {
         RiotAccountBusiness.getAccountInfo(method: .ActiveShardsByGame(puuid: puuid, game: game), region: region, key: self.key, handler: handler)
     }
+    
+    public func getAccount(byAuthorizationToken token: String, on region: WorldRegion, handler: @escaping (RiotAccount?, String?) -> Void) {
+        RiotAccountBusiness.getAccountInfo(method: .ByAuthorizationToken(token: token), region: region, key: self.key, handler: handler)
+    }
 }

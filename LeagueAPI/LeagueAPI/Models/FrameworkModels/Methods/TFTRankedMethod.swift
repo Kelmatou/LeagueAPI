@@ -17,6 +17,7 @@ internal class TFTRankedMethod: LeagueMethod {
         case GetGrandMaster
         case LeagueById(id: TFTLeagueId)
         case GetMaster
+        case GetTopRatedLadders
         
         public var description: String {
             var methodDescription: String {
@@ -33,6 +34,8 @@ internal class TFTRankedMethod: LeagueMethod {
                     return "LeagueById"
                 case .GetMaster:
                     return "GetMaster"
+                case .GetTopRatedLadders:
+                    return "GetTopRatedLadders"
                 }
             }
             return "\(String(describing: TFTRankedMethods.self))-\(methodDescription)"
@@ -71,11 +74,17 @@ internal class TFTRankedMethod: LeagueMethod {
             return "\(commonPath)/leagues/\(id)"
         case .GetMaster:
             return "\(commonPath)/master"
+        case .GetTopRatedLadders:
+            return "\(commonPath)/rated-ladders/RANKED_TFT_TURBO/top" // queue is supposed to be dynamic but there is only one at the moment
         }
     }
     
     func getMethodBody() -> Data? {
         return nil
+    }
+    
+    func getCustomHeaders() -> [String: String] {
+        return [:]
     }
     
     func getWarningMessage() -> String? {

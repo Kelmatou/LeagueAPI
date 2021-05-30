@@ -84,6 +84,10 @@ internal class MatchMethod: LeagueMethod {
     func getMethodBody() -> Data? {
         return nil
     }
+
+    func getCustomHeaders() -> [String: String] {
+        return [:]
+    }
     
     func getWarningMessage() -> String? {
         return nil

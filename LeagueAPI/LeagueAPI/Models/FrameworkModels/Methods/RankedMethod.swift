@@ -78,6 +78,10 @@ internal class RankedMethod: LeagueMethod {
         return nil
     }
     
+    func getCustomHeaders() -> [String: String] {
+        return [:]
+    }
+    
     func getWarningMessage() -> String? {
         switch self.method {
         case .ChallengerByQueue, .GrandMasterByQueue, .MasterByQueue, .EntriesById, .QueueEntries:

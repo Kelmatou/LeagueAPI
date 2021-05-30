@@ -14,6 +14,7 @@ internal class RiotAccountMethod: LeagueMethod {
         case ByPuuid(puuid: SummonerPuuid)
         case ByRiotId(riotId: RiotId)
         case ActiveShardsByGame(puuid: SummonerPuuid, game: ShardGame)
+        case ByAuthorizationToken(token: String)
         
         public var description: String {
             var methodDescription: String {
@@ -24,6 +25,8 @@ internal class RiotAccountMethod: LeagueMethod {
                     return "ByRiotId"
                 case .ActiveShardsByGame:
                     return "ActiveShardsByGame"
+                case .ByAuthorizationToken:
+                    return "ByAuthorizationToken"
                 }
             }
             return "\(String(describing: RiotAccountMethods.self))-\(methodDescription)"
@@ -56,11 +59,22 @@ internal class RiotAccountMethod: LeagueMethod {
             return "\(commonPath)/accounts/by-riot-id/\(riotId.gameName)/\(riotId.tagLine)"
         case .ActiveShardsByGame(let puuid, let game):
             return "\(commonPath)/active-shards/by-game/\(game.shardGame.rawValue)/by-puuid/\(puuid)"
+        case .ByAuthorizationToken:
+            return "\(commonPath)/accounts/me"
         }
     }
     
     func getMethodBody() -> Data? {
         return nil
+    }
+    
+    func getCustomHeaders() -> [String: String] {
+        switch self.method {
+        case .ByAuthorizationToken(let token):
+            return ["Authorization": token]
+        default:
+            return [:]
+        }
     }
     
     func getWarningMessage() -> String? {

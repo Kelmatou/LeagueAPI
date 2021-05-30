@@ -19,6 +19,8 @@ internal enum MethodPaths: String {
     case RunneteraMatch = "/lor/match"
     case RunneteraRanked = "/lor/ranked"
     case RunneteraStatus = "/lor/status"
+    case RunneteraInventory = "/lor/inventory"
+    case RunneteraDeck = "/lor/deck"
     case Match = "/lol/match"
     case Spectator = "/lol/spectator"
     case Summoner = "/lol/summoner"

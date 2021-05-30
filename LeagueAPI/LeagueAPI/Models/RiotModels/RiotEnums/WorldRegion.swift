@@ -13,4 +13,5 @@ public enum WorldRegion: String {
     case Asia
     case Europe
     case SouthEastAsia
+    case Esports
 }

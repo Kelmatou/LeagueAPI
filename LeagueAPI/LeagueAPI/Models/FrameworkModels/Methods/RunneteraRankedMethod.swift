@@ -54,6 +54,10 @@ internal class RunneteraRankedMethod: LeagueMethod {
         return nil
     }
     
+    func getCustomHeaders() -> [String: String] {
+        return [:]
+    }
+    
     func getWarningMessage() -> String? {
         return nil
     }

@@ -36,6 +36,10 @@ public class TFTAPI: APIClient {
         TFTRankedBusiness.getRanked(method: .EntriesByTierAndDivision(division: division, page: page), region: region, key: self.key, handler: handler)
     }
     
+    public func getTopRatedLadders(on region: Region, handler: @escaping ([TFTRatedLadder]?, String?) -> Void) {
+        TFTRankedBusiness.getRanked(method: .GetTopRatedLadders, region: region, key: self.key, handler: handler)
+    }
+    
     // MARK: - Match
     
     public func getMatchList(by puuid: SummonerPuuid, count: Int? = nil, on region: Region, handler: @escaping ([TFTGameId]?, String?) -> Void) {
@@ -69,6 +73,10 @@ public class TFTAPI: APIClient {
     
     public func getSummoner(by summonerId: SummonerId, on region: Region, handler: @escaping (Summoner?, String?) -> Void) {
         TFTSummonerBusiness.getSummoner(method: .ById(id: summonerId), region: region, key: self.key, handler: handler)
+    }
+    
+    public func getSummoner(byAuthorizationToken token: String, on region: Region, handler: @escaping (Summoner?, String?) -> Void) {
+        TFTSummonerBusiness.getSummoner(method: .ByAuthorizationToken(token: token), region: region, key: self.key, handler: handler)
     }
     
     // MARK: - Assets

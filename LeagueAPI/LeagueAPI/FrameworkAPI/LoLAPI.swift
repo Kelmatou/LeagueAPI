@@ -147,6 +147,10 @@ public class LoLAPI: APIClient {
         SummonerBusiness.getSummoner(method: .ById(id: summonerId), region: region, key: self.key, handler: handler)
     }
     
+    public func getSummoner(byAuthorizationToken token: String, on region: Region, handler: @escaping (Summoner?, String?) -> Void) {
+        SummonerBusiness.getSummoner(method: .ByAuthorizationToken(token: token), region: region, key: self.key, handler: handler)
+    }
+    
     // MARK: - Third Party Code
     
     public func getThirdPartyVerificationCode(by summonerId: SummonerId, on region: Region, handler: @escaping (String?, String?) -> Void) {
