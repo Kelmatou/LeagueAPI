@@ -15,7 +15,7 @@ public class RankedEntry: Decodable {
     public var queue: Queue
     
     enum CodingKeys: String, CodingKey {
-        case leagueId = "leagueID"
+        case leagueId = "leagueId"
         case queue = "queueType"
     }
     
