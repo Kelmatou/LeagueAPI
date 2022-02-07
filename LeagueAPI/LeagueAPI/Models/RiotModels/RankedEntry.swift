@@ -10,7 +10,7 @@ import Foundation
 
 public class RankedEntry: Decodable {
     
-    public var leagueId: LeagueId
+    public var leagueId: LeagueId?
     public var leagueInfo: LeagueInfo
     public var queue: Queue
     
