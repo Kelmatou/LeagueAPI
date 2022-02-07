@@ -10,21 +10,13 @@ import Foundation
 
 public class RankedEntry: Decodable {
     
-    let leagueID: String?
-    let queueType: String
-    let tier, rank: String?
-    let summonerID, summonerName: String
-    let leaguePoints: Int?
-    let wins, losses: Int
-    let veteran, inactive, freshBlood, hotStreak: Bool?
-    let ratedTier: String?
-    let ratedRating: Int?
-
+    public var leagueId: LeagueId
+    public var leagueInfo: LeagueInfo
+    public var queue: Queue
+    
     enum CodingKeys: String, CodingKey {
-        case leagueID = "leagueId"
-        case queueType, tier, rank
-        case summonerID = "summonerId"
-        case summonerName, leaguePoints, wins, losses, veteran, inactive, freshBlood, hotStreak, ratedTier, ratedRating
+        case leagueId = "leagueID"
+        case queue = "queueType"
     }
     
     public init(leagueId: LeagueId, leagueName: String, leagueInfo: LeagueInfo, queue: Queue) {
