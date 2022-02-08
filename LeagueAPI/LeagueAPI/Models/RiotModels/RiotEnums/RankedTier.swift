@@ -38,7 +38,7 @@ public class RankedTier {
         self.tier = tier
     }
     
-    internal init(_ tier: String) {
+    internal init(_ tier: String?) {
         switch tier {
         case Tiers.Unranked.rawValue:
             self.tier = .Unranked
@@ -61,7 +61,7 @@ public class RankedTier {
         case Tiers.Challenger.rawValue:
             self.tier = .Challenger
         default:
-            Logger.warning("Ranked Tier \"\(tier)\" unknown (check for LeagueAPI update)")
+            Logger.warning("Ranked Tier \"\(tier ?? "unknown")\" unknown (check for LeagueAPI update)")
             self.tier = .Unknown
         }
     }
