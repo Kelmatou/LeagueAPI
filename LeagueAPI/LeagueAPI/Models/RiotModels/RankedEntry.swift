@@ -10,9 +10,9 @@ import Foundation
 
 public class RankedEntry: Decodable {
     
-    public var tier: RankedTier
-    public var leagueId: LeagueId
-    public var leagueInfo: LeagueInfo
+    public var tier: RankedTier?
+    public var leagueId: LeagueId?
+    public var leagueInfo: LeagueInfo?
     public var queue: Queue
     
     enum CodingKeys: String, CodingKey {
@@ -30,8 +30,11 @@ public class RankedEntry: Decodable {
     
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.tier = try RankedTier(container.decode(String.self, forKey: .tier))
-        self.leagueId = try LeagueId(container.decode(String.self, forKey: .leagueId))
+        self.tier = try RankedTier(container.decodeIfPresent(String.self, forKey: .tier))
+        let responseLeagueId = try container.decodeIfPresent(String.self, forKey: .leagueId)
+        if let leagueId = responseLeagueId {
+            self.leagueId = LeagueId(leagueId)
+        }
         self.leagueInfo = try LeagueInfo(from: decoder)
         self.queue = try Queue(container.decode(String.self, forKey: .queue))
     }

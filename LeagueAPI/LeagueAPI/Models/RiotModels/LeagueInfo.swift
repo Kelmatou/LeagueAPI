@@ -12,15 +12,15 @@ public class LeagueInfo: Decodable {
     
     public var summonerId: SummonerId
     public var summonerName: String
-    public var rank: String
-    public var leaguePoints: Int
+    public var rank: String?
+    public var leaguePoints: Int?
     public var series: Series?
     public var wins: Int
     public var losses: Int
-    public var hotStreak: Bool
-    public var veteran: Bool
-    public var freshBlood: Bool
-    public var inactive: Bool
+    public var hotStreak: Bool?
+    public var veteran: Bool?
+    public var freshBlood: Bool?
+    public var inactive: Bool?
     
     enum CodingKeys: String, CodingKey {
         case summonerId = "summonerId"
@@ -54,14 +54,14 @@ public class LeagueInfo: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.summonerId = try SummonerId(container.decode(String.self, forKey: .summonerId))
         self.summonerName = try container.decode(String.self, forKey: .summonerName)
-        self.rank = try container.decode(String.self, forKey: .rank)
-        self.leaguePoints = try container.decode(Int.self, forKey: .leaguePoints)
-        self.series = try? container.decode(Series.self, forKey: .series)
+        self.rank = try container.decodeIfPresent(String.self, forKey: .rank)
+        self.leaguePoints = try container.decodeIfPresent(Int.self, forKey: .leaguePoints)
+        self.series = try? container.decodeIfPresent(Series.self, forKey: .series)
         self.wins = try container.decode(Int.self, forKey: .wins)
         self.losses = try container.decode(Int.self, forKey: .losses)
-        self.hotStreak = try container.decode(Bool.self, forKey: .hotStreak)
-        self.veteran = try container.decode(Bool.self, forKey: .veteran)
-        self.freshBlood = try container.decode(Bool.self, forKey: .freshBlood)
-        self.inactive = try container.decode(Bool.self, forKey: .inactive)
+        self.hotStreak = try container.decodeIfPresent(Bool.self, forKey: .hotStreak)
+        self.veteran = try container.decodeIfPresent(Bool.self, forKey: .veteran)
+        self.freshBlood = try container.decodeIfPresent(Bool.self, forKey: .freshBlood)
+        self.inactive = try container.decodeIfPresent(Bool.self, forKey: .inactive)
     }
 }
